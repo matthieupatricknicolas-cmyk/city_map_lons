@@ -126,12 +126,16 @@
   .ctrl-btn.active .ctrl-top { color: rgba(255,255,255,0.7); }
   .ctrl-btn .ctrl-main { font-size: 12px; font-weight: 700; }
 
-  /* Small icon-only bottom-right buttons (recentrer / locate) */
-  .bottom-controls { position: absolute; bottom: 130px; right: 10px; z-index: 30; display: flex; flex-direction: column; gap: 8px; }
-  .icon-btn { width: 40px; height: 40px; border-radius: 10px; border: none; cursor: pointer; background: white; box-shadow: 0 4px 12px rgba(15,23,42,0.15); display: flex; align-items: center; justify-content: center; transition: transform 0.15s, background 0.15s; padding: 0; }
-  .icon-btn:hover { transform: translateY(-1px); background: var(--lons-red-light); }
-  .icon-btn:active { transform: translateY(0); }
+  /* Compact vertical action-pill (recentrer / locate) — positioned left of the MapLibre nav stack */
+  .bottom-controls { position: absolute; bottom: 28px; right: 56px; z-index: 30; display: flex; flex-direction: column; background: white; border-radius: 14px; box-shadow: 0 6px 18px rgba(15,23,42,0.18), 0 0 0 1px rgba(15,23,42,0.04); overflow: hidden; }
+  .icon-btn { width: 40px; height: 40px; border: none; cursor: pointer; background: white; display: flex; align-items: center; justify-content: center; transition: background 0.15s, color 0.15s; padding: 0; position: relative; }
+  .icon-btn + .icon-btn { border-top: 1px solid #F1F1F0; }
+  .icon-btn:hover { background: var(--lons-red-light); }
+  .icon-btn:active { background: var(--lons-red); }
+  .icon-btn:active i { color: white !important; }
   .icon-btn i { color: var(--lons-red); }
+  .icon-btn::after { content: attr(data-tip); position: absolute; right: calc(100% + 10px); top: 50%; transform: translateY(-50%) translateX(-6px); background: var(--lons-ink); color: white; padding: 5px 10px; border-radius: 8px; font-size: 11px; font-weight: 600; white-space: nowrap; opacity: 0; pointer-events: none; transition: all 0.2s; }
+  .icon-btn:hover::after { opacity: 1; transform: translateY(-50%) translateX(0); }
 
   .basemap-menu { position: absolute; top: 100%; right: 0; margin-top: 8px; width: 288px; max-height: 60vh; overflow-y: auto; border-radius: 12px; background: white; border: 1px solid var(--lons-border); box-shadow: 0 20px 40px rgba(15,23,42,0.15); padding: 8px; display: none; }
   .basemap-menu.open { display: block; }
@@ -647,6 +651,10 @@ function renderControls() {
   const el = document.getElementById("map-controls");
   const current = BASEMAPS.find((b) => b.id === state.basemap) || BASEMAPS[0];
   el.innerHTML = `
+    <button class="ctrl-btn ${state.buildings3D ? "active" : ""}" id="btn-3d">
+      <div class="ctrl-icon-wrap"><i data-lucide="box" style="width:16px;height:16px"></i></div>
+      <div class="ctrl-label"><div class="ctrl-top">Vue</div><div class="ctrl-main">Bâtiments 3D</div></div>
+    </button>
     <div style="position:relative">
       <button class="ctrl-btn" id="btn-basemap">
         <div class="ctrl-icon-wrap"><i data-lucide="layers" style="width:16px;height:16px"></i></div>
@@ -661,19 +669,15 @@ function renderControls() {
         `).join("")}
       </div>
     </div>
-    <button class="ctrl-btn ${state.buildings3D ? "active" : ""}" id="btn-3d">
-      <div class="ctrl-icon-wrap"><i data-lucide="box" style="width:16px;height:16px"></i></div>
-      <div class="ctrl-label"><div class="ctrl-top">Vue</div><div class="ctrl-main">Bâtiments 3D</div></div>
-    </button>
   `;
 
   // Small icon-only bottom-right buttons (mobile-app style)
   const bc = document.getElementById("bottom-controls");
   bc.innerHTML = `
-    <button class="icon-btn" id="btn-reset" title="Recentrer sur Lons-le-Saunier" aria-label="Recentrer">
+    <button class="icon-btn" id="btn-reset" data-tip="Recentrer sur Lons-le-Saunier" aria-label="Recentrer">
       <i data-lucide="compass" style="width:20px;height:20px"></i>
     </button>
-    <button class="icon-btn" id="btn-locate" title="Ma position" aria-label="Ma position">
+    <button class="icon-btn" id="btn-locate" data-tip="Ma position" aria-label="Ma position">
       <i data-lucide="crosshair" style="width:20px;height:20px"></i>
     </button>
   `;
