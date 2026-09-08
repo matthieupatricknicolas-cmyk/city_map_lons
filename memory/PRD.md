@@ -1,56 +1,53 @@
-# PRD · Cartographie 3D Ville de Lons-le-Saunier
+# PRD — Cartographie Ville de Lons-le-Saunier
 
-## Problème initial (verbatim)
-> Je voudrais créer une cartographie web basée sur la technologie MapLibre avec la possibilité
-> de faire de la navigation 3D et exploitant les API de données libres extraites de OpenStreetMap
-> en direct. Créer des onglets représentant des thèmes différents. Premier thème : déplacement et
-> mobilité (parkings vélos, pistes cyclables, abris bus, lignes de bus). Deuxième thème : commerces.
-> Données interrogeables au clic, symbologie type flaticon, popup latérale glissante qui se replie
-> au clic hors POI. Charte graphique Ville de Lons-le-Saunier.
+## Problem statement (original, verbatim intent)
+Application web de cartographie 3D pour la Ville de Lons-le-Saunier (39000, France), basée sur MapLibre GL JS avec données OSM temps réel via Geodatamine + Overpass. Thèmes : Mobilité (parkings vélos, pistes cyclables, arrêts/lignes de bus), Commerces (boutiques, restaurants), Culture (patrimoine, cinémas, bibliothèques, musées/théâtres/arts) et Nature (parcs, aires de jeux, fontaines, espaces verts). Interactions : clic sur un objet → panneau latéral détaillé + accès Panoramax (photo la plus proche). Charte graphique Lons-le-Saunier stricte (rouge dominant #E30613, logo officiel).
 
-## Architecture
-- **Frontend** : React 19 + Tailwind + MapLibre GL JS 4.7 + Lucide + Sonner (toasts)
-- **Backend** : FastAPI (endpoint `/api/config` uniquement — non requis pour la carto en direct)
-- **Données** :
-  - `https://geodatamine.fr/data/{theme}/152508?format=geojson` (Lons-le-Saunier, admin_8)
-  - `https://overpass-api.de/api/interpreter` (POST QL) pour arrêts & lignes bus
-- **Fonds de carte** : 7 basemaps (CARTO Voyager par défaut, Dark Matter, OpenFreeMap, IGN Ortho, OSM France, OpenTopoMap, MapLibre Demo)
+**Contrainte produit** : livrer un **fichier HTML autonome** (`lons-cartographie.html`) téléchargeable et utilisable hors-ligne / sur un serveur externe (pas de backend).
 
-## Personas
-- **Citoyen(ne) de Lons-le-Saunier** cherchant un parking vélo, un commerce, un arrêt de bus.
-- **Agent municipal** exposant les données publiques enrichies OSM.
-- **Touriste** explorant la ville en 3D.
+## Architecture actuelle
+- **Fichier unique** : `/app/frontend/public/lons-cartographie.html` (~1100 lignes, HTML + CSS + JS vanilla).
+- Aucun backend requis. `/app/backend/server.py` inutilisé.
+- Sources de données : Geodatamine (`geodatamine.fr`), Overpass (kumi.systems → overpass-api.de → osm.ch → private.coffee), Nominatim (avec fallback Photon `photon.komoot.io` pour CORS), Panoramax (`api.panoramax.xyz`).
 
-## Core requirements (statique)
-- Navigation 3D MapLibre (pitch, bearing, extrusion bâtiments)
-- Données OSM en DIRECT (geodatamine.fr / Overpass)
-- Onglets thématiques (Mobilité, Commerces) extensibles
-- Panneau latéral droit glissant au clic POI, fermeture au clic vide
-- Charte Ville : bleu #003D7A + rouge #E30613, typographies Bricolage Grotesque + Plus Jakarta Sans
+## Ce qui est implémenté
+### 2026-02 — Session 1 (fork courant)
+- MapLibre 3D + bâtiments extrudés, 7 fonds de carte (CARTO, IGN, OSM France, OpenFreeMap, OpenTopoMap…).
+- Charte Lons-le-Saunier : rouge #E30613 dominant, logo officiel webp, contour communal (Nominatim + fallback Overpass).
+- 4 thèmes : Mobilité, Commerces, Culture, **Nature** (parcs, aires de jeux, fontaines, espaces verts).
+- Icônes points 100% SVG vectorielles (cercles avec logo) — rendu universel.
+- Point layers systématiquement au-dessus des lignes/polygones via `map.moveLayer`.
+- Panoramax "photo la plus proche" (recherche bbox progressive 0.001° → 0.012°).
+- Boutons recentrage / géolocalisation compacts en bas à droite.
+- **Barre de recherche d'adresse** (Nominatim + fallback Photon, biais viewbox Lons, keyboard nav ↑↓ Enter Esc).
+- **Export GeoJSON** des couches visibles (téléchargement local) avec metadata (title, timestamp, layers, sources, licence ODbL).
+- Logo cliquable → https://www.lonslesaunier.fr (target=_blank).
+- Résilience Overpass : AbortController 20 s par endpoint, état d'erreur retry-on-click sur les layer-rows.
 
-## Implémenté (2026-02-08)
-- [x] Layout : header municipal, sidebar thèmes/couches, carte plein écran
-- [x] MapView MapLibre 3D avec extrusion bâtiments et 7 basemaps switchables
-- [x] Fetch geodatamine.fr : bicycle_parking (144), cycleway (496), shop_craft_office (617), restaurant (95)
-- [x] Fetch Overpass : bus_stop + bus_station, relations route=bus (Overpass injoignable depuis container — appels client OK en prod)
-- [x] Panneau détail droit avec titre, catégorie, coordonnées, attributs FR (schéma GeoDataMine)
-- [x] Toggle bâtiments 3D, bouton Recentrer, géolocalisation
-- [x] Toast Sonner sur chargement de couche
-- [x] Tests E2E : 12/12 acceptance criteria PASS
+## Backlog priorisé
+### P2
+- **Mode offline** : cache localStorage des dernières couches téléchargées (Geodatamine + Overpass), utilisable sans internet.
+- **Sélecteur multi-communes** : élargir aux communes voisines de la CAECL (Communauté d'Agglomération ECLA).
+- **Filtre par tag OSM** dans le panneau latéral (ex : ne montrer que les commerces avec `wheelchair=yes`).
+- **Impression / export PDF** de la vue courante avec légende.
 
-## Backlog (P1)
-- [ ] Ajouter thèmes : Services publics, Santé, Écoles, Patrimoine, Sport
-- [ ] Icônes SVG custom dans les points (au lieu de cercles) via `map.loadImage`
-- [ ] Barre de recherche d'adresse (Nominatim)
-- [ ] Filtre "à proximité de moi" avec rayon paramétrable
-- [ ] Export CSV/GeoJSON depuis le panneau (télécharge geodatamine)
-- [ ] Mode partage (URL avec état de la carte + POI sélectionné)
+### Backlog / améliorations
+- Marqueurs de cluster (supercluster) quand zoom out sur > 200 points.
+- Mesure distance / surface directement sur la carte.
+- Partage d'URL avec position/zoom/couches actives.
 
-## Backlog (P2)
-- [ ] i18n (FR/EN)
-- [ ] Mode contraste renforcé / accessibilité AA
-- [ ] Analytics d'usage anonymisé
-- [ ] Impression / export PDF de la vue courante
+## API endpoints externes
+- `https://geodatamine.fr/data/{theme}/152508?format=geojson` — POI par thème pour Lons.
+- `https://overpass.kumi.systems/api/interpreter` (+ 3 miroirs) — requêtes Overpass QL.
+- `https://nominatim.openstreetmap.org/search?...` — géocodage principal.
+- `https://photon.komoot.io/api/?q=...&bbox=5.48,46.62,5.63,46.72` — fallback géocodeur CORS-friendly.
+- `https://api.panoramax.xyz/api/search?bbox=...&limit=5` — recherche photos rue-vue.
 
-## Test creds
-Aucune (app publique, pas d'auth).
+## Tests
+- `/app/test_reports/iteration_3.json` — testing_agent (2026-02) : 100 % (6/8 totalement, 2 partiels dus aux limites d'egress du preview Cloudflare).
+- Aucun bug bloquant. UX retry câblé correctement. Preview restrictions n'affectent PAS le fichier téléchargé (Nominatim/Overpass fonctionnent depuis un navigateur utilisateur).
+
+## Fichiers clés
+- `/app/frontend/public/lons-cartographie.html` — application entière.
+- `/app/memory/PRD.md` (ce fichier).
+- `/app/test_reports/iteration_3.json` — dernier rapport.

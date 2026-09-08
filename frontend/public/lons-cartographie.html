@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Cartographie 3D · Ville de Lons-le-Saunier</title>
+<title>Ville de Lons-le-Saunier · Cartographie</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
@@ -32,7 +32,30 @@
   /* Layout */
   .app { display: flex; flex-direction: column; height: 100vh; width: 100vw; }
   header.app-header { height: 68px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; background: white; border-bottom: 3px solid var(--lons-red); z-index: 30; position: relative; box-shadow: 0 4px 20px rgba(227,6,19,0.08); }
-  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand { display: flex; align-items: center; gap: 14px; transition: opacity 0.15s; }
+  .brand:hover { opacity: 0.85; }
+
+  /* Address search bar */
+  .search-wrap { position: relative; flex: 1; max-width: 480px; margin: 0 24px; display: flex; align-items: center; gap: 10px; padding: 8px 14px; background: #FAFAF7; border: 1px solid var(--lons-border); border-radius: 999px; transition: all 0.2s; }
+  .search-wrap:focus-within { border-color: var(--lons-red); background: white; box-shadow: 0 4px 14px rgba(227,6,19,0.12); }
+  .search-wrap input { flex: 1; border: none; outline: none; background: transparent; font-family: inherit; font-size: 14px; color: var(--lons-ink); min-width: 0; }
+  .search-wrap input::placeholder { color: #9CA3AF; }
+  .search-wrap button#address-clear { border: none; background: transparent; cursor: pointer; padding: 4px; color: #9CA3AF; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .search-wrap button#address-clear:hover { background: #F3F4F6; color: var(--lons-red); }
+  .address-results { position: absolute; top: calc(100% + 8px); left: 0; right: 0; background: white; border-radius: 12px; border: 1px solid var(--lons-border); box-shadow: 0 20px 40px rgba(15,23,42,0.15); max-height: 320px; overflow-y: auto; z-index: 40; display: none; }
+  .address-results.open { display: block; }
+  .address-item { padding: 10px 14px; cursor: pointer; border-bottom: 1px solid #F3F4F6; display: flex; gap: 10px; align-items: flex-start; }
+  .address-item:last-child { border-bottom: none; }
+  .address-item:hover, .address-item.hl { background: var(--lons-red-light); }
+  .address-item .a-icon { width: 28px; height: 28px; border-radius: 8px; background: var(--lons-red-light); color: var(--lons-red); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .address-item .a-main { font-weight: 700; font-size: 13px; color: #1F2937; line-height: 1.2; }
+  .address-item .a-sub { font-size: 11px; color: var(--lons-muted); margin-top: 2px; }
+  .address-empty { padding: 14px; font-size: 12px; color: var(--lons-muted); text-align: center; }
+
+  /* Export button */
+  .badge-export { background: white; border: 1px solid var(--lons-red); color: var(--lons-red); cursor: pointer; font-family: inherit; text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.15s; }
+  .badge-export:hover { background: var(--lons-red); color: white; transform: translateY(-1px); }
+  .badge-export:disabled { opacity: 0.5; cursor: not-allowed; }
   .brand-crest { width: 48px; height: 48px; flex-shrink: 0; object-fit: contain; filter: drop-shadow(0 4px 10px rgba(227,6,19,0.25)); }
   .brand-title { line-height: 1.15; }
   .brand-title .top { font-size: 10px; text-transform: uppercase; letter-spacing: 0.22em; color: var(--lons-red); font-weight: 700; }
@@ -48,14 +71,14 @@
   .body-row { flex: 1; display: flex; overflow: hidden; }
 
   /* Sidebar */
-  aside.sidebar { width: 328px; flex-shrink: 0; border-right: 1px solid var(--lons-border); background: white; display: flex; flex-direction: column; position: relative; z-index: 20; }
+  aside.sidebar { width: 360px; flex-shrink: 0; border-right: 1px solid var(--lons-border); background: white; display: flex; flex-direction: column; position: relative; z-index: 20; }
   .sidebar-section-title { font-size: 10px; text-transform: uppercase; letter-spacing: 0.22em; font-weight: 700; color: #9CA3AF; padding: 20px 16px 8px; }
-  .tab-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; padding: 0 16px; }
-  .tab-btn { position: relative; text-align: left; padding: 10px 8px; border-radius: 12px; border: 1px solid var(--lons-border); background: #FAFAF7; cursor: pointer; transition: all 0.2s; font-family: inherit; min-width: 0; overflow: hidden; }
+  .tab-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 5px; padding: 0 16px; }
+  .tab-btn { position: relative; text-align: left; padding: 8px 6px; border-radius: 10px; border: 1px solid var(--lons-border); background: #FAFAF7; cursor: pointer; transition: all 0.2s; font-family: inherit; min-width: 0; overflow: hidden; }
   .tab-btn:hover { border-color: rgba(227,6,19,0.4); }
-  .tab-btn .tab-title { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 13px; font-family: "Bricolage Grotesque", sans-serif; color: #1F2937; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .tab-btn .tab-title { display: flex; align-items: center; gap: 4px; font-weight: 700; font-size: 12px; font-family: "Bricolage Grotesque", sans-serif; color: #1F2937; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .tab-btn .tab-title i { flex-shrink: 0; }
-  .tab-btn .tab-sub { margin-top: 4px; font-size: 9px; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; color: #9CA3AF; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .tab-btn .tab-sub { margin-top: 3px; font-size: 8px; text-transform: uppercase; letter-spacing: 0.03em; font-weight: 600; color: #9CA3AF; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .tab-btn.active { background: var(--lons-red); border-color: var(--lons-red); color: white; box-shadow: 0 8px 20px rgba(227,6,19,0.25); }
   .tab-btn.active .tab-title, .tab-btn.active .tab-sub { color: white; }
   .tab-btn.active::before { content: ""; position: absolute; left: -1px; top: 12px; bottom: 12px; width: 3px; background: linear-gradient(180deg, white 0%, rgba(255,255,255,0.4) 100%); border-radius: 0 3px 3px 0; }
@@ -63,6 +86,8 @@
   .layer-row { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 12px; border: 1px solid var(--lons-border); background: white; cursor: pointer; margin-bottom: 8px; transition: all 0.2s; user-select: none; }
   .layer-row:hover { transform: translateY(-1px); border-color: rgba(227,6,19,0.3); }
   .layer-row.off { background: rgba(250,250,247,0.7); }
+  .layer-row.err { border-color: rgba(227,6,19,0.4); background: rgba(253,232,233,0.4); }
+  .layer-row.err .count { color: var(--lons-red); }
   .layer-icon { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; }
   .layer-info { flex: 1; min-width: 0; }
   .layer-info .name { font-size: 14px; font-weight: 700; color: #1F2937; }
@@ -90,6 +115,13 @@
   .ctrl-btn .ctrl-top { font-size: 9px; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #9CA3AF; }
   .ctrl-btn.active .ctrl-top { color: rgba(255,255,255,0.7); }
   .ctrl-btn .ctrl-main { font-size: 12px; font-weight: 700; }
+
+  /* Small icon-only bottom-right buttons (recentrer / locate) */
+  .bottom-controls { position: absolute; bottom: 130px; right: 10px; z-index: 30; display: flex; flex-direction: column; gap: 8px; }
+  .icon-btn { width: 40px; height: 40px; border-radius: 10px; border: none; cursor: pointer; background: white; box-shadow: 0 4px 12px rgba(15,23,42,0.15); display: flex; align-items: center; justify-content: center; transition: transform 0.15s, background 0.15s; padding: 0; }
+  .icon-btn:hover { transform: translateY(-1px); background: var(--lons-red-light); }
+  .icon-btn:active { transform: translateY(0); }
+  .icon-btn i { color: var(--lons-red); }
 
   .basemap-menu { position: absolute; top: 100%; left: 0; margin-top: 8px; width: 288px; max-height: 60vh; overflow-y: auto; border-radius: 12px; background: white; border: 1px solid var(--lons-border); box-shadow: 0 20px 40px rgba(15,23,42,0.15); padding: 8px; display: none; }
   .basemap-menu.open { display: block; }
@@ -131,6 +163,10 @@
   .toast.loading { border-left: 4px solid var(--lons-red); }
   @keyframes toastIn { from { transform: translateY(8px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
+  @keyframes spinRotate { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+  .spin { animation: spinRotate 1s linear infinite; }
+  .action-btn:disabled { opacity: 0.75; cursor: wait; }
+
   /* Scrollbar */
   ::-webkit-scrollbar { width: 6px; }
   ::-webkit-scrollbar-thumb { background: rgba(227,6,19,0.25); border-radius: 999px; }
@@ -149,15 +185,29 @@
 <body>
 <div class="app">
   <header class="app-header">
-    <div class="brand">
+    <a class="brand" href="https://www.lonslesaunier.fr" target="_blank" rel="noreferrer" data-testid="brand-link" title="Ouvrir le site officiel de Lons-le-Saunier" style="text-decoration:none;color:inherit">
       <!-- Logo officiel Ville de Lons-le-Saunier -->
       <img class="brand-crest" src="https://customer-assets-7cd3h4nn.emergentagent.net/job_citymap-lons/artifacts/bncgvice_Logo%20Ville%20Carre%20Rouge.webp" alt="Ville de Lons-le-Saunier" />
       <div class="brand-title">
         <div class="top">Ville de</div>
-        <div class="main">Lons-le-Saunier <span class="subtitle">· Cartographie 3D</span></div>
+        <div class="main">Lons-le-Saunier</div>
       </div>
+    </a>
+
+    <!-- Barre de recherche d'adresse (biais Lons-le-Saunier via Nominatim) -->
+    <div class="search-wrap" data-testid="address-search-wrap">
+      <i data-lucide="search" style="width:16px;height:16px;color:#9CA3AF;flex-shrink:0"></i>
+      <input id="address-input" type="text" placeholder="Rechercher une adresse à Lons-le-Saunier…" autocomplete="off" data-testid="address-input" />
+      <button id="address-clear" type="button" title="Effacer" aria-label="Effacer" data-testid="address-clear" style="display:none">
+        <i data-lucide="x" style="width:14px;height:14px"></i>
+      </button>
+      <div id="address-results" class="address-results" data-testid="address-results"></div>
     </div>
+
     <div class="badges">
+      <button id="btn-export" class="badge badge-export" title="Exporter les couches visibles (GeoJSON)" data-testid="btn-export">
+        <i data-lucide="download" style="width:14px;height:14px"></i> Export GeoJSON
+      </button>
       <div class="badge badge-live"><span class="live-dot"></span> Données OSM · Direct</div>
       <div class="badge badge-count"><i data-lucide="radio" style="width:14px;height:14px"></i> <span id="header-count">0</span> objets chargés</div>
     </div>
@@ -180,6 +230,7 @@
     <main class="map-area">
       <div id="map"></div>
       <div class="map-controls" id="map-controls"></div>
+      <div class="bottom-controls" id="bottom-controls"></div>
       <div class="toasts" id="toasts"></div>
     </main>
   </div>
@@ -192,11 +243,13 @@ const LONS_BOUNDARY_ID = "152508"; // GeoDataMine ID (admin_8)
 const LONS_OSM_RELATION = 152508;   // OSM relation ID (identique)
 const GEODATAMINE_BASE = "https://geodatamine.fr";
 const OVERPASS_ENDPOINTS = [
-  "https://overpass-api.de/api/interpreter",
   "https://overpass.kumi.systems/api/interpreter",
+  "https://overpass-api.de/api/interpreter",
+  "https://overpass.osm.ch/api/interpreter",
   "https://overpass.private.coffee/api/interpreter",
 ];
 const NOMINATIM_BASE = "https://nominatim.openstreetmap.org";
+const PHOTON_BASE = "https://photon.komoot.io";  // Fallback: CORS-friendly geocoder
 const PANORAMAX_BASE = "https://api.panoramax.xyz/";
 
 const BASEMAPS = [
@@ -209,19 +262,24 @@ const BASEMAPS = [
   { id: "maplibre_demo", name: "MapLibre · Demo", subtitle: "Style minimaliste", type: "style", style: "https://demotiles.maplibre.org/style.json" },
 ];
 
-/* Chemins SVG lucide (fill=none, stroke=currentColor) pour la symbologie thématique */
+/* Icônes SVG dessinées à la main (viewBox 24x24) — universelles, aucune font requise */
 const ICON_PATHS = {
-  bike: "M18.5 17.5m-3.5 0a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0 -7 0 M5.5 17.5m-3.5 0a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0 -7 0 M15 6 h4 l-2 4 l-3 -3 h-3 l-5 10.5 M12 17.5 l3 -6.5",
-  bus: "M8 6v6 M15 6v6 M2 12h19.6 M18 18h.01 M6 18h.01 M19 18a2 2 0 0 0 2-2v-6a5 5 0 0 0-5-5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-1h6v1a2 2 0 0 0 2 2Z",
-  navigation: "m3 11 19-9-9 19-2-8-8-2z",
-  route: "M6 19a3 3 0 0 1-3-3v-1a3 3 0 0 1 3-3h12a3 3 0 0 0 0-6H8a3 3 0 0 0-3 3v0",
-  shop: "M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z",
-  utensils: "M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2 M7 2v20 M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7",
-  landmark: "M3 22h18 M6 18v-7 M10 18v-7 M14 18v-7 M18 18v-7 M22 11H2l10-9 10 9Z",
-  film: "M7 3v18 M17 3v18 M3 7.5h4 M3 12h18 M3 16.5h4 M17 7.5h4 M17 16.5h4 M22 3H2v18h20V3z",
-  library: "M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z",
-  theater: "M15.05 8.63A5 5 0 0 0 12 5c-3 0-5 2-5 5s2 5 5 5 M12 12l0 6 M8 20l4 -2l4 2 M9 10h.01 M15 10h.01",
-  palette: "M13.5 20a5 5 0 0 1-5-5c0-3 2-5 5-5s5 2 5 5c0 3-2 5-5 5Zm0 0h6.5a2 2 0 0 0 2-2v-2 M4 6a3 3 0 1 0 6 0 3 3 0 1 0-6 0 M17 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6 M20 14a3 3 0 1 0 0-6 3 3 0 0 0 0 6",
+  bike:       `<circle cx="6" cy="17" r="3.5"/><circle cx="18" cy="17" r="3.5"/><path d="M6 17l4-9h5l-2.5-3M10 8l4 9M13 8h4"/>`,
+  bus:        `<rect x="4" y="6" width="16" height="11" rx="2"/><path d="M4 11h16M9 17v2M15 17v2"/><circle cx="8" cy="17" r="1.4"/><circle cx="16" cy="17" r="1.4"/><path d="M8 8h2M14 8h2"/>`,
+  bus_stop:   `<path d="M12 4v10M8 4h8M7 14h10v2H7zM12 16v5"/><circle cx="12" cy="18" r="1"/>`,
+  shop:       `<path d="M5 8h14l-1 12H6L5 8ZM9 8V6a3 3 0 0 1 6 0v2"/>`,
+  utensils:   `<path d="M7 3v8M4 3v5a3 3 0 0 0 3 3M10 3v18M4 11l6 0M14 3v9h3l-1-9h-2ZM14 12v9"/>`,
+  landmark:   `<path d="M12 3l10 6H2l10-6Z"/><path d="M5 10v9M10 10v9M14 10v9M19 10v9"/><path d="M3 19h18v2H3z"/>`,
+  film:       `<rect x="3" y="3" width="18" height="18" rx="1"/><path d="M7 3v18M17 3v18M3 8h4M3 12h4M3 16h4M17 8h4M17 12h4M17 16h4"/>`,
+  library:    `<path d="M4 4h3v16H4zM8 4h3v16H8zM12 4l3 0v16l-3 0zM16 6l3 -0.5l3 15.5l-3 0.5z"/>`,
+  theater:    `<circle cx="8.5" cy="10" r="4.5"/><circle cx="15.5" cy="14" r="4.5"/><path d="M6.5 10.5c1 1.5 3 1.5 4 0M13.5 14.5c1 1.5 3 1.5 4 0M7 8v1M10 8v1M14 12v1M17 12v1"/>`,
+  navigation: `<path d="M12 3l5 18-5-4-5 4z"/>`,
+  route:      `<circle cx="6" cy="19" r="2.5"/><circle cx="18" cy="5" r="2.5"/><path d="M6 16.5c0-3 3-3 6-3s6 0 6-3M15 5h3"/>`,
+  palette:    `<circle cx="12" cy="12" r="9"/><circle cx="7.5" cy="10" r="1.2" fill="currentColor"/><circle cx="12" cy="7" r="1.2" fill="currentColor"/><circle cx="16.5" cy="10" r="1.2" fill="currentColor"/>`,
+  tree:       `<path d="M12 3l5 6h-3l4 5h-3l3 4H6l3-4H6l4-5H7l5-6z"/><path d="M12 18v3"/>`,
+  playground: `<circle cx="12" cy="5" r="2"/><path d="M12 7v4M8 11h8M9 11l-2 6M15 11l2 6M9 21l3-4 3 4"/>`,
+  droplet:    `<path d="M12 3s-6 7-6 12a6 6 0 0 0 12 0c0-5-6-12-6-12z"/><path d="M9 15a3 3 0 0 0 3 3"/>`,
+  leaf:       `<path d="M4 20c8-2 14-8 16-16-8 0-14 2-16 8-1 3 0 6 0 8z"/><path d="M4 20l8-8"/>`,
 };
 
 const LAYERS = {
@@ -253,12 +311,23 @@ const LAYERS = {
       arts:     { label: "Musées, théâtres, arts", icon: "theater", color: "#7C3AED", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["tourism"="museum"](around:5000,46.6739,5.5539);node["amenity"~"^(theatre|arts_centre|community_centre|studio)$"](around:5000,46.6739,5.5539);node["tourism"="artwork"](around:5000,46.6739,5.5539););out body;` },
     },
   },
+  nature: {
+    label: "Nature", subtitle: "Espaces verts",
+    tabIcon: "trees",
+    items: {
+      parks:       { label: "Parcs & jardins", icon: "tree", color: "#16A34A", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["leisure"~"^(park|garden)$"](around:4500,46.6739,5.5539);way["leisure"~"^(park|garden)$"](around:4500,46.6739,5.5539););out center;` },
+      playgrounds: { label: "Aires de jeux", icon: "playground", color: "#F59E0B", geometry: "point", source: "overpass", query: `[out:json][timeout:25];(node["leisure"="playground"](around:4500,46.6739,5.5539);way["leisure"="playground"](around:4500,46.6739,5.5539););out center;` },
+      fountains:   { label: "Fontaines & points d'eau", icon: "droplet", color: "#0EA5E9", geometry: "point", source: "overpass", query: `[out:json][timeout:25];(node["amenity"="fountain"](around:4500,46.6739,5.5539);node["amenity"="drinking_water"](around:4500,46.6739,5.5539););out body;` },
+      greens:      { label: "Espaces verts", icon: "leaf", color: "#65A30D", geometry: "line", source: "overpass", query: `[out:json][timeout:35];(way["landuse"~"^(grass|recreation_ground|meadow|forest)$"](around:4000,46.6739,5.5539);way["leisure"~"^(nature_reserve|common)$"](around:4000,46.6739,5.5539);way["natural"="wood"](around:4000,46.6739,5.5539););out geom;` },
+    },
+  },
 };
 
 const DEFAULT_VISIBLE = {
   mobility: { bike_parking: true, cycle_lanes: true, bus_shelter: true, bus_lines: false },
   commerces: { shops: true, food: true },
   culture:   { historic: true, cinema: true, library: true, arts: true },
+  nature:    { parks: true, playgrounds: true, fountains: true, greens: false },
 };
 
 const KEY_LABELS = {
@@ -310,56 +379,33 @@ const LAYER_EMOJI = {
   cinema:       "🎬",
   library:      "📚",
   arts:         "🎭",
+  parks:        "🌳",
+  playgrounds:  "🛝",
+  fountains:    "⛲",
+  greens:       "🌿",
 };
 
-/** Build a thematic map pin using canvas + emoji (sémiologiquement explicite). */
-function makePinDataUrl(color, layerKey) {
-  const emoji = LAYER_EMOJI[layerKey] || "📍";
-  const W = 104, H = 132;
-  const canvas = document.createElement("canvas");
-  canvas.width = W; canvas.height = H;
-  const ctx = canvas.getContext("2d");
-
-  // Drop shadow
-  ctx.shadowColor = "rgba(0,0,0,0.35)";
-  ctx.shadowBlur = 10;
-  ctx.shadowOffsetY = 4;
-
-  // Draw teardrop pin
-  ctx.beginPath();
-  ctx.moveTo(W / 2, 6);
-  ctx.bezierCurveTo(24, 6, 8, 24, 8, 52);
-  ctx.bezierCurveTo(8, 82, W / 2, H - 4, W / 2, H - 4);
-  ctx.bezierCurveTo(W / 2, H - 4, W - 8, 82, W - 8, 52);
-  ctx.bezierCurveTo(W - 8, 24, W - 24, 6, W / 2, 6);
-  ctx.closePath();
-  ctx.fillStyle = color;
-  ctx.fill();
-
-  // Clear shadow before stroke + inner circle
-  ctx.shadowColor = "transparent";
-  ctx.strokeStyle = "white";
-  ctx.lineWidth = 5;
-  ctx.stroke();
-
-  // Inner white disk
-  ctx.beginPath();
-  ctx.arc(W / 2, 50, 30, 0, Math.PI * 2);
-  ctx.fillStyle = "white";
-  ctx.fill();
-
-  // Emoji at center of white disk
-  ctx.font = "42px 'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji','Twemoji Mozilla',system-ui,sans-serif";
-  ctx.textAlign = "center";
-  ctx.textBaseline = "middle";
-  ctx.fillText(emoji, W / 2, 52);
-
-  return canvas.toDataURL("image/png");
+/** Cercle avec icône SVG au centre. Rendu 100% vectoriel = universel. */
+function makePinDataUrl(color, iconKey) {
+  const iconInner = ICON_PATHS[iconKey] || `<circle cx="12" cy="12" r="2"/>`;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+    <defs>
+      <filter id="s" x="-30%" y="-30%" width="160%" height="160%">
+        <feDropShadow dx="0" dy="2" stdDeviation="2.2" flood-color="#000" flood-opacity="0.32"/>
+      </filter>
+    </defs>
+    <circle filter="url(#s)" cx="40" cy="40" r="26" fill="${color}"/>
+    <circle cx="40" cy="40" r="21" fill="#ffffff"/>
+    <g transform="translate(28 28)" fill="none" stroke="${color}" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      ${iconInner}
+    </g>
+  </svg>`;
+  return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
 }
 
 async function loadIconIntoMap(map, iconId, dataUrl) {
   if (map.hasImage(iconId)) return;
-  const img = new Image(104, 132);
+  const img = new Image(80, 80);
   await new Promise((resolve, reject) => {
     img.onload = resolve;
     img.onerror = reject;
@@ -377,12 +423,23 @@ async function fetchGeoDataMine(theme) {
 async function fetchOverpass(query) {
   let lastErr;
   for (const endpoint of OVERPASS_ENDPOINTS) {
+    const ctrl = new AbortController();
+    const timeoutId = setTimeout(() => ctrl.abort(), 20000); // per-endpoint 20 s hard cap
     try {
-      const r = await fetch(endpoint, { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams({ data: query }) });
+      const r = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ data: query }),
+        signal: ctrl.signal,
+      });
+      clearTimeout(timeoutId);
       if (!r.ok) { lastErr = `HTTP ${r.status}`; continue; }
       const j = await r.json();
       if (Array.isArray(j.elements)) return overpassToGeoJSON(j.elements);
-    } catch (e) { lastErr = e; }
+    } catch (e) {
+      clearTimeout(timeoutId);
+      lastErr = e?.name === "AbortError" ? `timeout (${endpoint})` : e;
+    }
   }
   throw new Error("Overpass indisponible: " + lastErr);
 }
@@ -394,6 +451,9 @@ function overpassToGeoJSON(elements) {
       features.push({ type: "Feature", geometry: { type: "Point", coordinates: [e.lon, e.lat] }, properties: { id: `node/${e.id}`, osm_type: "node", osm_id: e.id, ...(e.tags || {}) } });
     } else if (e.type === "way" && e.geometry) {
       features.push({ type: "Feature", geometry: { type: "LineString", coordinates: e.geometry.map((g) => [g.lon, g.lat]) }, properties: { id: `way/${e.id}`, osm_type: "way", osm_id: e.id, ...(e.tags || {}) } });
+    } else if (e.type === "way" && e.center) {
+      // `out center` collapses ways/polygons to their centroid point
+      features.push({ type: "Feature", geometry: { type: "Point", coordinates: [e.center.lon, e.center.lat] }, properties: { id: `way/${e.id}`, osm_type: "way", osm_id: e.id, ...(e.tags || {}) } });
     } else if (e.type === "relation" && e.members) {
       e.members.forEach((m, i) => {
         if (m.geometry && m.geometry.length > 1) {
@@ -405,17 +465,67 @@ function overpassToGeoJSON(elements) {
   return { type: "FeatureCollection", features };
 }
 
-/** Fetch commune polygon boundary via Nominatim */
+/** Panoramax: find the nearest street-level picture around a POI and open the viewer on it. */
+async function openPanoramaxNearest(lon, lat) {
+  // Search progressively wider bboxes until we find a picture (max ~500 m)
+  const deltas = [0.001, 0.003, 0.006, 0.012];
+  for (const d of deltas) {
+    const bbox = `${(lon - d).toFixed(6)},${(lat - d).toFixed(6)},${(lon + d).toFixed(6)},${(lat + d).toFixed(6)}`;
+    try {
+      const r = await fetch(`${PANORAMAX_BASE}api/search?bbox=${bbox}&limit=5`);
+      if (!r.ok) continue;
+      const j = await r.json();
+      const feats = j.features || [];
+      if (feats.length === 0) continue;
+      let best = feats[0], bestDist = Infinity;
+      for (const f of feats) {
+        const [flon, flat] = f.geometry?.coordinates || [];
+        if (typeof flon !== "number") continue;
+        const dx = (flon - lon), dy = (flat - lat);
+        const dist = dx * dx + dy * dy;
+        if (dist < bestDist) { bestDist = dist; best = f; }
+      }
+      if (best?.id) {
+        return `${PANORAMAX_BASE}?focus=pic&pic=${best.id}&map=18/${lat.toFixed(6)}/${lon.toFixed(6)}`;
+      }
+    } catch (_) { /* try next delta */ }
+  }
+  return null;
+}
+
+/** Fetch commune polygon boundary. Tries Nominatim first, falls back to Overpass. */
 async function fetchCommuneBoundary() {
+  // 1) Nominatim (fast + clean geometry)
   try {
     const url = `${NOMINATIM_BASE}/lookup?osm_ids=R${LONS_OSM_RELATION}&format=geojson&polygon_geojson=1`;
     const r = await fetch(url, { headers: { "Accept-Language": "fr" } });
-    if (!r.ok) throw new Error(`Nominatim HTTP ${r.status}`);
-    return await r.json();
+    if (r.ok) return await r.json();
+  } catch (_) { /* fall back to Overpass */ }
+
+  // 2) Overpass fallback — assemble outer ways into a polyline (visual outline only)
+  try {
+    const query = `[out:json][timeout:30];relation(${LONS_OSM_RELATION});out geom;`;
+    for (const endpoint of OVERPASS_ENDPOINTS) {
+      try {
+        const r = await fetch(endpoint, { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams({ data: query }) });
+        if (!r.ok) continue;
+        const j = await r.json();
+        const rel = j.elements?.find((e) => e.type === "relation");
+        if (!rel?.members) continue;
+        const outerLines = rel.members
+          .filter((m) => m.type === "way" && m.role === "outer" && m.geometry?.length > 1)
+          .map((m) => m.geometry.map((g) => [g.lon, g.lat]));
+        if (outerLines.length === 0) continue;
+        return {
+          type: "FeatureCollection",
+          features: [{ type: "Feature", geometry: { type: "MultiLineString", coordinates: outerLines }, properties: {} }],
+        };
+      } catch (_) { /* try next endpoint */ }
+    }
   } catch (e) {
-    console.warn("Limite communale indisponible:", e);
-    return null;
+    console.warn("Limite communale (Overpass) indisponible:", e);
   }
+  return null;
 }
 
 function stampFeatures(fc, themeKey, layerKey, meta) {
@@ -436,6 +546,7 @@ const state = {
   buildings3D: true,
   layerData: {},
   loadingLayers: {},
+  failedLayers: {},
   selectedFeature: null,
   inflight: new Set(),
 };
@@ -463,8 +574,8 @@ function renderTabs() {
       </button>
     `;
   }).join("");
-  // Change to 3 columns since we have 3 themes now
-  el.style.gridTemplateColumns = "repeat(3, 1fr)";
+  // 4 columns (Mobilité / Commerces / Culture / Nature)
+  el.style.gridTemplateColumns = "repeat(4, 1fr)";
   el.querySelectorAll(".tab-btn").forEach((btn) => btn.addEventListener("click", () => setActiveTheme(btn.dataset.tab)));
   lucide.createIcons();
 }
@@ -475,12 +586,17 @@ function renderLayers() {
   el.innerHTML = Object.entries(theme.items).map(([key, meta]) => {
     const visible = state.visibleLayers[key];
     const loading = state.loadingLayers[key];
+    const failed = state.failedLayers[key];
     const count = state.layerData[key]?.features.length || 0;
-    const status = loading ? "Chargement OSM…" : visible ? `${count} objets en direct` : "Cliquez pour activer";
+    let status;
+    if (loading) status = "Chargement OSM…";
+    else if (visible && failed && !state.layerData[key]) status = "⚠ Erreur — cliquer pour réessayer";
+    else if (visible) status = `${count} objets en direct`;
+    else status = "Cliquez pour activer";
     return `
-      <div class="layer-row ${visible ? "" : "off"}" data-layer="${key}">
+      <div class="layer-row ${visible ? "" : "off"} ${failed && !state.layerData[key] ? "err" : ""}" data-layer="${key}">
         <div class="layer-icon" style="background:${visible ? meta.color : "#E5E7EB"};box-shadow:${visible ? `0 6px 14px ${meta.color}40` : "none"}">
-          <i data-lucide="${meta.icon === "shop" ? "shopping-bag" : meta.icon === "theater" ? "drama" : meta.icon}" style="width:18px;height:18px;color:${visible ? "white" : "#6B7280"}"></i>
+          <i data-lucide="${meta.icon === "shop" ? "shopping-bag" : meta.icon === "theater" ? "drama" : meta.icon === "tree" ? "trees" : meta.icon === "playground" ? "baby" : meta.icon === "droplet" ? "droplet" : meta.icon === "leaf" ? "leaf" : meta.icon}" style="width:18px;height:18px;color:${visible ? "white" : "#6B7280"}"></i>
         </div>
         <div class="layer-info">
           <div class="name">${meta.label}</div>
@@ -522,15 +638,19 @@ function renderControls() {
       <div class="ctrl-icon-wrap"><i data-lucide="box" style="width:16px;height:16px"></i></div>
       <div class="ctrl-label"><div class="ctrl-top">Vue</div><div class="ctrl-main">Bâtiments 3D</div></div>
     </button>
-    <button class="ctrl-btn" id="btn-reset">
-      <div class="ctrl-icon-wrap"><i data-lucide="compass" style="width:16px;height:16px"></i></div>
-      <div class="ctrl-label"><div class="ctrl-top">Caméra</div><div class="ctrl-main">Recentrer</div></div>
+  `;
+
+  // Small icon-only bottom-right buttons (mobile-app style)
+  const bc = document.getElementById("bottom-controls");
+  bc.innerHTML = `
+    <button class="icon-btn" id="btn-reset" title="Recentrer sur Lons-le-Saunier" aria-label="Recentrer">
+      <i data-lucide="compass" style="width:20px;height:20px"></i>
     </button>
-    <button class="ctrl-btn" id="btn-locate">
-      <div class="ctrl-icon-wrap"><i data-lucide="crosshair" style="width:16px;height:16px"></i></div>
-      <div class="ctrl-label"><div class="ctrl-top">Position</div><div class="ctrl-main">Me localiser</div></div>
+    <button class="icon-btn" id="btn-locate" title="Ma position" aria-label="Ma position">
+      <i data-lucide="crosshair" style="width:20px;height:20px"></i>
     </button>
   `;
+
   lucide.createIcons();
   document.getElementById("btn-basemap").addEventListener("click", (e) => {
     e.stopPropagation();
@@ -570,7 +690,6 @@ function renderDetail() {
     });
   const osmType = props.osm_type || props.id_osm?.split("/")?.[0] || "node";
   const osmId = props.osm_id || props.id_osm?.split("/")?.[1] || String(props.id).split("/").pop();
-  const panoramaxUrl = `${PANORAMAX_BASE}?focus=map&map=18/${lat.toFixed(6)}/${lon.toFixed(6)}`;
 
   const panel = document.createElement("div");
   panel.className = "detail-panel";
@@ -592,11 +711,11 @@ function renderDetail() {
         return `<div class="detail-row"><span class="k">${label}</span><span class="v" title="${humanize(v)}">${humanize(v)}</span></div>`;
       }).join("")}
 
-      <a class="action-btn panoramax" href="${panoramaxUrl}" target="_blank" rel="noreferrer">
+      <button class="action-btn panoramax" data-panoramax data-lon="${lon}" data-lat="${lat}">
         <i data-lucide="camera" style="width:16px;height:16px"></i>
-        Voir sur Panoramax (photos rue)
+        <span>Voir la photo Panoramax la plus proche</span>
         <i data-lucide="external-link" style="width:14px;height:14px;opacity:0.75"></i>
-      </a>
+      </button>
       ${osmId ? `<a class="action-btn osm" href="https://www.openstreetmap.org/${osmType}/${osmId}" target="_blank" rel="noreferrer">
         <i data-lucide="map" style="width:16px;height:16px"></i>Voir sur OpenStreetMap
       </a>` : ""}
@@ -604,6 +723,32 @@ function renderDetail() {
   `;
   document.querySelector("main.map-area").appendChild(panel);
   panel.querySelector(".detail-close").addEventListener("click", () => { state.selectedFeature = null; renderDetail(); });
+
+  // Panoramax button — fetch nearest picture, then open viewer
+  const pxBtn = panel.querySelector("[data-panoramax]");
+  if (pxBtn) {
+    pxBtn.addEventListener("click", async () => {
+      const plon = parseFloat(pxBtn.dataset.lon);
+      const plat = parseFloat(pxBtn.dataset.lat);
+      const originalHTML = pxBtn.innerHTML;
+      pxBtn.disabled = true;
+      pxBtn.innerHTML = `<i data-lucide="loader" style="width:16px;height:16px" class="spin"></i> <span>Recherche de la photo la plus proche…</span>`;
+      lucide.createIcons();
+      try {
+        const url = await openPanoramaxNearest(plon, plat);
+        if (url) {
+          window.open(url, "_blank", "noopener");
+        } else {
+          toast("Aucune photo Panoramax à proximité (rayon ~1 km)", "error");
+        }
+      } finally {
+        pxBtn.disabled = false;
+        pxBtn.innerHTML = originalHTML;
+        lucide.createIcons();
+      }
+    });
+  }
+
   lucide.createIcons();
 }
 
@@ -627,6 +772,14 @@ function setActiveTheme(themeKey) {
 }
 
 function toggleLayer(layerKey) {
+  // If the layer previously failed to load, treat the click as a retry
+  if (state.failedLayers[layerKey] && !state.layerData[layerKey]) {
+    state.failedLayers[layerKey] = false;
+    state.visibleLayers[layerKey] = true;
+    renderLayers();
+    ensureLayers();
+    return;
+  }
   state.visibleLayers[layerKey] = !state.visibleLayers[layerKey];
   renderLayers();
   ensureLayers();
@@ -663,16 +816,18 @@ async function ensureLayers() {
     if (!meta) continue;
     state.inflight.add(layerKey);
     state.loadingLayers[layerKey] = true;
+    state.failedLayers[layerKey] = false;
     renderLayers();
     try {
       const raw = meta.source === "geodatamine" ? await fetchGeoDataMine(meta.theme) : await fetchOverpass(meta.query);
       state.layerData[layerKey] = stampFeatures(raw, state.activeTheme, layerKey, meta);
       // Register thematic icon
-      await loadIconIntoMap(map, `pin-${layerKey}`, makePinDataUrl(meta.color, layerKey));
+      await loadIconIntoMap(map, `pin-${layerKey}`, makePinDataUrl(meta.color, meta.icon));
       toast(`${meta.label} · ${state.layerData[layerKey].features.length} objets`);
     } catch (e) {
       console.error(e);
-      toast(`Erreur chargement « ${meta.label} »`, "error");
+      state.failedLayers[layerKey] = true;
+      toast(`Erreur chargement « ${meta.label} » — cliquez sur la couche pour réessayer`, "error");
     } finally {
       state.inflight.delete(layerKey);
       state.loadingLayers[layerKey] = false;
@@ -760,7 +915,7 @@ function applyMapSources() {
         if (!map.getLayer(`${srcId}-halo`)) map.addLayer({ id: `${srcId}-halo`, type: "line", source: srcId, paint: { "line-color": meta.color, "line-width": 10, "line-opacity": 0.2, "line-blur": 3 } });
         if (!map.getLayer(`${srcId}-fill`)) map.addLayer({ id: `${srcId}-fill`, type: "line", source: srcId, layout: { "line-cap": "round", "line-join": "round" }, paint: { "line-color": meta.color, "line-width": 3.6 } });
       } else {
-        // Thematic pin symbol
+        // Thematic circular icon (anchor center → point stays on the location)
         if (!map.getLayer(`${srcId}-symbol`) && map.hasImage(`pin-${lk}`)) {
           map.addLayer({
             id: `${srcId}-symbol`,
@@ -768,21 +923,31 @@ function applyMapSources() {
             source: srcId,
             layout: {
               "icon-image": `pin-${lk}`,
-              "icon-size": ["interpolate", ["linear"], ["zoom"], 12, 0.35, 15, 0.55, 18, 0.85],
+              "icon-size": ["interpolate", ["linear"], ["zoom"], 12, 0.32, 15, 0.5, 18, 0.75],
               "icon-allow-overlap": true,
-              "icon-anchor": "bottom",
+              "icon-anchor": "center",
               "symbol-sort-key": 1,
             },
           });
         }
-        // Ensure a picking layer exists (transparent circle) for clicks
+        // Transparent picking circle (for click hit tests)
         if (!map.getLayer(`${srcId}-fill`)) map.addLayer({
           id: `${srcId}-fill`, type: "circle", source: srcId,
-          paint: { "circle-radius": 14, "circle-color": meta.color, "circle-opacity": 0.001 },
+          paint: { "circle-radius": 18, "circle-color": meta.color, "circle-opacity": 0.001 },
         });
       }
     });
   });
+
+  // Ensure ALL point layers (symbols + picking circles) sit on TOP of line/surface layers
+  Object.keys(LAYERS).forEach((tk) => Object.entries(LAYERS[tk].items).forEach(([lk, meta]) => {
+    if (meta.geometry !== "line") {
+      const sid = `osm-${lk}-symbol`;
+      const fid = `osm-${lk}-fill`;
+      if (map.getLayer(fid)) map.moveLayer(fid);
+      if (map.getLayer(sid)) map.moveLayer(sid);
+    }
+  }));
 }
 
 map.on("load", async () => {
@@ -832,12 +997,200 @@ map.on("click", (e) => {
 document.addEventListener("click", (e) => {
   const menu = document.getElementById("basemap-menu");
   if (menu && !menu.contains(e.target) && !document.getElementById("btn-basemap").contains(e.target)) menu.classList.remove("open");
+  const results = document.getElementById("address-results");
+  const wrap = document.querySelector(".search-wrap");
+  if (results && wrap && !wrap.contains(e.target)) results.classList.remove("open");
 });
+
+/* ---------------- Address search (Nominatim, biased on Lons commune) ---------------- */
+let addressSearchTimer = null;
+let addressMarker = null;
+let addressHlIndex = -1;
+let addressLastResults = [];
+
+async function nominatimSearch(query) {
+  // 1) Try Nominatim (biased to Lons via viewbox)
+  const viewbox = [5.48, 46.72, 5.63, 46.62].join(","); // left,top,right,bottom
+  try {
+    const url = `${NOMINATIM_BASE}/search?format=json&addressdetails=1&limit=8&countrycodes=fr&viewbox=${viewbox}&bounded=1&q=${encodeURIComponent(query)}`;
+    const r = await fetch(url, { headers: { "Accept-Language": "fr" } });
+    if (r.ok) return await r.json();
+  } catch (_) { /* fall through */ }
+
+  // 2) Fallback: Photon by Komoot (CORS-friendly, biased with lat/lon + bbox)
+  try {
+    const url = `${PHOTON_BASE}/api/?q=${encodeURIComponent(query)}&limit=8&lang=fr&lat=46.6739&lon=5.5539&bbox=5.48,46.62,5.63,46.72`;
+    const r = await fetch(url);
+    if (!r.ok) throw new Error(`Photon ${r.status}`);
+    const j = await r.json();
+    // Adapt Photon → Nominatim-like objects
+    return (j.features || []).map((f) => {
+      const p = f.properties || {};
+      const [lon, lat] = f.geometry?.coordinates || [];
+      const road = p.street || p.name;
+      const houseNb = p.housenumber ? `${p.housenumber} ` : "";
+      const displayParts = [p.name, road, p.postcode, p.city || p.town || p.village, p.country].filter(Boolean);
+      return {
+        lat: String(lat), lon: String(lon),
+        display_name: displayParts.join(", "),
+        name: p.name,
+        address: {
+          road: road,
+          house_number: p.housenumber,
+          postcode: p.postcode,
+          city: p.city, town: p.town, village: p.village,
+          country: p.country,
+        },
+      };
+    });
+  } catch (e) {
+    throw new Error("Aucun service de géocodage disponible");
+  }
+}
+
+function renderAddressResults(list) {
+  const el = document.getElementById("address-results");
+  addressLastResults = list || [];
+  addressHlIndex = -1;
+  if (!list || list.length === 0) {
+    el.innerHTML = `<div class="address-empty">Aucun résultat</div>`;
+    el.classList.add("open");
+    return;
+  }
+  el.innerHTML = list.map((r, i) => {
+    const addr = r.address || {};
+    const main = r.name || addr.road || addr.house_number || r.display_name.split(",")[0];
+    const houseNb = addr.house_number ? `${addr.house_number} ` : "";
+    const roadLine = addr.road ? `${houseNb}${addr.road}` : main;
+    const sub = [addr.postcode, addr.city || addr.town || addr.village || addr.municipality].filter(Boolean).join(" · ");
+    return `
+      <div class="address-item" data-i="${i}" data-testid="address-item-${i}">
+        <div class="a-icon"><i data-lucide="map-pin" style="width:14px;height:14px"></i></div>
+        <div>
+          <div class="a-main">${roadLine}</div>
+          <div class="a-sub">${sub}</div>
+        </div>
+      </div>
+    `;
+  }).join("");
+  el.classList.add("open");
+  lucide.createIcons();
+  el.querySelectorAll(".address-item").forEach((it) => {
+    it.addEventListener("click", () => pickAddress(parseInt(it.dataset.i, 10)));
+  });
+}
+
+function pickAddress(index) {
+  const r = addressLastResults[index];
+  if (!r) return;
+  const lon = parseFloat(r.lon), lat = parseFloat(r.lat);
+  if (!isFinite(lon) || !isFinite(lat)) return;
+  if (addressMarker) addressMarker.remove();
+  const el = document.createElement("div");
+  el.style.cssText = "width:22px;height:22px;border-radius:50%;background:#E30613;border:3px solid white;box-shadow:0 4px 14px rgba(227,6,19,0.45);";
+  addressMarker = new maplibregl.Marker({ element: el }).setLngLat([lon, lat]).addTo(map);
+  map.flyTo({ center: [lon, lat], zoom: 18, pitch: 55, duration: 1200 });
+  document.getElementById("address-results").classList.remove("open");
+  const addr = r.address || {};
+  const label = [addr.house_number, addr.road].filter(Boolean).join(" ") || r.name || r.display_name.split(",")[0];
+  document.getElementById("address-input").value = label;
+  document.getElementById("address-clear").style.display = "flex";
+  toast(`Adresse: ${label}`, "success");
+}
+
+function clearAddress() {
+  document.getElementById("address-input").value = "";
+  document.getElementById("address-clear").style.display = "none";
+  document.getElementById("address-results").classList.remove("open");
+  if (addressMarker) { addressMarker.remove(); addressMarker = null; }
+}
+
+function bindAddressSearch() {
+  const input = document.getElementById("address-input");
+  const clear = document.getElementById("address-clear");
+  const results = document.getElementById("address-results");
+  if (!input) return;
+  input.addEventListener("input", (e) => {
+    const q = e.target.value.trim();
+    clear.style.display = q ? "flex" : "none";
+    clearTimeout(addressSearchTimer);
+    if (q.length < 3) { results.classList.remove("open"); return; }
+    addressSearchTimer = setTimeout(async () => {
+      try {
+        const list = await nominatimSearch(q);
+        renderAddressResults(list);
+      } catch (err) {
+        console.error(err);
+        toast("Recherche d'adresse indisponible", "error");
+      }
+    }, 320);
+  });
+  input.addEventListener("keydown", (e) => {
+    if (!results.classList.contains("open")) return;
+    const items = results.querySelectorAll(".address-item");
+    if (e.key === "ArrowDown") { e.preventDefault(); addressHlIndex = Math.min(items.length - 1, addressHlIndex + 1); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); addressHlIndex = Math.max(0, addressHlIndex - 1); }
+    else if (e.key === "Enter") { e.preventDefault(); if (addressHlIndex >= 0) pickAddress(addressHlIndex); else if (items.length > 0) pickAddress(0); return; }
+    else if (e.key === "Escape") { results.classList.remove("open"); return; }
+    items.forEach((it, i) => it.classList.toggle("hl", i === addressHlIndex));
+  });
+  input.addEventListener("focus", () => {
+    if (addressLastResults.length > 0) results.classList.add("open");
+  });
+  clear.addEventListener("click", clearAddress);
+}
+
+/* ---------------- GeoJSON Export (visible layers of active theme) ---------------- */
+function exportVisibleLayersGeoJSON() {
+  const theme = LAYERS[state.activeTheme];
+  const features = [];
+  const layersIncluded = [];
+  Object.entries(state.visibleLayers).forEach(([lk, on]) => {
+    if (!on) return;
+    const fc = state.layerData[lk];
+    if (!fc || !fc.features?.length) return;
+    layersIncluded.push({ layer: lk, label: theme.items[lk]?.label, count: fc.features.length });
+    fc.features.forEach((f) => features.push(f));
+  });
+  if (features.length === 0) {
+    toast("Aucune couche visible à exporter", "error");
+    return;
+  }
+  const fc = {
+    type: "FeatureCollection",
+    metadata: {
+      title: `Lons-le-Saunier — ${theme.label}`,
+      generated: new Date().toISOString(),
+      layers: layersIncluded,
+      sources: ["Geodatamine", "Overpass / OpenStreetMap"],
+      license: "ODbL 1.0 — © OpenStreetMap contributors",
+    },
+    features,
+  };
+  const blob = new Blob([JSON.stringify(fc, null, 2)], { type: "application/geo+json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  const stamp = new Date().toISOString().replace(/[:T]/g, "-").slice(0, 16);
+  a.href = url;
+  a.download = `lons-${state.activeTheme}-${stamp}.geojson`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  toast(`Export · ${features.length} objets (${layersIncluded.length} couches)`, "success");
+}
+
+function bindExport() {
+  const btn = document.getElementById("btn-export");
+  if (btn) btn.addEventListener("click", exportVisibleLayersGeoJSON);
+}
 
 /* ---------------- Boot ---------------- */
 renderTabs();
 renderLayers();
 renderControls();
+bindAddressSearch();
+bindExport();
 lucide.createIcons();
 ensureLayers();
 </script>
