@@ -945,7 +945,7 @@ function applyMapSources() {
             source: srcId,
             layout: {
               "icon-image": `pin-${lk}`,
-              "icon-size": ["interpolate", ["linear"], ["zoom"], 12, 0.32, 15, 0.5, 18, 0.75],
+              "icon-size": ["interpolate", ["linear"], ["zoom"], 12, 0.5, 15, 0.85, 18, 1.15],
               "icon-allow-overlap": true,
               "icon-anchor": "center",
               "symbol-sort-key": 1,
@@ -955,7 +955,7 @@ function applyMapSources() {
         // Transparent picking circle (for click hit tests)
         if (!map.getLayer(`${srcId}-fill`)) map.addLayer({
           id: `${srcId}-fill`, type: "circle", source: srcId,
-          paint: { "circle-radius": 18, "circle-color": meta.color, "circle-opacity": 0.001 },
+          paint: { "circle-radius": 26, "circle-color": meta.color, "circle-opacity": 0.001 },
         });
       }
     });
