@@ -63,7 +63,9 @@
   .brand-title .main .subtitle { color: var(--lons-red); font-weight: 700; }
   .badges { display: flex; align-items: center; gap: 12px; }
   .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
-  .badge-live { background: var(--lons-red); color: white; border: 1px solid var(--lons-red-hover); }
+  .badge-live { background: var(--lons-red); color: white; border: 1px solid var(--lons-red-hover); transition: all 0.25s; }
+  .badge-live.offline { background: #F59E0B; border-color: #D97706; }
+  .badge-live.offline .live-dot { animation: none; }
   .badge-count { background: #F3F4F6; border: 1px solid #E5E7EB; color: #374151; font-family: "JetBrains Mono", monospace; letter-spacing: 0; }
   .live-dot { width: 8px; height: 8px; border-radius: 50%; background: white; animation: livePulse 1.8s infinite; }
   @keyframes livePulse { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.6); } 70% { box-shadow: 0 0 0 8px rgba(255,255,255,0); } 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); } }
@@ -205,10 +207,13 @@
     </div>
 
     <div class="badges">
+      <button id="btn-share" class="badge badge-export" title="Copier le lien de la vue actuelle" data-testid="btn-share">
+        <i data-lucide="share-2" style="width:14px;height:14px"></i> Partager
+      </button>
       <button id="btn-export" class="badge badge-export" title="Exporter les couches visibles (GeoJSON)" data-testid="btn-export">
         <i data-lucide="download" style="width:14px;height:14px"></i> Export GeoJSON
       </button>
-      <div class="badge badge-live"><span class="live-dot"></span> Données OSM · Direct</div>
+      <div class="badge badge-live" id="live-badge"><span class="live-dot"></span> <span id="live-text">Données OSM · Direct</span></div>
       <div class="badge badge-count"><i data-lucide="radio" style="width:14px;height:14px"></i> <span id="header-count">0</span> objets chargés</div>
     </div>
   </header>
@@ -547,9 +552,11 @@ const state = {
   layerData: {},
   loadingLayers: {},
   failedLayers: {},
+  fromCache: {},
   selectedFeature: null,
   inflight: new Set(),
 };
+window.__state = state;
 
 /* ---------------- Toasts ---------------- */
 function toast(msg, type = "success") {
@@ -769,6 +776,7 @@ function setActiveTheme(themeKey) {
   renderTabs(); renderLayers(); renderDetail();
   ensureLayers();
   applyMapSources();
+  scheduleHashUpdate();
 }
 
 function toggleLayer(layerKey) {
@@ -784,6 +792,7 @@ function toggleLayer(layerKey) {
   renderLayers();
   ensureLayers();
   applyMapSources();
+  scheduleHashUpdate();
 }
 
 function setBasemap(id) {
@@ -791,9 +800,10 @@ function setBasemap(id) {
   renderControls();
   const bm = BASEMAPS.find((b) => b.id === id);
   map.setStyle(makeStyle(bm));
+  scheduleHashUpdate();
 }
 
-function toggle3D() { state.buildings3D = !state.buildings3D; renderControls(); applyMapSources(); }
+function toggle3D() { state.buildings3D = !state.buildings3D; renderControls(); applyMapSources(); scheduleHashUpdate(); }
 
 function resetCamera() {
   state.selectedFeature = null; renderDetail();
@@ -821,13 +831,25 @@ async function ensureLayers() {
     try {
       const raw = meta.source === "geodatamine" ? await fetchGeoDataMine(meta.theme) : await fetchOverpass(meta.query);
       state.layerData[layerKey] = stampFeatures(raw, state.activeTheme, layerKey, meta);
-      // Register thematic icon
+      cacheSet(layerKey, state.layerData[layerKey]);
       await loadIconIntoMap(map, `pin-${layerKey}`, makePinDataUrl(meta.color, meta.icon));
       toast(`${meta.label} · ${state.layerData[layerKey].features.length} objets`);
+      // Any successful fetch clears the offline banner
+      if (!Object.values(state.fromCache || {}).some(Boolean)) setOfflineIndicator(false);
     } catch (e) {
       console.error(e);
-      state.failedLayers[layerKey] = true;
-      toast(`Erreur chargement « ${meta.label} » — cliquez sur la couche pour réessayer`, "error");
+      // Try offline cache before showing error
+      const cached = cacheGet(layerKey);
+      if (cached) {
+        state.layerData[layerKey] = cached.fc;
+        state.fromCache = { ...(state.fromCache || {}), [layerKey]: true };
+        await loadIconIntoMap(map, `pin-${layerKey}`, makePinDataUrl(meta.color, meta.icon));
+        toast(`${meta.label} · ${cached.fc.features.length} objets (cache hors ligne)`, "success");
+        setOfflineIndicator(true, Date.now() - cached.at);
+      } else {
+        state.failedLayers[layerKey] = true;
+        toast(`Erreur chargement « ${meta.label} » — cliquez pour réessayer`, "error");
+      }
     } finally {
       state.inflight.delete(layerKey);
       state.loadingLayers[layerKey] = false;
@@ -1002,7 +1024,153 @@ document.addEventListener("click", (e) => {
   if (results && wrap && !wrap.contains(e.target)) results.classList.remove("open");
 });
 
-/* ---------------- Address search (Nominatim, biased on Lons commune) ---------------- */
+/* ---------------- Offline cache (localStorage) ---------------- */
+const CACHE_VERSION = "v1";
+const CACHE_TTL_MS = 30 * 24 * 60 * 60 * 1000; // 30 days
+const CACHE_KEY = (layerKey) => `lons-cache:${CACHE_VERSION}:${layerKey}`;
+
+function cacheSet(layerKey, geojson) {
+  try {
+    const payload = { at: Date.now(), fc: geojson };
+    localStorage.setItem(CACHE_KEY(layerKey), JSON.stringify(payload));
+  } catch (e) {
+    console.warn(`Cache set failed for ${layerKey}:`, e?.name || e);
+    // Fallback: try to clear old entries and retry once
+    if (e && e.name === "QuotaExceededError") {
+      cachePurge();
+      try { localStorage.setItem(CACHE_KEY(layerKey), JSON.stringify({ at: Date.now(), fc: geojson })); } catch (_) {}
+    }
+  }
+}
+
+function cacheGet(layerKey) {
+  try {
+    const raw = localStorage.getItem(CACHE_KEY(layerKey));
+    if (!raw) return null;
+    const p = JSON.parse(raw);
+    if (!p?.fc?.features) return null;
+    if (Date.now() - p.at > CACHE_TTL_MS) return null;
+    return p;
+  } catch (_) { return null; }
+}
+
+function cachePurge() {
+  try {
+    for (const k of Object.keys(localStorage)) {
+      if (k.startsWith("lons-cache:")) localStorage.removeItem(k);
+    }
+  } catch (_) {}
+}
+
+function setOfflineIndicator(offline, cacheAgeMs) {
+  const badge = document.getElementById("live-badge");
+  const text = document.getElementById("live-text");
+  if (!badge || !text) return;
+  if (offline) {
+    badge.classList.add("offline");
+    const hours = Math.round((cacheAgeMs || 0) / 3600000);
+    text.textContent = hours < 24 ? `Mode hors ligne · cache ${hours} h` : `Mode hors ligne · cache ${Math.round(hours / 24)} j`;
+  } else {
+    badge.classList.remove("offline");
+    text.textContent = "Données OSM · Direct";
+  }
+}
+
+/* ---------------- URL state (share link) ---------------- */
+function encodeState() {
+  const c = map.getCenter();
+  const parts = {
+    t: state.activeTheme,
+    l: Object.entries(state.visibleLayers).filter(([, v]) => v).map(([k]) => k).join(","),
+    z: map.getZoom().toFixed(2),
+    c: `${c.lng.toFixed(5)},${c.lat.toFixed(5)}`,
+    p: map.getPitch().toFixed(0),
+    b: map.getBearing().toFixed(0),
+    bm: state.basemap,
+    d: state.buildings3D ? "1" : "0",
+  };
+  const usp = new URLSearchParams();
+  Object.entries(parts).forEach(([k, v]) => { if (v !== "" && v != null) usp.set(k, String(v)); });
+  return "#" + usp.toString();
+}
+
+function parseHashState() {
+  const h = (location.hash || "").replace(/^#/, "");
+  if (!h) return null;
+  try {
+    const usp = new URLSearchParams(h);
+    const out = {};
+    for (const [k, v] of usp.entries()) out[k] = v;
+    return out;
+  } catch (_) { return null; }
+}
+
+let hashUpdateTimer = null;
+function scheduleHashUpdate() {
+  clearTimeout(hashUpdateTimer);
+  hashUpdateTimer = setTimeout(() => {
+    const newHash = encodeState();
+    if (location.hash !== newHash) history.replaceState(null, "", newHash);
+  }, 400);
+}
+
+async function applyHashState(st) {
+  if (!st) return;
+  // Basemap
+  if (st.bm && BASEMAPS.find((b) => b.id === st.bm)) state.basemap = st.bm;
+  // 3D
+  if (st.d != null) state.buildings3D = st.d === "1";
+  // Theme
+  if (st.t && LAYERS[st.t]) state.activeTheme = st.t;
+  // Visible layers (restrict to active theme keys)
+  if (st.l != null) {
+    const wanted = new Set(st.l.split(",").filter(Boolean));
+    const items = LAYERS[state.activeTheme].items;
+    state.visibleLayers = Object.fromEntries(Object.keys(items).map((k) => [k, wanted.has(k)]));
+  }
+  // Camera
+  const opts = {};
+  if (st.c) { const [lng, lat] = st.c.split(",").map(parseFloat); if (isFinite(lng) && isFinite(lat)) opts.center = [lng, lat]; }
+  if (st.z != null) opts.zoom = parseFloat(st.z);
+  if (st.p != null) opts.pitch = parseFloat(st.p);
+  if (st.b != null) opts.bearing = parseFloat(st.b);
+  if (Object.keys(opts).length) map.jumpTo(opts);
+}
+
+async function copyShareLink() {
+  const url = location.origin + location.pathname + encodeState();
+  try {
+    await navigator.clipboard.writeText(url);
+    toast("Lien de la vue copié !", "success");
+  } catch (_) {
+    // Fallback: prompt
+    window.prompt("Copiez ce lien pour partager la vue :", url);
+  }
+}
+
+function bindShare() {
+  const btn = document.getElementById("btn-share");
+  if (btn) btn.addEventListener("click", copyShareLink);
+  // Keep hash in sync as user pans/zooms/toggles
+  map.on("moveend", scheduleHashUpdate);
+  map.on("pitchend", scheduleHashUpdate);
+  map.on("rotateend", scheduleHashUpdate);
+  // Support in-tab hash navigation (e.g. pasting a share link in the address bar)
+  window.addEventListener("hashchange", () => {
+    const st = parseHashState();
+    if (!st) return;
+    // Only re-apply if it differs from what we just serialized
+    const expected = encodeState().replace(/^#/, "");
+    if (location.hash.replace(/^#/, "") === expected) return;
+    applyHashState(st);
+    renderTabs(); renderLayers(); renderControls();
+    ensureLayers();
+    applyMapSources();
+    lucide.createIcons();
+  });
+}
+
+
 let addressSearchTimer = null;
 let addressMarker = null;
 let addressHlIndex = -1;
@@ -1186,12 +1354,39 @@ function bindExport() {
 }
 
 /* ---------------- Boot ---------------- */
+// Apply URL hash state BEFORE initial rendering so tabs/layers reflect the share link
+const _hashState = parseHashState();
+if (_hashState) {
+  // Set theme + visibility synchronously; camera is applied via map.on("load")
+  if (_hashState.t && LAYERS[_hashState.t]) state.activeTheme = _hashState.t;
+  if (_hashState.bm && BASEMAPS.find((b) => b.id === _hashState.bm)) state.basemap = _hashState.bm;
+  if (_hashState.d != null) state.buildings3D = _hashState.d === "1";
+  if (_hashState.l != null) {
+    const wanted = new Set(_hashState.l.split(",").filter(Boolean));
+    const items = LAYERS[state.activeTheme].items;
+    state.visibleLayers = Object.fromEntries(Object.keys(items).map((k) => [k, wanted.has(k)]));
+  }
+}
+
 renderTabs();
 renderLayers();
 renderControls();
 bindAddressSearch();
 bindExport();
+bindShare();
 lucide.createIcons();
+
+// After map load: apply camera from hash + start data fetch
+map.on("load", () => {
+  if (_hashState) {
+    const opts = {};
+    if (_hashState.c) { const [lng, lat] = _hashState.c.split(",").map(parseFloat); if (isFinite(lng) && isFinite(lat)) opts.center = [lng, lat]; }
+    if (_hashState.z != null) opts.zoom = parseFloat(_hashState.z);
+    if (_hashState.p != null) opts.pitch = parseFloat(_hashState.p);
+    if (_hashState.b != null) opts.bearing = parseFloat(_hashState.b);
+    if (Object.keys(opts).length) map.jumpTo(opts);
+  }
+});
 ensureLayers();
 </script>
 </body>
