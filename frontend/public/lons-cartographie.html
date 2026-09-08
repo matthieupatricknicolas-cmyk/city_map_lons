@@ -33,7 +33,7 @@
   .app { display: flex; flex-direction: column; height: 100vh; width: 100vw; }
   header.app-header { height: 68px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; background: white; border-bottom: 3px solid var(--lons-red); z-index: 30; position: relative; box-shadow: 0 4px 20px rgba(227,6,19,0.08); }
   .brand { display: flex; align-items: center; gap: 14px; }
-  .brand-crest { width: 46px; height: 52px; flex-shrink: 0; filter: drop-shadow(0 4px 10px rgba(227,6,19,0.3)); }
+  .brand-crest { width: 48px; height: 48px; flex-shrink: 0; object-fit: contain; filter: drop-shadow(0 4px 10px rgba(227,6,19,0.25)); }
   .brand-title { line-height: 1.15; }
   .brand-title .top { font-size: 10px; text-transform: uppercase; letter-spacing: 0.22em; color: var(--lons-red); font-weight: 700; }
   .brand-title .main { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: 20px; color: var(--lons-ink); }
@@ -58,7 +58,7 @@
   .tab-btn .tab-sub { margin-top: 4px; font-size: 9px; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; color: #9CA3AF; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .tab-btn.active { background: var(--lons-red); border-color: var(--lons-red); color: white; box-shadow: 0 8px 20px rgba(227,6,19,0.25); }
   .tab-btn.active .tab-title, .tab-btn.active .tab-sub { color: white; }
-  .tab-btn.active::before { content: ""; position: absolute; left: -1px; top: 12px; bottom: 12px; width: 3px; background: linear-gradient(180deg, var(--lons-gold) 0%, white 100%); border-radius: 0 3px 3px 0; }
+  .tab-btn.active::before { content: ""; position: absolute; left: -1px; top: 12px; bottom: 12px; width: 3px; background: linear-gradient(180deg, white 0%, rgba(255,255,255,0.4) 100%); border-radius: 0 3px 3px 0; }
   .layers { padding: 8px 16px; flex: 1; overflow-y: auto; }
   .layer-row { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 12px; border: 1px solid var(--lons-border); background: white; cursor: pointer; margin-bottom: 8px; transition: all 0.2s; user-select: none; }
   .layer-row:hover { transform: translateY(-1px); border-color: rgba(227,6,19,0.3); }
@@ -118,17 +118,17 @@
   .detail-empty { padding: 16px; background: #FAFAF7; border-radius: 10px; color: var(--lons-muted); font-size: 13px; display: flex; gap: 10px; align-items: flex-start; margin-bottom: 12px; }
   .action-btn { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; padding: 13px; border-radius: 12px; color: white; text-decoration: none; font-weight: 700; font-size: 13px; transition: transform 0.2s, box-shadow 0.2s; letter-spacing: 0.02em; }
   .action-btn:hover { transform: translateY(-1px); }
-  .action-btn.panoramax { background: linear-gradient(135deg, #7A00E3 0%, #C205C4 100%); box-shadow: 0 8px 20px rgba(122,0,227,0.25); }
-  .action-btn.panoramax:hover { box-shadow: 0 12px 24px rgba(122,0,227,0.35); }
-  .action-btn.osm { background: var(--lons-blue); box-shadow: 0 6px 14px rgba(0,61,122,0.2); }
-  .action-btn.osm:hover { background: #002855; }
+  .action-btn.panoramax { background: var(--lons-red); box-shadow: 0 8px 20px rgba(227,6,19,0.3); }
+  .action-btn.panoramax:hover { background: var(--lons-red-hover); box-shadow: 0 12px 24px rgba(227,6,19,0.4); }
+  .action-btn.osm { background: white; color: var(--lons-red); border: 2px solid var(--lons-red); box-shadow: 0 4px 12px rgba(227,6,19,0.15); }
+  .action-btn.osm:hover { background: var(--lons-red-light); }
 
   /* Toasts */
   .toasts { position: absolute; bottom: 20px; right: 20px; z-index: 50; display: flex; flex-direction: column; gap: 8px; pointer-events: none; }
   .toast { pointer-events: auto; padding: 12px 16px; background: white; border-radius: 10px; border: 1px solid var(--lons-border); box-shadow: 0 10px 25px rgba(15,23,42,0.1); font-size: 13px; font-weight: 600; color: #374151; min-width: 240px; display: flex; align-items: center; gap: 10px; animation: toastIn 240ms cubic-bezier(0.22,1,0.36,1); }
   .toast.success { border-left: 4px solid #10B981; }
   .toast.error { border-left: 4px solid var(--lons-red); }
-  .toast.loading { border-left: 4px solid var(--lons-blue); }
+  .toast.loading { border-left: 4px solid var(--lons-red); }
   @keyframes toastIn { from { transform: translateY(8px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
   /* Scrollbar */
@@ -150,35 +150,8 @@
 <div class="app">
   <header class="app-header">
     <div class="brand">
-      <!-- Écusson Ville de Lons-le-Saunier (stylisation officielle : lion héraldique sur bouclier rouge & or) -->
-      <svg class="brand-crest" viewBox="0 0 46 52" xmlns="http://www.w3.org/2000/svg" aria-label="Blason Lons-le-Saunier">
-        <defs>
-          <linearGradient id="shieldRed" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#E30613"/>
-            <stop offset="1" stop-color="#A00510"/>
-          </linearGradient>
-          <linearGradient id="shieldGold" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#F5D97B"/>
-            <stop offset="1" stop-color="#C6A34F"/>
-          </linearGradient>
-        </defs>
-        <!-- Contour bouclier -->
-        <path d="M3 4 L43 4 L43 26 C43 40 33 48 23 51 C13 48 3 40 3 26 Z" fill="url(#shieldRed)" stroke="#7A020B" stroke-width="1.2"/>
-        <!-- Chef d'or (bandeau supérieur) -->
-        <path d="M3 4 L43 4 L43 14 L3 14 Z" fill="url(#shieldGold)" stroke="#7A020B" stroke-width="1"/>
-        <!-- Trois croissants d'argent sur le chef -->
-        <g fill="white" stroke="#7A020B" stroke-width="0.5">
-          <path d="M10 9 a 2.6 2.6 0 1 0 2.4 3.6 a 2 2 0 1 1 -2.4 -3.6 Z"/>
-          <path d="M21.8 9 a 2.6 2.6 0 1 0 2.4 3.6 a 2 2 0 1 1 -2.4 -3.6 Z"/>
-          <path d="M33.6 9 a 2.6 2.6 0 1 0 2.4 3.6 a 2 2 0 1 1 -2.4 -3.6 Z"/>
-        </g>
-        <!-- Lion héraldique doré (stylisation) -->
-        <g transform="translate(23 32) scale(0.9)" fill="url(#shieldGold)" stroke="#7A020B" stroke-width="0.6" stroke-linejoin="round">
-          <path d="M -9 -6 L -10 -9 L -7 -8 L -5 -11 L -2 -9 L 0 -12 L 2 -9 L 5 -11 L 7 -8 L 10 -9 L 9 -6 C 11 -4 11 -1 9 2 L 10 5 L 6 4 L 4 7 L 1 5 L -1 5 L -4 7 L -6 4 L -10 5 L -9 2 C -11 -1 -11 -4 -9 -6 Z"/>
-          <circle cx="-3" cy="-3" r="0.7" fill="#7A020B" stroke="none"/>
-          <circle cx="3" cy="-3" r="0.7" fill="#7A020B" stroke="none"/>
-        </g>
-      </svg>
+      <!-- Logo officiel Ville de Lons-le-Saunier -->
+      <img class="brand-crest" src="https://customer-assets-7cd3h4nn.emergentagent.net/job_citymap-lons/artifacts/bncgvice_Logo%20Ville%20Carre%20Rouge.webp" alt="Ville de Lons-le-Saunier" />
       <div class="brand-title">
         <div class="top">Ville de</div>
         <div class="main">Lons-le-Saunier <span class="subtitle">· Cartographie 3D</span></div>
@@ -325,29 +298,68 @@ function makeStyle(bm) {
   };
 }
 
-/** Build a thematic "map pin" icon: coloured teardrop with a lucide icon carved inside. Returns SVG data URL. */
-function makePinDataUrl(color, iconKey) {
-  const iconD = ICON_PATHS[iconKey] || "M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0";
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="52" height="66" viewBox="0 0 52 66">
-    <defs>
-      <filter id="s" x="-30%" y="-30%" width="160%" height="160%">
-        <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.3"/>
-      </filter>
-    </defs>
-    <path filter="url(#s)" d="M26 2 C13.3 2 3 12.3 3 25 c0 15 23 39 23 39 s23-24 23-39 C49 12.3 38.7 2 26 2 Z"
-          fill="${color}" stroke="white" stroke-width="3"/>
-    <circle cx="26" cy="25" r="12" fill="white"/>
-    <g transform="translate(14 13) scale(0.5)" fill="none" stroke="${color}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-      <path d="${iconD}"/>
-    </g>
-  </svg>`;
-  return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+/* Emoji sémiologiquement explicites pour chaque couche */
+const LAYER_EMOJI = {
+  bike_parking: "🚲",
+  cycle_lanes:  "🛣️",
+  bus_shelter:  "🚏",
+  bus_lines:    "🚌",
+  shops:        "🛍️",
+  food:         "🍽️",
+  historic:     "🏛️",
+  cinema:       "🎬",
+  library:      "📚",
+  arts:         "🎭",
+};
+
+/** Build a thematic map pin using canvas + emoji (sémiologiquement explicite). */
+function makePinDataUrl(color, layerKey) {
+  const emoji = LAYER_EMOJI[layerKey] || "📍";
+  const W = 104, H = 132;
+  const canvas = document.createElement("canvas");
+  canvas.width = W; canvas.height = H;
+  const ctx = canvas.getContext("2d");
+
+  // Drop shadow
+  ctx.shadowColor = "rgba(0,0,0,0.35)";
+  ctx.shadowBlur = 10;
+  ctx.shadowOffsetY = 4;
+
+  // Draw teardrop pin
+  ctx.beginPath();
+  ctx.moveTo(W / 2, 6);
+  ctx.bezierCurveTo(24, 6, 8, 24, 8, 52);
+  ctx.bezierCurveTo(8, 82, W / 2, H - 4, W / 2, H - 4);
+  ctx.bezierCurveTo(W / 2, H - 4, W - 8, 82, W - 8, 52);
+  ctx.bezierCurveTo(W - 8, 24, W - 24, 6, W / 2, 6);
+  ctx.closePath();
+  ctx.fillStyle = color;
+  ctx.fill();
+
+  // Clear shadow before stroke + inner circle
+  ctx.shadowColor = "transparent";
+  ctx.strokeStyle = "white";
+  ctx.lineWidth = 5;
+  ctx.stroke();
+
+  // Inner white disk
+  ctx.beginPath();
+  ctx.arc(W / 2, 50, 30, 0, Math.PI * 2);
+  ctx.fillStyle = "white";
+  ctx.fill();
+
+  // Emoji at center of white disk
+  ctx.font = "42px 'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji','Twemoji Mozilla',system-ui,sans-serif";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText(emoji, W / 2, 52);
+
+  return canvas.toDataURL("image/png");
 }
 
 async function loadIconIntoMap(map, iconId, dataUrl) {
   if (map.hasImage(iconId)) return;
-  const img = new Image(52, 66);
-  img.crossOrigin = "anonymous";
+  const img = new Image(104, 132);
   await new Promise((resolve, reject) => {
     img.onload = resolve;
     img.onerror = reject;
@@ -563,9 +575,9 @@ function renderDetail() {
   const panel = document.createElement("div");
   panel.className = "detail-panel";
   panel.innerHTML = `
-    <div class="detail-header" style="background:linear-gradient(135deg, ${layerMeta?.color || "#E30613"} 0%, ${layerMeta?.color ? shadeColor(layerMeta.color, -25) : "#A00510"} 100%)">
+    <div class="detail-header" style="background:linear-gradient(135deg, #E30613 0%, #7A020B 100%)">
       <button class="detail-close"><i data-lucide="x" style="width:16px;height:16px"></i></button>
-      <div class="detail-badge"><i data-lucide="tag" style="width:12px;height:12px"></i>${humanize(category)}</div>
+      <div class="detail-badge"><span style="font-size:14px;line-height:1">${LAYER_EMOJI[props._layer] || "📍"}</span>${humanize(category)}</div>
       <h2 class="detail-title">${humanize(title)}</h2>
       <div class="detail-coords"><i data-lucide="map-pin" style="width:12px;height:12px"></i>${lat.toFixed(5)}, ${lon.toFixed(5)}</div>
     </div>
@@ -656,7 +668,7 @@ async function ensureLayers() {
       const raw = meta.source === "geodatamine" ? await fetchGeoDataMine(meta.theme) : await fetchOverpass(meta.query);
       state.layerData[layerKey] = stampFeatures(raw, state.activeTheme, layerKey, meta);
       // Register thematic icon
-      await loadIconIntoMap(map, `pin-${layerKey}`, makePinDataUrl(meta.color, meta.icon));
+      await loadIconIntoMap(map, `pin-${layerKey}`, makePinDataUrl(meta.color, layerKey));
       toast(`${meta.label} · ${state.layerData[layerKey].features.length} objets`);
     } catch (e) {
       console.error(e);
