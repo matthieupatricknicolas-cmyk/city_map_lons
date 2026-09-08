@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Cartographie 3D · Lons-le-Saunier</title>
+<title>Cartographie 3D · Ville de Lons-le-Saunier</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
@@ -12,14 +12,17 @@
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <style>
   :root {
-    --lons-primary: #003D7A;
-    --lons-primary-hover: #002855;
+    /* Charte Ville de Lons-le-Saunier — rouge dominant */
     --lons-red: #E30613;
     --lons-red-hover: #B8000B;
-    --lons-ink: #0F172A;
-    --lons-muted: #64748B;
-    --lons-border: #E2E8F0;
-    --lons-bg: #F8FAFC;
+    --lons-red-light: #FDE8E9;
+    --lons-blue: #003D7A;
+    --lons-blue-light: #E8F1FB;
+    --lons-gold: #C6A34F;
+    --lons-ink: #1A1A1A;
+    --lons-muted: #6B7280;
+    --lons-border: #E5E7EB;
+    --lons-bg: #FAFAF7;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; height: 100%; font-family: "Plus Jakarta Sans", system-ui, sans-serif; color: var(--lons-ink); background: var(--lons-bg); overflow: hidden; }
@@ -28,112 +31,118 @@
 
   /* Layout */
   .app { display: flex; flex-direction: column; height: 100vh; width: 100vw; }
-  header.app-header { height: 64px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--lons-border); z-index: 30; position: relative; }
-  .brand { display: flex; align-items: center; gap: 12px; }
-  .brand-badge { width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg,#003D7A 0%,#00559E 60%,#E30613 130%); color: white; box-shadow: 0 4px 12px rgba(0,61,122,0.25); }
-  .brand-title { line-height: 1.1; }
-  .brand-title .top { font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--lons-muted); }
-  .brand-title .main { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: 20px; }
-  .brand-title .main .sep { color: var(--lons-red); }
-  .brand-title .main .subtitle { color: var(--lons-primary); }
+  header.app-header { height: 68px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; background: white; border-bottom: 3px solid var(--lons-red); z-index: 30; position: relative; box-shadow: 0 4px 20px rgba(227,6,19,0.08); }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand-crest { width: 46px; height: 52px; flex-shrink: 0; filter: drop-shadow(0 4px 10px rgba(227,6,19,0.3)); }
+  .brand-title { line-height: 1.15; }
+  .brand-title .top { font-size: 10px; text-transform: uppercase; letter-spacing: 0.22em; color: var(--lons-red); font-weight: 700; }
+  .brand-title .main { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: 20px; color: var(--lons-ink); }
+  .brand-title .main .subtitle { color: var(--lons-red); font-weight: 700; }
   .badges { display: flex; align-items: center; gap: 12px; }
-  .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; }
-  .badge-live { background: #FDE8E9; border: 1px solid #FBD5D9; color: var(--lons-red-hover); }
-  .badge-count { background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; font-family: "JetBrains Mono", monospace; letter-spacing: 0; }
-  .live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lons-red); animation: livePulse 1.8s infinite; }
-  @keyframes livePulse { 0% { box-shadow: 0 0 0 0 rgba(227,6,19,0.55); } 70% { box-shadow: 0 0 0 10px rgba(227,6,19,0); } 100% { box-shadow: 0 0 0 0 rgba(227,6,19,0); } }
+  .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+  .badge-live { background: var(--lons-red); color: white; border: 1px solid var(--lons-red-hover); }
+  .badge-count { background: #F3F4F6; border: 1px solid #E5E7EB; color: #374151; font-family: "JetBrains Mono", monospace; letter-spacing: 0; }
+  .live-dot { width: 8px; height: 8px; border-radius: 50%; background: white; animation: livePulse 1.8s infinite; }
+  @keyframes livePulse { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.6); } 70% { box-shadow: 0 0 0 8px rgba(255,255,255,0); } 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); } }
 
   .body-row { flex: 1; display: flex; overflow: hidden; }
 
   /* Sidebar */
-  aside.sidebar { width: 300px; flex-shrink: 0; border-right: 1px solid var(--lons-border); background: white; display: flex; flex-direction: column; position: relative; z-index: 20; }
-  .sidebar-section-title { font-size: 10px; text-transform: uppercase; letter-spacing: 0.22em; font-weight: 700; color: #94A3B8; padding: 20px 16px 6px; }
-  .tab-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 0 16px; }
-  .tab-btn { position: relative; text-align: left; padding: 12px; border-radius: 12px; border: 1px solid var(--lons-border); background: #F8FAFC; cursor: pointer; transition: all 0.2s; font-family: inherit; }
-  .tab-btn:hover { border-color: rgba(0,61,122,0.4); }
-  .tab-btn .tab-title { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; font-family: "Bricolage Grotesque", sans-serif; color: #334155; }
-  .tab-btn .tab-sub { margin-top: 4px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; color: #94A3B8; }
-  .tab-btn.active { background: var(--lons-primary); border-color: var(--lons-primary); color: white; box-shadow: 0 10px 20px rgba(0,61,122,0.2); }
+  aside.sidebar { width: 328px; flex-shrink: 0; border-right: 1px solid var(--lons-border); background: white; display: flex; flex-direction: column; position: relative; z-index: 20; }
+  .sidebar-section-title { font-size: 10px; text-transform: uppercase; letter-spacing: 0.22em; font-weight: 700; color: #9CA3AF; padding: 20px 16px 8px; }
+  .tab-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; padding: 0 16px; }
+  .tab-btn { position: relative; text-align: left; padding: 10px 8px; border-radius: 12px; border: 1px solid var(--lons-border); background: #FAFAF7; cursor: pointer; transition: all 0.2s; font-family: inherit; min-width: 0; overflow: hidden; }
+  .tab-btn:hover { border-color: rgba(227,6,19,0.4); }
+  .tab-btn .tab-title { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 13px; font-family: "Bricolage Grotesque", sans-serif; color: #1F2937; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .tab-btn .tab-title i { flex-shrink: 0; }
+  .tab-btn .tab-sub { margin-top: 4px; font-size: 9px; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; color: #9CA3AF; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .tab-btn.active { background: var(--lons-red); border-color: var(--lons-red); color: white; box-shadow: 0 8px 20px rgba(227,6,19,0.25); }
   .tab-btn.active .tab-title, .tab-btn.active .tab-sub { color: white; }
-  .tab-btn.active::before { content: ""; position: absolute; left: -1px; top: 12px; bottom: 12px; width: 3px; background: linear-gradient(180deg,var(--lons-red) 0%,var(--lons-primary) 100%); border-radius: 0 3px 3px 0; }
+  .tab-btn.active::before { content: ""; position: absolute; left: -1px; top: 12px; bottom: 12px; width: 3px; background: linear-gradient(180deg, var(--lons-gold) 0%, white 100%); border-radius: 0 3px 3px 0; }
   .layers { padding: 8px 16px; flex: 1; overflow-y: auto; }
   .layer-row { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 12px; border: 1px solid var(--lons-border); background: white; cursor: pointer; margin-bottom: 8px; transition: all 0.2s; user-select: none; }
-  .layer-row:hover { transform: translateY(-1px); }
-  .layer-row.off { background: rgba(248,250,252,0.6); }
-  .layer-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; }
+  .layer-row:hover { transform: translateY(-1px); border-color: rgba(227,6,19,0.3); }
+  .layer-row.off { background: rgba(250,250,247,0.7); }
+  .layer-icon { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; }
   .layer-info { flex: 1; min-width: 0; }
-  .layer-info .name { font-size: 14px; font-weight: 700; color: #1E293B; }
-  .layer-info .count { font-size: 11px; color: var(--lons-muted); font-family: "JetBrains Mono", monospace; }
-  .switch { position: relative; width: 36px; height: 20px; border-radius: 999px; background: #CBD5E1; transition: background 0.2s; flex-shrink: 0; }
-  .switch.on { background: var(--lons-primary); }
+  .layer-info .name { font-size: 14px; font-weight: 700; color: #1F2937; }
+  .layer-info .count { font-size: 11px; color: var(--lons-muted); font-family: "JetBrains Mono", monospace; margin-top: 2px; }
+  .switch { position: relative; width: 36px; height: 20px; border-radius: 999px; background: #D1D5DB; transition: background 0.2s; flex-shrink: 0; }
+  .switch.on { background: var(--lons-red); }
   .switch .knob { position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.2); transition: transform 0.2s; }
   .switch.on .knob { transform: translateX(16px); }
-  .tip-card { margin: 12px 16px 16px; padding: 16px; border-radius: 12px; background: linear-gradient(135deg,var(--lons-primary) 0%,#00559E 100%); color: white; font-size: 13px; font-weight: 600; line-height: 1.4; position: relative; overflow: hidden; }
-  .tip-card .tip-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.22em; color: rgba(255,255,255,0.7); margin-bottom: 6px; font-weight: 700; }
+  .tip-card { margin: 12px 16px 16px; padding: 16px; border-radius: 12px; background: linear-gradient(135deg, var(--lons-red) 0%, #A00510 100%); color: white; font-size: 13px; font-weight: 600; line-height: 1.4; position: relative; overflow: hidden; }
+  .tip-card::after { content: ""; position: absolute; right: -20px; bottom: -20px; width: 100px; height: 100px; background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%); }
+  .tip-card .tip-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.22em; color: rgba(255,255,255,0.8); margin-bottom: 6px; font-weight: 700; }
 
   /* Map area */
   main.map-area { position: relative; flex: 1; overflow: hidden; }
   #map { position: absolute; inset: 0; width: 100%; height: 100%; }
 
   /* Map controls */
-  .map-controls { position: absolute; top: 16px; left: 16px; z-index: 30; display: flex; flex-direction: column; gap: 12px; }
-  .ctrl-btn { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 12px; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border: 1px solid var(--lons-border); box-shadow: 0 8px 20px rgba(15,23,42,0.06); cursor: pointer; font-family: inherit; transition: transform 0.2s; }
+  .map-controls { position: absolute; top: 16px; left: 16px; z-index: 30; display: flex; flex-direction: column; gap: 10px; }
+  .ctrl-btn { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 12px; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border: 1px solid var(--lons-border); box-shadow: 0 8px 20px rgba(15,23,42,0.08); cursor: pointer; font-family: inherit; transition: transform 0.2s; }
   .ctrl-btn:hover { transform: translateY(-1px); }
-  .ctrl-btn.active { background: var(--lons-primary); color: white; border-color: var(--lons-primary); }
-  .ctrl-btn .ctrl-icon-wrap { width: 32px; height: 32px; border-radius: 8px; background: rgba(0,61,122,0.1); display: flex; align-items: center; justify-content: center; color: var(--lons-primary); flex-shrink: 0; }
+  .ctrl-btn.active { background: var(--lons-red); color: white; border-color: var(--lons-red); }
+  .ctrl-btn .ctrl-icon-wrap { width: 32px; height: 32px; border-radius: 8px; background: var(--lons-red-light); display: flex; align-items: center; justify-content: center; color: var(--lons-red); flex-shrink: 0; }
   .ctrl-btn.active .ctrl-icon-wrap { background: rgba(255,255,255,0.15); color: white; }
   .ctrl-btn .ctrl-label { line-height: 1.15; }
-  .ctrl-btn .ctrl-top { font-size: 9px; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #94A3B8; }
+  .ctrl-btn .ctrl-top { font-size: 9px; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #9CA3AF; }
   .ctrl-btn.active .ctrl-top { color: rgba(255,255,255,0.7); }
   .ctrl-btn .ctrl-main { font-size: 12px; font-weight: 700; }
 
   .basemap-menu { position: absolute; top: 100%; left: 0; margin-top: 8px; width: 288px; max-height: 60vh; overflow-y: auto; border-radius: 12px; background: white; border: 1px solid var(--lons-border); box-shadow: 0 20px 40px rgba(15,23,42,0.15); padding: 8px; display: none; }
   .basemap-menu.open { display: block; }
   .basemap-item { width: 100%; text-align: left; padding: 10px 12px; border-radius: 8px; background: transparent; border: none; cursor: pointer; font-family: inherit; margin-bottom: 2px; }
-  .basemap-item:hover { background: #F1F5F9; }
-  .basemap-item.selected { background: var(--lons-primary); color: white; }
+  .basemap-item:hover { background: #F9FAFB; }
+  .basemap-item.selected { background: var(--lons-red); color: white; }
   .basemap-item .bm-name { font-size: 14px; font-weight: 700; }
-  .basemap-item .bm-sub { font-size: 11px; color: #64748B; margin-top: 2px; }
-  .basemap-item.selected .bm-sub { color: rgba(255,255,255,0.75); }
+  .basemap-item .bm-sub { font-size: 11px; color: #6B7280; margin-top: 2px; }
+  .basemap-item.selected .bm-sub { color: rgba(255,255,255,0.8); }
 
   /* Detail panel */
-  .detail-panel { position: absolute; top: 16px; right: 16px; bottom: 16px; width: min(420px, 92vw); background: white; border-radius: 16px; box-shadow: 0 30px 60px rgba(8,112,184,0.18); border: 1px solid var(--lons-border); overflow: hidden; display: flex; flex-direction: column; z-index: 40; animation: slideInRight 320ms cubic-bezier(0.22,1,0.36,1); }
+  .detail-panel { position: absolute; top: 16px; right: 16px; bottom: 16px; width: min(440px, 92vw); background: white; border-radius: 16px; box-shadow: 0 30px 60px rgba(227,6,19,0.15); border: 1px solid var(--lons-border); overflow: hidden; display: flex; flex-direction: column; z-index: 40; animation: slideInRight 320ms cubic-bezier(0.22,1,0.36,1); }
   @keyframes slideInRight { from { transform: translateX(24px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
-  .detail-header { padding: 20px; position: relative; overflow: hidden; color: white; }
-  .detail-close { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.15); border: none; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(6px); transition: background 0.2s; }
-  .detail-close:hover { background: rgba(255,255,255,0.3); }
-  .detail-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,0.2); backdrop-filter: blur(4px); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 8px; }
-  .detail-title { font-family: "Bricolage Grotesque", sans-serif; font-size: 24px; font-weight: 800; line-height: 1.15; margin: 0; }
-  .detail-coords { margin-top: 8px; display: flex; align-items: center; gap: 6px; font-family: "JetBrains Mono", monospace; font-size: 12px; color: rgba(255,255,255,0.8); }
+  .detail-header { padding: 22px; position: relative; overflow: hidden; color: white; }
+  .detail-header::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.15) 0%, transparent 60%); pointer-events: none; }
+  .detail-close { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.2); border: none; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(6px); transition: background 0.2s; z-index: 2; }
+  .detail-close:hover { background: rgba(255,255,255,0.35); }
+  .detail-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,0.22); backdrop-filter: blur(4px); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 8px; position: relative; z-index: 1; }
+  .detail-title { font-family: "Bricolage Grotesque", sans-serif; font-size: 24px; font-weight: 800; line-height: 1.15; margin: 0; position: relative; z-index: 1; }
+  .detail-coords { margin-top: 8px; display: flex; align-items: center; gap: 6px; font-family: "JetBrains Mono", monospace; font-size: 12px; color: rgba(255,255,255,0.85); position: relative; z-index: 1; }
   .detail-body { padding: 20px; overflow-y: auto; flex: 1; }
-  .detail-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #F1F5F9; }
+  .detail-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid #F3F4F6; }
   .detail-row:last-of-type { border-bottom: none; }
   .detail-row .k { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: var(--lons-muted); }
-  .detail-row .v { font-size: 14px; font-weight: 600; text-align: right; color: #1E293B; max-width: 60%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .detail-empty { padding: 16px; background: #F8FAFC; border-radius: 8px; color: var(--lons-muted); font-size: 13px; display: flex; gap: 10px; align-items: flex-start; }
-  .osm-link { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 16px; padding: 12px; border-radius: 12px; background: var(--lons-primary); color: white; text-decoration: none; font-weight: 700; font-size: 13px; transition: background 0.2s; }
-  .osm-link:hover { background: var(--lons-primary-hover); }
+  .detail-row .v { font-size: 14px; font-weight: 600; text-align: right; color: #1F2937; max-width: 60%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .detail-empty { padding: 16px; background: #FAFAF7; border-radius: 10px; color: var(--lons-muted); font-size: 13px; display: flex; gap: 10px; align-items: flex-start; margin-bottom: 12px; }
+  .action-btn { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; padding: 13px; border-radius: 12px; color: white; text-decoration: none; font-weight: 700; font-size: 13px; transition: transform 0.2s, box-shadow 0.2s; letter-spacing: 0.02em; }
+  .action-btn:hover { transform: translateY(-1px); }
+  .action-btn.panoramax { background: linear-gradient(135deg, #7A00E3 0%, #C205C4 100%); box-shadow: 0 8px 20px rgba(122,0,227,0.25); }
+  .action-btn.panoramax:hover { box-shadow: 0 12px 24px rgba(122,0,227,0.35); }
+  .action-btn.osm { background: var(--lons-blue); box-shadow: 0 6px 14px rgba(0,61,122,0.2); }
+  .action-btn.osm:hover { background: #002855; }
 
   /* Toasts */
   .toasts { position: absolute; bottom: 20px; right: 20px; z-index: 50; display: flex; flex-direction: column; gap: 8px; pointer-events: none; }
-  .toast { pointer-events: auto; padding: 12px 16px; background: white; border-radius: 10px; border: 1px solid var(--lons-border); box-shadow: 0 10px 25px rgba(15,23,42,0.1); font-size: 13px; font-weight: 600; color: #334155; min-width: 240px; display: flex; align-items: center; gap: 10px; animation: toastIn 240ms cubic-bezier(0.22,1,0.36,1); }
+  .toast { pointer-events: auto; padding: 12px 16px; background: white; border-radius: 10px; border: 1px solid var(--lons-border); box-shadow: 0 10px 25px rgba(15,23,42,0.1); font-size: 13px; font-weight: 600; color: #374151; min-width: 240px; display: flex; align-items: center; gap: 10px; animation: toastIn 240ms cubic-bezier(0.22,1,0.36,1); }
   .toast.success { border-left: 4px solid #10B981; }
   .toast.error { border-left: 4px solid var(--lons-red); }
-  .toast.loading { border-left: 4px solid var(--lons-primary); }
+  .toast.loading { border-left: 4px solid var(--lons-blue); }
   @keyframes toastIn { from { transform: translateY(8px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
   /* Scrollbar */
   ::-webkit-scrollbar { width: 6px; }
-  ::-webkit-scrollbar-thumb { background: rgba(0,61,122,0.25); border-radius: 999px; }
+  ::-webkit-scrollbar-thumb { background: rgba(227,6,19,0.25); border-radius: 999px; }
   ::-webkit-scrollbar-track { background: transparent; }
 
   /* MapLibre tweaks */
   .maplibregl-ctrl-attrib { font-size: 10px !important; background: rgba(255,255,255,0.75) !important; backdrop-filter: blur(6px); }
-  .maplibregl-ctrl-attrib a { color: var(--lons-primary) !important; }
+  .maplibregl-ctrl-attrib a { color: var(--lons-red) !important; }
 
   @media (max-width: 900px) {
     aside.sidebar { width: 240px; }
-    .detail-panel { width: 92vw; right: 16px; top: 72px; bottom: 16px; }
+    .detail-panel { width: 92vw; right: 12px; top: 80px; bottom: 12px; }
   }
 </style>
 </head>
@@ -141,10 +150,38 @@
 <div class="app">
   <header class="app-header">
     <div class="brand">
-      <div class="brand-badge"><i data-lucide="map-pin"></i></div>
+      <!-- Écusson Ville de Lons-le-Saunier (stylisation officielle : lion héraldique sur bouclier rouge & or) -->
+      <svg class="brand-crest" viewBox="0 0 46 52" xmlns="http://www.w3.org/2000/svg" aria-label="Blason Lons-le-Saunier">
+        <defs>
+          <linearGradient id="shieldRed" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#E30613"/>
+            <stop offset="1" stop-color="#A00510"/>
+          </linearGradient>
+          <linearGradient id="shieldGold" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#F5D97B"/>
+            <stop offset="1" stop-color="#C6A34F"/>
+          </linearGradient>
+        </defs>
+        <!-- Contour bouclier -->
+        <path d="M3 4 L43 4 L43 26 C43 40 33 48 23 51 C13 48 3 40 3 26 Z" fill="url(#shieldRed)" stroke="#7A020B" stroke-width="1.2"/>
+        <!-- Chef d'or (bandeau supérieur) -->
+        <path d="M3 4 L43 4 L43 14 L3 14 Z" fill="url(#shieldGold)" stroke="#7A020B" stroke-width="1"/>
+        <!-- Trois croissants d'argent sur le chef -->
+        <g fill="white" stroke="#7A020B" stroke-width="0.5">
+          <path d="M10 9 a 2.6 2.6 0 1 0 2.4 3.6 a 2 2 0 1 1 -2.4 -3.6 Z"/>
+          <path d="M21.8 9 a 2.6 2.6 0 1 0 2.4 3.6 a 2 2 0 1 1 -2.4 -3.6 Z"/>
+          <path d="M33.6 9 a 2.6 2.6 0 1 0 2.4 3.6 a 2 2 0 1 1 -2.4 -3.6 Z"/>
+        </g>
+        <!-- Lion héraldique doré (stylisation) -->
+        <g transform="translate(23 32) scale(0.9)" fill="url(#shieldGold)" stroke="#7A020B" stroke-width="0.6" stroke-linejoin="round">
+          <path d="M -9 -6 L -10 -9 L -7 -8 L -5 -11 L -2 -9 L 0 -12 L 2 -9 L 5 -11 L 7 -8 L 10 -9 L 9 -6 C 11 -4 11 -1 9 2 L 10 5 L 6 4 L 4 7 L 1 5 L -1 5 L -4 7 L -6 4 L -10 5 L -9 2 C -11 -1 -11 -4 -9 -6 Z"/>
+          <circle cx="-3" cy="-3" r="0.7" fill="#7A020B" stroke="none"/>
+          <circle cx="3" cy="-3" r="0.7" fill="#7A020B" stroke="none"/>
+        </g>
+      </svg>
       <div class="brand-title">
         <div class="top">Ville de</div>
-        <div class="main">Lons-le-Saunier <span class="sep">·</span> <span class="subtitle">Cartographie 3D</span></div>
+        <div class="main">Lons-le-Saunier <span class="subtitle">· Cartographie 3D</span></div>
       </div>
     </div>
     <div class="badges">
@@ -163,7 +200,7 @@
 
       <div class="tip-card">
         <div class="tip-label">Astuce</div>
-        Cliquez sur un objet pour ouvrir sa fiche détaillée. Cliquez dans le vide pour la refermer.
+        Cliquez sur un objet pour ouvrir sa fiche détaillée avec Panoramax. Cliquez dans le vide pour la refermer.
       </div>
     </aside>
 
@@ -178,13 +215,16 @@
 <script>
 /* ---------------- Configuration ---------------- */
 const LONS_CENTER = [5.5539, 46.6739];
-const LONS_BOUNDARY_ID = "152508";
+const LONS_BOUNDARY_ID = "152508"; // GeoDataMine ID (admin_8)
+const LONS_OSM_RELATION = 152508;   // OSM relation ID (identique)
 const GEODATAMINE_BASE = "https://geodatamine.fr";
 const OVERPASS_ENDPOINTS = [
   "https://overpass-api.de/api/interpreter",
   "https://overpass.kumi.systems/api/interpreter",
   "https://overpass.private.coffee/api/interpreter",
 ];
+const NOMINATIM_BASE = "https://nominatim.openstreetmap.org";
+const PANORAMAX_BASE = "https://api.panoramax.xyz/";
 
 const BASEMAPS = [
   { id: "openfreemap", name: "OpenFreeMap · Liberty", subtitle: "Vectoriel clair", type: "style", style: "https://tiles.openfreemap.org/styles/liberty" },
@@ -196,21 +236,48 @@ const BASEMAPS = [
   { id: "maplibre_demo", name: "MapLibre · Demo", subtitle: "Style minimaliste", type: "style", style: "https://demotiles.maplibre.org/style.json" },
 ];
 
+/* Chemins SVG lucide (fill=none, stroke=currentColor) pour la symbologie thématique */
+const ICON_PATHS = {
+  bike: "M18.5 17.5m-3.5 0a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0 -7 0 M5.5 17.5m-3.5 0a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0 -7 0 M15 6 h4 l-2 4 l-3 -3 h-3 l-5 10.5 M12 17.5 l3 -6.5",
+  bus: "M8 6v6 M15 6v6 M2 12h19.6 M18 18h.01 M6 18h.01 M19 18a2 2 0 0 0 2-2v-6a5 5 0 0 0-5-5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-1h6v1a2 2 0 0 0 2 2Z",
+  navigation: "m3 11 19-9-9 19-2-8-8-2z",
+  route: "M6 19a3 3 0 0 1-3-3v-1a3 3 0 0 1 3-3h12a3 3 0 0 0 0-6H8a3 3 0 0 0-3 3v0",
+  shop: "M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z",
+  utensils: "M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2 M7 2v20 M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7",
+  landmark: "M3 22h18 M6 18v-7 M10 18v-7 M14 18v-7 M18 18v-7 M22 11H2l10-9 10 9Z",
+  film: "M7 3v18 M17 3v18 M3 7.5h4 M3 12h18 M3 16.5h4 M17 7.5h4 M17 16.5h4 M22 3H2v18h20V3z",
+  library: "M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z",
+  theater: "M15.05 8.63A5 5 0 0 0 12 5c-3 0-5 2-5 5s2 5 5 5 M12 12l0 6 M8 20l4 -2l4 2 M9 10h.01 M15 10h.01",
+  palette: "M13.5 20a5 5 0 0 1-5-5c0-3 2-5 5-5s5 2 5 5c0 3-2 5-5 5Zm0 0h6.5a2 2 0 0 0 2-2v-2 M4 6a3 3 0 1 0 6 0 3 3 0 1 0-6 0 M17 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6 M20 14a3 3 0 1 0 0-6 3 3 0 0 0 0 6",
+};
+
 const LAYERS = {
   mobility: {
     label: "Mobilité", subtitle: "Déplacement",
+    tabIcon: "bike",
     items: {
       bike_parking: { label: "Parkings vélos", icon: "bike", color: "#059669", geometry: "point", source: "geodatamine", theme: "bicycle_parking" },
-      cycle_lanes:  { label: "Pistes cyclables", icon: "navigation", color: "#10B981", geometry: "line",  source: "geodatamine", theme: "cycleway" },
+      cycle_lanes:  { label: "Pistes cyclables", icon: "navigation", color: "#10B981", geometry: "line", source: "geodatamine", theme: "cycleway" },
       bus_shelter:  { label: "Arrêts & Abris bus", icon: "bus", color: "#2563EB", geometry: "point", source: "overpass", query: `[out:json][timeout:25];(node["highway"="bus_stop"](around:4000,46.6739,5.5539);node["amenity"="bus_station"](around:4000,46.6739,5.5539););out body;` },
-      bus_lines:    { label: "Lignes de bus", icon: "route", color: "#3B82F6", geometry: "line",  source: "overpass", query: `[out:json][timeout:40];relation["route"="bus"](around:4000,46.6739,5.5539);out body geom;` },
+      bus_lines:    { label: "Lignes de bus", icon: "route", color: "#3B82F6", geometry: "line", source: "overpass", query: `[out:json][timeout:40];relation["route"="bus"](around:4000,46.6739,5.5539);out body geom;` },
     },
   },
   commerces: {
     label: "Commerces", subtitle: "Vie locale",
+    tabIcon: "shopping-bag",
     items: {
-      shops: { label: "Boutiques & Magasins", icon: "shopping-bag", color: "#8B5CF6", geometry: "point", source: "geodatamine", theme: "shop_craft_office" },
+      shops: { label: "Boutiques & Magasins", icon: "shop", color: "#8B5CF6", geometry: "point", source: "geodatamine", theme: "shop_craft_office" },
       food:  { label: "Restaurants, cafés & bars", icon: "utensils", color: "#EC4899", geometry: "point", source: "geodatamine", theme: "restaurant" },
+    },
+  },
+  culture: {
+    label: "Culture", subtitle: "Patrimoine",
+    tabIcon: "landmark",
+    items: {
+      historic: { label: "Patrimoine historique", icon: "landmark", color: "#B45309", geometry: "point", source: "geodatamine", theme: "historic" },
+      cinema:   { label: "Cinémas", icon: "film", color: "#DB2777", geometry: "point", source: "geodatamine", theme: "cinema" },
+      library:  { label: "Bibliothèques", icon: "library", color: "#0891B2", geometry: "point", source: "geodatamine", theme: "library" },
+      arts:     { label: "Musées, théâtres, arts", icon: "theater", color: "#7C3AED", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["tourism"="museum"](around:5000,46.6739,5.5539);node["amenity"~"^(theatre|arts_centre|community_centre|studio)$"](around:5000,46.6739,5.5539);node["tourism"="artwork"](around:5000,46.6739,5.5539););out body;` },
     },
   },
 };
@@ -218,6 +285,7 @@ const LAYERS = {
 const DEFAULT_VISIBLE = {
   mobility: { bike_parking: true, cycle_lanes: true, bus_shelter: true, bus_lines: false },
   commerces: { shops: true, food: true },
+  culture:   { historic: true, cinema: true, library: true, arts: true },
 };
 
 const KEY_LABELS = {
@@ -226,6 +294,7 @@ const KEY_LABELS = {
   bench: "Banc", network: "Réseau", ref: "Ligne", opening_hours: "Horaires",
   phone: "Téléphone", website: "Site web", brand: "Enseigne", cuisine: "Cuisine",
   shop: "Type de commerce", amenity: "Catégorie", highway: "Type de voie",
+  historic: "Type patrimoine", tourism: "Tourisme", heritage: "Classement",
   nom: "Nom", capacite: "Capacité", capacite_cargo: "Capacité cargo",
   type_accroche: "Type d'accroche", mobilier: "Mobilier", acces: "Accès",
   gratuit: "Gratuit", protection: "Protection", couverture: "Couverture",
@@ -234,11 +303,7 @@ const KEY_LABELS = {
   bidirect: "Bidirectionnel", categorie: "Catégorie", telephone: "Téléphone",
   site_web: "Site web", horaires: "Horaires", adresse: "Adresse",
   enseigne: "Enseigne", type: "Type", source: "Source", date_maj: "Mise à jour",
-  d_service: "Mise en service", revet_d: "Revêtement (droit)", revet_g: "Revêtement (gauche)",
-  regime_d: "Régime (droit)", regime_g: "Régime (gauche)",
-  ame_d: "Aménagement (droit)", ame_g: "Aménagement (gauche)",
-  statut_d: "Statut (droit)", statut_g: "Statut (gauche)",
-  sens_g: "Sens", trafic_vit: "Vitesse trafic", local_g: "Emplacement",
+  d_service: "Mise en service",
 };
 
 /* ---------------- Utilities ---------------- */
@@ -258,6 +323,37 @@ function makeStyle(bm) {
     sources: { "raster-src": { type: "raster", tiles: bm.tiles, tileSize: 256, attribution: bm.attribution || "", maxzoom: bm.maxzoom || 19 } },
     layers: [{ id: "raster-layer", type: "raster", source: "raster-src" }],
   };
+}
+
+/** Build a thematic "map pin" icon: coloured teardrop with a lucide icon carved inside. Returns SVG data URL. */
+function makePinDataUrl(color, iconKey) {
+  const iconD = ICON_PATHS[iconKey] || "M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0";
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="52" height="66" viewBox="0 0 52 66">
+    <defs>
+      <filter id="s" x="-30%" y="-30%" width="160%" height="160%">
+        <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.3"/>
+      </filter>
+    </defs>
+    <path filter="url(#s)" d="M26 2 C13.3 2 3 12.3 3 25 c0 15 23 39 23 39 s23-24 23-39 C49 12.3 38.7 2 26 2 Z"
+          fill="${color}" stroke="white" stroke-width="3"/>
+    <circle cx="26" cy="25" r="12" fill="white"/>
+    <g transform="translate(14 13) scale(0.5)" fill="none" stroke="${color}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="${iconD}"/>
+    </g>
+  </svg>`;
+  return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+}
+
+async function loadIconIntoMap(map, iconId, dataUrl) {
+  if (map.hasImage(iconId)) return;
+  const img = new Image(52, 66);
+  img.crossOrigin = "anonymous";
+  await new Promise((resolve, reject) => {
+    img.onload = resolve;
+    img.onerror = reject;
+    img.src = dataUrl;
+  });
+  if (!map.hasImage(iconId)) map.addImage(iconId, img, { pixelRatio: 2 });
 }
 
 async function fetchGeoDataMine(theme) {
@@ -297,12 +393,25 @@ function overpassToGeoJSON(elements) {
   return { type: "FeatureCollection", features };
 }
 
+/** Fetch commune polygon boundary via Nominatim */
+async function fetchCommuneBoundary() {
+  try {
+    const url = `${NOMINATIM_BASE}/lookup?osm_ids=R${LONS_OSM_RELATION}&format=geojson&polygon_geojson=1`;
+    const r = await fetch(url, { headers: { "Accept-Language": "fr" } });
+    if (!r.ok) throw new Error(`Nominatim HTTP ${r.status}`);
+    return await r.json();
+  } catch (e) {
+    console.warn("Limite communale indisponible:", e);
+    return null;
+  }
+}
+
 function stampFeatures(fc, themeKey, layerKey, meta) {
   return {
     type: "FeatureCollection",
     features: (fc.features || []).map((f) => ({
       ...f,
-      properties: { ...f.properties, _theme: themeKey, _layer: layerKey, _color: meta.color, _label: meta.label, id: f.properties?.id || f.properties?.id_osm || `${layerKey}-${Math.random()}` },
+      properties: { ...f.properties, _theme: themeKey, _layer: layerKey, _color: meta.color, _label: meta.label, _icon: meta.icon, id: f.properties?.id || f.properties?.id_osm || `${layerKey}-${Math.random()}` },
     })),
   };
 }
@@ -334,15 +443,16 @@ function toast(msg, type = "success") {
 function renderTabs() {
   const el = document.getElementById("tab-grid");
   el.innerHTML = Object.entries(LAYERS).map(([key, theme]) => {
-    const iconName = key === "mobility" ? "bike" : "shopping-bag";
     const active = key === state.activeTheme;
     return `
       <button class="tab-btn ${active ? "active" : ""}" data-tab="${key}">
-        <div class="tab-title"><i data-lucide="${iconName}" style="width:16px;height:16px"></i>${theme.label}</div>
+        <div class="tab-title"><i data-lucide="${theme.tabIcon}" style="width:16px;height:16px"></i>${theme.label}</div>
         <div class="tab-sub">${theme.subtitle}</div>
       </button>
     `;
   }).join("");
+  // Change to 3 columns since we have 3 themes now
+  el.style.gridTemplateColumns = "repeat(3, 1fr)";
   el.querySelectorAll(".tab-btn").forEach((btn) => btn.addEventListener("click", () => setActiveTheme(btn.dataset.tab)));
   lucide.createIcons();
 }
@@ -357,8 +467,8 @@ function renderLayers() {
     const status = loading ? "Chargement OSM…" : visible ? `${count} objets en direct` : "Cliquez pour activer";
     return `
       <div class="layer-row ${visible ? "" : "off"}" data-layer="${key}">
-        <div class="layer-icon" style="background:${visible ? meta.color : "#E2E8F0"};box-shadow:${visible ? `0 6px 14px ${meta.color}40` : "none"}">
-          <i data-lucide="${meta.icon}" style="width:16px;height:16px;color:${visible ? "white" : "#64748B"}"></i>
+        <div class="layer-icon" style="background:${visible ? meta.color : "#E5E7EB"};box-shadow:${visible ? `0 6px 14px ${meta.color}40` : "none"}">
+          <i data-lucide="${meta.icon === "shop" ? "shopping-bag" : meta.icon === "theater" ? "drama" : meta.icon}" style="width:18px;height:18px;color:${visible ? "white" : "#6B7280"}"></i>
         </div>
         <div class="layer-info">
           <div class="name">${meta.label}</div>
@@ -405,7 +515,7 @@ function renderControls() {
       <div class="ctrl-label"><div class="ctrl-top">Caméra</div><div class="ctrl-main">Recentrer</div></div>
     </button>
     <button class="ctrl-btn" id="btn-locate">
-      <div class="ctrl-icon-wrap" style="background:rgba(227,6,19,0.1);color:var(--lons-red)"><i data-lucide="crosshair" style="width:16px;height:16px"></i></div>
+      <div class="ctrl-icon-wrap"><i data-lucide="crosshair" style="width:16px;height:16px"></i></div>
       <div class="ctrl-label"><div class="ctrl-top">Position</div><div class="ctrl-main">Me localiser</div></div>
     </button>
   `;
@@ -430,14 +540,14 @@ function renderDetail() {
   const props = f.properties || {};
   const layerMeta = LAYERS[props._theme]?.items?.[props._layer];
   const title = props.name || props.nom || props.brand || props.enseigne || props.operator || props.ref || layerMeta?.label || "Objet";
-  const category = props.categorie || props.shop || props.amenity || props.highway || props.type || layerMeta?.label || "OSM";
+  const category = props.categorie || props.shop || props.amenity || props.historic || props.tourism || props.highway || props.type || layerMeta?.label || "OSM";
   let lon = 0, lat = 0;
   if (f._clickCoords) [lon, lat] = f._clickCoords;
   else if (Array.isArray(props.coordonneesxy)) [lon, lat] = props.coordonneesxy;
   else if (f.geometry?.type === "Point") [lon, lat] = f.geometry.coordinates;
   else if (f.geometry?.type === "LineString") { const c = f.geometry.coordinates[Math.floor(f.geometry.coordinates.length/2)]; if (c) [lon,lat]=c; }
-  const IGNORED = new Set(["id","id_local","id_osm","coordonneesxy","_theme","_layer","_color","_label","commentaires","url_info"]);
-  const priority = ["name","nom","brand","enseigne","amenity","shop","categorie","type","capacite","gestionnaire","opening_hours","horaires","phone","telephone","website","site_web"];
+  const IGNORED = new Set(["id","id_local","id_osm","coordonneesxy","_theme","_layer","_color","_label","_icon","commentaires","url_info"]);
+  const priority = ["name","nom","brand","enseigne","historic","tourism","amenity","shop","categorie","type","capacite","gestionnaire","opening_hours","horaires","phone","telephone","website","site_web"];
   const entries = Object.entries(props)
     .filter(([k, v]) => !k.startsWith("_") && !IGNORED.has(k) && v !== null && v !== "" && typeof v !== "object")
     .sort(([a], [b]) => {
@@ -448,11 +558,12 @@ function renderDetail() {
     });
   const osmType = props.osm_type || props.id_osm?.split("/")?.[0] || "node";
   const osmId = props.osm_id || props.id_osm?.split("/")?.[1] || String(props.id).split("/").pop();
+  const panoramaxUrl = `${PANORAMAX_BASE}?focus=map&map=18/${lat.toFixed(6)}/${lon.toFixed(6)}`;
 
   const panel = document.createElement("div");
   panel.className = "detail-panel";
   panel.innerHTML = `
-    <div class="detail-header" style="background:linear-gradient(135deg, ${layerMeta?.color || "#003D7A"} 0%, #003D7A 100%)">
+    <div class="detail-header" style="background:linear-gradient(135deg, ${layerMeta?.color || "#E30613"} 0%, ${layerMeta?.color ? shadeColor(layerMeta.color, -25) : "#A00510"} 100%)">
       <button class="detail-close"><i data-lucide="x" style="width:16px;height:16px"></i></button>
       <div class="detail-badge"><i data-lucide="tag" style="width:12px;height:12px"></i>${humanize(category)}</div>
       <h2 class="detail-title">${humanize(title)}</h2>
@@ -464,16 +575,33 @@ function renderDetail() {
         const label = KEY_LABELS[k] || k.replace(/_/g, " ");
         if (k === "website" || k === "site_web" || k === "url") {
           const href = /^https?:\/\//.test(v) ? v : `https://${v}`;
-          return `<a href="${href}" target="_blank" rel="noreferrer" class="detail-row" style="text-decoration:none"><span class="k">${label}</span><span class="v" style="color:var(--lons-primary)">${v} ↗</span></a>`;
+          return `<a href="${href}" target="_blank" rel="noreferrer" class="detail-row" style="text-decoration:none"><span class="k">${label}</span><span class="v" style="color:var(--lons-red)">${v} ↗</span></a>`;
         }
         return `<div class="detail-row"><span class="k">${label}</span><span class="v" title="${humanize(v)}">${humanize(v)}</span></div>`;
       }).join("")}
-      ${osmId ? `<a class="osm-link" href="https://www.openstreetmap.org/${osmType}/${osmId}" target="_blank" rel="noreferrer"><i data-lucide="external-link" style="width:16px;height:16px"></i>Voir sur OpenStreetMap</a>` : ""}
+
+      <a class="action-btn panoramax" href="${panoramaxUrl}" target="_blank" rel="noreferrer">
+        <i data-lucide="camera" style="width:16px;height:16px"></i>
+        Voir sur Panoramax (photos rue)
+        <i data-lucide="external-link" style="width:14px;height:14px;opacity:0.75"></i>
+      </a>
+      ${osmId ? `<a class="action-btn osm" href="https://www.openstreetmap.org/${osmType}/${osmId}" target="_blank" rel="noreferrer">
+        <i data-lucide="map" style="width:16px;height:16px"></i>Voir sur OpenStreetMap
+      </a>` : ""}
     </div>
   `;
   document.querySelector("main.map-area").appendChild(panel);
   panel.querySelector(".detail-close").addEventListener("click", () => { state.selectedFeature = null; renderDetail(); });
   lucide.createIcons();
+}
+
+function shadeColor(hex, percent) {
+  const num = parseInt(hex.replace("#", ""), 16);
+  const R = (num >> 16) + Math.round(255 * percent / 100);
+  const G = ((num >> 8) & 0x00FF) + Math.round(255 * percent / 100);
+  const B = (num & 0x0000FF) + Math.round(255 * percent / 100);
+  const clamp = (v) => Math.max(0, Math.min(255, v));
+  return "#" + ((1 << 24) + (clamp(R) << 16) + (clamp(G) << 8) + clamp(B)).toString(16).slice(1);
 }
 
 /* ---------------- Actions ---------------- */
@@ -527,6 +655,8 @@ async function ensureLayers() {
     try {
       const raw = meta.source === "geodatamine" ? await fetchGeoDataMine(meta.theme) : await fetchOverpass(meta.query);
       state.layerData[layerKey] = stampFeatures(raw, state.activeTheme, layerKey, meta);
+      // Register thematic icon
+      await loadIconIntoMap(map, `pin-${layerKey}`, makePinDataUrl(meta.color, meta.icon));
       toast(`${meta.label} · ${state.layerData[layerKey].features.length} objets`);
     } catch (e) {
       console.error(e);
@@ -540,13 +670,35 @@ async function ensureLayers() {
   }
 }
 
+async function addCommuneBoundary() {
+  const gj = await fetchCommuneBoundary();
+  if (!gj) return;
+  // Nominatim returns FeatureCollection or GeoJSON with polygon
+  const feature = gj.features?.[0] || gj;
+  if (!feature?.geometry) return;
+  if (map.getSource("commune-boundary")) return;
+  map.addSource("commune-boundary", { type: "geojson", data: feature });
+  // Halo / gloss inside
+  map.addLayer({
+    id: "commune-halo", type: "line", source: "commune-boundary",
+    paint: { "line-color": "#E30613", "line-width": 10, "line-opacity": 0.15, "line-blur": 4 },
+  });
+  // Contour épais
+  map.addLayer({
+    id: "commune-outline", type: "line", source: "commune-boundary",
+    layout: { "line-cap": "round", "line-join": "round" },
+    paint: { "line-color": "#E30613", "line-width": 3, "line-dasharray": [3, 2] },
+  });
+}
+
 /* ---------------- Map ---------------- */
 const map = new maplibregl.Map({
   container: "map",
   style: makeStyle(BASEMAPS.find((b) => b.id === state.basemap)),
-  center: LONS_CENTER, zoom: 15, pitch: 55, bearing: -17.6, maxPitch: 75,
+  center: LONS_CENTER, zoom: 14.5, pitch: 55, bearing: -17.6, maxPitch: 75,
   attributionControl: { compact: true },
 });
+window.__map = map;
 map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-right");
 map.addControl(new maplibregl.ScaleControl({ maxWidth: 120 }), "bottom-left");
 
@@ -564,10 +716,10 @@ function applyMapSources() {
             map.addLayer({
               id: "3d-buildings", source: vec[0], "source-layer": sl, type: "fill-extrusion", minzoom: 14,
               paint: {
-                "fill-extrusion-color": ["interpolate", ["linear"], ["coalesce", ["get", "render_height"], ["get", "height"], 10], 0, "#E2E8F0", 30, "#94A3B8", 80, "#003D7A"],
+                "fill-extrusion-color": ["interpolate", ["linear"], ["coalesce", ["get", "render_height"], ["get", "height"], 10], 0, "#F3F4F6", 30, "#9CA3AF", 80, "#4B5563"],
                 "fill-extrusion-height": ["coalesce", ["get", "render_height"], ["get", "height"], ["*", ["coalesce", ["get", "levels"], 2], 3]],
                 "fill-extrusion-base": ["coalesce", ["get", "render_min_height"], ["get", "min_height"], 0],
-                "fill-extrusion-opacity": 0.85,
+                "fill-extrusion-opacity": 0.82,
               },
             });
             break;
@@ -581,7 +733,7 @@ function applyMapSources() {
   Object.entries(LAYERS).forEach(([tk, theme]) => {
     Object.entries(theme.items).forEach(([lk, meta]) => {
       const srcId = `osm-${lk}`;
-      const ids = [`${srcId}-halo`, `${srcId}-fill`];
+      const ids = [`${srcId}-halo`, `${srcId}-fill`, `${srcId}-symbol`];
       const isActive = tk === state.activeTheme && state.visibleLayers[lk] && state.layerData[lk];
       if (!isActive) {
         ids.forEach((id) => { if (map.getLayer(id)) map.removeLayer(id); });
@@ -593,27 +745,55 @@ function applyMapSources() {
       else map.addSource(srcId, { type: "geojson", data: fc });
 
       if (meta.geometry === "line") {
-        if (!map.getLayer(`${srcId}-halo`)) map.addLayer({ id: `${srcId}-halo`, type: "line", source: srcId, paint: { "line-color": meta.color, "line-width": 9, "line-opacity": 0.18, "line-blur": 2 } });
-        if (!map.getLayer(`${srcId}-fill`)) map.addLayer({ id: `${srcId}-fill`, type: "line", source: srcId, layout: { "line-cap": "round", "line-join": "round" }, paint: { "line-color": meta.color, "line-width": 3.4 } });
+        if (!map.getLayer(`${srcId}-halo`)) map.addLayer({ id: `${srcId}-halo`, type: "line", source: srcId, paint: { "line-color": meta.color, "line-width": 10, "line-opacity": 0.2, "line-blur": 3 } });
+        if (!map.getLayer(`${srcId}-fill`)) map.addLayer({ id: `${srcId}-fill`, type: "line", source: srcId, layout: { "line-cap": "round", "line-join": "round" }, paint: { "line-color": meta.color, "line-width": 3.6 } });
       } else {
-        if (!map.getLayer(`${srcId}-halo`)) map.addLayer({ id: `${srcId}-halo`, type: "circle", source: srcId, paint: { "circle-radius": 15, "circle-color": meta.color, "circle-opacity": 0.2, "circle-blur": 0.5 } });
-        if (!map.getLayer(`${srcId}-fill`)) map.addLayer({ id: `${srcId}-fill`, type: "circle", source: srcId, paint: { "circle-radius": 7, "circle-color": meta.color, "circle-stroke-width": 2.5, "circle-stroke-color": "#ffffff" } });
+        // Thematic pin symbol
+        if (!map.getLayer(`${srcId}-symbol`) && map.hasImage(`pin-${lk}`)) {
+          map.addLayer({
+            id: `${srcId}-symbol`,
+            type: "symbol",
+            source: srcId,
+            layout: {
+              "icon-image": `pin-${lk}`,
+              "icon-size": ["interpolate", ["linear"], ["zoom"], 12, 0.35, 15, 0.55, 18, 0.85],
+              "icon-allow-overlap": true,
+              "icon-anchor": "bottom",
+              "symbol-sort-key": 1,
+            },
+          });
+        }
+        // Ensure a picking layer exists (transparent circle) for clicks
+        if (!map.getLayer(`${srcId}-fill`)) map.addLayer({
+          id: `${srcId}-fill`, type: "circle", source: srcId,
+          paint: { "circle-radius": 14, "circle-color": meta.color, "circle-opacity": 0.001 },
+        });
       }
     });
   });
 }
 
-map.on("load", applyMapSources);
-map.on("styledata", applyMapSources);
+map.on("load", async () => {
+  applyMapSources();
+  await addCommuneBoundary();
+});
+map.on("styledata", async () => {
+  applyMapSources();
+  await addCommuneBoundary();
+});
 
 map.on("click", (e) => {
   const ids = [];
-  Object.keys(LAYERS).forEach((t) => Object.keys(LAYERS[t].items).forEach((k) => ids.push(`osm-${k}-fill`)));
+  Object.keys(LAYERS).forEach((t) => Object.keys(LAYERS[t].items).forEach((k) => ids.push(`osm-${k}-fill`, `osm-${k}-symbol`)));
   const existing = ids.filter((l) => map.getLayer(l));
   if (existing.length === 0) { state.selectedFeature = null; renderDetail(); return; }
-  const bbox = [[e.point.x - 8, e.point.y - 8], [e.point.x + 8, e.point.y + 8]];
+  const bbox = [[e.point.x - 10, e.point.y - 10], [e.point.x + 10, e.point.y + 10]];
   const feats = map.queryRenderedFeatures(bbox, { layers: existing });
-  feats.sort((a, b) => (a.layer.type === "circle" ? 0 : 1) - (b.layer.type === "circle" ? 0 : 1));
+  // Prefer symbol/circle over line
+  feats.sort((a, b) => {
+    const rank = (t) => (t === "symbol" ? 0 : t === "circle" ? 1 : 2);
+    return rank(a.layer.type) - rank(b.layer.type);
+  });
   if (feats.length > 0) {
     const f = feats[0];
     let coords;
@@ -628,15 +808,15 @@ map.on("click", (e) => {
   }
 });
 
-// Pointer cursor on POI layers
 ["mouseenter", "mouseleave"].forEach((ev) => {
   Object.keys(LAYERS).forEach((t) => Object.keys(LAYERS[t].items).forEach((k) => {
-    const id = `osm-${k}-fill`;
-    map.on(ev, id, () => (map.getCanvas().style.cursor = ev === "mouseenter" ? "pointer" : ""));
+    ["fill", "symbol"].forEach((s) => {
+      const id = `osm-${k}-${s}`;
+      map.on(ev, id, () => (map.getCanvas().style.cursor = ev === "mouseenter" ? "pointer" : ""));
+    });
   }));
 });
 
-// Close basemap menu on outside click
 document.addEventListener("click", (e) => {
   const menu = document.getElementById("basemap-menu");
   if (menu && !menu.contains(e.target) && !document.getElementById("btn-basemap").contains(e.target)) menu.classList.remove("open");
