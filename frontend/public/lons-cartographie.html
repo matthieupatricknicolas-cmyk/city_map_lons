@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Cartographie 3D · Lons-le-Saunier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  :root {
+    --lons-primary: #003D7A;
+    --lons-primary-hover: #002855;
+    --lons-red: #E30613;
+    --lons-red-hover: #B8000B;
+    --lons-ink: #0F172A;
+    --lons-muted: #64748B;
+    --lons-border: #E2E8F0;
+    --lons-bg: #F8FAFC;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; font-family: "Plus Jakarta Sans", system-ui, sans-serif; color: var(--lons-ink); background: var(--lons-bg); overflow: hidden; }
+  .font-display { font-family: "Bricolage Grotesque", "Plus Jakarta Sans", sans-serif; letter-spacing: -0.015em; }
+  .font-mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+
+  /* Layout */
+  .app { display: flex; flex-direction: column; height: 100vh; width: 100vw; }
+  header.app-header { height: 64px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--lons-border); z-index: 30; position: relative; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-badge { width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg,#003D7A 0%,#00559E 60%,#E30613 130%); color: white; box-shadow: 0 4px 12px rgba(0,61,122,0.25); }
+  .brand-title { line-height: 1.1; }
+  .brand-title .top { font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--lons-muted); }
+  .brand-title .main { font-family: "Bricolage Grotesque", sans-serif; font-weight: 800; font-size: 20px; }
+  .brand-title .main .sep { color: var(--lons-red); }
+  .brand-title .main .subtitle { color: var(--lons-primary); }
+  .badges { display: flex; align-items: center; gap: 12px; }
+  .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; }
+  .badge-live { background: #FDE8E9; border: 1px solid #FBD5D9; color: var(--lons-red-hover); }
+  .badge-count { background: #F1F5F9; border: 1px solid #E2E8F0; color: #334155; font-family: "JetBrains Mono", monospace; letter-spacing: 0; }
+  .live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lons-red); animation: livePulse 1.8s infinite; }
+  @keyframes livePulse { 0% { box-shadow: 0 0 0 0 rgba(227,6,19,0.55); } 70% { box-shadow: 0 0 0 10px rgba(227,6,19,0); } 100% { box-shadow: 0 0 0 0 rgba(227,6,19,0); } }
+
+  .body-row { flex: 1; display: flex; overflow: hidden; }
+
+  /* Sidebar */
+  aside.sidebar { width: 300px; flex-shrink: 0; border-right: 1px solid var(--lons-border); background: white; display: flex; flex-direction: column; position: relative; z-index: 20; }
+  .sidebar-section-title { font-size: 10px; text-transform: uppercase; letter-spacing: 0.22em; font-weight: 700; color: #94A3B8; padding: 20px 16px 6px; }
+  .tab-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 0 16px; }
+  .tab-btn { position: relative; text-align: left; padding: 12px; border-radius: 12px; border: 1px solid var(--lons-border); background: #F8FAFC; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+  .tab-btn:hover { border-color: rgba(0,61,122,0.4); }
+  .tab-btn .tab-title { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; font-family: "Bricolage Grotesque", sans-serif; color: #334155; }
+  .tab-btn .tab-sub { margin-top: 4px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; color: #94A3B8; }
+  .tab-btn.active { background: var(--lons-primary); border-color: var(--lons-primary); color: white; box-shadow: 0 10px 20px rgba(0,61,122,0.2); }
+  .tab-btn.active .tab-title, .tab-btn.active .tab-sub { color: white; }
+  .tab-btn.active::before { content: ""; position: absolute; left: -1px; top: 12px; bottom: 12px; width: 3px; background: linear-gradient(180deg,var(--lons-red) 0%,var(--lons-primary) 100%); border-radius: 0 3px 3px 0; }
+  .layers { padding: 8px 16px; flex: 1; overflow-y: auto; }
+  .layer-row { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 12px; border: 1px solid var(--lons-border); background: white; cursor: pointer; margin-bottom: 8px; transition: all 0.2s; user-select: none; }
+  .layer-row:hover { transform: translateY(-1px); }
+  .layer-row.off { background: rgba(248,250,252,0.6); }
+  .layer-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; }
+  .layer-info { flex: 1; min-width: 0; }
+  .layer-info .name { font-size: 14px; font-weight: 700; color: #1E293B; }
+  .layer-info .count { font-size: 11px; color: var(--lons-muted); font-family: "JetBrains Mono", monospace; }
+  .switch { position: relative; width: 36px; height: 20px; border-radius: 999px; background: #CBD5E1; transition: background 0.2s; flex-shrink: 0; }
+  .switch.on { background: var(--lons-primary); }
+  .switch .knob { position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.2); transition: transform 0.2s; }
+  .switch.on .knob { transform: translateX(16px); }
+  .tip-card { margin: 12px 16px 16px; padding: 16px; border-radius: 12px; background: linear-gradient(135deg,var(--lons-primary) 0%,#00559E 100%); color: white; font-size: 13px; font-weight: 600; line-height: 1.4; position: relative; overflow: hidden; }
+  .tip-card .tip-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.22em; color: rgba(255,255,255,0.7); margin-bottom: 6px; font-weight: 700; }
+
+  /* Map area */
+  main.map-area { position: relative; flex: 1; overflow: hidden; }
+  #map { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+  /* Map controls */
+  .map-controls { position: absolute; top: 16px; left: 16px; z-index: 30; display: flex; flex-direction: column; gap: 12px; }
+  .ctrl-btn { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 12px; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border: 1px solid var(--lons-border); box-shadow: 0 8px 20px rgba(15,23,42,0.06); cursor: pointer; font-family: inherit; transition: transform 0.2s; }
+  .ctrl-btn:hover { transform: translateY(-1px); }
+  .ctrl-btn.active { background: var(--lons-primary); color: white; border-color: var(--lons-primary); }
+  .ctrl-btn .ctrl-icon-wrap { width: 32px; height: 32px; border-radius: 8px; background: rgba(0,61,122,0.1); display: flex; align-items: center; justify-content: center; color: var(--lons-primary); flex-shrink: 0; }
+  .ctrl-btn.active .ctrl-icon-wrap { background: rgba(255,255,255,0.15); color: white; }
+  .ctrl-btn .ctrl-label { line-height: 1.15; }
+  .ctrl-btn .ctrl-top { font-size: 9px; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #94A3B8; }
+  .ctrl-btn.active .ctrl-top { color: rgba(255,255,255,0.7); }
+  .ctrl-btn .ctrl-main { font-size: 12px; font-weight: 700; }
+
+  .basemap-menu { position: absolute; top: 100%; left: 0; margin-top: 8px; width: 288px; max-height: 60vh; overflow-y: auto; border-radius: 12px; background: white; border: 1px solid var(--lons-border); box-shadow: 0 20px 40px rgba(15,23,42,0.15); padding: 8px; display: none; }
+  .basemap-menu.open { display: block; }
+  .basemap-item { width: 100%; text-align: left; padding: 10px 12px; border-radius: 8px; background: transparent; border: none; cursor: pointer; font-family: inherit; margin-bottom: 2px; }
+  .basemap-item:hover { background: #F1F5F9; }
+  .basemap-item.selected { background: var(--lons-primary); color: white; }
+  .basemap-item .bm-name { font-size: 14px; font-weight: 700; }
+  .basemap-item .bm-sub { font-size: 11px; color: #64748B; margin-top: 2px; }
+  .basemap-item.selected .bm-sub { color: rgba(255,255,255,0.75); }
+
+  /* Detail panel */
+  .detail-panel { position: absolute; top: 16px; right: 16px; bottom: 16px; width: min(420px, 92vw); background: white; border-radius: 16px; box-shadow: 0 30px 60px rgba(8,112,184,0.18); border: 1px solid var(--lons-border); overflow: hidden; display: flex; flex-direction: column; z-index: 40; animation: slideInRight 320ms cubic-bezier(0.22,1,0.36,1); }
+  @keyframes slideInRight { from { transform: translateX(24px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+  .detail-header { padding: 20px; position: relative; overflow: hidden; color: white; }
+  .detail-close { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.15); border: none; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(6px); transition: background 0.2s; }
+  .detail-close:hover { background: rgba(255,255,255,0.3); }
+  .detail-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,0.2); backdrop-filter: blur(4px); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 8px; }
+  .detail-title { font-family: "Bricolage Grotesque", sans-serif; font-size: 24px; font-weight: 800; line-height: 1.15; margin: 0; }
+  .detail-coords { margin-top: 8px; display: flex; align-items: center; gap: 6px; font-family: "JetBrains Mono", monospace; font-size: 12px; color: rgba(255,255,255,0.8); }
+  .detail-body { padding: 20px; overflow-y: auto; flex: 1; }
+  .detail-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #F1F5F9; }
+  .detail-row:last-of-type { border-bottom: none; }
+  .detail-row .k { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: var(--lons-muted); }
+  .detail-row .v { font-size: 14px; font-weight: 600; text-align: right; color: #1E293B; max-width: 60%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .detail-empty { padding: 16px; background: #F8FAFC; border-radius: 8px; color: var(--lons-muted); font-size: 13px; display: flex; gap: 10px; align-items: flex-start; }
+  .osm-link { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 16px; padding: 12px; border-radius: 12px; background: var(--lons-primary); color: white; text-decoration: none; font-weight: 700; font-size: 13px; transition: background 0.2s; }
+  .osm-link:hover { background: var(--lons-primary-hover); }
+
+  /* Toasts */
+  .toasts { position: absolute; bottom: 20px; right: 20px; z-index: 50; display: flex; flex-direction: column; gap: 8px; pointer-events: none; }
+  .toast { pointer-events: auto; padding: 12px 16px; background: white; border-radius: 10px; border: 1px solid var(--lons-border); box-shadow: 0 10px 25px rgba(15,23,42,0.1); font-size: 13px; font-weight: 600; color: #334155; min-width: 240px; display: flex; align-items: center; gap: 10px; animation: toastIn 240ms cubic-bezier(0.22,1,0.36,1); }
+  .toast.success { border-left: 4px solid #10B981; }
+  .toast.error { border-left: 4px solid var(--lons-red); }
+  .toast.loading { border-left: 4px solid var(--lons-primary); }
+  @keyframes toastIn { from { transform: translateY(8px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-thumb { background: rgba(0,61,122,0.25); border-radius: 999px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+
+  /* MapLibre tweaks */
+  .maplibregl-ctrl-attrib { font-size: 10px !important; background: rgba(255,255,255,0.75) !important; backdrop-filter: blur(6px); }
+  .maplibregl-ctrl-attrib a { color: var(--lons-primary) !important; }
+
+  @media (max-width: 900px) {
+    aside.sidebar { width: 240px; }
+    .detail-panel { width: 92vw; right: 16px; top: 72px; bottom: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-badge"><i data-lucide="map-pin"></i></div>
+      <div class="brand-title">
+        <div class="top">Ville de</div>
+        <div class="main">Lons-le-Saunier <span class="sep">·</span> <span class="subtitle">Cartographie 3D</span></div>
+      </div>
+    </div>
+    <div class="badges">
+      <div class="badge badge-live"><span class="live-dot"></span> Données OSM · Direct</div>
+      <div class="badge badge-count"><i data-lucide="radio" style="width:14px;height:14px"></i> <span id="header-count">0</span> objets chargés</div>
+    </div>
+  </header>
+
+  <div class="body-row">
+    <aside class="sidebar">
+      <div class="sidebar-section-title">Thématiques</div>
+      <div class="tab-grid" id="tab-grid"></div>
+
+      <div class="sidebar-section-title">Couches à afficher</div>
+      <div class="layers" id="layers"></div>
+
+      <div class="tip-card">
+        <div class="tip-label">Astuce</div>
+        Cliquez sur un objet pour ouvrir sa fiche détaillée. Cliquez dans le vide pour la refermer.
+      </div>
+    </aside>
+
+    <main class="map-area">
+      <div id="map"></div>
+      <div class="map-controls" id="map-controls"></div>
+      <div class="toasts" id="toasts"></div>
+    </main>
+  </div>
+</div>
+
+<script>
+/* ---------------- Configuration ---------------- */
+const LONS_CENTER = [5.5539, 46.6739];
+const LONS_BOUNDARY_ID = "152508";
+const GEODATAMINE_BASE = "https://geodatamine.fr";
+const OVERPASS_ENDPOINTS = [
+  "https://overpass-api.de/api/interpreter",
+  "https://overpass.kumi.systems/api/interpreter",
+  "https://overpass.private.coffee/api/interpreter",
+];
+
+const BASEMAPS = [
+  { id: "openfreemap", name: "OpenFreeMap · Liberty", subtitle: "Vectoriel clair", type: "style", style: "https://tiles.openfreemap.org/styles/liberty" },
+  { id: "cartodb_voyager", name: "CARTO · Voyager", subtitle: "Vectoriel éditorial (défaut)", type: "style", style: "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json" },
+  { id: "carto_dark", name: "CARTO · Dark Matter", subtitle: "Mode nuit", type: "style", style: "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json" },
+  { id: "ign_ortho", name: "IGN · Orthophoto", subtitle: "Satellite français", type: "raster", tiles: ["https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ORTHOIMAGERY.ORTHOPHOTOS&STYLE=normal&FORMAT=image/jpeg&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}"], attribution: "© IGN-F / Géoportail", maxzoom: 19 },
+  { id: "osm_fr", name: "OSM · France", subtitle: "Raster classique", type: "raster", tiles: ["https://a.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png","https://b.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png","https://c.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png"], attribution: "© OpenStreetMap France", maxzoom: 19 },
+  { id: "opentopomap", name: "OpenTopoMap · Relief", subtitle: "Topographique", type: "raster", tiles: ["https://a.tile.opentopomap.org/{z}/{x}/{y}.png","https://b.tile.opentopomap.org/{z}/{x}/{y}.png","https://c.tile.opentopomap.org/{z}/{x}/{y}.png"], attribution: "© OpenTopoMap (CC-BY-SA)", maxzoom: 17 },
+  { id: "maplibre_demo", name: "MapLibre · Demo", subtitle: "Style minimaliste", type: "style", style: "https://demotiles.maplibre.org/style.json" },
+];
+
+const LAYERS = {
+  mobility: {
+    label: "Mobilité", subtitle: "Déplacement",
+    items: {
+      bike_parking: { label: "Parkings vélos", icon: "bike", color: "#059669", geometry: "point", source: "geodatamine", theme: "bicycle_parking" },
+      cycle_lanes:  { label: "Pistes cyclables", icon: "navigation", color: "#10B981", geometry: "line",  source: "geodatamine", theme: "cycleway" },
+      bus_shelter:  { label: "Arrêts & Abris bus", icon: "bus", color: "#2563EB", geometry: "point", source: "overpass", query: `[out:json][timeout:25];(node["highway"="bus_stop"](around:4000,46.6739,5.5539);node["amenity"="bus_station"](around:4000,46.6739,5.5539););out body;` },
+      bus_lines:    { label: "Lignes de bus", icon: "route", color: "#3B82F6", geometry: "line",  source: "overpass", query: `[out:json][timeout:40];relation["route"="bus"](around:4000,46.6739,5.5539);out body geom;` },
+    },
+  },
+  commerces: {
+    label: "Commerces", subtitle: "Vie locale",
+    items: {
+      shops: { label: "Boutiques & Magasins", icon: "shopping-bag", color: "#8B5CF6", geometry: "point", source: "geodatamine", theme: "shop_craft_office" },
+      food:  { label: "Restaurants, cafés & bars", icon: "utensils", color: "#EC4899", geometry: "point", source: "geodatamine", theme: "restaurant" },
+    },
+  },
+};
+
+const DEFAULT_VISIBLE = {
+  mobility: { bike_parking: true, cycle_lanes: true, bus_shelter: true, bus_lines: false },
+  commerces: { shops: true, food: true },
+};
+
+const KEY_LABELS = {
+  name: "Nom", operator: "Opérateur", capacity: "Capacité", covered: "Couvert",
+  access: "Accès", fee: "Payant", surface: "Revêtement", lit: "Éclairé", shelter: "Abri",
+  bench: "Banc", network: "Réseau", ref: "Ligne", opening_hours: "Horaires",
+  phone: "Téléphone", website: "Site web", brand: "Enseigne", cuisine: "Cuisine",
+  shop: "Type de commerce", amenity: "Catégorie", highway: "Type de voie",
+  nom: "Nom", capacite: "Capacité", capacite_cargo: "Capacité cargo",
+  type_accroche: "Type d'accroche", mobilier: "Mobilier", acces: "Accès",
+  gratuit: "Gratuit", protection: "Protection", couverture: "Couverture",
+  surveillance: "Surveillance", lumiere: "Éclairage", proprietaire: "Propriétaire",
+  gestionnaire: "Gestionnaire", code_com: "Commune (INSEE)", type_voie: "Type de voie",
+  bidirect: "Bidirectionnel", categorie: "Catégorie", telephone: "Téléphone",
+  site_web: "Site web", horaires: "Horaires", adresse: "Adresse",
+  enseigne: "Enseigne", type: "Type", source: "Source", date_maj: "Mise à jour",
+  d_service: "Mise en service", revet_d: "Revêtement (droit)", revet_g: "Revêtement (gauche)",
+  regime_d: "Régime (droit)", regime_g: "Régime (gauche)",
+  ame_d: "Aménagement (droit)", ame_g: "Aménagement (gauche)",
+  statut_d: "Statut (droit)", statut_g: "Statut (gauche)",
+  sens_g: "Sens", trafic_vit: "Vitesse trafic", local_g: "Emplacement",
+};
+
+/* ---------------- Utilities ---------------- */
+function humanize(v) {
+  if (v === "yes" || v === "true" || v === true) return "Oui";
+  if (v === "no" || v === "false" || v === false) return "Non";
+  if (typeof v === "string") return v.replace(/_/g, " ");
+  if (v == null) return "—";
+  return String(v);
+}
+
+function makeStyle(bm) {
+  if (bm.type === "style") return bm.style;
+  return {
+    version: 8,
+    glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
+    sources: { "raster-src": { type: "raster", tiles: bm.tiles, tileSize: 256, attribution: bm.attribution || "", maxzoom: bm.maxzoom || 19 } },
+    layers: [{ id: "raster-layer", type: "raster", source: "raster-src" }],
+  };
+}
+
+async function fetchGeoDataMine(theme) {
+  const r = await fetch(`${GEODATAMINE_BASE}/data/${theme}/${LONS_BOUNDARY_ID}?format=geojson`);
+  if (!r.ok) throw new Error(`geodatamine ${theme} HTTP ${r.status}`);
+  return await r.json();
+}
+
+async function fetchOverpass(query) {
+  let lastErr;
+  for (const endpoint of OVERPASS_ENDPOINTS) {
+    try {
+      const r = await fetch(endpoint, { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams({ data: query }) });
+      if (!r.ok) { lastErr = `HTTP ${r.status}`; continue; }
+      const j = await r.json();
+      if (Array.isArray(j.elements)) return overpassToGeoJSON(j.elements);
+    } catch (e) { lastErr = e; }
+  }
+  throw new Error("Overpass indisponible: " + lastErr);
+}
+
+function overpassToGeoJSON(elements) {
+  const features = [];
+  elements.forEach((e) => {
+    if (e.type === "node") {
+      features.push({ type: "Feature", geometry: { type: "Point", coordinates: [e.lon, e.lat] }, properties: { id: `node/${e.id}`, osm_type: "node", osm_id: e.id, ...(e.tags || {}) } });
+    } else if (e.type === "way" && e.geometry) {
+      features.push({ type: "Feature", geometry: { type: "LineString", coordinates: e.geometry.map((g) => [g.lon, g.lat]) }, properties: { id: `way/${e.id}`, osm_type: "way", osm_id: e.id, ...(e.tags || {}) } });
+    } else if (e.type === "relation" && e.members) {
+      e.members.forEach((m, i) => {
+        if (m.geometry && m.geometry.length > 1) {
+          features.push({ type: "Feature", geometry: { type: "LineString", coordinates: m.geometry.map((g) => [g.lon, g.lat]) }, properties: { id: `rel/${e.id}/${i}`, osm_type: "relation", osm_id: e.id, ...(e.tags || {}) } });
+        }
+      });
+    }
+  });
+  return { type: "FeatureCollection", features };
+}
+
+function stampFeatures(fc, themeKey, layerKey, meta) {
+  return {
+    type: "FeatureCollection",
+    features: (fc.features || []).map((f) => ({
+      ...f,
+      properties: { ...f.properties, _theme: themeKey, _layer: layerKey, _color: meta.color, _label: meta.label, id: f.properties?.id || f.properties?.id_osm || `${layerKey}-${Math.random()}` },
+    })),
+  };
+}
+
+/* ---------------- State ---------------- */
+const state = {
+  activeTheme: "mobility",
+  visibleLayers: { ...DEFAULT_VISIBLE.mobility },
+  basemap: "cartodb_voyager",
+  buildings3D: true,
+  layerData: {},
+  loadingLayers: {},
+  selectedFeature: null,
+  inflight: new Set(),
+};
+
+/* ---------------- Toasts ---------------- */
+function toast(msg, type = "success") {
+  const el = document.createElement("div");
+  el.className = `toast ${type}`;
+  const iconMap = { success: "check-circle", error: "alert-circle", loading: "loader" };
+  el.innerHTML = `<i data-lucide="${iconMap[type]}" style="width:16px;height:16px"></i> <span>${msg}</span>`;
+  document.getElementById("toasts").appendChild(el);
+  lucide.createIcons();
+  setTimeout(() => { el.style.opacity = "0"; el.style.transition = "opacity 300ms"; setTimeout(() => el.remove(), 300); }, 2600);
+}
+
+/* ---------------- Rendering ---------------- */
+function renderTabs() {
+  const el = document.getElementById("tab-grid");
+  el.innerHTML = Object.entries(LAYERS).map(([key, theme]) => {
+    const iconName = key === "mobility" ? "bike" : "shopping-bag";
+    const active = key === state.activeTheme;
+    return `
+      <button class="tab-btn ${active ? "active" : ""}" data-tab="${key}">
+        <div class="tab-title"><i data-lucide="${iconName}" style="width:16px;height:16px"></i>${theme.label}</div>
+        <div class="tab-sub">${theme.subtitle}</div>
+      </button>
+    `;
+  }).join("");
+  el.querySelectorAll(".tab-btn").forEach((btn) => btn.addEventListener("click", () => setActiveTheme(btn.dataset.tab)));
+  lucide.createIcons();
+}
+
+function renderLayers() {
+  const el = document.getElementById("layers");
+  const theme = LAYERS[state.activeTheme];
+  el.innerHTML = Object.entries(theme.items).map(([key, meta]) => {
+    const visible = state.visibleLayers[key];
+    const loading = state.loadingLayers[key];
+    const count = state.layerData[key]?.features.length || 0;
+    const status = loading ? "Chargement OSM…" : visible ? `${count} objets en direct` : "Cliquez pour activer";
+    return `
+      <div class="layer-row ${visible ? "" : "off"}" data-layer="${key}">
+        <div class="layer-icon" style="background:${visible ? meta.color : "#E2E8F0"};box-shadow:${visible ? `0 6px 14px ${meta.color}40` : "none"}">
+          <i data-lucide="${meta.icon}" style="width:16px;height:16px;color:${visible ? "white" : "#64748B"}"></i>
+        </div>
+        <div class="layer-info">
+          <div class="name">${meta.label}</div>
+          <div class="count">${status}</div>
+        </div>
+        <div class="switch ${visible ? "on" : ""}"><div class="knob"></div></div>
+      </div>
+    `;
+  }).join("");
+  el.querySelectorAll(".layer-row").forEach((row) => row.addEventListener("click", () => toggleLayer(row.dataset.layer)));
+  lucide.createIcons();
+  updateHeaderCount();
+}
+
+function updateHeaderCount() {
+  const total = Object.values(state.layerData).reduce((s, fc) => s + (fc.features?.length || 0), 0);
+  document.getElementById("header-count").textContent = total;
+}
+
+function renderControls() {
+  const el = document.getElementById("map-controls");
+  const current = BASEMAPS.find((b) => b.id === state.basemap) || BASEMAPS[0];
+  el.innerHTML = `
+    <div style="position:relative">
+      <button class="ctrl-btn" id="btn-basemap">
+        <div class="ctrl-icon-wrap"><i data-lucide="layers" style="width:16px;height:16px"></i></div>
+        <div class="ctrl-label"><div class="ctrl-top">Fond de carte</div><div class="ctrl-main">${current.name}</div></div>
+      </button>
+      <div class="basemap-menu" id="basemap-menu">
+        ${BASEMAPS.map((b) => `
+          <button class="basemap-item ${b.id === state.basemap ? "selected" : ""}" data-bm="${b.id}">
+            <div class="bm-name">${b.name}</div>
+            <div class="bm-sub">${b.subtitle}</div>
+          </button>
+        `).join("")}
+      </div>
+    </div>
+    <button class="ctrl-btn ${state.buildings3D ? "active" : ""}" id="btn-3d">
+      <div class="ctrl-icon-wrap"><i data-lucide="box" style="width:16px;height:16px"></i></div>
+      <div class="ctrl-label"><div class="ctrl-top">Vue</div><div class="ctrl-main">Bâtiments 3D</div></div>
+    </button>
+    <button class="ctrl-btn" id="btn-reset">
+      <div class="ctrl-icon-wrap"><i data-lucide="compass" style="width:16px;height:16px"></i></div>
+      <div class="ctrl-label"><div class="ctrl-top">Caméra</div><div class="ctrl-main">Recentrer</div></div>
+    </button>
+    <button class="ctrl-btn" id="btn-locate">
+      <div class="ctrl-icon-wrap" style="background:rgba(227,6,19,0.1);color:var(--lons-red)"><i data-lucide="crosshair" style="width:16px;height:16px"></i></div>
+      <div class="ctrl-label"><div class="ctrl-top">Position</div><div class="ctrl-main">Me localiser</div></div>
+    </button>
+  `;
+  lucide.createIcons();
+  document.getElementById("btn-basemap").addEventListener("click", (e) => {
+    e.stopPropagation();
+    document.getElementById("basemap-menu").classList.toggle("open");
+  });
+  document.getElementById("basemap-menu").querySelectorAll(".basemap-item").forEach((b) => {
+    b.addEventListener("click", () => { setBasemap(b.dataset.bm); document.getElementById("basemap-menu").classList.remove("open"); });
+  });
+  document.getElementById("btn-3d").addEventListener("click", toggle3D);
+  document.getElementById("btn-reset").addEventListener("click", resetCamera);
+  document.getElementById("btn-locate").addEventListener("click", locate);
+}
+
+function renderDetail() {
+  const existing = document.querySelector(".detail-panel");
+  if (existing) existing.remove();
+  const f = state.selectedFeature;
+  if (!f) return;
+  const props = f.properties || {};
+  const layerMeta = LAYERS[props._theme]?.items?.[props._layer];
+  const title = props.name || props.nom || props.brand || props.enseigne || props.operator || props.ref || layerMeta?.label || "Objet";
+  const category = props.categorie || props.shop || props.amenity || props.highway || props.type || layerMeta?.label || "OSM";
+  let lon = 0, lat = 0;
+  if (f._clickCoords) [lon, lat] = f._clickCoords;
+  else if (Array.isArray(props.coordonneesxy)) [lon, lat] = props.coordonneesxy;
+  else if (f.geometry?.type === "Point") [lon, lat] = f.geometry.coordinates;
+  else if (f.geometry?.type === "LineString") { const c = f.geometry.coordinates[Math.floor(f.geometry.coordinates.length/2)]; if (c) [lon,lat]=c; }
+  const IGNORED = new Set(["id","id_local","id_osm","coordonneesxy","_theme","_layer","_color","_label","commentaires","url_info"]);
+  const priority = ["name","nom","brand","enseigne","amenity","shop","categorie","type","capacite","gestionnaire","opening_hours","horaires","phone","telephone","website","site_web"];
+  const entries = Object.entries(props)
+    .filter(([k, v]) => !k.startsWith("_") && !IGNORED.has(k) && v !== null && v !== "" && typeof v !== "object")
+    .sort(([a], [b]) => {
+      const pa = priority.indexOf(a), pb = priority.indexOf(b);
+      if (pa === -1 && pb === -1) return a.localeCompare(b);
+      if (pa === -1) return 1; if (pb === -1) return -1;
+      return pa - pb;
+    });
+  const osmType = props.osm_type || props.id_osm?.split("/")?.[0] || "node";
+  const osmId = props.osm_id || props.id_osm?.split("/")?.[1] || String(props.id).split("/").pop();
+
+  const panel = document.createElement("div");
+  panel.className = "detail-panel";
+  panel.innerHTML = `
+    <div class="detail-header" style="background:linear-gradient(135deg, ${layerMeta?.color || "#003D7A"} 0%, #003D7A 100%)">
+      <button class="detail-close"><i data-lucide="x" style="width:16px;height:16px"></i></button>
+      <div class="detail-badge"><i data-lucide="tag" style="width:12px;height:12px"></i>${humanize(category)}</div>
+      <h2 class="detail-title">${humanize(title)}</h2>
+      <div class="detail-coords"><i data-lucide="map-pin" style="width:12px;height:12px"></i>${lat.toFixed(5)}, ${lon.toFixed(5)}</div>
+    </div>
+    <div class="detail-body">
+      ${entries.length === 0 ? `<div class="detail-empty"><i data-lucide="info" style="width:16px;height:16px;flex-shrink:0;margin-top:2px"></i>Pas de données détaillées supplémentaires.</div>` : ""}
+      ${entries.map(([k, v]) => {
+        const label = KEY_LABELS[k] || k.replace(/_/g, " ");
+        if (k === "website" || k === "site_web" || k === "url") {
+          const href = /^https?:\/\//.test(v) ? v : `https://${v}`;
+          return `<a href="${href}" target="_blank" rel="noreferrer" class="detail-row" style="text-decoration:none"><span class="k">${label}</span><span class="v" style="color:var(--lons-primary)">${v} ↗</span></a>`;
+        }
+        return `<div class="detail-row"><span class="k">${label}</span><span class="v" title="${humanize(v)}">${humanize(v)}</span></div>`;
+      }).join("")}
+      ${osmId ? `<a class="osm-link" href="https://www.openstreetmap.org/${osmType}/${osmId}" target="_blank" rel="noreferrer"><i data-lucide="external-link" style="width:16px;height:16px"></i>Voir sur OpenStreetMap</a>` : ""}
+    </div>
+  `;
+  document.querySelector("main.map-area").appendChild(panel);
+  panel.querySelector(".detail-close").addEventListener("click", () => { state.selectedFeature = null; renderDetail(); });
+  lucide.createIcons();
+}
+
+/* ---------------- Actions ---------------- */
+function setActiveTheme(themeKey) {
+  state.activeTheme = themeKey;
+  state.visibleLayers = { ...DEFAULT_VISIBLE[themeKey] };
+  state.selectedFeature = null;
+  renderTabs(); renderLayers(); renderDetail();
+  ensureLayers();
+  applyMapSources();
+}
+
+function toggleLayer(layerKey) {
+  state.visibleLayers[layerKey] = !state.visibleLayers[layerKey];
+  renderLayers();
+  ensureLayers();
+  applyMapSources();
+}
+
+function setBasemap(id) {
+  state.basemap = id;
+  renderControls();
+  const bm = BASEMAPS.find((b) => b.id === id);
+  map.setStyle(makeStyle(bm));
+}
+
+function toggle3D() { state.buildings3D = !state.buildings3D; renderControls(); applyMapSources(); }
+
+function resetCamera() {
+  state.selectedFeature = null; renderDetail();
+  map.flyTo({ center: LONS_CENTER, zoom: 15, pitch: 55, bearing: -17.6, duration: 1400 });
+}
+
+function locate() {
+  if (!navigator.geolocation) return toast("Géolocalisation non disponible", "error");
+  navigator.geolocation.getCurrentPosition(
+    (pos) => map.flyTo({ center: [pos.coords.longitude, pos.coords.latitude], zoom: 16, duration: 1400 }),
+    () => toast("Impossible de vous localiser", "error")
+  );
+}
+
+async function ensureLayers() {
+  for (const [layerKey, visible] of Object.entries(state.visibleLayers)) {
+    if (!visible) continue;
+    if (state.layerData[layerKey] || state.inflight.has(layerKey)) continue;
+    const meta = LAYERS[state.activeTheme].items[layerKey];
+    if (!meta) continue;
+    state.inflight.add(layerKey);
+    state.loadingLayers[layerKey] = true;
+    renderLayers();
+    try {
+      const raw = meta.source === "geodatamine" ? await fetchGeoDataMine(meta.theme) : await fetchOverpass(meta.query);
+      state.layerData[layerKey] = stampFeatures(raw, state.activeTheme, layerKey, meta);
+      toast(`${meta.label} · ${state.layerData[layerKey].features.length} objets`);
+    } catch (e) {
+      console.error(e);
+      toast(`Erreur chargement « ${meta.label} »`, "error");
+    } finally {
+      state.inflight.delete(layerKey);
+      state.loadingLayers[layerKey] = false;
+      renderLayers();
+      applyMapSources();
+    }
+  }
+}
+
+/* ---------------- Map ---------------- */
+const map = new maplibregl.Map({
+  container: "map",
+  style: makeStyle(BASEMAPS.find((b) => b.id === state.basemap)),
+  center: LONS_CENTER, zoom: 15, pitch: 55, bearing: -17.6, maxPitch: 75,
+  attributionControl: { compact: true },
+});
+map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-right");
+map.addControl(new maplibregl.ScaleControl({ maxWidth: 120 }), "bottom-left");
+
+function applyMapSources() {
+  if (!map.isStyleLoaded()) return;
+
+  // 3D buildings
+  if (state.buildings3D) {
+    if (!map.getLayer("3d-buildings")) {
+      const style = map.getStyle();
+      const vec = Object.entries(style.sources).find(([, s]) => s.type === "vector");
+      if (vec) {
+        for (const sl of ["building", "buildings"]) {
+          try {
+            map.addLayer({
+              id: "3d-buildings", source: vec[0], "source-layer": sl, type: "fill-extrusion", minzoom: 14,
+              paint: {
+                "fill-extrusion-color": ["interpolate", ["linear"], ["coalesce", ["get", "render_height"], ["get", "height"], 10], 0, "#E2E8F0", 30, "#94A3B8", 80, "#003D7A"],
+                "fill-extrusion-height": ["coalesce", ["get", "render_height"], ["get", "height"], ["*", ["coalesce", ["get", "levels"], 2], 3]],
+                "fill-extrusion-base": ["coalesce", ["get", "render_min_height"], ["get", "min_height"], 0],
+                "fill-extrusion-opacity": 0.85,
+              },
+            });
+            break;
+          } catch (_) {}
+        }
+      }
+    }
+  } else if (map.getLayer("3d-buildings")) map.removeLayer("3d-buildings");
+
+  // Data layers
+  Object.entries(LAYERS).forEach(([tk, theme]) => {
+    Object.entries(theme.items).forEach(([lk, meta]) => {
+      const srcId = `osm-${lk}`;
+      const ids = [`${srcId}-halo`, `${srcId}-fill`];
+      const isActive = tk === state.activeTheme && state.visibleLayers[lk] && state.layerData[lk];
+      if (!isActive) {
+        ids.forEach((id) => { if (map.getLayer(id)) map.removeLayer(id); });
+        if (map.getSource(srcId)) map.removeSource(srcId);
+        return;
+      }
+      const fc = state.layerData[lk];
+      if (map.getSource(srcId)) map.getSource(srcId).setData(fc);
+      else map.addSource(srcId, { type: "geojson", data: fc });
+
+      if (meta.geometry === "line") {
+        if (!map.getLayer(`${srcId}-halo`)) map.addLayer({ id: `${srcId}-halo`, type: "line", source: srcId, paint: { "line-color": meta.color, "line-width": 9, "line-opacity": 0.18, "line-blur": 2 } });
+        if (!map.getLayer(`${srcId}-fill`)) map.addLayer({ id: `${srcId}-fill`, type: "line", source: srcId, layout: { "line-cap": "round", "line-join": "round" }, paint: { "line-color": meta.color, "line-width": 3.4 } });
+      } else {
+        if (!map.getLayer(`${srcId}-halo`)) map.addLayer({ id: `${srcId}-halo`, type: "circle", source: srcId, paint: { "circle-radius": 15, "circle-color": meta.color, "circle-opacity": 0.2, "circle-blur": 0.5 } });
+        if (!map.getLayer(`${srcId}-fill`)) map.addLayer({ id: `${srcId}-fill`, type: "circle", source: srcId, paint: { "circle-radius": 7, "circle-color": meta.color, "circle-stroke-width": 2.5, "circle-stroke-color": "#ffffff" } });
+      }
+    });
+  });
+}
+
+map.on("load", applyMapSources);
+map.on("styledata", applyMapSources);
+
+map.on("click", (e) => {
+  const ids = [];
+  Object.keys(LAYERS).forEach((t) => Object.keys(LAYERS[t].items).forEach((k) => ids.push(`osm-${k}-fill`)));
+  const existing = ids.filter((l) => map.getLayer(l));
+  if (existing.length === 0) { state.selectedFeature = null; renderDetail(); return; }
+  const bbox = [[e.point.x - 8, e.point.y - 8], [e.point.x + 8, e.point.y + 8]];
+  const feats = map.queryRenderedFeatures(bbox, { layers: existing });
+  feats.sort((a, b) => (a.layer.type === "circle" ? 0 : 1) - (b.layer.type === "circle" ? 0 : 1));
+  if (feats.length > 0) {
+    const f = feats[0];
+    let coords;
+    if (f.geometry.type === "Point") coords = f.geometry.coordinates;
+    else if (f.geometry.type === "LineString") coords = f.geometry.coordinates[Math.floor(f.geometry.coordinates.length / 2)];
+    else coords = [e.lngLat.lng, e.lngLat.lat];
+    state.selectedFeature = { ...f, _clickCoords: coords };
+    renderDetail();
+    map.flyTo({ center: coords, offset: [-160, 0], duration: 900, essential: true });
+  } else {
+    state.selectedFeature = null; renderDetail();
+  }
+});
+
+// Pointer cursor on POI layers
+["mouseenter", "mouseleave"].forEach((ev) => {
+  Object.keys(LAYERS).forEach((t) => Object.keys(LAYERS[t].items).forEach((k) => {
+    const id = `osm-${k}-fill`;
+    map.on(ev, id, () => (map.getCanvas().style.cursor = ev === "mouseenter" ? "pointer" : ""));
+  }));
+});
+
+// Close basemap menu on outside click
+document.addEventListener("click", (e) => {
+  const menu = document.getElementById("basemap-menu");
+  if (menu && !menu.contains(e.target) && !document.getElementById("btn-basemap").contains(e.target)) menu.classList.remove("open");
+});
+
+/* ---------------- Boot ---------------- */
+renderTabs();
+renderLayers();
+renderControls();
+lucide.createIcons();
+ensureLayers();
+</script>
+</body>
+</html>
