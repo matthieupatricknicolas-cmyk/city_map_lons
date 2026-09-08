@@ -72,18 +72,25 @@
 
   .body-row { flex: 1; display: flex; overflow: hidden; }
 
+  /* Vertical theme rail (left, permanent) */
+  aside.theme-rail { width: 84px; flex-shrink: 0; background: linear-gradient(180deg, #1A1A1A 0%, #2A0508 100%); border-right: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; padding: 20px 10px; gap: 8px; z-index: 22; }
+  .rail-brand { display: flex; align-items: center; justify-content: center; padding: 0 0 12px; margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .rail-btn { position: relative; width: 100%; padding: 12px 6px; background: transparent; border: 1px solid transparent; border-radius: 14px; cursor: pointer; color: rgba(255,255,255,0.65); display: flex; flex-direction: column; align-items: center; gap: 6px; font-family: inherit; transition: all 0.2s; }
+  .rail-btn .rail-ico { width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+  .rail-btn .rail-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+  .rail-btn:hover { color: white; }
+  .rail-btn:hover .rail-ico { background: rgba(227,6,19,0.25); }
+  .rail-btn.active { color: white; }
+  .rail-btn.active .rail-ico { background: var(--lons-red); box-shadow: 0 8px 20px rgba(227,6,19,0.45); }
+  .rail-btn.active::before { content: ""; position: absolute; left: -10px; top: 20%; bottom: 20%; width: 4px; border-radius: 0 4px 4px 0; background: var(--lons-red); }
+
   /* Sidebar */
-  aside.sidebar { width: 360px; flex-shrink: 0; border-right: 1px solid var(--lons-border); background: white; display: flex; flex-direction: column; position: relative; z-index: 20; }
-  .sidebar-section-title { font-size: 10px; text-transform: uppercase; letter-spacing: 0.22em; font-weight: 700; color: #9CA3AF; padding: 20px 16px 8px; }
-  .tab-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 5px; padding: 0 16px; }
-  .tab-btn { position: relative; text-align: left; padding: 8px 6px; border-radius: 10px; border: 1px solid var(--lons-border); background: #FAFAF7; cursor: pointer; transition: all 0.2s; font-family: inherit; min-width: 0; overflow: hidden; }
-  .tab-btn:hover { border-color: rgba(227,6,19,0.4); }
-  .tab-btn .tab-title { display: flex; align-items: center; gap: 4px; font-weight: 700; font-size: 12px; font-family: "Bricolage Grotesque", sans-serif; color: #1F2937; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .tab-btn .tab-title i { flex-shrink: 0; }
-  .tab-btn .tab-sub { margin-top: 3px; font-size: 8px; text-transform: uppercase; letter-spacing: 0.03em; font-weight: 600; color: #9CA3AF; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .tab-btn.active { background: var(--lons-red); border-color: var(--lons-red); color: white; box-shadow: 0 8px 20px rgba(227,6,19,0.25); }
-  .tab-btn.active .tab-title, .tab-btn.active .tab-sub { color: white; }
-  .tab-btn.active::before { content: ""; position: absolute; left: -1px; top: 12px; bottom: 12px; width: 3px; background: linear-gradient(180deg, white 0%, rgba(255,255,255,0.4) 100%); border-radius: 0 3px 3px 0; }
+  aside.sidebar { width: 300px; flex-shrink: 0; border-right: 1px solid var(--lons-border); background: white; display: flex; flex-direction: column; position: relative; z-index: 20; }
+  .sidebar-header { padding: 18px 18px 4px; }
+  .sidebar-header .kicker { font-size: 10px; text-transform: uppercase; letter-spacing: 0.22em; font-weight: 700; color: var(--lons-red); }
+  .sidebar-header .title { font-family: "Bricolage Grotesque", sans-serif; font-size: 22px; font-weight: 800; margin-top: 2px; color: var(--lons-ink); line-height: 1.1; }
+  .sidebar-header .subtitle { margin-top: 4px; font-size: 12px; color: var(--lons-muted); font-weight: 500; }
+  .sidebar-section-title { font-size: 10px; text-transform: uppercase; letter-spacing: 0.22em; font-weight: 700; color: #9CA3AF; padding: 16px 18px 6px; }
   .layers { padding: 8px 16px; flex: 1; overflow-y: auto; }
   .layer-row { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 12px; border: 1px solid var(--lons-border); background: white; cursor: pointer; margin-bottom: 8px; transition: all 0.2s; user-select: none; }
   .layer-row:hover { transform: translateY(-1px); border-color: rgba(227,6,19,0.3); }
@@ -180,6 +187,7 @@
   .maplibregl-ctrl-attrib a { color: var(--lons-red) !important; }
 
   @media (max-width: 900px) {
+    aside.theme-rail { width: 68px; padding: 12px 6px; }
     aside.sidebar { width: 240px; }
     .detail-panel { width: 92vw; right: 12px; top: 80px; bottom: 12px; }
   }
@@ -220,9 +228,14 @@
   </header>
 
   <div class="body-row">
+    <aside class="theme-rail" data-testid="theme-rail" id="theme-rail"></aside>
+
     <aside class="sidebar">
-      <div class="sidebar-section-title">Thématiques</div>
-      <div class="tab-grid" id="tab-grid"></div>
+      <div class="sidebar-header">
+        <div class="kicker" id="sidebar-kicker">Thématique</div>
+        <div class="title" id="sidebar-title">Mobilité</div>
+        <div class="subtitle" id="sidebar-subtitle">Déplacement</div>
+      </div>
 
       <div class="sidebar-section-title">Couches à afficher</div>
       <div class="layers" id="layers"></div>
@@ -572,19 +585,25 @@ function toast(msg, type = "success") {
 
 /* ---------------- Rendering ---------------- */
 function renderTabs() {
-  const el = document.getElementById("tab-grid");
+  const el = document.getElementById("theme-rail");
   el.innerHTML = Object.entries(LAYERS).map(([key, theme]) => {
     const active = key === state.activeTheme;
     return `
-      <button class="tab-btn ${active ? "active" : ""}" data-tab="${key}">
-        <div class="tab-title"><i data-lucide="${theme.tabIcon}" style="width:16px;height:16px"></i>${theme.label}</div>
-        <div class="tab-sub">${theme.subtitle}</div>
+      <button class="rail-btn ${active ? "active" : ""}" data-tab="${key}" data-testid="theme-tab-${key}" title="${theme.label} · ${theme.subtitle}">
+        <div class="rail-ico"><i data-lucide="${theme.tabIcon}" style="width:20px;height:20px"></i></div>
+        <div class="rail-label">${theme.label}</div>
       </button>
     `;
   }).join("");
-  // 4 columns (Mobilité / Commerces / Culture / Nature)
-  el.style.gridTemplateColumns = "repeat(4, 1fr)";
-  el.querySelectorAll(".tab-btn").forEach((btn) => btn.addEventListener("click", () => setActiveTheme(btn.dataset.tab)));
+  el.querySelectorAll(".rail-btn").forEach((btn) => btn.addEventListener("click", () => setActiveTheme(btn.dataset.tab)));
+
+  // Update sidebar header for the active theme
+  const active = LAYERS[state.activeTheme];
+  const t = document.getElementById("sidebar-title");
+  const s = document.getElementById("sidebar-subtitle");
+  if (t) t.textContent = active.label;
+  if (s) s.textContent = active.subtitle;
+
   lucide.createIcons();
 }
 
