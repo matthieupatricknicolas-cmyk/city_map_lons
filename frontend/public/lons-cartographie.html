@@ -73,11 +73,11 @@
   .body-row { flex: 1; display: flex; overflow: hidden; }
 
   /* Vertical theme rail (left, permanent) */
-  aside.theme-rail { width: 84px; flex-shrink: 0; background: linear-gradient(180deg, #1A1A1A 0%, #2A0508 100%); border-right: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; padding: 20px 10px; gap: 8px; z-index: 22; }
+  aside.theme-rail { width: 100px; flex-shrink: 0; background: linear-gradient(180deg, #1A1A1A 0%, #2A0508 100%); border-right: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; padding: 16px 8px; gap: 6px; z-index: 22; overflow-y: auto; }
   .rail-brand { display: flex; align-items: center; justify-content: center; padding: 0 0 12px; margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.08); }
-  .rail-btn { position: relative; width: 100%; padding: 12px 6px; background: transparent; border: 1px solid transparent; border-radius: 14px; cursor: pointer; color: rgba(255,255,255,0.65); display: flex; flex-direction: column; align-items: center; gap: 6px; font-family: inherit; transition: all 0.2s; }
-  .rail-btn .rail-ico { width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
-  .rail-btn .rail-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+  .rail-btn { position: relative; width: 100%; padding: 10px 4px; background: transparent; border: 1px solid transparent; border-radius: 12px; cursor: pointer; color: rgba(255,255,255,0.65); display: flex; flex-direction: column; align-items: center; gap: 6px; font-family: inherit; transition: all 0.2s; }
+  .rail-btn .rail-ico { width: 38px; height: 38px; border-radius: 11px; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+  .rail-btn .rail-label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; text-align: center; line-height: 1.18; white-space: normal; max-width: 100%; hyphens: auto; -webkit-hyphens: auto; overflow-wrap: anywhere; }
   .rail-btn:hover { color: white; }
   .rail-btn:hover .rail-ico { background: rgba(227,6,19,0.25); }
   .rail-btn.active { color: white; }
@@ -303,6 +303,12 @@ const ICON_PATHS = {
   playground: `<circle cx="12" cy="5" r="2"/><path d="M12 7v4M8 11h8M9 11l-2 6M15 11l2 6M9 21l3-4 3 4"/>`,
   droplet:    `<path d="M12 3s-6 7-6 12a6 6 0 0 0 12 0c0-5-6-12-6-12z"/><path d="M9 15a3 3 0 0 0 3 3"/>`,
   leaf:       `<path d="M4 20c8-2 14-8 16-16-8 0-14 2-16 8-1 3 0 6 0 8z"/><path d="M4 20l8-8"/>`,
+  parking:    `<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 8v8M9 8h3.5a2.5 2.5 0 1 1 0 5H9"/>`,
+  parking_p:  `<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 8v8M9 8h3.5a2.5 2.5 0 1 1 0 5H9"/>`,
+  meter:      `<rect x="7" y="3" width="10" height="6" rx="1.2"/><path d="M9 6h6M12 9v3M9 12h6"/><rect x="8" y="14" width="8" height="7" rx="1.2"/>`,
+  wheelchair: `<circle cx="10" cy="4.5" r="1.6"/><path d="M10 6.5v6h6M10 12.5l3 5"/><circle cx="10" cy="16.5" r="4"/>`,
+  clock:      `<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>`,
+  truck:      `<rect x="1.5" y="7" width="12" height="9" rx="1"/><path d="M13.5 10h4l3 3v3h-7z"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>`,
 };
 
 const LAYERS = {
@@ -344,6 +350,18 @@ const LAYERS = {
       greens:      { label: "Espaces verts", icon: "leaf", color: "#65A30D", geometry: "line", source: "overpass", query: `[out:json][timeout:35];(way["landuse"~"^(grass|recreation_ground|meadow|forest)$"](around:4000,46.6739,5.5539);way["leisure"~"^(nature_reserve|common)$"](around:4000,46.6739,5.5539);way["natural"="wood"](around:4000,46.6739,5.5539););out geom;` },
     },
   },
+  stationnement: {
+    label: "Stationnement", subtitle: "Se garer",
+    tabIcon: "square-parking",
+    items: {
+      parking_pay:   { label: "Stationnement payant",  icon: "parking",    color: "#DC2626", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["amenity"="parking"]["fee"="yes"](around:4000,46.6739,5.5539);way["amenity"="parking"]["fee"="yes"](around:4000,46.6739,5.5539);node["amenity"="parking_space"]["fee"="yes"](around:4000,46.6739,5.5539););out center;` },
+      parking_free:  { label: "Stationnement gratuit", icon: "parking",    color: "#16A34A", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["amenity"="parking"]["fee"="no"](around:4000,46.6739,5.5539);way["amenity"="parking"]["fee"="no"](around:4000,46.6739,5.5539);node["amenity"="parking_space"]["fee"="no"](around:4000,46.6739,5.5539););out center;` },
+      horodateur:    { label: "Horodateurs",            icon: "meter",      color: "#F59E0B", geometry: "point", source: "overpass", query: `[out:json][timeout:25];(node["amenity"="vending_machine"]["vending"~"parking_tickets"](around:4000,46.6739,5.5539);node["vending"="parking_tickets"](around:4000,46.6739,5.5539););out body;` },
+      pmr:           { label: "Places PMR",             icon: "wheelchair", color: "#2563EB", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["amenity"="parking_space"]["parking_space"="disabled"](around:4000,46.6739,5.5539);node["amenity"="parking_space"]["capacity:disabled"](around:4000,46.6739,5.5539);node["amenity"="parking"]["capacity:disabled"](around:4000,46.6739,5.5539);way["amenity"="parking"]["capacity:disabled"](around:4000,46.6739,5.5539););out center;` },
+      arret_minute:  { label: "Arrêts minute",          icon: "clock",      color: "#8B5CF6", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["amenity"="parking_space"]["parking_space"="drop_off"](around:4000,46.6739,5.5539);node["amenity"="parking"]["maxstay"](around:4000,46.6739,5.5539);way["amenity"="parking"]["maxstay"](around:4000,46.6739,5.5539);node["parking:condition"~"drop_off|short_term"](around:4000,46.6739,5.5539););out center;` },
+      livraison:     { label: "Livraison",              icon: "truck",      color: "#B45309", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["amenity"="parking"]["access"~"delivery|hgv"](around:4000,46.6739,5.5539);way["amenity"="parking"]["access"~"delivery|hgv"](around:4000,46.6739,5.5539);node["amenity"="loading_dock"](around:4000,46.6739,5.5539);node["parking:condition"="loading"](around:4000,46.6739,5.5539);node["highway"="loading"](around:4000,46.6739,5.5539););out center;` },
+    },
+  },
 };
 
 const DEFAULT_VISIBLE = {
@@ -351,6 +369,7 @@ const DEFAULT_VISIBLE = {
   commerces: { shops: true, food: true },
   culture:   { historic: true, cinema: true, library: true, arts: true },
   nature:    { parks: true, playgrounds: true, fountains: true, greens: false },
+  stationnement: { parking_pay: true, parking_free: true, horodateur: false, pmr: true, arret_minute: true, livraison: false },
 };
 
 const KEY_LABELS = {
@@ -369,13 +388,183 @@ const KEY_LABELS = {
   site_web: "Site web", horaires: "Horaires", adresse: "Adresse",
   enseigne: "Enseigne", type: "Type", source: "Source", date_maj: "Mise à jour",
   d_service: "Mise en service",
+  // Parking-related
+  parking: "Type de parking",
+  parking_space: "Type de place",
+  "capacity:disabled": "Places PMR",
+  "capacity:charging": "Places recharge",
+  "capacity:parent": "Places famille",
+  "capacity:women": "Places femmes",
+  "capacity:hgv": "Places poids-lourds",
+  "capacity:bus": "Places bus",
+  "capacity:motorcycle": "Places moto",
+  maxstay: "Durée max",
+  park_ride: "Parc-relais",
+  supervised: "Surveillé",
+  layer: "Niveau",
+  level: "Niveau",
+  height: "Hauteur max",
+  vending: "Type de distributeur",
+  "payment:coins": "Paiement pièces",
+  "payment:cards": "Paiement carte bancaire",
+  "payment:notes": "Paiement billets",
+  "payment:credit_cards": "Carte de crédit",
+  "payment:contactless": "Sans contact",
+  hgv: "Poids-lourd",
+  motorcycle: "Moto",
+  bicycle: "Vélo",
+  taxi: "Taxi",
+  wheelchair: "Accessibilité PMR",
+  disabled: "PMR",
+  leisure: "Loisir",
+  landuse: "Usage du sol",
+  natural: "Élément naturel",
+  short_term: "Court séjour",
+  "parking:condition": "Condition",
+  "parking:condition:conditional": "Condition horaire",
+  fee_conditional: "Payant (horaires)",
+  charge: "Tarif",
+  currency: "Devise",
+};
+
+/* Traductions des valeurs OSM courantes (utilisées dans humanize()) */
+const VALUE_LABELS = {
+  // Yes/No
+  yes: "Oui", no: "Non", true: "Oui", false: "Non",
+  // Amenity / features
+  parking: "Parking",
+  parking_space: "Place de stationnement",
+  parking_entrance: "Entrée de parking",
+  vending_machine: "Distributeur automatique",
+  loading_dock: "Quai de livraison",
+  motorcycle_parking: "Parking moto",
+  bicycle_parking: "Parking vélo",
+  bus_stop: "Arrêt de bus",
+  bus_station: "Gare routière",
+  restaurant: "Restaurant",
+  cafe: "Café",
+  fast_food: "Restauration rapide",
+  bar: "Bar",
+  pub: "Pub",
+  bakery: "Boulangerie",
+  cinema: "Cinéma",
+  theatre: "Théâtre",
+  library: "Bibliothèque",
+  arts_centre: "Centre culturel",
+  community_centre: "Centre communautaire",
+  museum: "Musée",
+  church: "Église",
+  chapel: "Chapelle",
+  monument: "Monument",
+  memorial: "Mémorial",
+  fountain: "Fontaine",
+  drinking_water: "Point d'eau potable",
+  playground: "Aire de jeux",
+  park: "Parc",
+  garden: "Jardin",
+  studio: "Studio artistique",
+  artwork: "Œuvre d'art",
+  parking_tickets: "Tickets de stationnement",
+  // Access / conditions
+  private: "Privé",
+  permissive: "Toléré",
+  customers: "Clients",
+  delivery: "Livraison",
+  designated: "Réservé",
+  destination: "Ayants droit",
+  emergency: "Urgence",
+  hgv: "Poids-lourd",
+  psv: "Transports publics",
+  disabled: "PMR",
+  drop_off: "Dépose-minute",
+  charging: "Recharge électrique",
+  taxi: "Taxi",
+  loading: "Livraison",
+  short_term: "Court séjour",
+  // Structure / surface
+  underground: "Souterrain",
+  "multi-storey": "Silo",
+  multi_storey: "Silo",
+  rooftop: "Sur toit",
+  street_side: "En bordure de rue",
+  lane: "Sur voirie",
+  paved: "Revêtu",
+  unpaved: "Non revêtu",
+  asphalt: "Bitume",
+  concrete: "Béton",
+  paving_stones: "Pavés",
+  cobblestone: "Pavés anciens",
+  gravel: "Gravier",
+  grass: "Herbe",
+  dirt: "Terre",
+  sand: "Sable",
+  wood: "Bois",
+  metal: "Métal",
+  // Fee
+  free: "Gratuit",
+  // Historic
+  building: "Bâtiment",
+  castle: "Château",
+  ruins: "Ruines",
+  archaeological_site: "Site archéologique",
+  wayside_cross: "Croix de chemin",
+  wayside_shrine: "Oratoire",
+  city_gate: "Porte de ville",
+  tower: "Tour",
+  // Shop
+  butcher: "Boucherie",
+  clothes: "Vêtements",
+  gift: "Cadeaux",
+  hairdresser: "Coiffeur",
+  jewelry: "Bijouterie",
+  optician: "Opticien",
+  supermarket: "Supermarché",
+  convenience: "Alimentation générale",
+  florist: "Fleuriste",
+  pharmacy: "Pharmacie",
+  chocolate: "Chocolaterie",
+  toys: "Jouets",
+  books: "Librairie",
+  furniture: "Meubles",
+  shoes: "Chaussures",
+  // Highway types
+  cycleway: "Piste cyclable",
+  footway: "Voie piétonne",
+  path: "Chemin",
+  pedestrian: "Zone piétonne",
+  residential: "Voie résidentielle",
+  service: "Voie de service",
+  // Cuisine
+  french: "Française",
+  italian: "Italienne",
+  pizza: "Pizza",
+  regional: "Régionale",
+  asian: "Asiatique",
+  chinese: "Chinoise",
+  japanese: "Japonaise",
+  vietnamese: "Vietnamienne",
+  kebab: "Kebab",
+  burger: "Burgers",
+  // Tourism
+  attraction: "Attraction",
+  information: "Point info",
+  viewpoint: "Point de vue",
+  picnic_site: "Aire de pique-nique",
 };
 
 /* ---------------- Utilities ---------------- */
 function humanize(v) {
   if (v === "yes" || v === "true" || v === true) return "Oui";
   if (v === "no" || v === "false" || v === false) return "Non";
-  if (typeof v === "string") return v.replace(/_/g, " ");
+  if (typeof v === "string") {
+    // 1) Exact match with FR dictionary
+    if (VALUE_LABELS[v]) return VALUE_LABELS[v];
+    // 2) Semi-colon lists: "restaurant;cafe" → "Restaurant · Café"
+    if (v.includes(";")) return v.split(";").map((s) => VALUE_LABELS[s.trim()] || s.trim().replace(/_/g, " ")).join(" · ");
+    // 3) Fallback: replace underscores + capitalize first letter
+    const t = v.replace(/_/g, " ");
+    return t.charAt(0).toUpperCase() + t.slice(1);
+  }
   if (v == null) return "—";
   return String(v);
 }
@@ -406,6 +595,12 @@ const LAYER_EMOJI = {
   playgrounds:  "🛝",
   fountains:    "⛲",
   greens:       "🌿",
+  parking_pay:  "🅿️",
+  parking_free: "🅿️",
+  horodateur:   "🎫",
+  pmr:          "♿",
+  arret_minute: "⏱️",
+  livraison:    "🚚",
 };
 
 /** Cercle avec icône SVG au centre. Rendu 100% vectoriel = universel. */
@@ -614,6 +809,7 @@ function renderTabs() {
 function renderLayers() {
   const el = document.getElementById("layers");
   const theme = LAYERS[state.activeTheme];
+  const LUCIDE_MAP = { shop: "shopping-bag", theater: "drama", tree: "trees", playground: "baby", droplet: "droplet", leaf: "leaf", parking: "square-parking", parking_p: "square-parking", meter: "receipt-text", wheelchair: "accessibility", clock: "clock", truck: "truck", bike: "bike", bus: "bus", bus_stop: "bus-front", utensils: "utensils", landmark: "landmark", film: "film", library: "library-big", navigation: "navigation", route: "route" };
   el.innerHTML = Object.entries(theme.items).map(([key, meta]) => {
     const visible = state.visibleLayers[key];
     const loading = state.loadingLayers[key];
@@ -624,10 +820,11 @@ function renderLayers() {
     else if (visible && failed && !state.layerData[key]) status = "⚠ Erreur — cliquer pour réessayer";
     else if (visible) status = `${count} objets en direct`;
     else status = "Cliquez pour activer";
+    const iconName = LUCIDE_MAP[meta.icon] || meta.icon;
     return `
       <div class="layer-row ${visible ? "" : "off"} ${failed && !state.layerData[key] ? "err" : ""}" data-layer="${key}">
         <div class="layer-icon" style="background:${visible ? meta.color : "#E5E7EB"};box-shadow:${visible ? `0 6px 14px ${meta.color}40` : "none"}">
-          <i data-lucide="${meta.icon === "shop" ? "shopping-bag" : meta.icon === "theater" ? "drama" : meta.icon === "tree" ? "trees" : meta.icon === "playground" ? "baby" : meta.icon === "droplet" ? "droplet" : meta.icon === "leaf" ? "leaf" : meta.icon}" style="width:18px;height:18px;color:${visible ? "white" : "#6B7280"}"></i>
+          <i data-lucide="${iconName}" style="width:18px;height:18px;color:${visible ? "white" : "#6B7280"}"></i>
         </div>
         <div class="layer-info">
           <div class="name">${meta.label}</div>
@@ -711,7 +908,7 @@ function renderDetail() {
   else if (Array.isArray(props.coordonneesxy)) [lon, lat] = props.coordonneesxy;
   else if (f.geometry?.type === "Point") [lon, lat] = f.geometry.coordinates;
   else if (f.geometry?.type === "LineString") { const c = f.geometry.coordinates[Math.floor(f.geometry.coordinates.length/2)]; if (c) [lon,lat]=c; }
-  const IGNORED = new Set(["id","id_local","id_osm","coordonneesxy","_theme","_layer","_color","_label","_icon","commentaires","url_info"]);
+  const IGNORED = new Set(["id","id_local","id_osm","osm_id","osm_type","coordonneesxy","_theme","_layer","_color","_label","_icon","commentaires","url_info"]);
   const priority = ["name","nom","brand","enseigne","historic","tourism","amenity","shop","categorie","type","capacite","gestionnaire","opening_hours","horaires","phone","telephone","website","site_web"];
   const entries = Object.entries(props)
     .filter(([k, v]) => !k.startsWith("_") && !IGNORED.has(k) && v !== null && v !== "" && typeof v !== "object")
