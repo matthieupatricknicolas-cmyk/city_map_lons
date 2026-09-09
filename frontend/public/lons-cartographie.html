@@ -354,10 +354,10 @@ const LAYERS = {
     label: "Stationnement", subtitle: "Se garer",
     tabIcon: "square-parking",
     items: {
-      parking_pay:   { label: "Stationnement payant",  icon: "parking",    color: "#DC2626", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["amenity"="parking"]["fee"="yes"](around:4000,46.6739,5.5539);way["amenity"="parking"]["fee"="yes"](around:4000,46.6739,5.5539);node["amenity"="parking_space"]["fee"="yes"](around:4000,46.6739,5.5539););out center;` },
-      parking_free:  { label: "Stationnement gratuit", icon: "parking",    color: "#16A34A", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["amenity"="parking"]["fee"="no"](around:4000,46.6739,5.5539);way["amenity"="parking"]["fee"="no"](around:4000,46.6739,5.5539);node["amenity"="parking_space"]["fee"="no"](around:4000,46.6739,5.5539););out center;` },
+      parking_pay:   { label: "Stationnement payant",  icon: "parking",    color: "#DC2626", geometry: "polygon", source: "overpass", query: `[out:json][timeout:30];(node["amenity"="parking"]["fee"="yes"](around:4000,46.6739,5.5539);way["amenity"="parking"]["fee"="yes"](around:4000,46.6739,5.5539);node["amenity"="parking_space"]["fee"="yes"](around:4000,46.6739,5.5539);way["amenity"="parking_space"]["fee"="yes"](around:4000,46.6739,5.5539););out geom;` },
+      parking_free:  { label: "Stationnement gratuit", icon: "parking",    color: "#16A34A", geometry: "polygon", source: "overpass", query: `[out:json][timeout:30];(node["amenity"="parking"]["fee"="no"](around:4000,46.6739,5.5539);way["amenity"="parking"]["fee"="no"](around:4000,46.6739,5.5539);node["amenity"="parking_space"]["fee"="no"](around:4000,46.6739,5.5539);way["amenity"="parking_space"]["fee"="no"](around:4000,46.6739,5.5539););out geom;` },
       horodateur:    { label: "Horodateurs",            icon: "meter",      color: "#F59E0B", geometry: "point", source: "overpass", query: `[out:json][timeout:25];(node["amenity"="vending_machine"]["vending"~"parking_tickets"](around:4000,46.6739,5.5539);node["vending"="parking_tickets"](around:4000,46.6739,5.5539););out body;` },
-      pmr:           { label: "Places PMR",             icon: "wheelchair", color: "#2563EB", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["amenity"="parking_space"]["parking_space"="disabled"](around:4000,46.6739,5.5539);node["amenity"="parking_space"]["capacity:disabled"](around:4000,46.6739,5.5539);node["amenity"="parking"]["capacity:disabled"](around:4000,46.6739,5.5539);way["amenity"="parking"]["capacity:disabled"](around:4000,46.6739,5.5539););out center;` },
+      pmr:           { label: "Places PMR",             icon: "wheelchair", color: "#2563EB", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["parking_space"="disabled"](around:5000,46.6739,5.5539);way["parking_space"="disabled"](around:5000,46.6739,5.5539);node["capacity:disabled"](around:5000,46.6739,5.5539);way["capacity:disabled"](around:5000,46.6739,5.5539);node["amenity"="parking_space"]["wheelchair"~"^(yes|designated)$"](around:5000,46.6739,5.5539););out center;` },
       arret_minute:  { label: "Arrêts minute",          icon: "clock",      color: "#8B5CF6", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["amenity"="parking_space"]["parking_space"="drop_off"](around:4000,46.6739,5.5539);node["amenity"="parking"]["maxstay"](around:4000,46.6739,5.5539);way["amenity"="parking"]["maxstay"](around:4000,46.6739,5.5539);node["parking:condition"~"drop_off|short_term"](around:4000,46.6739,5.5539););out center;` },
       livraison:     { label: "Livraison",              icon: "truck",      color: "#B45309", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["amenity"="parking"]["access"~"delivery|hgv"](around:4000,46.6739,5.5539);way["amenity"="parking"]["access"~"delivery|hgv"](around:4000,46.6739,5.5539);node["amenity"="loading_dock"](around:4000,46.6739,5.5539);node["parking:condition"="loading"](around:4000,46.6739,5.5539);node["highway"="loading"](around:4000,46.6739,5.5539););out center;` },
     },
@@ -668,7 +668,11 @@ function overpassToGeoJSON(elements) {
     if (e.type === "node") {
       features.push({ type: "Feature", geometry: { type: "Point", coordinates: [e.lon, e.lat] }, properties: { id: `node/${e.id}`, osm_type: "node", osm_id: e.id, ...(e.tags || {}) } });
     } else if (e.type === "way" && e.geometry) {
-      features.push({ type: "Feature", geometry: { type: "LineString", coordinates: e.geometry.map((g) => [g.lon, g.lat]) }, properties: { id: `way/${e.id}`, osm_type: "way", osm_id: e.id, ...(e.tags || {}) } });
+      const coords = e.geometry.map((g) => [g.lon, g.lat]);
+      const first = coords[0], last = coords[coords.length - 1];
+      const closed = coords.length >= 4 && first[0] === last[0] && first[1] === last[1];
+      const geom = closed ? { type: "Polygon", coordinates: [coords] } : { type: "LineString", coordinates: coords };
+      features.push({ type: "Feature", geometry: geom, properties: { id: `way/${e.id}`, osm_type: "way", osm_id: e.id, ...(e.tags || {}) } });
     } else if (e.type === "way" && e.center) {
       // `out center` collapses ways/polygons to their centroid point
       features.push({ type: "Feature", geometry: { type: "Point", coordinates: [e.center.lon, e.center.lat] }, properties: { id: `way/${e.id}`, osm_type: "way", osm_id: e.id, ...(e.tags || {}) } });
@@ -908,6 +912,7 @@ function renderDetail() {
   else if (Array.isArray(props.coordonneesxy)) [lon, lat] = props.coordonneesxy;
   else if (f.geometry?.type === "Point") [lon, lat] = f.geometry.coordinates;
   else if (f.geometry?.type === "LineString") { const c = f.geometry.coordinates[Math.floor(f.geometry.coordinates.length/2)]; if (c) [lon,lat]=c; }
+  else if (f.geometry?.type === "Polygon") { const ring = f.geometry.coordinates[0] || []; const c = ring[Math.floor(ring.length/2)] || ring[0]; if (c) [lon,lat]=c; }
   const IGNORED = new Set(["id","id_local","id_osm","osm_id","osm_type","coordonneesxy","_theme","_layer","_color","_label","_icon","commentaires","url_info"]);
   const priority = ["name","nom","brand","enseigne","historic","tourism","amenity","shop","categorie","type","capacite","gestionnaire","opening_hours","horaires","phone","telephone","website","site_web"];
   const entries = Object.entries(props)
@@ -1145,7 +1150,7 @@ function applyMapSources() {
   Object.entries(LAYERS).forEach(([tk, theme]) => {
     Object.entries(theme.items).forEach(([lk, meta]) => {
       const srcId = `osm-${lk}`;
-      const ids = [`${srcId}-halo`, `${srcId}-fill`, `${srcId}-symbol`];
+      const ids = [`${srcId}-halo`, `${srcId}-fill`, `${srcId}-outline`, `${srcId}-symbol`];
       const isActive = tk === state.activeTheme && state.visibleLayers[lk] && state.layerData[lk];
       if (!isActive) {
         ids.forEach((id) => { if (map.getLayer(id)) map.removeLayer(id); });
@@ -1159,6 +1164,33 @@ function applyMapSources() {
       if (meta.geometry === "line") {
         if (!map.getLayer(`${srcId}-halo`)) map.addLayer({ id: `${srcId}-halo`, type: "line", source: srcId, paint: { "line-color": meta.color, "line-width": 10, "line-opacity": 0.2, "line-blur": 3 } });
         if (!map.getLayer(`${srcId}-fill`)) map.addLayer({ id: `${srcId}-fill`, type: "line", source: srcId, layout: { "line-cap": "round", "line-join": "round" }, paint: { "line-color": meta.color, "line-width": 3.6 } });
+      } else if (meta.geometry === "polygon") {
+        // Filled surface + colored outline + centered icon
+        if (!map.getLayer(`${srcId}-fill`)) map.addLayer({
+          id: `${srcId}-fill`, type: "fill", source: srcId,
+          filter: ["==", "$type", "Polygon"],
+          paint: { "fill-color": meta.color, "fill-opacity": 0.28 },
+        });
+        if (!map.getLayer(`${srcId}-outline`)) map.addLayer({
+          id: `${srcId}-outline`, type: "line", source: srcId,
+          filter: ["==", "$type", "Polygon"],
+          layout: { "line-cap": "round", "line-join": "round" },
+          paint: { "line-color": meta.color, "line-width": 2.2, "line-opacity": 0.95 },
+        });
+        // Centroid icon (works for both Point + Polygon via symbol-placement:"point")
+        if (!map.getLayer(`${srcId}-symbol`) && map.hasImage(`pin-${lk}`)) {
+          map.addLayer({
+            id: `${srcId}-symbol`, type: "symbol", source: srcId,
+            layout: {
+              "icon-image": `pin-${lk}`,
+              "icon-size": ["interpolate", ["linear"], ["zoom"], 12, 0.42, 15, 0.7, 18, 1.0],
+              "icon-allow-overlap": true,
+              "icon-anchor": "center",
+              "symbol-placement": "point",
+              "symbol-sort-key": 1,
+            },
+          });
+        }
       } else {
         // Thematic circular icon (anchor center → point stays on the location)
         if (!map.getLayer(`${srcId}-symbol`) && map.hasImage(`pin-${lk}`)) {
@@ -1178,19 +1210,23 @@ function applyMapSources() {
         // Transparent picking circle (for click hit tests)
         if (!map.getLayer(`${srcId}-fill`)) map.addLayer({
           id: `${srcId}-fill`, type: "circle", source: srcId,
+          filter: ["==", "$type", "Point"],
           paint: { "circle-radius": 26, "circle-color": meta.color, "circle-opacity": 0.001 },
         });
       }
     });
   });
 
-  // Ensure ALL point layers (symbols + picking circles) sit on TOP of line/surface layers
+  // Ensure ALL point symbols (icons) sit on TOP of line/surface layers
   Object.keys(LAYERS).forEach((tk) => Object.entries(LAYERS[tk].items).forEach(([lk, meta]) => {
-    if (meta.geometry !== "line") {
-      const sid = `osm-${lk}-symbol`;
-      const fid = `osm-${lk}-fill`;
+    const sid = `osm-${lk}-symbol`;
+    const fid = `osm-${lk}-fill`;
+    if (meta.geometry === "point") {
       if (map.getLayer(fid)) map.moveLayer(fid);
       if (map.getLayer(sid)) map.moveLayer(sid);
+    } else if (meta.geometry === "polygon") {
+      // Polygon: keep fill below, outline & symbol on top
+      if (map.getLayer(`${sid}`)) map.moveLayer(sid);
     }
   }));
 }
@@ -1221,6 +1257,7 @@ map.on("click", (e) => {
     let coords;
     if (f.geometry.type === "Point") coords = f.geometry.coordinates;
     else if (f.geometry.type === "LineString") coords = f.geometry.coordinates[Math.floor(f.geometry.coordinates.length / 2)];
+    else if (f.geometry.type === "Polygon") coords = [e.lngLat.lng, e.lngLat.lat]; // use click location on polygon
     else coords = [e.lngLat.lng, e.lngLat.lat];
     state.selectedFeature = { ...f, _clickCoords: coords };
     renderDetail();
