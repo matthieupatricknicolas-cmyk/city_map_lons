@@ -113,6 +113,40 @@
   main.map-area { position: relative; flex: 1; overflow: hidden; }
   #map { position: absolute; inset: 0; width: 100%; height: 100%; }
 
+  /* Donut menu — floating layers panel opened on theme click */
+  .donut-panel { position: absolute; top: 24px; left: 24px; z-index: 25; width: 420px; max-width: calc(100vw - 60px); background: white; border-radius: 22px; border: 1px solid var(--lons-border); box-shadow: 0 24px 60px rgba(15,23,42,0.22), 0 0 0 1px rgba(15,23,42,0.04); padding: 22px 22px 14px; animation: donut-in 0.28s cubic-bezier(0.34, 1.6, 0.64, 1); }
+  .donut-panel[hidden] { display: none; }
+  @keyframes donut-in { from { opacity: 0; transform: translateY(-10px) scale(0.96); } to { opacity: 1; transform: none; } }
+  .donut-close { position: absolute; top: 12px; right: 12px; width: 34px; height: 34px; border: 1px solid var(--lons-border); background: white; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--lons-muted); transition: all 0.2s; padding: 0; z-index: 2; }
+  .donut-close:hover { background: var(--lons-red); border-color: var(--lons-red); color: white; transform: rotate(90deg); }
+  .donut-head { padding: 4px 42px 12px 4px; border-bottom: 1px solid #F3F4F6; }
+  .donut-kicker { font-size: 10px; text-transform: uppercase; letter-spacing: 0.22em; font-weight: 700; color: var(--lons-red); }
+  .donut-title { font-family: "Bricolage Grotesque", sans-serif; font-size: 24px; font-weight: 800; margin-top: 2px; color: var(--lons-ink); line-height: 1.05; }
+  .donut-sub { margin-top: 4px; font-size: 12px; color: var(--lons-muted); font-weight: 500; }
+  .donut-svg-wrap { display: flex; justify-content: center; padding: 12px 0 4px; }
+  #donut-svg { width: 100%; max-width: 260px; height: auto; overflow: visible; cursor: pointer; }
+  .donut-slice { transition: filter 0.2s, opacity 0.2s; cursor: pointer; }
+  .donut-slice:hover { filter: brightness(1.12) drop-shadow(0 4px 10px rgba(0,0,0,0.15)); }
+  .donut-slice.off { fill: #E5E7EB; }
+  .donut-slice.err { fill: rgba(220,38,38,0.35); }
+  .donut-icon-bg { pointer-events: none; }
+  .donut-icon { pointer-events: none; color: white; }
+  .donut-icon.off { color: #6B7280; }
+  .donut-center-total { font-family: "Bricolage Grotesque", sans-serif; font-size: 24px; font-weight: 800; fill: var(--lons-ink); text-anchor: middle; dominant-baseline: middle; }
+  .donut-center-label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; fill: var(--lons-muted); text-anchor: middle; dominant-baseline: middle; }
+  .donut-legend { display: flex; flex-direction: column; gap: 2px; padding: 6px 0 4px; max-height: 200px; overflow-y: auto; }
+  .donut-legend-row { display: flex; align-items: center; gap: 10px; padding: 7px 8px; border-radius: 10px; cursor: pointer; transition: background 0.12s; }
+  .donut-legend-row:hover { background: #FAFAF7; }
+  .donut-legend-row.err { background: rgba(253,232,233,0.4); }
+  .donut-legend-dot { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+  .donut-legend-row.off .donut-legend-dot { background: #E5E7EB !important; }
+  .donut-legend-info { flex: 1; min-width: 0; }
+  .donut-legend-name { font-size: 13px; font-weight: 700; color: var(--lons-ink); }
+  .donut-legend-row.off .donut-legend-name { color: var(--lons-muted); }
+  .donut-legend-count { font-size: 10px; color: var(--lons-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 1px; }
+  .donut-legend-row.err .donut-legend-count { color: var(--lons-red); font-weight: 600; }
+  .donut-tip { display: flex; align-items: center; gap: 6px; padding: 10px 2px 0; font-size: 11px; color: var(--lons-muted); border-top: 1px solid #F3F4F6; margin-top: 6px; }
+
   /* Map controls */
   .map-controls { position: absolute; top: 16px; right: 16px; z-index: 30; display: flex; flex-direction: column; gap: 10px; align-items: flex-end; transition: opacity 0.25s, transform 0.25s; }
   main.map-area.detail-open .map-controls { opacity: 0; pointer-events: none; transform: translateX(24px); }
@@ -234,24 +268,29 @@
   <div class="body-row">
     <aside class="theme-rail" data-testid="theme-rail" id="theme-rail"></aside>
 
-    <aside class="sidebar">
-      <div class="sidebar-header">
-        <div class="kicker" id="sidebar-kicker">Thématique</div>
-        <div class="title" id="sidebar-title">Mobilité</div>
-        <div class="subtitle" id="sidebar-subtitle">Déplacement</div>
-      </div>
-
-      <div class="sidebar-section-title">Couches à afficher</div>
-      <div class="layers" id="layers"></div>
-
-      <div class="tip-card">
-        <div class="tip-label">Astuce</div>
-        Cliquez sur un objet pour ouvrir sa fiche détaillée avec Panoramax. Cliquez dans le vide pour la refermer.
-      </div>
-    </aside>
-
     <main class="map-area">
       <div id="map"></div>
+
+      <!-- Floating donut menu — opens on theme-tab click, closes via × -->
+      <div class="donut-panel" id="donut-panel" data-testid="donut-panel" hidden>
+        <button class="donut-close" id="donut-close" data-testid="donut-close" aria-label="Fermer">
+          <i data-lucide="x" style="width:18px;height:18px"></i>
+        </button>
+        <div class="donut-head">
+          <div class="donut-kicker">Thématique</div>
+          <div class="donut-title" id="donut-title">Mobilité</div>
+          <div class="donut-sub" id="donut-sub">Déplacement</div>
+        </div>
+        <div class="donut-svg-wrap">
+          <svg id="donut-svg" viewBox="-140 -140 280 280" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
+        <div class="donut-legend" id="donut-legend"></div>
+        <div class="donut-tip">
+          <i data-lucide="lightbulb" style="width:12px;height:12px"></i>
+          Cliquez sur un segment ou une ligne pour activer / désactiver la couche.
+        </div>
+      </div>
+
       <div class="map-controls" id="map-controls"></div>
       <div class="bottom-controls" id="bottom-controls"></div>
       <div class="toasts" id="toasts"></div>
@@ -772,6 +811,7 @@ const state = {
   fromCache: {},
   selectedFeature: null,
   inflight: new Set(),
+  donutOpen: false,
 };
 window.__state = state;
 
@@ -790,7 +830,7 @@ function toast(msg, type = "success") {
 function renderTabs() {
   const el = document.getElementById("theme-rail");
   el.innerHTML = Object.entries(LAYERS).map(([key, theme]) => {
-    const active = key === state.activeTheme;
+    const active = key === state.activeTheme && state.donutOpen;
     return `
       <button class="rail-btn ${active ? "active" : ""}" data-tab="${key}" data-testid="theme-tab-${key}" title="${theme.label} · ${theme.subtitle}">
         <div class="rail-ico"><i data-lucide="${theme.tabIcon}" style="width:20px;height:20px"></i></div>
@@ -798,50 +838,126 @@ function renderTabs() {
       </button>
     `;
   }).join("");
-  el.querySelectorAll(".rail-btn").forEach((btn) => btn.addEventListener("click", () => setActiveTheme(btn.dataset.tab)));
-
-  // Update sidebar header for the active theme
-  const active = LAYERS[state.activeTheme];
-  const t = document.getElementById("sidebar-title");
-  const s = document.getElementById("sidebar-subtitle");
-  if (t) t.textContent = active.label;
-  if (s) s.textContent = active.subtitle;
-
+  el.querySelectorAll(".rail-btn").forEach((btn) => btn.addEventListener("click", () => toggleDonutFor(btn.dataset.tab)));
   lucide.createIcons();
 }
 
-function renderLayers() {
-  const el = document.getElementById("layers");
+/* ---------------- Donut panel (open/close + render) ---------------- */
+function openDonut(themeKey) {
+  const panel = document.getElementById("donut-panel");
+  state.donutOpen = true;
+  if (themeKey && themeKey !== state.activeTheme) setActiveTheme(themeKey);
+  else renderDonut();
+  panel.hidden = false;
+}
+function closeDonut() {
+  const panel = document.getElementById("donut-panel");
+  state.donutOpen = false;
+  panel.hidden = true;
+}
+function toggleDonutFor(themeKey) {
+  // Same theme + already open → close. Otherwise open with that theme.
+  if (state.donutOpen && themeKey === state.activeTheme) closeDonut();
+  else openDonut(themeKey);
+}
+
+function polarToCartesian(cx, cy, r, angleDeg) {
+  const a = ((angleDeg - 90) * Math.PI) / 180.0;
+  return [cx + r * Math.cos(a), cy + r * Math.sin(a)];
+}
+function describeArc(cx, cy, rOuter, rInner, startAngle, endAngle) {
+  const [x1, y1] = polarToCartesian(cx, cy, rOuter, endAngle);
+  const [x2, y2] = polarToCartesian(cx, cy, rOuter, startAngle);
+  const [x3, y3] = polarToCartesian(cx, cy, rInner, startAngle);
+  const [x4, y4] = polarToCartesian(cx, cy, rInner, endAngle);
+  const largeArc = endAngle - startAngle <= 180 ? "0" : "1";
+  return `M ${x1} ${y1} A ${rOuter} ${rOuter} 0 ${largeArc} 0 ${x2} ${y2} L ${x3} ${y3} A ${rInner} ${rInner} 0 ${largeArc} 1 ${x4} ${y4} Z`;
+}
+
+const LUCIDE_MAP = { shop: "shopping-bag", theater: "drama", tree: "trees", playground: "baby", droplet: "droplet", leaf: "leaf", parking: "square-parking", parking_p: "square-parking", meter: "receipt-text", wheelchair: "accessibility", clock: "clock", truck: "truck", bike: "bike", bus: "bus", bus_stop: "bus-front", utensils: "utensils", landmark: "landmark", film: "film", library: "library-big", navigation: "navigation", route: "route" };
+
+function renderDonut() {
+  if (!state.donutOpen) return;
   const theme = LAYERS[state.activeTheme];
-  const LUCIDE_MAP = { shop: "shopping-bag", theater: "drama", tree: "trees", playground: "baby", droplet: "droplet", leaf: "leaf", parking: "square-parking", parking_p: "square-parking", meter: "receipt-text", wheelchair: "accessibility", clock: "clock", truck: "truck", bike: "bike", bus: "bus", bus_stop: "bus-front", utensils: "utensils", landmark: "landmark", film: "film", library: "library-big", navigation: "navigation", route: "route" };
-  el.innerHTML = Object.entries(theme.items).map(([key, meta]) => {
-    const visible = state.visibleLayers[key];
-    const loading = state.loadingLayers[key];
-    const failed = state.failedLayers[key];
-    const count = state.layerData[key]?.features.length || 0;
-    let status;
-    if (loading) status = "Chargement OSM…";
-    else if (visible && failed && !state.layerData[key]) status = "⚠ Erreur — cliquer pour réessayer";
-    else if (visible) status = `${count} objets en direct`;
-    else status = "Cliquez pour activer";
+  const entries = Object.entries(theme.items);
+  const n = entries.length;
+  document.getElementById("donut-title").textContent = theme.label;
+  document.getElementById("donut-sub").textContent = theme.subtitle;
+
+  // Build SVG ring
+  const svg = document.getElementById("donut-svg");
+  const rOuter = 110, rInner = 62;
+  const rIcon = (rOuter + rInner) / 2; // slice midpoint radius (for icons)
+  let totalVisibleCount = 0;
+  let visibleLayers = 0;
+  const slices = entries.map(([lk, meta], i) => {
+    const angleStart = (360 / n) * i;
+    const angleEnd = angleStart + (360 / n);
+    const midAngle = (angleStart + angleEnd) / 2;
+    const [ix, iy] = polarToCartesian(0, 0, rIcon, midAngle);
+    const visible = state.visibleLayers[lk];
+    const failed = state.failedLayers[lk] && !state.layerData[lk];
+    const count = state.layerData[lk]?.features.length || 0;
+    if (visible) { totalVisibleCount += count; visibleLayers++; }
+    const cls = failed ? "err" : (visible ? "on" : "off");
     const iconName = LUCIDE_MAP[meta.icon] || meta.icon;
     return `
-      <div class="layer-row ${visible ? "" : "off"} ${failed && !state.layerData[key] ? "err" : ""}" data-layer="${key}">
-        <div class="layer-icon" style="background:${visible ? meta.color : "#E5E7EB"};box-shadow:${visible ? `0 6px 14px ${meta.color}40` : "none"}">
-          <i data-lucide="${iconName}" style="width:18px;height:18px;color:${visible ? "white" : "#6B7280"}"></i>
+      <path class="donut-slice ${cls}" d="${describeArc(0, 0, rOuter, rInner, angleStart, angleEnd)}"
+            fill="${visible ? meta.color : "#E5E7EB"}" stroke="white" stroke-width="2"
+            data-layer="${lk}" data-testid="donut-slice-${lk}">
+        <title>${meta.label} · ${count} objets</title>
+      </path>
+      <circle class="donut-icon-bg" cx="${ix}" cy="${iy}" r="14" fill="${visible ? "rgba(255,255,255,0.28)" : "rgba(255,255,255,0.55)"}" pointer-events="none"></circle>
+      <foreignObject class="donut-icon ${visible ? "" : "off"}" x="${ix - 10}" y="${iy - 10}" width="20" height="20" pointer-events="none">
+        <i data-lucide="${iconName}" style="width:20px;height:20px;color:${visible ? "white" : "#6B7280"};display:block"></i>
+      </foreignObject>
+    `;
+  }).join("");
+
+  svg.innerHTML = `
+    ${slices}
+    <circle cx="0" cy="0" r="${rInner - 3}" fill="white" stroke="#F3F4F6" stroke-width="1"></circle>
+    <text class="donut-center-total" x="0" y="-4">${totalVisibleCount}</text>
+    <text class="donut-center-label" x="0" y="16">${visibleLayers} / ${n} couche${visibleLayers > 1 ? "s" : ""}</text>
+  `;
+
+  // Bind slice clicks
+  svg.querySelectorAll(".donut-slice").forEach((path) => {
+    path.addEventListener("click", () => toggleLayer(path.dataset.layer));
+  });
+
+  // Legend list
+  const legend = document.getElementById("donut-legend");
+  legend.innerHTML = entries.map(([lk, meta]) => {
+    const visible = state.visibleLayers[lk];
+    const loading = state.loadingLayers[lk];
+    const failed = state.failedLayers[lk] && !state.layerData[lk];
+    const count = state.layerData[lk]?.features.length || 0;
+    let status;
+    if (loading) status = "Chargement OSM…";
+    else if (failed) status = "⚠ Erreur — cliquer pour réessayer";
+    else if (visible) status = `${count} objets en direct`;
+    else status = "Désactivé";
+    return `
+      <div class="donut-legend-row ${visible ? "" : "off"} ${failed ? "err" : ""}" data-layer="${lk}" data-testid="donut-row-${lk}">
+        <div class="donut-legend-dot" style="background:${visible ? meta.color : "#E5E7EB"}"></div>
+        <div class="donut-legend-info">
+          <div class="donut-legend-name">${meta.label}</div>
+          <div class="donut-legend-count">${status}</div>
         </div>
-        <div class="layer-info">
-          <div class="name">${meta.label}</div>
-          <div class="count">${status}</div>
-        </div>
-        <div class="switch ${visible ? "on" : ""}"><div class="knob"></div></div>
       </div>
     `;
   }).join("");
-  el.querySelectorAll(".layer-row").forEach((row) => row.addEventListener("click", () => toggleLayer(row.dataset.layer)));
+  legend.querySelectorAll(".donut-legend-row").forEach((row) => {
+    row.addEventListener("click", () => toggleLayer(row.dataset.layer));
+  });
+
   lucide.createIcons();
   updateHeaderCount();
 }
+
+/* Backward-compatible wrapper: any old call site that expected renderLayers() now refreshes the donut */
+function renderLayers() { renderDonut(); }
 
 function updateHeaderCount() {
   const total = Object.values(state.layerData).reduce((s, fc) => s + (fc.features?.length || 0), 0);
@@ -1001,7 +1117,7 @@ function setActiveTheme(themeKey) {
   state.activeTheme = themeKey;
   state.visibleLayers = { ...DEFAULT_VISIBLE[themeKey] };
   state.selectedFeature = null;
-  renderTabs(); renderLayers(); renderDetail();
+  renderTabs(); renderDonut(); renderDetail();
   ensureLayers();
   applyMapSources();
   scheduleHashUpdate();
@@ -1012,12 +1128,12 @@ function toggleLayer(layerKey) {
   if (state.failedLayers[layerKey] && !state.layerData[layerKey]) {
     state.failedLayers[layerKey] = false;
     state.visibleLayers[layerKey] = true;
-    renderLayers();
+    renderDonut();
     ensureLayers();
     return;
   }
   state.visibleLayers[layerKey] = !state.visibleLayers[layerKey];
-  renderLayers();
+  renderDonut();
   ensureLayers();
   applyMapSources();
   scheduleHashUpdate();
@@ -1629,11 +1745,12 @@ if (_hashState) {
 }
 
 renderTabs();
-renderLayers();
+renderDonut();
 renderControls();
 bindAddressSearch();
 bindExport();
 bindShare();
+document.getElementById("donut-close").addEventListener("click", closeDonut);
 lucide.createIcons();
 
 // After map load: apply camera from hash + start data fetch
