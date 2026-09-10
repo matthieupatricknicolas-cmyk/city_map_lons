@@ -384,7 +384,7 @@ const LAYERS = {
     tabIcon: "trees",
     items: {
       parks:       { label: "Parcs & jardins", icon: "tree", color: "#16A34A", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["leisure"~"^(park|garden)$"](around:4500,46.6739,5.5539);way["leisure"~"^(park|garden)$"](around:4500,46.6739,5.5539););out center;` },
-      playgrounds: { label: "Aires de jeux", icon: "playground", color: "#F59E0B", geometry: "point", source: "overpass", query: `[out:json][timeout:25];(node["leisure"="playground"](around:4500,46.6739,5.5539);way["leisure"="playground"](around:4500,46.6739,5.5539););out center;` },
+      playgrounds: { label: "Aires de jeux", icon: "playground", color: "#F59E0B", geometry: "point", source: "local", file: "playground.geojson" },
       fountains:   { label: "Fontaines & points d'eau", icon: "droplet", color: "#0EA5E9", geometry: "point", source: "overpass", query: `[out:json][timeout:25];(node["amenity"="fountain"](around:4500,46.6739,5.5539);node["amenity"="drinking_water"](around:4500,46.6739,5.5539););out body;` },
       greens:      { label: "Espaces verts", icon: "leaf", color: "#65A30D", geometry: "line", source: "overpass", query: `[out:json][timeout:35];(way["landuse"~"^(grass|recreation_ground|meadow|forest)$"](around:4000,46.6739,5.5539);way["leisure"~"^(nature_reserve|common)$"](around:4000,46.6739,5.5539);way["natural"="wood"](around:4000,46.6739,5.5539););out geom;` },
     },
@@ -464,6 +464,13 @@ const KEY_LABELS = {
   fee_conditional: "Payant (horaires)",
   charge: "Tarif",
   currency: "Devise",
+  // Playground / equipment fields
+  min_age: "Âge minimum",
+  max_age: "Âge maximum",
+  indoor: "En intérieur",
+  supervised: "Surveillé",
+  com_insee: "INSEE commune",
+  com_nom: "Commune",
 };
 
 /* Traductions des valeurs OSM courantes (utilisées dans humanize()) */
@@ -701,6 +708,22 @@ async function fetchOverpass(query) {
   throw new Error("Overpass indisponible: " + lastErr);
 }
 
+/** Load a GeoJSON file bundled next to the HTML (fastest path — no network round-trip). */
+async function fetchLocalGeoJSON(file) {
+  const url = new URL(file, location.href).toString();
+  const r = await fetch(url, { cache: "force-cache" });
+  if (!r.ok) throw new Error(`Fichier local introuvable (${file}): HTTP ${r.status}`);
+  const j = await r.json();
+  if (!j || !Array.isArray(j.features)) throw new Error(`Fichier local invalide (${file}): pas un FeatureCollection`);
+  // Ensure every feature has an id — required for click handlers
+  j.features = j.features.map((f, i) => {
+    if (!f.properties) f.properties = {};
+    if (!f.properties.id) f.properties.id = f.properties.osm_id || `local/${file}/${i}`;
+    return f;
+  });
+  return j;
+}
+
 function overpassToGeoJSON(elements) {
   const features = [];
   elements.forEach((e) => {
@@ -936,7 +959,11 @@ function renderDonut() {
     let status;
     if (loading) status = "Chargement OSM…";
     else if (failed) status = "⚠ Erreur — cliquer pour réessayer";
-    else if (visible) status = `${count} objets en direct`;
+    else if (visible) {
+      const meta = LAYERS[state.activeTheme].items[lk];
+      const badge = meta?.source === "local" ? "⚡ " : meta?.source === "geodatamine" ? "" : "";
+      status = `${badge}${count} objets en direct`;
+    }
     else status = "Désactivé";
     return `
       <div class="donut-legend-row ${visible ? "" : "off"} ${failed ? "err" : ""}" data-layer="${lk}" data-testid="donut-row-${lk}">
@@ -1173,7 +1200,11 @@ async function ensureLayers() {
     state.failedLayers[layerKey] = false;
     renderLayers();
     try {
-      const raw = meta.source === "geodatamine" ? await fetchGeoDataMine(meta.theme) : await fetchOverpass(meta.query);
+      const raw = meta.source === "geodatamine"
+        ? await fetchGeoDataMine(meta.theme)
+        : meta.source === "local"
+          ? await fetchLocalGeoJSON(meta.file)
+          : await fetchOverpass(meta.query);
       state.layerData[layerKey] = stampFeatures(raw, state.activeTheme, layerKey, meta);
       cacheSet(layerKey, state.layerData[layerKey]);
       await loadIconIntoMap(map, `pin-${layerKey}`, makePinDataUrl(meta.color, meta.icon));
