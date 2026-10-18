@@ -1,0 +1,1395 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5535325,
+          46.6760636
+        ]
+      },
+      "properties": {
+        "id": "node/631011962",
+        "osm_type": "node",
+        "osm_id": 631011962,
+        "contact:facebook": "https://www.facebook.com/museelons",
+        "contact:phone": "+33 3 84 47 64 30",
+        "contact:street": "Place Philibert de Chalon",
+        "contact:website": "https://www.lonslesaunier.fr/les-musees/musee-des-beaux-arts/",
+        "fee": "yes",
+        "name": "Musée des Beaux-Arts",
+        "official_name": "Musée des Beaux-Arts",
+        "opening_hours": "Tu-Su 14:00-18:00",
+        "operator": "Commune de Lons-le-Saunier",
+        "ref:FR:museofile": "M0345",
+        "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010",
+        "tourism": "museum",
+        "wikidata": "Q3330229",
+        "wikipedia": "fr:Musée des beaux-arts et d'archéologie de Lons-le-Saunier"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5570832,
+          46.6731951
+        ]
+      },
+      "properties": {
+        "id": "node/631756371",
+        "osm_type": "node",
+        "osm_id": 631756371,
+        "artist_name": "Frédéric-Auguste Bartholdi",
+        "artwork_subject": "figurative",
+        "artwork_type": "statue",
+        "heritage": "2",
+        "heritage:operator": "mhs",
+        "material": "bronze",
+        "mhs:inscription_date": "1992",
+        "name": "Rouget de Lisle",
+        "name:etymology": "Claude-Joseph Rouget de Lisle",
+        "name:etymology:wikidata": "Q207660",
+        "ref:mhs": "PA00102060",
+        "source": "cadastre-dgi-fr source : Direction Générale des Impôts - Cadastre. Mise à jour : 2010",
+        "source:heritage": "data.gouv.fr:Ministère de la Culture - 04/2015",
+        "start_date": "1882",
+        "tourism": "artwork",
+        "wikidata": "Q22953275"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5528032,
+          46.6799113
+        ]
+      },
+      "properties": {
+        "id": "node/963763242",
+        "osm_type": "node",
+        "osm_id": 963763242,
+        "artist:wikipedia": "Georges Rousse",
+        "artist_name": "Georges Rousse",
+        "artwork_type": "mural",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5549661,
+          46.6778841
+        ]
+      },
+      "properties": {
+        "id": "node/1161751335",
+        "osm_type": "node",
+        "osm_id": 1161751335,
+        "amenity": "fountain",
+        "artist_name": "Canova",
+        "artwork_type": "statue",
+        "material": "metal",
+        "name": "Vénus de Canova",
+        "start_date": "1844-10-04",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5530613,
+          46.6762903
+        ]
+      },
+      "properties": {
+        "id": "node/1259880151",
+        "osm_type": "node",
+        "osm_id": 1259880151,
+        "addr:city": "Lons-le-Saunier",
+        "addr:postcode": "39000",
+        "addr:street": "Place Perraud",
+        "artist_name": "Max Claudet",
+        "artwork_type": "sculpture",
+        "name": "À Perraud",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5555491,
+          46.6756994
+        ]
+      },
+      "properties": {
+        "id": "node/1572748364",
+        "osm_type": "node",
+        "osm_id": 1572748364,
+        "amenity": "fountain",
+        "artist_name": "Charles-Auguste Lebourg",
+        "artwork_type": "fontaine Wallace",
+        "fountain": "wallace",
+        "name": "Fontaine Wallace",
+        "subject:wikidata": "Q829304",
+        "tourism": "artwork",
+        "wikimedia_commons": "File:Wall font., Lons - 39.jpg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5536884,
+          46.6753259
+        ]
+      },
+      "properties": {
+        "id": "node/1785365692",
+        "osm_type": "node",
+        "osm_id": 1785365692,
+        "contact:phone": "+33 3 84 24 65 01",
+        "contact:website": "https://www.lonslesaunier.fr/decouvrir-lons-le-saunier/ville-natale-de-rouget-de-lisle/musee-rouget-de-lisle/",
+        "fee": "yes",
+        "historic": "yes",
+        "name": "Maison natale de Rouget de Lisle",
+        "note": "De juillet à août : du lundi au vendredi (10h-12h et 14h-18h) Week-ends et jours fériés : 14h à 17h",
+        "opening_hours": "Jun-Sep Tu-Su 14:00-18:00",
+        "operator": "Office de tourisme de Lons-le-Saunier",
+        "owner": "Commune de Lons-le-Saunier",
+        "owner:type": "public",
+        "tourism": "museum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5744723,
+          46.6952772
+        ]
+      },
+      "properties": {
+        "id": "node/2634950756",
+        "osm_type": "node",
+        "osm_id": 2634950756,
+        "artwork_type": "sculpture",
+        "description": "fr:Statue de la Vierge en métal",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5543797,
+          46.6735596
+        ]
+      },
+      "properties": {
+        "id": "node/4107718727",
+        "osm_type": "node",
+        "osm_id": 4107718727,
+        "amenity": "community_centre",
+        "contact:phone": "+33 3 84 24 74 00",
+        "contact:street": "Place du 11 Novembre",
+        "contact:website": "https://www.carcom.org/",
+        "name": "Carrefour de la Communication",
+        "operator": "Commune de Lons-le-Saunier",
+        "short_name": "CarCom"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5601658,
+          46.6741519
+        ]
+      },
+      "properties": {
+        "id": "node/4872937221",
+        "osm_type": "node",
+        "osm_id": 4872937221,
+        "amenity": "recycling",
+        "artwork_subject": "Théâtre de Lons-le-Saunier",
+        "artwork_type": "mural",
+        "check_date:recycling": "2023-03-29",
+        "opening_hours": "24/7",
+        "operator": "SICTOM de la zone de Lons-le-Saunier",
+        "recycling:glass_bottles": "yes",
+        "recycling_type": "container",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5763846,
+          46.6676482
+        ]
+      },
+      "properties": {
+        "id": "node/4997696941",
+        "osm_type": "node",
+        "osm_id": 4997696941,
+        "addr:city": "Perrigny",
+        "addr:housenumber": "393",
+        "addr:postcode": "39570",
+        "addr:street": "Route de Conliège",
+        "name": "Musée de Véhicules Anciens",
+        "opening_hours": "Mar 31-Jun 30,Sep 01-Nov 11 We-Su 14:00-18:30; Jul-Aug 14:00-18:30",
+        "phone": "+33 3 48 48 42 07",
+        "short_name": "MVA",
+        "tourism": "museum",
+        "website": "http://mva39.fr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5336411,
+          46.6688864
+        ]
+      },
+      "properties": {
+        "id": "node/5097579108",
+        "osm_type": "node",
+        "osm_id": 5097579108,
+        "amenity": "community_centre",
+        "community_centre": "youth_centre",
+        "community_centre:for": "child",
+        "contact:email": "centre-montciel.lons@wanadoo.fr",
+        "contact:phone": "+33 3 84 47 11 63",
+        "contact:website": "https://francasdujura.fr/project/lons-le-saunier/",
+        "name": "Centre aéré Serge Jeanblanc",
+        "operator": "Francas",
+        "owner": "Commune de Lons-le-Saunier",
+        "owner:type": "public",
+        "ref:FR:SIRET": "77839680400149"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5560556,
+          46.6739114
+        ]
+      },
+      "properties": {
+        "id": "node/5149237461",
+        "osm_type": "node",
+        "osm_id": 5149237461,
+        "artist_name": "Don Mateo",
+        "artwork_type": "mural",
+        "name": "Margaux",
+        "start_date": "2017-10-04",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5592828,
+          46.6710504
+        ]
+      },
+      "properties": {
+        "id": "node/5199738858",
+        "osm_type": "node",
+        "osm_id": 5199738858,
+        "amenity": "recycling",
+        "artwork_subject": "Rouget de l’Isle",
+        "artwork_type": "mural",
+        "check_date:recycling": "2025-07-19",
+        "operator": "SICTOM de la zone de Lons-le-Saunier",
+        "recycling:cans": "yes",
+        "recycling_type": "container",
+        "subject:wikidata": "Q207660",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5971765,
+          46.6548344
+        ]
+      },
+      "properties": {
+        "id": "node/6437165125",
+        "osm_type": "node",
+        "osm_id": 6437165125,
+        "amenity": "community_centre",
+        "name": "Salle des Fêtes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5324692,
+          46.6777358
+        ]
+      },
+      "properties": {
+        "id": "node/6622181302",
+        "osm_type": "node",
+        "osm_id": 6622181302,
+        "addr:housenumber": "8",
+        "addr:street": "Rue du Stade",
+        "alt_name": "Accueil de loisirs \"Crockylou\"",
+        "amenity": "community_centre",
+        "community_centre": "youth_centre",
+        "community_centre:for": "child",
+        "contact:email": "alsh.crockylou@leolagrange.org",
+        "contact:phone": "+33 3 84 86 21 12",
+        "contact:website": "https://www.enfance-jeunesse-montmorot.org/",
+        "name": "Crockylou",
+        "operator": "Léo Lagrange",
+        "owner": "Commune de Montmorot",
+        "owner:type": "public",
+        "ref:FR:SIRET": "32368669100169"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5552066,
+          46.6771836
+        ]
+      },
+      "properties": {
+        "id": "node/6759331658",
+        "osm_type": "node",
+        "osm_id": 6759331658,
+        "amenity": "studio",
+        "contact:facebook": "MizenboiteProduction",
+        "contact:housenumber": "98",
+        "contact:phone": "+33 3 63 67 27 26",
+        "contact:street": "Rue Georges Trouillot",
+        "contact:website": "https://mizenboite.fr/",
+        "craft": "photographer",
+        "name": "Mizenboite",
+        "office": "advertising_agency",
+        "official_name": "Mizenboite Production",
+        "ref:FR:SIRET": "50839509200051",
+        "source": "cadastre-dgi-fr source : Direction Générale des Finances Publiques - Cadastre. Mise à jour : 2014"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5338757,
+          46.7166425
+        ]
+      },
+      "properties": {
+        "id": "node/7116452999",
+        "osm_type": "node",
+        "osm_id": 7116452999,
+        "amenity": "community_centre",
+        "name": "Salle des Rencontres"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5381393,
+          46.669408
+        ]
+      },
+      "properties": {
+        "id": "node/7464569096",
+        "osm_type": "node",
+        "osm_id": 7464569096,
+        "amenity": "community_centre",
+        "name": "Domaine de Montciel",
+        "operator": "Domaine de Montciel",
+        "phone": "+33 6 89 27 65 60",
+        "website": "http://domainedemontciel.fr"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5515021,
+          46.6795466
+        ]
+      },
+      "properties": {
+        "id": "node/7501337828",
+        "osm_type": "node",
+        "osm_id": 7501337828,
+        "artist_name": "Madeleine Vénard Salomé",
+        "artwork_type": "sculpture",
+        "description": "Oeuvre réalisée dans le cadre du \"1% artistique\"",
+        "material": "marble",
+        "name": "Le Destin de la femme",
+        "start_date": "1964",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5686741,
+          46.6730908
+        ]
+      },
+      "properties": {
+        "id": "node/7603102975",
+        "osm_type": "node",
+        "osm_id": 7603102975,
+        "addr:housenumber": "34",
+        "addr:street": "Avenue du Commandant de Villard",
+        "amenity": "community_centre",
+        "name": "Salle Iris",
+        "operator": "Commune de Lons-le-Saunier",
+        "operator:type": "public"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5144153,
+          46.7073916
+        ]
+      },
+      "properties": {
+        "id": "node/8715835802",
+        "osm_type": "node",
+        "osm_id": 8715835802,
+        "amenity": "community_centre",
+        "name": "Salle des fêtes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.4998276,
+          46.6580526
+        ]
+      },
+      "properties": {
+        "id": "node/8933601453",
+        "osm_type": "node",
+        "osm_id": 8933601453,
+        "amenity": "community_centre",
+        "community_centre": "village_hall",
+        "name": "Salle polyvalente"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.553169,
+          46.674243
+        ]
+      },
+      "properties": {
+        "id": "node/9602598577",
+        "osm_type": "node",
+        "osm_id": 9602598577,
+        "amenity": "studio",
+        "check_date": "2024-12-28",
+        "email": "arcadesstudio39@gmail.com",
+        "facebook": "Arcades-Studio-108148328295898",
+        "name": "Arcades Studio",
+        "operator": "Sébastien Guillier",
+        "phone": "+33 7 84 17 49 68",
+        "ref:FR:SIRET": "64715039000027",
+        "studio": "music"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5229762,
+          46.6615098
+        ]
+      },
+      "properties": {
+        "id": "node/9624065715",
+        "osm_type": "node",
+        "osm_id": 9624065715,
+        "amenity": "community_centre",
+        "name": "Maison paroissiale"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5218557,
+          46.6624583
+        ]
+      },
+      "properties": {
+        "id": "node/9624065720",
+        "osm_type": "node",
+        "osm_id": 9624065720,
+        "amenity": "community_centre",
+        "name": "Salle des Fêtes",
+        "phone": "+33 3 84 47 07 59",
+        "website": "https://www.messiasursorne.fr/salle-des-fetes.htm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5528637,
+          46.6723984
+        ]
+      },
+      "properties": {
+        "id": "node/9695263691",
+        "osm_type": "node",
+        "osm_id": 9695263691,
+        "alt_name": "Salle le Culthurel",
+        "amenity": "arts_centre",
+        "email": "leslucioles.quaithurel@gmail.com",
+        "name": "Le Culthurel",
+        "website": "https://sortiralons.fr/place/salle-le-culthurel/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5491303,
+          46.674298
+        ]
+      },
+      "properties": {
+        "id": "node/9931765164",
+        "osm_type": "node",
+        "osm_id": 9931765164,
+        "artist_name": "Simone Découpe",
+        "artwork_type": "mural",
+        "description": "Venturi non immemor aevi (N'oublie pas les générations futures)",
+        "name": "Venturi non immemor aevi",
+        "start_date": "2022-08-04",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5564194,
+          46.6758282
+        ]
+      },
+      "properties": {
+        "id": "node/10209856343",
+        "osm_type": "node",
+        "osm_id": 10209856343,
+        "artist_name": "Audrey Hantz;Julie Lacote",
+        "artwork_type": "mural",
+        "name": "Air urbain, l’art de rien",
+        "panoramax": "40a8639a-5512-46e5-886d-cc59cef544ff",
+        "start_date": "2021-08-18",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5420001,
+          46.6758906
+        ]
+      },
+      "properties": {
+        "id": "node/10223329053",
+        "osm_type": "node",
+        "osm_id": 10223329053,
+        "artist_name": "Pink'Art RoZ",
+        "artwork_type": "mural",
+        "fixme": "Position à vérifier",
+        "start_date": "2022-07-09",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5677948,
+          46.6588542
+        ]
+      },
+      "properties": {
+        "id": "node/10609052741",
+        "osm_type": "node",
+        "osm_id": 10609052741,
+        "alt_name": "Salle des aînés",
+        "amenity": "community_centre",
+        "name": "Salle des associations"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5419178,
+          46.6754511
+        ]
+      },
+      "properties": {
+        "id": "node/10804034753",
+        "osm_type": "node",
+        "osm_id": 10804034753,
+        "artwork_type": "mural",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5710239,
+          46.6729638
+        ]
+      },
+      "properties": {
+        "id": "node/11042506704",
+        "osm_type": "node",
+        "osm_id": 11042506704,
+        "amenity": "recycling",
+        "artwork_type": "graffiti",
+        "operator": "SICTOM de la zone de Lons-le-Saunier",
+        "operator:wikidata": "Q92937465",
+        "panoramax": "8c1be8d4-374d-45bd-9d9f-03b0758c15d2",
+        "recycling:cans": "yes",
+        "recycling:cardboard": "yes",
+        "recycling:magazines": "yes",
+        "recycling:newspaper": "yes",
+        "recycling:paper": "yes",
+        "recycling:paper_packaging": "yes",
+        "recycling:plastic": "yes",
+        "recycling:plastic_bottles": "yes",
+        "recycling:plastic_packaging": "yes",
+        "recycling_type": "container",
+        "start_date": "2023-06-06",
+        "survey:date": "2023-07-19",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5680724,
+          46.6741235
+        ]
+      },
+      "properties": {
+        "id": "node/11054730538",
+        "osm_type": "node",
+        "osm_id": 11054730538,
+        "amenity": "recycling",
+        "artwork_type": "graffiti",
+        "operator": "SICTOM de la zone de Lons-le-Saunier",
+        "panoramax": "a092b318-5b7f-43c4-abd7-62d85b1634b1",
+        "recycling:cans": "yes",
+        "recycling:cardboard": "yes",
+        "recycling:magazines": "yes",
+        "recycling:newspaper": "yes",
+        "recycling:paper": "yes",
+        "recycling:paper_packaging": "yes",
+        "recycling:plastic": "yes",
+        "recycling:plastic_bottles": "yes",
+        "recycling:plastic_packaging": "yes",
+        "recycling_type": "container",
+        "start_date": "2023-06-06",
+        "survey:date": "2023-07-19",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5707501,
+          46.6737671
+        ]
+      },
+      "properties": {
+        "id": "node/11054743992",
+        "osm_type": "node",
+        "osm_id": 11054743992,
+        "access": "private",
+        "amenity": "recycling",
+        "artwork_type": "graffiti",
+        "operator": "SICTOM de la zone de Lons-le-Saunier",
+        "panoramax": "a5127f70-6a91-4b08-84bf-2ef0c42afe34",
+        "recycling:cans": "yes",
+        "recycling:cardboard": "yes",
+        "recycling:magazines": "yes",
+        "recycling:newspaper": "yes",
+        "recycling:paper": "yes",
+        "recycling:paper_packaging": "yes",
+        "recycling:plastic": "yes",
+        "recycling:plastic_bottles": "yes",
+        "recycling:plastic_packaging": "yes",
+        "recycling_type": "container",
+        "start_date": "2023-06-06",
+        "survey:date": "2023-07-19",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5690342,
+          46.6739981
+        ]
+      },
+      "properties": {
+        "id": "node/11054753154",
+        "osm_type": "node",
+        "osm_id": 11054753154,
+        "amenity": "recycling",
+        "artwork_type": "graffiti",
+        "operator": "SICTOM de la zone de Lons-le-Saunier",
+        "panoramax": "745ae9a4-0095-4e04-adf6-d459b4cd7a15",
+        "recycling:cans": "yes",
+        "recycling:cardboard": "yes",
+        "recycling:magazines": "yes",
+        "recycling:newspaper": "yes",
+        "recycling:paper": "yes",
+        "recycling:paper_packaging": "yes",
+        "recycling:plastic": "yes",
+        "recycling:plastic_bottles": "yes",
+        "recycling:plastic_packaging": "yes",
+        "recycling_type": "container",
+        "start_date": "2023-06-06",
+        "survey:date": "2023-07-19",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5698724,
+          46.6738934
+        ]
+      },
+      "properties": {
+        "id": "node/11054753347",
+        "osm_type": "node",
+        "osm_id": 11054753347,
+        "amenity": "recycling",
+        "artwork_type": "graffiti",
+        "operator": "SICTOM de la zone de Lons-le-Saunier",
+        "panoramax": "1f25e5c1-720f-453b-a9e5-c1278691c83b",
+        "recycling:cans": "yes",
+        "recycling:cardboard": "yes",
+        "recycling:magazines": "yes",
+        "recycling:newspaper": "yes",
+        "recycling:paper": "yes",
+        "recycling:paper_packaging": "yes",
+        "recycling:plastic": "yes",
+        "recycling:plastic_bottles": "yes",
+        "recycling:plastic_packaging": "yes",
+        "recycling_type": "container",
+        "start_date": "2023-06-06",
+        "survey:date": "2023-07-19",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5683065,
+          46.6738792
+        ]
+      },
+      "properties": {
+        "id": "node/11059686657",
+        "osm_type": "node",
+        "osm_id": 11059686657,
+        "artwork_type": "mural",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5534409,
+          46.6735885
+        ]
+      },
+      "properties": {
+        "id": "node/11059886517",
+        "osm_type": "node",
+        "osm_id": 11059886517,
+        "amenity": "recycling",
+        "artwork_subject": "Théâtre de Lons-le-Saunier",
+        "artwork_type": "mural",
+        "opening_hours": "24/7",
+        "operator": "SICTOM de la zone de Lons-le-Saunier",
+        "operator:wikidata": "Q92937465",
+        "recycling:glass_bottles": "yes",
+        "recycling_type": "container",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.557092,
+          46.6814151
+        ]
+      },
+      "properties": {
+        "id": "node/11500034457",
+        "osm_type": "node",
+        "osm_id": 11500034457,
+        "addr:housenumber": "250",
+        "addr:street": "Chemin de Montenay",
+        "amenity": "studio",
+        "name": "Tres2B - Records",
+        "phone": "+33 6 34 37 06 81",
+        "studio": "audio",
+        "website": "https://www.facebook.com/people/Tres2B-Records/61550773902105/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5558511,
+          46.669665
+        ]
+      },
+      "properties": {
+        "id": "node/11676060681",
+        "osm_type": "node",
+        "osm_id": 11676060681,
+        "artwork_subject": "Mario",
+        "artwork_type": "mural",
+        "survey:date": "2024-02-28",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5102465,
+          46.690759
+        ]
+      },
+      "properties": {
+        "id": "node/11787084427",
+        "osm_type": "node",
+        "osm_id": 11787084427,
+        "artist_name": "Hetaone",
+        "artwork_type": "mural",
+        "start_date": "2024-03",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5671279,
+          46.6704044
+        ]
+      },
+      "properties": {
+        "id": "node/11792804859",
+        "osm_type": "node",
+        "osm_id": 11792804859,
+        "description": "Fleur métallique coréenne",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5217062,
+          46.6618938
+        ]
+      },
+      "properties": {
+        "id": "node/11809598239",
+        "osm_type": "node",
+        "osm_id": 11809598239,
+        "addr:street": "Rue du 19 Mars 1962",
+        "alt_name": "Accueil de loisirs \"Les Ticastors\"",
+        "amenity": "community_centre",
+        "community_centre": "youth_centre",
+        "community_centre:for": "child",
+        "contact:email": "ticastors.francas39@gmail.com",
+        "contact:phone": "+33 3 84 35 29 45",
+        "contact:website": "https://francasdujura.fr/project/messia-sur-sorne/",
+        "name": "Les Ticastors",
+        "operator": "Francas",
+        "owner": "Commune de Messia-sur-Sorne",
+        "owner:type": "public",
+        "ref:FR:SIRET": "77839680400198"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5397975,
+          46.645698
+        ]
+      },
+      "properties": {
+        "id": "node/11828493141",
+        "osm_type": "node",
+        "osm_id": 11828493141,
+        "addr:housenumber": "180",
+        "addr:street": "Rue du Revermont",
+        "alt_name": "Accueil de loisirs \"les Loustics\"",
+        "amenity": "community_centre",
+        "check_date:opening_hours": "2025-11-01",
+        "community_centre": "youth_centre",
+        "community_centre:for": "child",
+        "contact:phone": "+33 6 83 65 53 56",
+        "contact:website": "https://www.macornay.fr/social-et-education/education/accueil-de-loisirs.htm",
+        "name": "Les Loustics",
+        "opening_hours": "Mo-Fr 07:30-18:30",
+        "operator": "SIVOS du Revermont",
+        "operator:type": "public"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5298473,
+          46.6836793
+        ]
+      },
+      "properties": {
+        "id": "node/11847796286",
+        "osm_type": "node",
+        "osm_id": 11847796286,
+        "artwork_type": "mural",
+        "name": "Platini",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5838527,
+          46.6674055
+        ]
+      },
+      "properties": {
+        "id": "node/11875914951",
+        "osm_type": "node",
+        "osm_id": 11875914951,
+        "addr:housenumber": "40",
+        "addr:street": "Rue de la Vertambole",
+        "amenity": "community_centre",
+        "community_centre": "youth_centre",
+        "community_centre:for": "child",
+        "contact:email": "clsh.perrigny@wanadoo.fr",
+        "contact:phone": "+33 3 84 43 50 71",
+        "contact:website": "http://www.ville-perrigny.fr/fr/information/40019/accueil-loisirs",
+        "name": "Accueil de loisirs",
+        "operator": "Commune de Perrigny",
+        "operator:type": "public"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5624512,
+          46.6744745
+        ]
+      },
+      "properties": {
+        "id": "node/11904413772",
+        "osm_type": "node",
+        "osm_id": 11904413772,
+        "addr:housenumber": "14",
+        "addr:street": "Rue François Bussenet",
+        "amenity": "community_centre",
+        "community_centre": "youth_centre",
+        "community_centre:for": "child",
+        "contact:phone": "+33 7 52 60 01 52",
+        "name": "Accueil périscolaire Paul-Émile Victor",
+        "operator": "Commune de Lons-le-Saunier",
+        "operator:type": "public"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5687076,
+          46.680165
+        ]
+      },
+      "properties": {
+        "id": "node/11925084750",
+        "osm_type": "node",
+        "osm_id": 11925084750,
+        "addr:housenumber": "16",
+        "addr:street": "Rue du Vignoble",
+        "amenity": "community_centre",
+        "community_centre": "youth_centre",
+        "community_centre:for": "child",
+        "contact:email": "alshrousseau@lonslesaunier.fr",
+        "contact:phone": "+33 7 52 60 01 52",
+        "name": "Accueil périscolaire Jean-Jacques Rousseau"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5688229,
+          46.6766468
+        ]
+      },
+      "properties": {
+        "id": "node/11953663523",
+        "osm_type": "node",
+        "osm_id": 11953663523,
+        "artist_name": "Bernard Jobin",
+        "artwork_type": "statue",
+        "material": "bronze",
+        "name": "Marjorie",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5329249,
+          46.6784724
+        ]
+      },
+      "properties": {
+        "id": "node/12312255975",
+        "osm_type": "node",
+        "osm_id": 12312255975,
+        "amenity": "community_centre",
+        "community_centre": "village_hall",
+        "name": "Salle Victor Hugo",
+        "website": "https://www.montmorot.fr/reserver-une-salle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5331316,
+          46.6784
+        ]
+      },
+      "properties": {
+        "id": "node/12312255977",
+        "osm_type": "node",
+        "osm_id": 12312255977,
+        "amenity": "community_centre",
+        "community_centre": "village_hall",
+        "fixme": "emplacement à préciser",
+        "name": "Salle Paul-Émile Victor",
+        "website": "https://www.montmorot.fr/reserver-une-salle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5329895,
+          46.6781746
+        ]
+      },
+      "properties": {
+        "id": "node/12312255979",
+        "osm_type": "node",
+        "osm_id": 12312255979,
+        "amenity": "community_centre",
+        "community_centre": "village_hall",
+        "name": "Salle Georges Trouillot",
+        "website": "https://www.montmorot.fr/reserver-une-salle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.4996423,
+          46.6578458
+        ]
+      },
+      "properties": {
+        "id": "node/12595273059",
+        "osm_type": "node",
+        "osm_id": 12595273059,
+        "amenity": "community_centre",
+        "club": "yes",
+        "community_centre": "club_home",
+        "name": "Salle conviviale du P'tit Bouchon",
+        "was:amenity": "bar, restaurant"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5648296,
+          46.6793964
+        ]
+      },
+      "properties": {
+        "id": "node/12905887127",
+        "osm_type": "node",
+        "osm_id": 12905887127,
+        "artwork_type": "mural",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5713899,
+          46.6733037
+        ]
+      },
+      "properties": {
+        "id": "node/13655274651",
+        "osm_type": "node",
+        "osm_id": 13655274651,
+        "access": "private",
+        "amenity": "recycling",
+        "artwork_type": "graffiti",
+        "operator": "SICTOM de la zone de Lons-le-Saunier",
+        "operator:wikidata": "Q92937465",
+        "panoramax": "a5127f70-6a91-4b08-84bf-2ef0c42afe34",
+        "recycling:cans": "yes",
+        "recycling:cardboard": "yes",
+        "recycling:magazines": "yes",
+        "recycling:newspaper": "yes",
+        "recycling:paper": "yes",
+        "recycling:paper_packaging": "yes",
+        "recycling:plastic": "yes",
+        "recycling:plastic_bottles": "yes",
+        "recycling:plastic_packaging": "yes",
+        "recycling_type": "container",
+        "start_date": "2023-06-06",
+        "survey:date": "2023-07-19",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5572408,
+          46.6528863
+        ]
+      },
+      "properties": {
+        "id": "node/14055677603",
+        "osm_type": "node",
+        "osm_id": 14055677603,
+        "amenity": "fountain",
+        "lit": "no",
+        "name": "Les Gauthières",
+        "natural": "spring",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5989323,
+          46.6979245
+        ]
+      },
+      "properties": {
+        "id": "node/14135595798",
+        "osm_type": "node",
+        "osm_id": 14135595798,
+        "alt_name": "Salle des fêtes",
+        "amenity": "community_centre",
+        "community_centre": "community_hall",
+        "name": "Salle polyvalente",
+        "survey:date": "2026-08-30"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5408626,
+          46.6455538
+        ]
+      },
+      "properties": {
+        "id": "node/14192199200",
+        "osm_type": "node",
+        "osm_id": 14192199200,
+        "amenity": "community_centre",
+        "name": "Salle Bellecombe",
+        "survey:date": "2026-09-18",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.6014789,
+          46.6603251
+        ]
+      },
+      "properties": {
+        "id": "node/14253006677",
+        "osm_type": "node",
+        "osm_id": 14253006677,
+        "artwork_type": "statue",
+        "material": "stone",
+        "name": "Saint Jean-Baptiste",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.6018395,
+          46.659892
+        ]
+      },
+      "properties": {
+        "id": "node/14253006678",
+        "osm_type": "node",
+        "osm_id": 14253006678,
+        "artist_name": "Clément Richem",
+        "artwork_subject": "Ermitage Sainte-Anne",
+        "artwork_type": "painting",
+        "name": "L'Ermitage, Conliège, vue en coupe (imaginaire)",
+        "start_date": "2025",
+        "tourism": "artwork"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.6022052,
+          46.6599628
+        ]
+      },
+      "properties": {
+        "id": "node/14253006694",
+        "osm_type": "node",
+        "osm_id": 14253006694,
+        "artwork_type": "sculpture",
+        "material": "wood",
+        "start_date": "2026",
+        "tourism": "artwork"
+      }
+    }
+  ]
+}

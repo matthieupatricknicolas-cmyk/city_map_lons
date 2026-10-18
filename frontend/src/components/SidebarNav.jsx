@@ -113,9 +113,9 @@ export default function SidebarNav({
                   </div>
                   <div className="text-[11px] text-slate-500 font-mono">
                     {isLoading
-                      ? "Chargement OSM…"
+                      ? "Chargement GeoJSON…"
                       : isVisible
-                      ? `${count} objets en direct`
+                      ? `${count} objets chargés`
                       : "Cliquez pour activer"}
                   </div>
                 </div>

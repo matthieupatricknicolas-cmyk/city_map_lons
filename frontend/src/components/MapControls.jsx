@@ -112,7 +112,7 @@ export default function MapControls({
         >
           <Loader2 className="w-4 h-4 text-[#003D7A] animate-spin" />
           <span className="text-xs font-bold text-slate-700">
-            Chargement OSM…
+            Chargement GeoJSON…
           </span>
         </div>
       )}

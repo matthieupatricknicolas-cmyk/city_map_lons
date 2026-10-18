@@ -5,7 +5,7 @@ import SidebarNav from "@/components/SidebarNav";
 import MapView from "@/components/MapView";
 import MapControls from "@/components/MapControls";
 import DetailPanel from "@/components/DetailPanel";
-import { LAYERS, stampFeatures } from "@/lib/osm";
+import { fetchLayerGeoJSON, LAYERS, stampFeatures } from "@/lib/osm";
 
 const DEFAULT_VISIBLE = {
   mobility: {
@@ -39,14 +39,14 @@ export default function CartographyPage() {
       inflight.current.add(layerKey);
       setLoadingLayers((s) => ({ ...s, [layerKey]: true }));
       try {
-        const fc = await meta.fetcher();
+        const fc = await fetchLayerGeoJSON(meta.file);
         const stamped = stampFeatures(fc, themeKey, layerKey, meta);
         setLayerData((s) => ({ ...s, [layerKey]: stamped }));
         toast.success(`${meta.label} · ${stamped.features.length} objets`, {
           duration: 2200,
         });
       } catch (e) {
-        console.error("Fetch error", layerKey, e);
+        console.error("GeoJSON loading error", layerKey, e);
         toast.error(`Impossible de charger « ${meta.label} »`);
       } finally {
         inflight.current.delete(layerKey);

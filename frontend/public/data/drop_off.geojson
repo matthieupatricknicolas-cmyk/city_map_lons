@@ -1,0 +1,1400 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5507962,
+          46.6773851
+        ]
+      },
+      "properties": {
+        "id": "way/423827798",
+        "osm_type": "way",
+        "osm_id": 423827798,
+        "access": "customers",
+        "amenity": "parking",
+        "fee": "no",
+        "maxstay": "1 hour",
+        "name": "Parking IRM",
+        "park_ride": "no",
+        "parking": "surface",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5535202,
+          46.675648
+        ]
+      },
+      "properties": {
+        "id": "way/439892602",
+        "osm_type": "way",
+        "osm_id": 439892602,
+        "addr:street": "Place de l'Hôtel de Ville",
+        "amenity": "parking",
+        "capacity": "2",
+        "fee": "Mo-Sa 09:00-17:00",
+        "maxstay": "20 minutes",
+        "operator": "Ville de Lons-le-Saunier",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5730778,
+          46.6698271
+        ]
+      },
+      "properties": {
+        "id": "way/498665871",
+        "osm_type": "way",
+        "osm_id": 498665871,
+        "access": "yes",
+        "amenity": "parking",
+        "fee": "no",
+        "maxstay": "2 days",
+        "park_ride": "yes",
+        "parking": "surface",
+        "supervised": "no",
+        "surface": "asphalt",
+        "toilets": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5687777,
+          46.6695356
+        ]
+      },
+      "properties": {
+        "id": "way/561572207",
+        "osm_type": "way",
+        "osm_id": 561572207,
+        "access": "customers",
+        "amenity": "parking",
+        "fee": "no",
+        "lit": "yes",
+        "maxstay": "2 days",
+        "operator": "Gifi",
+        "operator:type": "business",
+        "park_ride": "no",
+        "parking": "surface",
+        "supervised": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.567642,
+          46.6694208
+        ]
+      },
+      "properties": {
+        "id": "way/561572678",
+        "osm_type": "way",
+        "osm_id": 561572678,
+        "access": "customers",
+        "amenity": "parking",
+        "fee": "no",
+        "maxstay": "2 days",
+        "park_ride": "no",
+        "parking": "surface",
+        "supervised": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5255962,
+          46.6683091
+        ]
+      },
+      "properties": {
+        "id": "way/563375403",
+        "osm_type": "way",
+        "osm_id": 563375403,
+        "access": "yes",
+        "addr:city": "Montmorot",
+        "addr:postcode": "39570",
+        "addr:street": "En Chantrans",
+        "amenity": "parking",
+        "fee": "no",
+        "maxstay": "2 days",
+        "parking": "surface",
+        "supervised": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5514652,
+          46.6765276
+        ]
+      },
+      "properties": {
+        "id": "way/569284306",
+        "osm_type": "way",
+        "osm_id": 569284306,
+        "access": "customers",
+        "amenity": "parking",
+        "fee": "no",
+        "maxstay": "1 hour",
+        "operator": "Centre Hospitalier de Lons-le-Saunier",
+        "park_ride": "no",
+        "parking": "surface",
+        "supervised": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5397091,
+          46.6448807
+        ]
+      },
+      "properties": {
+        "id": "way/770590516",
+        "osm_type": "way",
+        "osm_id": 770590516,
+        "access": "permit",
+        "amenity": "parking",
+        "area": "yes",
+        "capacity": "16",
+        "fee": "no",
+        "maxstay": "no",
+        "opening_hours": "24/7",
+        "orientation": "parallel",
+        "parking": "surface",
+        "smoothness": "excellent",
+        "surface": "paved"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5516539,
+          46.6729017
+        ]
+      },
+      "properties": {
+        "id": "way/1126664653",
+        "osm_type": "way",
+        "osm_id": 1126664653,
+        "addr:street": "Avenue Aristide Briand",
+        "amenity": "parking",
+        "capacity": "2",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "parking_space": "normal",
+        "restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5600457,
+          46.6758705
+        ]
+      },
+      "properties": {
+        "id": "way/1165355306",
+        "osm_type": "way",
+        "osm_id": 1165355306,
+        "access": "yes",
+        "addr:street": "Place des Déportés",
+        "amenity": "parking",
+        "capacity": "3",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "orientation": "perpendicular",
+        "parking": "street_side",
+        "restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5544037,
+          46.6731994
+        ]
+      },
+      "properties": {
+        "id": "way/1173496271",
+        "osm_type": "way",
+        "osm_id": 1173496271,
+        "addr:street": "Rue Jean Jaurès",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "yes",
+        "maxstay": "30 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "parking:restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5521641,
+          46.6750463
+        ]
+      },
+      "properties": {
+        "id": "way/1173615619",
+        "osm_type": "way",
+        "osm_id": 1173615619,
+        "access": "yes",
+        "addr:street": "Rue Lafayette",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "yes",
+        "maxstay": "load-unload",
+        "operator": "Ville de Lons-le-Saunier",
+        "operator:type": "public",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5522094,
+          46.6751296
+        ]
+      },
+      "properties": {
+        "id": "way/1173615620",
+        "osm_type": "way",
+        "osm_id": 1173615620,
+        "access": "yes",
+        "addr:street": "Rue Lafayette",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "yes",
+        "maxstay": "20 minutes",
+        "operator": "Ville de Lons-le-Saunier",
+        "operator:type": "public",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5522637,
+          46.6743194
+        ]
+      },
+      "properties": {
+        "id": "way/1173619887",
+        "osm_type": "way",
+        "osm_id": 1173619887,
+        "access": "yes",
+        "addr:street": "Rue Tamisier",
+        "amenity": "parking",
+        "capacity": "3",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "operator": "Ville de Lons-le-Saunier",
+        "operator:type": "public",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5517632,
+          46.6728513
+        ]
+      },
+      "properties": {
+        "id": "way/1174947344",
+        "osm_type": "way",
+        "osm_id": 1174947344,
+        "addr:street": "Avenue Aristide Briand",
+        "amenity": "parking",
+        "capacity": "2",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "parking_space": "normal",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5516897,
+          46.6736485
+        ]
+      },
+      "properties": {
+        "id": "way/1175004955",
+        "osm_type": "way",
+        "osm_id": 1175004955,
+        "addr:street": "Rue Saint-Désiré",
+        "amenity": "parking",
+        "capacity": "5",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.551475,
+          46.6735399
+        ]
+      },
+      "properties": {
+        "id": "way/1175004956",
+        "osm_type": "way",
+        "osm_id": 1175004956,
+        "addr:street": "Rue Saint-Désiré",
+        "amenity": "parking",
+        "capacity": "5",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5517136,
+          46.6738004
+        ]
+      },
+      "properties": {
+        "id": "way/1175004957",
+        "osm_type": "way",
+        "osm_id": 1175004957,
+        "addr:street": "Rue Saint-Désiré",
+        "amenity": "parking",
+        "capacity": "5",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5513435,
+          46.6741828
+        ]
+      },
+      "properties": {
+        "id": "way/1175038626",
+        "osm_type": "way",
+        "osm_id": 1175038626,
+        "access": "yes",
+        "addr:street": "Rue Lecourbe",
+        "amenity": "parking",
+        "capacity": "2",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "operator": "Commune de Lons-le-Saunier",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "parking:restriction": "no_standing"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5506701,
+          46.6746548
+        ]
+      },
+      "properties": {
+        "id": "way/1175050251",
+        "osm_type": "way",
+        "osm_id": 1175050251,
+        "addr:street": "Impasse Saint-Antoine",
+        "amenity": "parking",
+        "capacity": "4",
+        "maxstay": "20 minutes",
+        "orientation": "perpendicular",
+        "parking": "street_side",
+        "parking:restriction": "no_standing",
+        "parking_space": "normal",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5518789,
+          46.6742891
+        ]
+      },
+      "properties": {
+        "id": "way/1175241129",
+        "osm_type": "way",
+        "osm_id": 1175241129,
+        "access": "yes",
+        "addr:street": "Place de la Liberté",
+        "amenity": "parking",
+        "capacity": "2",
+        "maxstay": "20 minutes",
+        "operator": "Commune de Lons-le-Saunier",
+        "operator:type": "public",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing",
+        "surface": "paving_stones"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5482885,
+          46.6741444
+        ]
+      },
+      "properties": {
+        "id": "way/1175549423",
+        "osm_type": "way",
+        "osm_id": 1175549423,
+        "access": "yes",
+        "addr:street": "Rue des Salines",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "operator": "Commune de Lons-le-Saunier",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5478257,
+          46.6739444
+        ]
+      },
+      "properties": {
+        "id": "way/1175549425",
+        "osm_type": "way",
+        "osm_id": 1175549425,
+        "access": "yes",
+        "addr:street": "Rue des Salines",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "parking:condition": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5476817,
+          46.6739014
+        ]
+      },
+      "properties": {
+        "id": "way/1175549426",
+        "osm_type": "way",
+        "osm_id": 1175549426,
+        "access": "yes",
+        "addr:street": "Rue des Salines",
+        "amenity": "parking",
+        "capacity": "2",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5467794,
+          46.6736293
+        ]
+      },
+      "properties": {
+        "id": "way/1175550816",
+        "osm_type": "way",
+        "osm_id": 1175550816,
+        "access": "yes",
+        "addr:street": "Rue des Salines",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5454595,
+          46.6732903
+        ]
+      },
+      "properties": {
+        "id": "way/1175552654",
+        "osm_type": "way",
+        "osm_id": 1175552654,
+        "access": "yes",
+        "addr:street": "Rue des Salines",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5482531,
+          46.6738487
+        ]
+      },
+      "properties": {
+        "id": "way/1175561554",
+        "osm_type": "way",
+        "osm_id": 1175561554,
+        "access": "yes",
+        "addr:street": "Rue du Colonel Mahon",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "no",
+        "maxstay": "10 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5502973,
+          46.672356
+        ]
+      },
+      "properties": {
+        "id": "way/1175568967",
+        "osm_type": "way",
+        "osm_id": 1175568967,
+        "access": "yes",
+        "addr:street": "Rue des Écoles",
+        "amenity": "parking",
+        "capacity": "3",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5481317,
+          46.6717394
+        ]
+      },
+      "properties": {
+        "id": "way/1175573338",
+        "osm_type": "way",
+        "osm_id": 1175573338,
+        "access": "yes",
+        "addr:street": "Chemin des Dombes",
+        "amenity": "parking",
+        "capacity": "6",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "operator": "Ville de Lons-le-saunier",
+        "operator:type": "public",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5503951,
+          46.6721177
+        ]
+      },
+      "properties": {
+        "id": "way/1175825002",
+        "osm_type": "way",
+        "osm_id": 1175825002,
+        "access": "yes",
+        "addr:street": "Rue Saint-Désiré",
+        "amenity": "parking",
+        "capacity": "2",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5592977,
+          46.6721557
+        ]
+      },
+      "properties": {
+        "id": "way/1175924095",
+        "osm_type": "way",
+        "osm_id": 1175924095,
+        "access": "yes",
+        "addr:street": "Rue de Pavigny",
+        "amenity": "parking",
+        "capacity": "4",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "parking:restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5589101,
+          46.6720201
+        ]
+      },
+      "properties": {
+        "id": "way/1175961903",
+        "osm_type": "way",
+        "osm_id": 1175961903,
+        "access": "yes",
+        "addr:street": "Avenue du 44e Régiment d'Infanterie",
+        "amenity": "parking",
+        "capacity": "5",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "parking:restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5672176,
+          46.6740997
+        ]
+      },
+      "properties": {
+        "id": "way/1178106335",
+        "osm_type": "way",
+        "osm_id": 1178106335,
+        "access": "yes",
+        "addr:street": "Avenue du Commandant de Villard",
+        "amenity": "parking",
+        "capacity": "7",
+        "fee": "no",
+        "maxstay": "2 hours",
+        "maxstay:conditional": "no @ (20:00-8:00)",
+        "orientation": "perpendicular",
+        "parking": "street_side",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5681512,
+          46.6728138
+        ]
+      },
+      "properties": {
+        "id": "way/1178112112",
+        "osm_type": "way",
+        "osm_id": 1178112112,
+        "access": "yes",
+        "addr:street": "Avenue Henri Grenat",
+        "amenity": "parking",
+        "capacity": "5",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5683638,
+          46.6727681
+        ]
+      },
+      "properties": {
+        "id": "way/1178112113",
+        "osm_type": "way",
+        "osm_id": 1178112113,
+        "access": "yes",
+        "addr:street": "Avenue Henri Grenat",
+        "amenity": "parking",
+        "capacity": "2",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "operator": "Ville de Lons-le-Saunier",
+        "operator:type": "public",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "parking:restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5454617,
+          46.6681813
+        ]
+      },
+      "properties": {
+        "id": "way/1180606343",
+        "osm_type": "way",
+        "osm_id": 1180606343,
+        "access": "yes",
+        "addr:street": "Rue du Couchant",
+        "amenity": "parking",
+        "capacity": "4",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "parking:restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5448186,
+          46.6684257
+        ]
+      },
+      "properties": {
+        "id": "way/1180606344",
+        "osm_type": "way",
+        "osm_id": 1180606344,
+        "access": "yes",
+        "addr:street": "Rue du Couchant",
+        "amenity": "parking",
+        "capacity": "3",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "parking:restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5518783,
+          46.6738412
+        ]
+      },
+      "properties": {
+        "id": "way/1357508901",
+        "osm_type": "way",
+        "osm_id": 1357508901,
+        "access": "yes",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "operator": "Commune de Lons-le-Saunier",
+        "operator:type": "public",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5502109,
+          46.6688202
+        ]
+      },
+      "properties": {
+        "id": "way/1359022288",
+        "osm_type": "way",
+        "osm_id": 1359022288,
+        "access": "yes",
+        "amenity": "parking",
+        "capacity": "10",
+        "fee": "no",
+        "maxstay": "30 minutes",
+        "name": "Dépose minute",
+        "operator": "Commune de Lons-le-Saunier",
+        "parking": "lane",
+        "parking:restriction": "no_standing",
+        "website": "https://www.garesetconnexions.sncf/fr/gares-services/lons-saunier/intermodalites/depose-minute"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5505404,
+          46.6689947
+        ]
+      },
+      "properties": {
+        "id": "way/1359022291",
+        "osm_type": "way",
+        "osm_id": 1359022291,
+        "access": "yes",
+        "addr:street": "Boulevard Gambetta",
+        "amenity": "parking",
+        "capacity": "5",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "operator": "Ville de Lons-le-saunier",
+        "operator:type": "public",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "parking:restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5484232,
+          46.674189
+        ]
+      },
+      "properties": {
+        "id": "way/1366571402",
+        "osm_type": "way",
+        "osm_id": 1366571402,
+        "access": "yes",
+        "addr:street": "Rue des Salines",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "operator": "Commune de Lons-le-Saunier",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "parking:condition": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5555739,
+          46.6764299
+        ]
+      },
+      "properties": {
+        "id": "way/1369912790",
+        "osm_type": "way",
+        "osm_id": 1369912790,
+        "access": "yes",
+        "addr:street": "Rue du Puits Salé",
+        "amenity": "parking",
+        "capacity": "2",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5552883,
+          46.6764316
+        ]
+      },
+      "properties": {
+        "id": "way/1369912791",
+        "osm_type": "way",
+        "osm_id": 1369912791,
+        "access": "yes",
+        "addr:street": "Rue du Puits Salé",
+        "amenity": "parking",
+        "capacity": "3",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5496432,
+          46.6746259
+        ]
+      },
+      "properties": {
+        "id": "way/1453905298",
+        "osm_type": "way",
+        "osm_id": 1453905298,
+        "addr:street": "Rue Lecourbe",
+        "amenity": "parking",
+        "capacity": "2",
+        "fee": "Mo-Sa 09:00-17:00",
+        "maxstay": "20 minutes",
+        "operator": "Commune de Lons-le-Saunier",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5550441,
+          46.6731365
+        ]
+      },
+      "properties": {
+        "id": "way/1454389987",
+        "osm_type": "way",
+        "osm_id": 1454389987,
+        "access": "yes",
+        "addr:street": "Avenue Jean Moulin",
+        "amenity": "parking",
+        "capacity": "2",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "operator": "Ville de Lons-le-Saunier",
+        "operator:type": "public",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "parking:restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5535004,
+          46.6747536
+        ]
+      },
+      "properties": {
+        "id": "way/1454442613",
+        "osm_type": "way",
+        "osm_id": 1454442613,
+        "access": "yes",
+        "amenity": "parking",
+        "capacity": "1",
+        "maxstay": "20 minutes",
+        "operator": "Ville de Lons-le-saunier",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "parking_restriction": "no_standing",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5523321,
+          46.6738627
+        ]
+      },
+      "properties": {
+        "id": "way/1454448767",
+        "osm_type": "way",
+        "osm_id": 1454448767,
+        "access": "yes",
+        "amenity": "parking",
+        "capacity": "6",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "operator": "Ville de Lons-le-saunier",
+        "operator:type": "public",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "parking:restriction": "no_standing",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5561195,
+          46.6750389
+        ]
+      },
+      "properties": {
+        "id": "way/1482828550",
+        "osm_type": "way",
+        "osm_id": 1482828550,
+        "access": "yes",
+        "addr:street": "Rue Sébile",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "operator": "Commune de Lons-le-saunier",
+        "operator:type": "public",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5518451,
+          46.6718843
+        ]
+      },
+      "properties": {
+        "id": "way/1488590226",
+        "osm_type": "way",
+        "osm_id": 1488590226,
+        "access": "yes",
+        "addr:street": "Avenue Aristide Briand",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5600057,
+          46.6719989
+        ]
+      },
+      "properties": {
+        "id": "way/1488590471",
+        "osm_type": "way",
+        "osm_id": 1488590471,
+        "addr:street": "Avenue Aristide Briand",
+        "amenity": "parking",
+        "capacity": "6",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5673343,
+          46.6731696
+        ]
+      },
+      "properties": {
+        "id": "way/1489729348",
+        "osm_type": "way",
+        "osm_id": 1489729348,
+        "access": "yes",
+        "addr:street": "Avenue Henri Grenat",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "no",
+        "maxstay": "30 minutes",
+        "operator": "Commune de Lons-le-saunier",
+        "operator:type": "public",
+        "orientation": "parallel",
+        "panoramax": "3a25a9d3-b3c3-481c-8714-660c493d7d11",
+        "parking": "street_side",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5501883,
+          46.6737461
+        ]
+      },
+      "properties": {
+        "id": "way/1498761377",
+        "osm_type": "way",
+        "osm_id": 1498761377,
+        "access": "yes",
+        "addr:street": "Rue Émile Monot",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "yes",
+        "maxstay": "30 minutes",
+        "operator": "Commune de Lons-le-Saunier",
+        "operator:type": "public",
+        "orientation": "parallel",
+        "panoramax": "e3fb6661-b729-4509-8a0e-c701aa878c07",
+        "parking": "street_side",
+        "parking_space": "normal",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.544772,
+          46.6730236
+        ]
+      },
+      "properties": {
+        "id": "way/1512304653",
+        "osm_type": "way",
+        "osm_id": 1512304653,
+        "access": "yes",
+        "addr:street": "Rue des Salines",
+        "amenity": "parking",
+        "capacity": "2",
+        "check_date:maxstay": "2025-04-06",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5542717,
+          46.6726817
+        ]
+      },
+      "properties": {
+        "id": "way/1532194191",
+        "osm_type": "way",
+        "osm_id": 1532194191,
+        "addr:street": "Avenue Thurel",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "no",
+        "maxstay": "20 minutes",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5535486,
+          46.6746641
+        ]
+      },
+      "properties": {
+        "id": "way/1532297285",
+        "osm_type": "way",
+        "osm_id": 1532297285,
+        "access": "yes",
+        "amenity": "parking",
+        "capacity": "1",
+        "maxstay": "20 minutes",
+        "operator": "Ville de Lons-le-saunier",
+        "orientation": "parallel",
+        "parking": "street_side",
+        "parking_restriction": "no_standing",
+        "surface": "sett"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5629861,
+          46.6745804
+        ]
+      },
+      "properties": {
+        "id": "way/1553192163",
+        "osm_type": "way",
+        "osm_id": 1553192163,
+        "addr:street": "Rue François Bussenet",
+        "amenity": "parking",
+        "capacity": "4",
+        "fee": "no",
+        "maxstay": "30 minutes",
+        "orientation": "diagonal",
+        "parking": "street_side",
+        "parking:restriction": "no_standing",
+        "surface": "asphalt"
+      }
+    }
+  ]
+}

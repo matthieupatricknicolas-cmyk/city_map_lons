@@ -1,0 +1,284 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5497572,
+          46.673978
+        ]
+      },
+      "properties": {
+        "id": "way/1094243891",
+        "osm_type": "way",
+        "osm_id": 1094243891,
+        "access": "delivery",
+        "addr:street": "Rue Émile Monot",
+        "amenity": "parking",
+        "capacity": "1",
+        "lit": "yes",
+        "operator": "Ville de Lons-le-saunier",
+        "orientation": "parallel",
+        "panoramax": "a49a812e-f466-4dc6-8ea9-05c98b1cef13",
+        "parking": "lane",
+        "parking_space": "delivery",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5503099,
+          46.6736853
+        ]
+      },
+      "properties": {
+        "id": "way/1126657998",
+        "osm_type": "way",
+        "osm_id": 1126657998,
+        "access": "delivery",
+        "addr:street": "Rue Émile Monot",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "no",
+        "lit": "yes",
+        "operator": "Ville de Lons-le-saunier",
+        "orientation": "parallel",
+        "panoramax": "0f21c7ed-e5d3-4a58-befb-26971f5f0295",
+        "parking": "lane",
+        "parking_space": "delivery",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5496662,
+          46.6745605
+        ]
+      },
+      "properties": {
+        "id": "way/1175038621",
+        "osm_type": "way",
+        "osm_id": 1175038621,
+        "access": "delivery",
+        "addr:street": "Rue Lecourbe",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "no",
+        "lit": "yes",
+        "operator": "Ville de Lons-le-saunier",
+        "operator:type": "public",
+        "orientation": "parallel",
+        "panoramax": "639c4c89-d18f-42d6-98b4-709078dfb5cb",
+        "parking": "surface",
+        "parking_space": "delivery",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5510471,
+          46.6730931
+        ]
+      },
+      "properties": {
+        "id": "way/1364717381",
+        "osm_type": "way",
+        "osm_id": 1364717381,
+        "access": "delivery",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "no",
+        "operator": "Ville de Lons-le-saunier",
+        "operator:type": "public",
+        "parking": "surface",
+        "parking_space": "delivery"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5518193,
+          46.6737782
+        ]
+      },
+      "properties": {
+        "id": "way/1454386015",
+        "osm_type": "way",
+        "osm_id": 1454386015,
+        "access": "delivery",
+        "amenity": "parking",
+        "capacity": "2",
+        "fee": "no",
+        "operator": "Ville de Lons-le-saunier",
+        "operator:type": "public",
+        "parking": "surface",
+        "parking_space": "delivery"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5527301,
+          46.6740928
+        ]
+      },
+      "properties": {
+        "id": "way/1455095938",
+        "osm_type": "way",
+        "osm_id": 1455095938,
+        "access": "delivery",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "no",
+        "operator": "Ville de Lons-le-saunier",
+        "operator:type": "public",
+        "parking": "surface",
+        "parking_space": "delivery"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5521641,
+          46.6750464
+        ]
+      },
+      "properties": {
+        "id": "way/1505048343",
+        "osm_type": "way",
+        "osm_id": 1505048343,
+        "access": "delivery",
+        "addr:street": "Rue Lafayette",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "no",
+        "operator": "Ville de Lons-le-saunier",
+        "operator:type": "public",
+        "parking": "surface",
+        "parking_space": "delivery"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5550105,
+          46.6730894
+        ]
+      },
+      "properties": {
+        "id": "way/1532294401",
+        "osm_type": "way",
+        "osm_id": 1532294401,
+        "access": "delivery",
+        "addr:street": "Avenue Jean Moulin",
+        "amenity": "parking",
+        "capacity": "2",
+        "fee": "no",
+        "lit": "yes",
+        "operator": "Ville de Lons-le-saunier",
+        "operator:type": "public",
+        "orientation": "parallel",
+        "panoramax": "7ef42f01-7f03-42a3-832f-8954025c4907",
+        "parking": "surface",
+        "parking_space": "delivery",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5537146,
+          46.6734632
+        ]
+      },
+      "properties": {
+        "id": "way/1532294402",
+        "osm_type": "way",
+        "osm_id": 1532294402,
+        "access": "delivery",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "no",
+        "operator": "Ville de Lons-le-saunier",
+        "orientation": "parallel",
+        "parking_space": "delivery"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5575313,
+          46.6728276
+        ]
+      },
+      "properties": {
+        "id": "way/1551051019",
+        "osm_type": "way",
+        "osm_id": 1551051019,
+        "access": "delivery",
+        "addr:street": "Avenue de la Marseillaise",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "no",
+        "lit": "yes",
+        "operator": "Ville de Lons-le-saunier",
+        "operator:type": "public",
+        "orientation": "parallel",
+        "panoramax": "043ca1c8-5176-4129-83ac-eacbfd9a15f1",
+        "parking_space": "delivery",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5548742,
+          46.6726089
+        ]
+      },
+      "properties": {
+        "id": "way/1551051020",
+        "osm_type": "way",
+        "osm_id": 1551051020,
+        "access": "delivery",
+        "addr:street": "Avenue de la Marseillaise",
+        "amenity": "parking",
+        "capacity": "1",
+        "fee": "no",
+        "lit": "yes",
+        "operator": "Ville de Lons-le-saunier",
+        "operator:type": "public",
+        "orientation": "parallel",
+        "panoramax": "5f8eb7da-4243-41b3-8603-badcae302568",
+        "parking": "surface",
+        "parking_space": "delivery",
+        "surface": "asphalt"
+      }
+    }
+  ]
+}

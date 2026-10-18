@@ -63,12 +63,11 @@
   .brand-title .main .subtitle { color: var(--lons-red); font-weight: 700; }
   .badges { display: flex; align-items: center; gap: 12px; }
   .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
-  .badge-live { background: var(--lons-red); color: white; border: 1px solid var(--lons-red-hover); transition: all 0.25s; }
+  .badge-live { background: #EFF6FF; color: #1E3A8A; border: 1px solid #BFDBFE; transition: all 0.25s; }
   .badge-live.offline { background: #F59E0B; border-color: #D97706; }
   .badge-live.offline .live-dot { animation: none; }
   .badge-count { background: #F3F4F6; border: 1px solid #E5E7EB; color: #374151; font-family: "JetBrains Mono", monospace; letter-spacing: 0; }
-  .live-dot { width: 8px; height: 8px; border-radius: 50%; background: white; animation: livePulse 1.8s infinite; }
-  @keyframes livePulse { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.6); } 70% { box-shadow: 0 0 0 8px rgba(255,255,255,0); } 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); } }
+  .live-dot { width: 8px; height: 8px; border-radius: 50%; background: #2563EB; }
 
   .body-row { flex: 1; display: flex; overflow: hidden; }
 
@@ -260,8 +259,8 @@
       <button id="btn-export" class="badge badge-export" title="Exporter les couches visibles (GeoJSON)" data-testid="btn-export">
         <i data-lucide="download" style="width:14px;height:14px"></i> Export GeoJSON
       </button>
-      <div class="badge badge-live" id="live-badge"><span class="live-dot"></span> <span id="live-text">Données OSM · Direct</span></div>
-      <div class="badge badge-count"><i data-lucide="radio" style="width:14px;height:14px"></i> <span id="header-count">0</span> objets chargés</div>
+      <div class="badge badge-live" id="live-badge"><span class="live-dot"></span> <span id="live-text">Données GeoJSON · Locales</span></div>
+      <div class="badge badge-count"><i data-lucide="database" style="width:14px;height:14px"></i> <span id="header-count">0</span> objets chargés</div>
     </div>
   </header>
 
@@ -301,15 +300,6 @@
 <script>
 /* ---------------- Configuration ---------------- */
 const LONS_CENTER = [5.5539, 46.6739];
-const LONS_BOUNDARY_ID = "152508"; // GeoDataMine ID (admin_8)
-const LONS_OSM_RELATION = 152508;   // OSM relation ID (identique)
-const GEODATAMINE_BASE = "https://geodatamine.fr";
-const OVERPASS_ENDPOINTS = [
-  "https://overpass.kumi.systems/api/interpreter",
-  "https://overpass-api.de/api/interpreter",
-  "https://overpass.osm.ch/api/interpreter",
-  "https://overpass.private.coffee/api/interpreter",
-];
 const NOMINATIM_BASE = "https://nominatim.openstreetmap.org";
 const PHOTON_BASE = "https://photon.komoot.io";  // Fallback: CORS-friendly geocoder
 const PANORAMAX_BASE = "https://api.panoramax.xyz/";
@@ -355,50 +345,50 @@ const LAYERS = {
     label: "Mobilité", subtitle: "Déplacement",
     tabIcon: "bike",
     items: {
-      bike_parking: { label: "Parkings vélos", icon: "bike", color: "#059669", geometry: "point", source: "geodatamine", theme: "bicycle_parking" },
-      cycle_lanes:  { label: "Pistes cyclables", icon: "navigation", color: "#10B981", geometry: "line", source: "geodatamine", theme: "cycleway" },
-      bus_shelter:  { label: "Arrêts & Abris bus", icon: "bus", color: "#2563EB", geometry: "point", source: "overpass", query: `[out:json][timeout:25];(node["highway"="bus_stop"](around:4000,46.6739,5.5539);node["amenity"="bus_station"](around:4000,46.6739,5.5539););out body;` },
-      bus_lines:    { label: "Lignes de bus", icon: "route", color: "#3B82F6", geometry: "line", source: "overpass", query: `[out:json][timeout:40];relation["route"="bus"](around:4000,46.6739,5.5539);out body geom;` },
+      bike_parking: { label: "Parkings vélos", icon: "bike", color: "#059669", geometry: "point", file: "data/bike_parking.geojson" },
+      cycle_lanes:  { label: "Pistes cyclables", icon: "navigation", color: "#10B981", geometry: "line", file: "data/cycle_lanes.geojson" },
+      bus_shelter:  { label: "Arrêts & Abris bus", icon: "bus", color: "#2563EB", geometry: "point", file: "data/bus_stops.geojson" },
+      bus_lines:    { label: "Lignes de bus", icon: "route", color: "#3B82F6", geometry: "line", file: "data/bus_lines.geojson" },
     },
   },
   commerces: {
     label: "Commerces", subtitle: "Vie locale",
     tabIcon: "shopping-bag",
     items: {
-      shops: { label: "Boutiques & Magasins", icon: "shop", color: "#8B5CF6", geometry: "point", source: "geodatamine", theme: "shop_craft_office" },
-      food:  { label: "Restaurants, cafés & bars", icon: "utensils", color: "#EC4899", geometry: "point", source: "geodatamine", theme: "restaurant" },
+      shops: { label: "Boutiques & Magasins", icon: "shop", color: "#8B5CF6", geometry: "point", file: "data/shops.geojson" },
+      food:  { label: "Restaurants, cafés & bars", icon: "utensils", color: "#EC4899", geometry: "point", file: "data/restaurants.geojson" },
     },
   },
   culture: {
     label: "Culture", subtitle: "Patrimoine",
     tabIcon: "landmark",
     items: {
-      historic: { label: "Patrimoine historique", icon: "landmark", color: "#B45309", geometry: "point", source: "geodatamine", theme: "historic" },
-      cinema:   { label: "Cinémas", icon: "film", color: "#DB2777", geometry: "point", source: "geodatamine", theme: "cinema" },
-      library:  { label: "Bibliothèques", icon: "library", color: "#0891B2", geometry: "point", source: "geodatamine", theme: "library" },
-      arts:     { label: "Musées, théâtres, arts", icon: "theater", color: "#7C3AED", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["tourism"="museum"](around:5000,46.6739,5.5539);node["amenity"~"^(theatre|arts_centre|community_centre|studio)$"](around:5000,46.6739,5.5539);node["tourism"="artwork"](around:5000,46.6739,5.5539););out body;` },
+      historic: { label: "Patrimoine historique", icon: "landmark", color: "#B45309", geometry: "point", file: "data/historic.geojson" },
+      cinema:   { label: "Cinémas", icon: "film", color: "#DB2777", geometry: "point", file: "data/cinemas.geojson" },
+      library:  { label: "Bibliothèques", icon: "library", color: "#0891B2", geometry: "point", file: "data/libraries.geojson" },
+      arts:     { label: "Musées, théâtres, arts", icon: "theater", color: "#7C3AED", geometry: "point", file: "data/arts_venues.geojson" },
     },
   },
   nature: {
     label: "Nature", subtitle: "Espaces verts",
     tabIcon: "trees",
     items: {
-      parks:       { label: "Parcs & jardins", icon: "tree", color: "#16A34A", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["leisure"~"^(park|garden)$"](around:4500,46.6739,5.5539);way["leisure"~"^(park|garden)$"](around:4500,46.6739,5.5539););out center;` },
-      playgrounds: { label: "Aires de jeux", icon: "playground", color: "#F59E0B", geometry: "point", source: "local", file: "playground.geojson" },
-      fountains:   { label: "Fontaines & points d'eau", icon: "droplet", color: "#0EA5E9", geometry: "point", source: "overpass", query: `[out:json][timeout:25];(node["amenity"="fountain"](around:4500,46.6739,5.5539);node["amenity"="drinking_water"](around:4500,46.6739,5.5539););out body;` },
-      greens:      { label: "Espaces verts", icon: "leaf", color: "#65A30D", geometry: "line", source: "overpass", query: `[out:json][timeout:35];(way["landuse"~"^(grass|recreation_ground|meadow|forest)$"](around:4000,46.6739,5.5539);way["leisure"~"^(nature_reserve|common)$"](around:4000,46.6739,5.5539);way["natural"="wood"](around:4000,46.6739,5.5539););out geom;` },
+      parks:       { label: "Parcs & jardins", icon: "tree", color: "#16A34A", geometry: "point", file: "data/parks.geojson" },
+      playgrounds: { label: "Aires de jeux", icon: "playground", color: "#F59E0B", geometry: "point", file: "data/playgrounds.geojson" },
+      fountains:   { label: "Fontaines & points d'eau", icon: "droplet", color: "#0EA5E9", geometry: "point", file: "data/fountains.geojson" },
+      greens:      { label: "Espaces verts", icon: "leaf", color: "#65A30D", geometry: "line", file: "data/green_spaces.geojson" },
     },
   },
   stationnement: {
     label: "Stationnement", subtitle: "Se garer",
     tabIcon: "square-parking",
     items: {
-      parking_pay:   { label: "Stationnement payant",  icon: "parking",    color: "#DC2626", geometry: "polygon", source: "overpass", query: `[out:json][timeout:30];(way["amenity"="parking"]["fee"!="no"](around:4000,46.6739,5.5539);relation["amenity"="parking"]["fee"!="no"](around:4000,46.6739,5.5539););out geom;` },
-      parking_free:  { label: "Stationnement gratuit", icon: "parking",    color: "#16A34A", geometry: "polygon", source: "overpass", query: `[out:json][timeout:30];(way["amenity"="parking"]["fee"="no"](around:4000,46.6739,5.5539);relation["amenity"="parking"]["fee"="no"](around:4000,46.6739,5.5539););out geom;` },
-      horodateur:    { label: "Horodateurs",            icon: "meter",      color: "#F59E0B", geometry: "point", source: "overpass", query: `[out:json][timeout:25];(node["amenity"="vending_machine"]["vending"~"parking_tickets"](around:4000,46.6739,5.5539);node["vending"="parking_tickets"](around:4000,46.6739,5.5539););out body;` },
-      pmr:           { label: "Places PMR",             icon: "wheelchair", color: "#2563EB", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["parking_space"="disabled"](around:5000,46.6739,5.5539);way["parking_space"="disabled"](around:5000,46.6739,5.5539);node["capacity:disabled"](around:5000,46.6739,5.5539);way["capacity:disabled"](around:5000,46.6739,5.5539);node["amenity"="parking_space"]["wheelchair"~"^(yes|designated)$"](around:5000,46.6739,5.5539););out center;` },
-      arret_minute:  { label: "Arrêts minute",          icon: "clock",      color: "#8B5CF6", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["amenity"="parking_space"]["parking_space"="drop_off"](around:4000,46.6739,5.5539);node["amenity"="parking"]["maxstay"](around:4000,46.6739,5.5539);way["amenity"="parking"]["maxstay"](around:4000,46.6739,5.5539);node["parking:condition"~"drop_off|short_term"](around:4000,46.6739,5.5539););out center;` },
-      livraison:     { label: "Livraison",              icon: "truck",      color: "#B45309", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["amenity"="parking"]["access"~"delivery|hgv"](around:4000,46.6739,5.5539);way["amenity"="parking"]["access"~"delivery|hgv"](around:4000,46.6739,5.5539);node["amenity"="loading_dock"](around:4000,46.6739,5.5539);node["parking:condition"="loading"](around:4000,46.6739,5.5539);node["highway"="loading"](around:4000,46.6739,5.5539););out center;` },
+      parking_pay:   { label: "Stationnement payant",  icon: "parking",    color: "#DC2626", geometry: "polygon", file: "data/paid_parking.geojson" },
+      parking_free:  { label: "Stationnement gratuit", icon: "parking",    color: "#16A34A", geometry: "polygon", file: "data/free_parking.geojson" },
+      horodateur:    { label: "Horodateurs",            icon: "meter",      color: "#F59E0B", geometry: "point", file: "data/parking_meters.geojson" },
+      pmr:           { label: "Places PMR",             icon: "wheelchair", color: "#2563EB", geometry: "point", file: "data/accessible_parking.geojson" },
+      arret_minute:  { label: "Arrêts minute",          icon: "clock",      color: "#8B5CF6", geometry: "point", file: "data/drop_off.geojson" },
+      livraison:     { label: "Livraison",              icon: "truck",      color: "#B45309", geometry: "point", file: "data/loading_zones.geojson" },
     },
   },
 };
@@ -678,43 +668,15 @@ async function loadIconIntoMap(map, iconId, dataUrl) {
   if (!map.hasImage(iconId)) map.addImage(iconId, img, { pixelRatio: 2 });
 }
 
-async function fetchGeoDataMine(theme) {
-  const r = await fetch(`${GEODATAMINE_BASE}/data/${theme}/${LONS_BOUNDARY_ID}?format=geojson`);
-  if (!r.ok) throw new Error(`geodatamine ${theme} HTTP ${r.status}`);
-  return await r.json();
-}
-
-async function fetchOverpass(query) {
-  let lastErr;
-  for (const endpoint of OVERPASS_ENDPOINTS) {
-    const ctrl = new AbortController();
-    const timeoutId = setTimeout(() => ctrl.abort(), 20000); // per-endpoint 20 s hard cap
-    try {
-      const r = await fetch(endpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({ data: query }),
-        signal: ctrl.signal,
-      });
-      clearTimeout(timeoutId);
-      if (!r.ok) { lastErr = `HTTP ${r.status}`; continue; }
-      const j = await r.json();
-      if (Array.isArray(j.elements)) return overpassToGeoJSON(j.elements);
-    } catch (e) {
-      clearTimeout(timeoutId);
-      lastErr = e?.name === "AbortError" ? `timeout (${endpoint})` : e;
-    }
-  }
-  throw new Error("Overpass indisponible: " + lastErr);
-}
-
-/** Load a GeoJSON file bundled next to the HTML (fastest path — no network round-trip). */
+/** Load an editable GeoJSON snapshot bundled with this page. */
 async function fetchLocalGeoJSON(file) {
   const url = new URL(file, location.href).toString();
-  const r = await fetch(url, { cache: "force-cache" });
+  const r = await fetch(url);
   if (!r.ok) throw new Error(`Fichier local introuvable (${file}): HTTP ${r.status}`);
   const j = await r.json();
-  if (!j || !Array.isArray(j.features)) throw new Error(`Fichier local invalide (${file}): pas un FeatureCollection`);
+  if (j?.type !== "FeatureCollection" || !Array.isArray(j.features)) {
+    throw new Error(`Fichier local invalide (${file}): pas un FeatureCollection`);
+  }
   // Ensure every feature has an id — required for click handlers
   j.features = j.features.map((f, i) => {
     if (!f.properties) f.properties = {};
@@ -722,31 +684,6 @@ async function fetchLocalGeoJSON(file) {
     return f;
   });
   return j;
-}
-
-function overpassToGeoJSON(elements) {
-  const features = [];
-  elements.forEach((e) => {
-    if (e.type === "node") {
-      features.push({ type: "Feature", geometry: { type: "Point", coordinates: [e.lon, e.lat] }, properties: { id: `node/${e.id}`, osm_type: "node", osm_id: e.id, ...(e.tags || {}) } });
-    } else if (e.type === "way" && e.geometry) {
-      const coords = e.geometry.map((g) => [g.lon, g.lat]);
-      const first = coords[0], last = coords[coords.length - 1];
-      const closed = coords.length >= 4 && first[0] === last[0] && first[1] === last[1];
-      const geom = closed ? { type: "Polygon", coordinates: [coords] } : { type: "LineString", coordinates: coords };
-      features.push({ type: "Feature", geometry: geom, properties: { id: `way/${e.id}`, osm_type: "way", osm_id: e.id, ...(e.tags || {}) } });
-    } else if (e.type === "way" && e.center) {
-      // `out center` collapses ways/polygons to their centroid point
-      features.push({ type: "Feature", geometry: { type: "Point", coordinates: [e.center.lon, e.center.lat] }, properties: { id: `way/${e.id}`, osm_type: "way", osm_id: e.id, ...(e.tags || {}) } });
-    } else if (e.type === "relation" && e.members) {
-      e.members.forEach((m, i) => {
-        if (m.geometry && m.geometry.length > 1) {
-          features.push({ type: "Feature", geometry: { type: "LineString", coordinates: m.geometry.map((g) => [g.lon, g.lat]) }, properties: { id: `rel/${e.id}/${i}`, osm_type: "relation", osm_id: e.id, ...(e.tags || {}) } });
-        }
-      });
-    }
-  });
-  return { type: "FeatureCollection", features };
 }
 
 /** Panoramax: find the nearest street-level picture around a POI and open the viewer on it. */
@@ -777,47 +714,12 @@ async function openPanoramaxNearest(lon, lat) {
   return null;
 }
 
-/** Fetch commune polygon boundary. Tries Nominatim first, falls back to Overpass. */
-async function fetchCommuneBoundary() {
-  // 1) Nominatim (fast + clean geometry)
-  try {
-    const url = `${NOMINATIM_BASE}/lookup?osm_ids=R${LONS_OSM_RELATION}&format=geojson&polygon_geojson=1`;
-    const r = await fetch(url, { headers: { "Accept-Language": "fr" } });
-    if (r.ok) return await r.json();
-  } catch (_) { /* fall back to Overpass */ }
-
-  // 2) Overpass fallback — assemble outer ways into a polyline (visual outline only)
-  try {
-    const query = `[out:json][timeout:30];relation(${LONS_OSM_RELATION});out geom;`;
-    for (const endpoint of OVERPASS_ENDPOINTS) {
-      try {
-        const r = await fetch(endpoint, { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams({ data: query }) });
-        if (!r.ok) continue;
-        const j = await r.json();
-        const rel = j.elements?.find((e) => e.type === "relation");
-        if (!rel?.members) continue;
-        const outerLines = rel.members
-          .filter((m) => m.type === "way" && m.role === "outer" && m.geometry?.length > 1)
-          .map((m) => m.geometry.map((g) => [g.lon, g.lat]));
-        if (outerLines.length === 0) continue;
-        return {
-          type: "FeatureCollection",
-          features: [{ type: "Feature", geometry: { type: "MultiLineString", coordinates: outerLines }, properties: {} }],
-        };
-      } catch (_) { /* try next endpoint */ }
-    }
-  } catch (e) {
-    console.warn("Limite communale (Overpass) indisponible:", e);
-  }
-  return null;
-}
-
 function stampFeatures(fc, themeKey, layerKey, meta) {
   return {
     type: "FeatureCollection",
     features: (fc.features || []).map((f) => ({
       ...f,
-      properties: { ...f.properties, _theme: themeKey, _layer: layerKey, _color: meta.color, _label: meta.label, _icon: meta.icon, id: f.properties?.id || f.properties?.id_osm || `${layerKey}-${Math.random()}` },
+      properties: { ...f.properties, _theme: themeKey, _layer: layerKey, _color: meta.color, _label: meta.label, _icon: meta.icon, id: f.properties?.id || f.properties?.id_osm || f.properties?.osm_id || `${layerKey}-${i}` },
     })),
   };
 }
@@ -957,12 +859,10 @@ function renderDonut() {
     const failed = state.failedLayers[lk] && !state.layerData[lk];
     const count = state.layerData[lk]?.features.length || 0;
     let status;
-    if (loading) status = "Chargement OSM…";
+    if (loading) status = "Chargement GeoJSON…";
     else if (failed) status = "⚠ Erreur — cliquer pour réessayer";
     else if (visible) {
-      const meta = LAYERS[state.activeTheme].items[lk];
-      const badge = meta?.source === "local" ? "⚡ " : meta?.source === "geodatamine" ? "" : "";
-      status = `${badge}${count} objets en direct`;
+      status = `${count} objets chargés`;
     }
     else status = "Désactivé";
     return `
@@ -1200,11 +1100,7 @@ async function ensureLayers() {
     state.failedLayers[layerKey] = false;
     renderLayers();
     try {
-      const raw = meta.source === "geodatamine"
-        ? await fetchGeoDataMine(meta.theme)
-        : meta.source === "local"
-          ? await fetchLocalGeoJSON(meta.file)
-          : await fetchOverpass(meta.query);
+      const raw = await fetchLocalGeoJSON(meta.file);
       state.layerData[layerKey] = stampFeatures(raw, state.activeTheme, layerKey, meta);
       cacheSet(layerKey, state.layerData[layerKey]);
       await loadIconIntoMap(map, `pin-${layerKey}`, makePinDataUrl(meta.color, meta.icon));
@@ -1234,25 +1130,34 @@ async function ensureLayers() {
   }
 }
 
+let communeBoundaryPromise;
+
 async function addCommuneBoundary() {
-  const gj = await fetchCommuneBoundary();
-  if (!gj) return;
-  // Nominatim returns FeatureCollection or GeoJSON with polygon
-  const feature = gj.features?.[0] || gj;
-  if (!feature?.geometry) return;
   if (map.getSource("commune-boundary")) return;
-  map.addSource("commune-boundary", { type: "geojson", data: feature });
-  // Halo / gloss inside
-  map.addLayer({
-    id: "commune-halo", type: "line", source: "commune-boundary",
-    paint: { "line-color": "#E30613", "line-width": 10, "line-opacity": 0.15, "line-blur": 4 },
-  });
-  // Contour épais
-  map.addLayer({
-    id: "commune-outline", type: "line", source: "commune-boundary",
-    layout: { "line-cap": "round", "line-join": "round" },
-    paint: { "line-color": "#E30613", "line-width": 3, "line-dasharray": [3, 2] },
-  });
+  if (!communeBoundaryPromise) {
+    communeBoundaryPromise = fetchLocalGeoJSON("data/commune_boundary.geojson")
+      .then((geojson) => {
+        if (map.getSource("commune-boundary")) return;
+        const feature = geojson.features[0];
+        if (!feature?.geometry) {
+          throw new Error("Le GeoJSON de la limite communale ne contient aucune géométrie");
+        }
+        map.addSource("commune-boundary", { type: "geojson", data: feature });
+        map.addLayer({
+          id: "commune-halo", type: "line", source: "commune-boundary",
+          paint: { "line-color": "#E30613", "line-width": 10, "line-opacity": 0.15, "line-blur": 4 },
+        });
+        map.addLayer({
+          id: "commune-outline", type: "line", source: "commune-boundary",
+          layout: { "line-cap": "round", "line-join": "round" },
+          paint: { "line-color": "#E30613", "line-width": 3, "line-dasharray": [3, 2] },
+        });
+      })
+      .finally(() => {
+        communeBoundaryPromise = null;
+      });
+  }
+  return communeBoundaryPromise;
 }
 
 /* ---------------- Map ---------------- */
@@ -1378,13 +1283,13 @@ function applyMapSources() {
   }));
 }
 
-map.on("load", async () => {
+map.on("load", () => {
   applyMapSources();
-  await addCommuneBoundary();
+  addCommuneBoundary().catch((error) => console.error("Limite communale GeoJSON indisponible:", error));
 });
-map.on("styledata", async () => {
+map.on("styledata", () => {
   applyMapSources();
-  await addCommuneBoundary();
+  addCommuneBoundary().catch((error) => console.error("Limite communale GeoJSON indisponible:", error));
 });
 
 map.on("click", (e) => {
@@ -1479,7 +1384,7 @@ function setOfflineIndicator(offline, cacheAgeMs) {
     text.textContent = hours < 24 ? `Mode hors ligne · cache ${hours} h` : `Mode hors ligne · cache ${Math.round(hours / 24)} j`;
   } else {
     badge.classList.remove("offline");
-    text.textContent = "Données OSM · Direct";
+    text.textContent = "Données GeoJSON · Locales";
   }
 }
 
