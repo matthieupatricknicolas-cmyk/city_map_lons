@@ -6,10 +6,41 @@ import { LAYERS } from "@/lib/osm";
 const LONS_CENTER = [5.5539, 46.6739];
 const DEFAULT_VIEW = {
   center: LONS_CENTER,
-  zoom: 15,
-  pitch: 55,
-  bearing: -17.6,
+  zoom: 12,
+  pitch: 0,
+  bearing: 0,
 };
+
+function getGeometryBounds(geometry) {
+  const bounds = [Infinity, Infinity, -Infinity, -Infinity];
+  const visit = (coordinates) => {
+    if (
+      Array.isArray(coordinates) &&
+      typeof coordinates[0] === "number" &&
+      typeof coordinates[1] === "number"
+    ) {
+      bounds[0] = Math.min(bounds[0], coordinates[0]);
+      bounds[1] = Math.min(bounds[1], coordinates[1]);
+      bounds[2] = Math.max(bounds[2], coordinates[0]);
+      bounds[3] = Math.max(bounds[3], coordinates[1]);
+      return;
+    }
+    if (Array.isArray(coordinates)) coordinates.forEach(visit);
+  };
+  visit(geometry?.coordinates);
+  return bounds.every(Number.isFinite) ? bounds : null;
+}
+
+function fitCommuneBounds(map, boundaryData, duration = 0) {
+  const feature = boundaryData?.features?.find((item) => item.geometry);
+  const bounds = getGeometryBounds(feature?.geometry);
+  if (!bounds) return false;
+  map.fitBounds(
+    [[bounds[0], bounds[1]], [bounds[2], bounds[3]]],
+    { padding: 48, duration, pitch: 0, bearing: 0 }
+  );
+  return true;
+}
 
 function makeStyle(basemap) {
   if (basemap.type === "raster") return buildRasterStyle(basemap);
@@ -17,15 +48,21 @@ function makeStyle(basemap) {
 }
 
 const MapView = React.forwardRef(function MapView(
-  { basemap, buildings3D, layerData, onFeatureClick, onEmptyClick, selectedId },
+  { basemap, buildings3D, layerData, boundaryData, onFeatureClick, onEmptyClick, selectedId },
   ref
 ) {
   const containerRef = useRef(null);
   const mapRef = useRef(null);
   const applyRef = useRef(() => {});
+  const hasFitCommune = useRef(false);
 
   React.useImperativeHandle(ref, () => ({
-    resetCamera: () => mapRef.current?.flyTo({ ...DEFAULT_VIEW, duration: 1400 }),
+    resetCamera: () => {
+      const map = mapRef.current;
+      if (!map || !fitCommuneBounds(map, boundaryData, 1400)) {
+        map?.flyTo({ ...DEFAULT_VIEW, duration: 1400 });
+      }
+    },
     flyTo: (opts) => mapRef.current?.flyTo(opts),
     getMap: () => mapRef.current,
   }));
@@ -93,7 +130,7 @@ const MapView = React.forwardRef(function MapView(
     Object.entries(LAYERS).forEach(([themeKey, theme]) => {
       Object.entries(theme.items).forEach(([layerKey, meta]) => {
         const srcId = `osm-${layerKey}`;
-        const layerIds = [`${srcId}-halo`, `${srcId}-fill`];
+        const layerIds = [`${srcId}-halo`, `${srcId}-fill`, `${srcId}-outline`];
         const fc = layerData[layerKey];
 
         if (!fc) {
@@ -136,6 +173,23 @@ const MapView = React.forwardRef(function MapView(
               },
             });
           }
+        } else if (meta.geometry === "polygon") {
+          if (!map.getLayer(`${srcId}-fill`)) {
+            map.addLayer({
+              id: `${srcId}-fill`,
+              type: "fill",
+              source: srcId,
+              paint: { "fill-color": meta.color, "fill-opacity": 0.28 },
+            });
+          }
+          if (!map.getLayer(`${srcId}-outline`)) {
+            map.addLayer({
+              id: `${srcId}-outline`,
+              type: "line",
+              source: srcId,
+              paint: { "line-color": meta.color, "line-width": 2.2 },
+            });
+          }
         } else {
           if (!map.getLayer(`${srcId}-halo`)) {
             map.addLayer({
@@ -176,7 +230,30 @@ const MapView = React.forwardRef(function MapView(
         }
       });
     });
-  }, [layerData, buildings3D, selectedId]);
+
+    if (boundaryData) {
+      if (!map.getSource("commune-boundary")) {
+        map.addSource("commune-boundary", { type: "geojson", data: boundaryData });
+      } else {
+        map.getSource("commune-boundary").setData(boundaryData);
+      }
+      if (!map.getLayer("commune-outline")) {
+        map.addLayer({
+          id: "commune-outline",
+          type: "line",
+          source: "commune-boundary",
+          paint: {
+            "line-color": "#E30613",
+            "line-width": 2.5,
+            "line-dasharray": [3, 2],
+          },
+        });
+      }
+      if (!hasFitCommune.current) {
+        hasFitCommune.current = fitCommuneBounds(map, boundaryData);
+      }
+    }
+  }, [layerData, buildings3D, selectedId, boundaryData]);
 
   // Init map
   useEffect(() => {
@@ -188,8 +265,8 @@ const MapView = React.forwardRef(function MapView(
       style: makeStyle(bm),
       center: DEFAULT_VIEW.center,
       zoom: DEFAULT_VIEW.zoom,
-      pitch: DEFAULT_VIEW.pitch,
-      bearing: DEFAULT_VIEW.bearing,
+      pitch: 0,
+      bearing: 0,
       attributionControl: { compact: true },
       maxPitch: 75,
     });

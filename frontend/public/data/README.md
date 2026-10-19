@@ -29,6 +29,8 @@ remplacés indépendamment du code.
 | `drop_off.geojson` | Arrêts minute | [Overpass API](https://overpass-api.de/) · rayon de 4 km |
 | `loading_zones.geojson` | Zones de livraison | [Overpass API](https://overpass-api.de/) · rayon de 4 km |
 | `commune_boundary.geojson` | Limite communale | [Nominatim](https://nominatim.openstreetmap.org/) · relation OSM 152508 |
+| `roadworks.geojson` | Travaux | Couche locale vide · géométries `Polygon` / `MultiPolygon` |
+| `temporary_disruptions.geojson` | Perturbations temporaires | Couche locale vide · géométries `LineString` / `MultiLineString` |
 
 Les données OpenStreetMap sont © [contributeurs OpenStreetMap](https://www.openstreetmap.org/copyright)
 et disponibles sous licence [ODbL](https://opendatacommons.org/licenses/odbl/).

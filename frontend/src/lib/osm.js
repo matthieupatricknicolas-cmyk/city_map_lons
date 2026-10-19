@@ -71,6 +71,27 @@ export const LAYERS = {
       },
     },
   },
+  travaux: {
+    label: "Travaux",
+    subtitle: "Chantiers & perturbations",
+    color: "#B45309",
+    items: {
+      roadworks: {
+        label: "Travaux",
+        icon: "Construction",
+        color: "#DC2626",
+        geometry: "polygon",
+        file: "roadworks.geojson",
+      },
+      disruptions: {
+        label: "Perturbations temporaires",
+        icon: "TriangleAlert",
+        color: "#F59E0B",
+        geometry: "line",
+        file: "temporary_disruptions.geojson",
+      },
+    },
+  },
 };
 
 /** Add display metadata and a stable ID for map interaction. */

@@ -6,12 +6,23 @@ import {
   Route,
   ShoppingBag,
   Utensils,
+  Construction,
+  TriangleAlert,
   Layers as LayersIcon,
   Sparkles,
 } from "lucide-react";
 import { LAYERS } from "@/lib/osm";
 
-const ICON_MAP = { Bike, Bus, Navigation, Route, ShoppingBag, Utensils };
+const ICON_MAP = {
+  Bike,
+  Bus,
+  Navigation,
+  Route,
+  ShoppingBag,
+  Utensils,
+  Construction,
+  TriangleAlert,
+};
 
 export default function SidebarNav({
   activeTheme,
@@ -49,11 +60,9 @@ export default function SidebarNav({
                   <span className="absolute -left-[1px] top-3 bottom-3 w-[3px] rounded-r tab-active-indicator" />
                 )}
                 <div className="flex items-center gap-2">
-                  {key === "mobility" ? (
-                    <Bike className="w-4 h-4" />
-                  ) : (
-                    <ShoppingBag className="w-4 h-4" />
-                  )}
+                  {key === "mobility" ? <Bike className="w-4 h-4" /> :
+                    key === "travaux" ? <Construction className="w-4 h-4" /> :
+                    <ShoppingBag className="w-4 h-4" />}
                   <span className="font-display font-bold text-sm">
                     {theme.label}
                   </span>
@@ -63,7 +72,7 @@ export default function SidebarNav({
                     active ? "text-white/70" : "text-slate-400"
                   }`}
                 >
-                  {key === "mobility" ? "Déplacement" : "Vie locale"}
+                  {theme.subtitle}
                 </div>
               </button>
             );

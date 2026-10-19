@@ -337,6 +337,8 @@ const ICON_PATHS = {
   wheelchair: `<circle cx="10" cy="4.5" r="1.6"/><path d="M10 6.5v6h6M10 12.5l3 5"/><circle cx="10" cy="16.5" r="4"/>`,
   clock:      `<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>`,
   truck:      `<rect x="1.5" y="7" width="12" height="9" rx="1"/><path d="M13.5 10h4l3 3v3h-7z"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>`,
+  construction: `<path d="M2 20h20M5 20V8l7-4 7 4v12M9 20v-6h6v6M8 9h.01M12 9h.01M16 9h.01"/>`,
+  alert: `<path d="M10.3 3.9 2.2 18a2 2 0 0 0 1.7 3h16.2a2 2 0 0 0 1.7-3l-8.1-14.1a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/>`,
 };
 
 const LAYERS = {
@@ -379,7 +381,7 @@ const LAYERS = {
     },
   },
   stationnement: {
-    label: "Stationnement", subtitle: "Se garer",
+    label: "Parking", subtitle: "Se garer",
     tabIcon: "square-parking",
     items: {
       parking_pay:   { label: "Stationnement payant",  icon: "parking",    color: "#DC2626", geometry: "polygon", file: "data/paid_parking.geojson" },
@@ -390,6 +392,14 @@ const LAYERS = {
       livraison:     { label: "Livraison",              icon: "truck",      color: "#B45309", geometry: "point", file: "data/loading_zones.geojson" },
     },
   },
+  travaux: {
+    label: "Travaux", subtitle: "Chantiers & perturbations",
+    tabIcon: "construction",
+    items: {
+      roadworks: { label: "Travaux", icon: "construction", color: "#DC2626", geometry: "polygon", file: "data/roadworks.geojson" },
+      disruptions: { label: "Perturbations temporaires", icon: "alert", color: "#F59E0B", geometry: "line", file: "data/temporary_disruptions.geojson" },
+    },
+  },
 };
 
 const DEFAULT_VISIBLE = {
@@ -398,6 +408,7 @@ const DEFAULT_VISIBLE = {
   culture:   { historic: true, cinema: true, library: true, arts: true },
   nature:    { parks: true, playgrounds: true, fountains: true, greens: false },
   stationnement: { parking_pay: true, parking_free: true, horodateur: false, pmr: true, arret_minute: true, livraison: false },
+  travaux: { roadworks: true, disruptions: true },
 };
 
 const KEY_LABELS = {
@@ -737,9 +748,10 @@ function stampFeatures(fc, themeKey, layerKey, meta) {
 /* ---------------- State ---------------- */
 const state = {
   activeTheme: "mobility",
-  visibleLayers: { ...DEFAULT_VISIBLE.mobility },
+  visibleLayers: Object.fromEntries(Object.keys(LAYERS.mobility.items).map((key) => [key, false])),
   basemap: "cartodb_voyager",
-  buildings3D: true,
+  buildings3D: false,
+  communeBoundary: null,
   layerData: {},
   loadingLayers: {},
   failedLayers: {},
@@ -1085,7 +1097,8 @@ function toggle3D() { state.buildings3D = !state.buildings3D; renderControls(); 
 
 function resetCamera() {
   state.selectedFeature = null; renderDetail();
-  map.flyTo({ center: LONS_CENTER, zoom: 15, pitch: 55, bearing: -17.6, duration: 1400 });
+  if (state.communeBoundary) fitCommuneBoundary(1400);
+  else map.flyTo({ center: LONS_CENTER, zoom: 12, pitch: 0, bearing: 0, duration: 1400 });
 }
 
 function locate() {
@@ -1149,6 +1162,7 @@ async function addCommuneBoundary() {
         if (!feature?.geometry) {
           throw new Error("Le GeoJSON de la limite communale ne contient aucune géométrie");
         }
+        state.communeBoundary = geojson;
         map.addSource("commune-boundary", { type: "geojson", data: feature });
         map.addLayer({
           id: "commune-halo", type: "line", source: "commune-boundary",
@@ -1167,11 +1181,30 @@ async function addCommuneBoundary() {
   return communeBoundaryPromise;
 }
 
+function fitCommuneBoundary(duration = 0) {
+  const coordinates = [];
+  const visit = (value) => {
+    if (Array.isArray(value) && typeof value[0] === "number" && typeof value[1] === "number") {
+      coordinates.push(value);
+    } else if (Array.isArray(value)) {
+      value.forEach(visit);
+    }
+  };
+  visit(state.communeBoundary?.features?.[0]?.geometry?.coordinates);
+  if (!coordinates.length) return false;
+  const bounds = coordinates.reduce(
+    (result, point) => result.extend([point[0], point[1]]),
+    new maplibregl.LngLatBounds([coordinates[0][0], coordinates[0][1]], [coordinates[0][0], coordinates[0][1]])
+  );
+  map.fitBounds(bounds, { padding: 48, duration, pitch: 0, bearing: 0 });
+  return true;
+}
+
 /* ---------------- Map ---------------- */
 const map = new maplibregl.Map({
   container: "map",
   style: makeStyle(BASEMAPS.find((b) => b.id === state.basemap)),
-  center: LONS_CENTER, zoom: 14.5, pitch: 55, bearing: -17.6, maxPitch: 75,
+  center: LONS_CENTER, zoom: 12, pitch: 0, bearing: 0, maxPitch: 75,
   attributionControl: { compact: true },
 });
 window.__map = map;
@@ -1292,7 +1325,9 @@ function applyMapSources() {
 
 map.on("load", () => {
   applyMapSources();
-  addCommuneBoundary().catch((error) => console.error("Limite communale GeoJSON indisponible:", error));
+  addCommuneBoundary().then(() => {
+    if (!_hashState) fitCommuneBoundary();
+  }).catch((error) => console.error("Limite communale GeoJSON indisponible:", error));
 });
 map.on("styledata", () => {
   applyMapSources();

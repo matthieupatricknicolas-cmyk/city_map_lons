@@ -18,18 +18,42 @@ const DEFAULT_VISIBLE = {
     shops: true,
     food: true,
   },
+  travaux: {
+    roadworks: true,
+    disruptions: true,
+  },
 };
+
+const INITIAL_VISIBLE = Object.fromEntries(
+  Object.keys(LAYERS.mobility.items).map((layerKey) => [layerKey, false])
+);
 
 export default function CartographyPage() {
   const [activeTheme, setActiveTheme] = useState("mobility");
-  const [visibleLayers, setVisibleLayers] = useState(DEFAULT_VISIBLE.mobility);
+  const [visibleLayers, setVisibleLayers] = useState(INITIAL_VISIBLE);
   const [basemap, setBasemap] = useState("cartodb_voyager");
-  const [buildings3D, setBuildings3D] = useState(true);
+  const [buildings3D, setBuildings3D] = useState(false);
   const [layerData, setLayerData] = useState({}); // layerKey -> FeatureCollection (stamped)
+  const [boundaryData, setBoundaryData] = useState(null);
   const [loadingLayers, setLoadingLayers] = useState({});
   const [selectedFeature, setSelectedFeature] = useState(null);
   const mapRef = useRef(null);
   const inflight = useRef(new Set());
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchLayerGeoJSON("commune_boundary.geojson")
+      .then((geojson) => {
+        if (!cancelled) setBoundaryData(geojson);
+      })
+      .catch((error) => {
+        console.error("Commune boundary loading error", error);
+        toast.error("Impossible de charger la limite communale");
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const fetchLayerIfMissing = useCallback(
     async (themeKey, layerKey) => {
@@ -140,6 +164,7 @@ export default function CartographyPage() {
             basemap={basemap}
             buildings3D={buildings3D}
             layerData={activeLayerData}
+            boundaryData={boundaryData}
             onFeatureClick={handleFeatureClick}
             onEmptyClick={() => setSelectedFeature(null)}
             selectedId={selectedFeature?.properties?.id}
