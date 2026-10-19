@@ -189,7 +189,7 @@
   .detail-close:hover { background: rgba(255,255,255,0.35); }
   .osm-logo-link { position: absolute; top: 56px; right: 14px; z-index: 2; padding: 4px; border-radius: 6px; background: rgba(255,255,255,0.94); box-shadow: 0 2px 8px rgba(0,0,0,0.18); line-height: 0; }
   .osm-logo-link:hover { background: white; transform: translateY(-1px); }
-  .osm-logo-link svg { width: 44px; height: 22px; }
+  .osm-logo-link img { display: block; width: 28px; height: 28px; }
   .detail-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,0.22); backdrop-filter: blur(4px); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 8px; position: relative; z-index: 1; }
   .detail-title { font-family: "Bricolage Grotesque", sans-serif; font-size: 24px; font-weight: 800; line-height: 1.15; margin: 0; position: relative; z-index: 1; }
   .detail-coords { margin-top: 8px; display: flex; align-items: center; gap: 6px; font-family: "JetBrains Mono", monospace; font-size: 12px; color: rgba(255,255,255,0.85); position: relative; z-index: 1; }
@@ -985,7 +985,7 @@ function renderDetail() {
     <div class="detail-header" style="background:linear-gradient(135deg, #E30613 0%, #7A020B 100%)">
       <button class="detail-close"><i data-lucide="x" style="width:16px;height:16px"></i></button>
       ${osmId ? `<a class="osm-logo-link" href="https://www.openstreetmap.org/${osmType}/${osmId}" target="_blank" rel="noopener noreferrer" aria-label="Voir cet objet sur OpenStreetMap" title="OpenStreetMap">
-        <svg aria-hidden="true" viewBox="0 0 48 24"><path d="M2 5 12 2l10 3 10-3 14 4v13l-14 3-10-3-10 3-10-4z" fill="#f2efe9"/><path d="m12 2 0 18M22 5v14M32 2v17" fill="none" stroke="#78866b" stroke-width="1.5"/><path d="M3 14h10M23 9h9M33 15h12" fill="none" stroke="#4a90a4" stroke-width="2"/><text x="24" y="14" fill="#1f2937" font-family="Arial,sans-serif" font-size="7" font-weight="700" text-anchor="middle">OSM</text></svg>
+        <img src="osm-logo.svg" alt="OpenStreetMap">
       </a>` : ""}
       <div class="detail-badge"><span style="font-size:14px;line-height:1">${LAYER_EMOJI[props._layer] || "📍"}</span>${humanize(category)}</div>
       <h2 class="detail-title">${humanize(title)}</h2>

@@ -64,17 +64,6 @@ function humanize(v) {
   return String(v);
 }
 
-function OpenStreetMapLogo() {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 48 24" className="h-6 w-12">
-      <path d="M2 5 12 2l10 3 10-3 14 4v13l-14 3-10-3-10 3-10-4z" fill="#f2efe9" />
-      <path d="m12 2 0 18M22 5v14M32 2v17" fill="none" stroke="#78866b" strokeWidth="1.5" />
-      <path d="M3 14h10M23 9h9M33 15h12" fill="none" stroke="#4a90a4" strokeWidth="2" />
-      <text x="24" y="14" fill="#1f2937" fontFamily="Arial,sans-serif" fontSize="7" fontWeight="700" textAnchor="middle">OSM</text>
-    </svg>
-  );
-}
-
 export default function DetailPanel({ feature, onClose }) {
   if (!feature) return null;
   return <DetailPanelContent feature={feature} onClose={onClose} />;
@@ -200,7 +189,11 @@ function DetailPanelContent({ feature, onClose }) {
             title="OpenStreetMap"
             className="absolute top-14 right-3 z-10 rounded-md bg-white/90 p-1 shadow-sm hover:bg-white transition-colors"
           >
-            <OpenStreetMapLogo />
+            <img
+              src={`${process.env.PUBLIC_URL}/osm-logo.svg`}
+              alt="OpenStreetMap"
+              className="h-7 w-7"
+            />
           </a>
         )}
         <div
