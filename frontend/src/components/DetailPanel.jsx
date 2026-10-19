@@ -1,6 +1,7 @@
-import React from "react";
-import { X, ExternalLink, MapPin, Tag, Info, Clock, Phone, Globe, Building2 } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { X, ExternalLink, MapPin, Tag, Info, Clock, Phone, Globe } from "lucide-react";
 import { LAYERS } from "@/lib/osm";
+import { findNearestPanoramaxImage } from "@/lib/panoramax";
 
 // Merge English OSM + French GeoDataMine schema labels
 const KEY_LABELS = {
@@ -63,8 +64,25 @@ function humanize(v) {
   return String(v);
 }
 
+function OpenStreetMapLogo() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 48 24" className="h-6 w-12">
+      <path d="M2 5 12 2l10 3 10-3 14 4v13l-14 3-10-3-10 3-10-4z" fill="#f2efe9" />
+      <path d="m12 2 0 18M22 5v14M32 2v17" fill="none" stroke="#78866b" strokeWidth="1.5" />
+      <path d="M3 14h10M23 9h9M33 15h12" fill="none" stroke="#4a90a4" strokeWidth="2" />
+      <text x="24" y="14" fill="#1f2937" fontFamily="Arial,sans-serif" fontSize="7" fontWeight="700" textAnchor="middle">OSM</text>
+    </svg>
+  );
+}
+
 export default function DetailPanel({ feature, onClose }) {
   if (!feature) return null;
+  return <DetailPanelContent feature={feature} onClose={onClose} />;
+}
+
+function DetailPanelContent({ feature, onClose }) {
+  const [panoramaxPhoto, setPanoramaxPhoto] = useState(null);
+  const [panoramaxStatus, setPanoramaxStatus] = useState("loading");
   const props = feature.properties || {};
   const themeKey = props._theme;
   const layerKey = props._layer;
@@ -129,7 +147,24 @@ export default function DetailPanel({ feature, onClose }) {
     });
 
   const osmType = props.osm_type || props.id_osm?.split("/")?.[0] || "node";
-  const osmId = props.osm_id || props.id_osm?.split("/")?.[1] || props.id;
+  const osmId = props.osm_id || props.id_osm?.split("/")?.[1];
+
+  useEffect(() => {
+    const controller = new AbortController();
+    setPanoramaxPhoto(null);
+    setPanoramaxStatus("loading");
+    findNearestPanoramaxImage(lon, lat, controller.signal)
+      .then((photo) => {
+        setPanoramaxPhoto(photo);
+        setPanoramaxStatus(photo ? "ready" : "empty");
+      })
+      .catch((error) => {
+        if (error.name === "AbortError") return;
+        console.error("Panoramax image loading error", error);
+        setPanoramaxStatus("error");
+      });
+    return () => controller.abort();
+  }, [lon, lat]);
 
   return (
     <div
@@ -137,7 +172,7 @@ export default function DetailPanel({ feature, onClose }) {
       className="slide-in-panel absolute top-4 right-4 bottom-4 w-[92vw] sm:w-[420px] bg-white rounded-2xl shadow-[0_30px_60px_rgba(8,112,184,0.18)] border border-slate-200 overflow-hidden flex flex-col z-40"
     >
       <div
-        className="p-5 relative overflow-hidden"
+        className="p-5 pr-16 relative overflow-hidden"
         style={{
           background: `linear-gradient(135deg, ${layerMeta?.color || "#003D7A"} 0%, #003D7A 100%)`,
         }}
@@ -156,6 +191,18 @@ export default function DetailPanel({ feature, onClose }) {
         >
           <X className="w-4 h-4 text-white" strokeWidth={2.5} />
         </button>
+        {osmId && (
+          <a
+            href={`https://www.openstreetmap.org/${osmType}/${osmId}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Voir cet objet sur OpenStreetMap"
+            title="OpenStreetMap"
+            className="absolute top-14 right-3 z-10 rounded-md bg-white/90 p-1 shadow-sm hover:bg-white transition-colors"
+          >
+            <OpenStreetMapLogo />
+          </a>
+        )}
         <div
           data-testid="poi-category-badge"
           className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-[0.15em] mb-2"
@@ -251,16 +298,32 @@ export default function DetailPanel({ feature, onClose }) {
         })}
 
         <div className="pt-3 space-y-2">
-          {osmId && (
+          <div className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+            Photo Panoramax la plus proche
+          </div>
+          {panoramaxPhoto ? (
             <a
-              href={`https://www.openstreetmap.org/${osmType}/${osmId}`}
+              href={panoramaxPhoto.viewerUrl}
               target="_blank"
-              rel="noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#003D7A] hover:bg-[#002855] text-white text-sm font-bold transition-colors"
+              rel="noopener noreferrer"
+              aria-label="Ouvrir la photo Panoramax dans un nouvel onglet"
+              className="inline-block overflow-hidden rounded-lg border border-slate-200 hover:border-slate-400 transition-colors"
             >
-              <Building2 className="w-4 h-4" /> Voir sur OpenStreetMap
-              <ExternalLink className="w-4 h-4" />
+              <img
+                src={panoramaxPhoto.thumbnailUrl}
+                alt="Photo Panoramax la plus proche"
+                className="block h-24 w-36 object-cover"
+                loading="lazy"
+              />
             </a>
+          ) : (
+            <div className="text-sm text-slate-500" aria-live="polite">
+              {panoramaxStatus === "loading"
+                ? "Recherche de photos à proximité…"
+                : panoramaxStatus === "empty"
+                  ? "Aucune photo Panoramax à proximité."
+                  : "Les photos Panoramax sont temporairement indisponibles."}
+            </div>
           )}
         </div>
       </div>
