@@ -97,6 +97,8 @@ export const LAYERS = {
         color: "#16A34A",
         geometry: "polygon",
         showIcon: false,
+        parkingStyle: true,
+        capacityLabelField: "capacity",
         file: "free_parking.geojson",
       },
     },

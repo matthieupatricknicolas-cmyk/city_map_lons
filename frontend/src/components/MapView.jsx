@@ -18,6 +18,57 @@ const COMMERCE_MARKERS = {
   bar: { color: "#7E22CE", icon: "glass" },
 };
 
+const PARKING_COLORS = {
+  street: "#2563EB",
+  public: "#059669",
+  business: "#EA580C",
+  residential: "#7C3AED",
+};
+const PARKING_CATEGORY_EXPRESSION = [
+  "case",
+  [
+    "any",
+    ["==", ["geometry-type"], "LineString"],
+    [
+      "in",
+      ["get", "parking"],
+      ["literal", ["street_side", "on_street", "street", "lane", "half_on_kerb", "layby"]],
+    ],
+  ],
+  "street",
+  ["in", ["get", "access"], ["literal", ["customers", "business"]]],
+  "business",
+  [
+    "any",
+    ["in", ["get", "access"], ["literal", ["private", "residents"]]],
+    ["in", ["get", "parking_space"], ["literal", ["private", "residents"]]],
+  ],
+  "residential",
+  "public",
+];
+const PARKING_COLOR_EXPRESSION = [
+  "match",
+  PARKING_CATEGORY_EXPRESSION,
+  "street",
+  PARKING_COLORS.street,
+  "business",
+  PARKING_COLORS.business,
+  "residential",
+  PARKING_COLORS.residential,
+  PARKING_COLORS.public,
+];
+const PARKING_FILL_OPACITY_EXPRESSION = [
+  "match",
+  PARKING_CATEGORY_EXPRESSION,
+  "street",
+  0.22,
+  "business",
+  0.28,
+  "residential",
+  0.24,
+  0.32,
+];
+
 function addCommerceMarkerImages(map) {
   Object.entries(COMMERCE_MARKERS).forEach(([category, marker]) => {
     const imageId = `commerce-${category}`;
@@ -269,7 +320,7 @@ function keepOverlaysAboveBasemap(map) {
         meta.geometry === "line"
           ? [`${sourceId}-halo`, `${sourceId}-fill`]
           : meta.geometry === "polygon"
-            ? [`${sourceId}-fill`, `${sourceId}-outline`, `${sourceId}-symbol`, `${sourceId}-label`]
+            ? [`${sourceId}-fill`, `${sourceId}-outline`, `${sourceId}-line`, `${sourceId}-symbol`, `${sourceId}-label`]
             : [`${sourceId}-halo`, `${sourceId}-fill`, `${sourceId}-symbol`];
       layerIds.forEach((id) => {
         if (map.getLayer(id)) overlayIds.push(id);
@@ -378,6 +429,7 @@ const MapView = React.forwardRef(function MapView(
           `${srcId}-halo`,
           `${srcId}-fill`,
           `${srcId}-outline`,
+          `${srcId}-line`,
           `${srcId}-symbol`,
           `${srcId}-label`,
         ];
@@ -430,15 +482,70 @@ const MapView = React.forwardRef(function MapView(
               id: `${srcId}-fill`,
               type: "fill",
               source: srcId,
+              ...(meta.parkingStyle && { filter: ["==", ["geometry-type"], "Polygon"] }),
               paint: { "fill-color": meta.color, "fill-opacity": 0.28 },
             });
+          }
+          if (meta.parkingStyle) {
+            map.setPaintProperty(`${srcId}-fill`, "fill-color", PARKING_COLOR_EXPRESSION);
+            map.setPaintProperty(`${srcId}-fill`, "fill-opacity", PARKING_FILL_OPACITY_EXPRESSION);
           }
           if (!map.getLayer(`${srcId}-outline`)) {
             map.addLayer({
               id: `${srcId}-outline`,
               type: "line",
               source: srcId,
+              ...(meta.parkingStyle && { filter: ["==", ["geometry-type"], "Polygon"] }),
               paint: { "line-color": meta.color, "line-width": 2.2 },
+            });
+          }
+          if (meta.parkingStyle) {
+            map.setPaintProperty(`${srcId}-outline`, "line-color", PARKING_COLOR_EXPRESSION);
+            map.setPaintProperty(`${srcId}-outline`, "line-width", 1.5);
+            if (!map.getLayer(`${srcId}-line`)) {
+              map.addLayer({
+                id: `${srcId}-line`,
+                type: "line",
+                source: srcId,
+                filter: ["==", ["geometry-type"], "LineString"],
+                layout: { "line-cap": "round", "line-join": "round" },
+                paint: {
+                  "line-color": PARKING_COLOR_EXPRESSION,
+                  "line-width": ["interpolate", ["linear"], ["zoom"], 11, 1.5, 16, 4],
+                  "line-opacity": 0.9,
+                  "line-dasharray": [2, 1],
+                },
+              });
+            }
+          }
+          if (meta.capacityLabelField && !map.getLayer(`${srcId}-label`)) {
+            map.addLayer({
+              id: `${srcId}-label`,
+              type: "symbol",
+              source: srcId,
+              minzoom: 17,
+              filter: [
+                "all",
+                ["has", meta.capacityLabelField],
+                [">", ["to-number", ["get", meta.capacityLabelField], 0], 0],
+              ],
+              layout: {
+                "symbol-placement": "point",
+                "text-field": [
+                  "concat",
+                  ["to-string", ["get", meta.capacityLabelField]],
+                  " places",
+                ],
+                "text-font": ["Open Sans Semibold", "Arial Unicode MS Regular"],
+                "text-size": ["interpolate", ["linear"], ["zoom"], 17, 11, 19, 14],
+                "text-allow-overlap": false,
+                "text-ignore-placement": false,
+              },
+              paint: {
+                "text-color": "#0F172A",
+                "text-halo-color": "#FFFFFF",
+                "text-halo-width": 1.5,
+              },
             });
           }
           if (meta.labelField && !map.getLayer(`${srcId}-label`)) {
@@ -560,6 +667,7 @@ const MapView = React.forwardRef(function MapView(
       pitch: 0,
       bearing: 0,
       attributionControl: { compact: true },
+      maxZoom: basemap === "osm_fr" ? 24 : 22,
       maxPitch: 75,
     });
     mapRef.current = map;
@@ -574,7 +682,7 @@ const MapView = React.forwardRef(function MapView(
       const allIds = [];
       Object.keys(LAYERS).forEach((t) =>
         Object.keys(LAYERS[t].items).forEach((k) =>
-          allIds.push(`osm-${k}-fill`, `osm-${k}-symbol`)
+          allIds.push(`osm-${k}-fill`, `osm-${k}-line`, `osm-${k}-symbol`)
         )
       );
       const existing = allIds.filter((l) => map.getLayer(l));
@@ -607,9 +715,10 @@ const MapView = React.forwardRef(function MapView(
     // Cursor for interactive layers
     Object.keys(LAYERS).forEach((t) =>
       Object.keys(LAYERS[t].items).forEach((k) => {
-        const lid = `osm-${k}-fill`;
-        map.on("mouseenter", lid, () => (map.getCanvas().style.cursor = "pointer"));
-        map.on("mouseleave", lid, () => (map.getCanvas().style.cursor = ""));
+        [`osm-${k}-fill`, `osm-${k}-line`].forEach((lid) => {
+          map.on("mouseenter", lid, () => (map.getCanvas().style.cursor = "pointer"));
+          map.on("mouseleave", lid, () => (map.getCanvas().style.cursor = ""));
+        });
       })
     );
 
@@ -630,6 +739,7 @@ const MapView = React.forwardRef(function MapView(
       return;
     }
     const bm = BASEMAPS.find((b) => b.id === basemap) || BASEMAPS[0];
+    map.setMaxZoom(basemap === "osm_fr" ? 24 : 22);
     map.setStyle(makeStyle(bm));
   }, [basemap]); // eslint-disable-line
 

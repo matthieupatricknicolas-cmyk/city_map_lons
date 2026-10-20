@@ -145,6 +145,10 @@
   .donut-legend-count { font-size: 10px; color: var(--lons-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 1px; }
   .donut-legend-row.err .donut-legend-count { color: var(--lons-red); font-weight: 600; }
   .donut-tip { display: flex; align-items: center; gap: 6px; padding: 10px 2px 0; font-size: 11px; color: var(--lons-muted); border-top: 1px solid #F3F4F6; margin-top: 6px; }
+  .parking-legend { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px; padding: 8px 4px 2px; font-size: 10px; font-weight: 600; color: #475569; }
+  .parking-legend[hidden] { display: none; }
+  .parking-legend-item { display: flex; align-items: center; gap: 6px; min-width: 0; }
+  .parking-legend-swatch { width: 10px; height: 10px; flex-shrink: 0; border-radius: 3px; }
 
   /* Map controls */
   .map-controls { position: absolute; top: 16px; right: 16px; z-index: 30; display: flex; flex-direction: column; gap: 8px; align-items: stretch; width: 240px; transition: opacity 0.25s, transform 0.25s; }
@@ -287,6 +291,12 @@
           <svg id="donut-svg" viewBox="-140 -140 280 280" preserveAspectRatio="xMidYMid meet"></svg>
         </div>
         <div class="donut-legend" id="donut-legend"></div>
+        <div class="parking-legend" id="parking-legend" hidden>
+          <div class="parking-legend-item"><span class="parking-legend-swatch" style="background:#2563EB"></span>Rue</div>
+          <div class="parking-legend-item"><span class="parking-legend-swatch" style="background:#059669"></span>Parking public</div>
+          <div class="parking-legend-item"><span class="parking-legend-swatch" style="background:#EA580C"></span>Clientèle</div>
+          <div class="parking-legend-item"><span class="parking-legend-swatch" style="background:#7C3AED"></span>Résidentiel / privé</div>
+        </div>
         <div class="donut-tip">
           <i data-lucide="lightbulb" style="width:12px;height:12px"></i>
           Cliquez sur un segment ou une ligne pour activer / désactiver la couche.
@@ -399,7 +409,7 @@ const LAYERS = {
     tabIcon: "square-parking",
     items: {
       parking_pay:   { label: "Stationnement payant",  icon: "parking",    color: "#DC2626", geometry: "polygon", file: "data/paid_parking.geojson" },
-      parking_free:  { label: "Stationnement gratuit", icon: "parking",    color: "#16A34A", geometry: "polygon", showIcon: false, file: "data/free_parking.geojson" },
+      parking_free:  { label: "Stationnement gratuit", icon: "parking",    color: "#16A34A", geometry: "polygon", showIcon: false, parkingStyle: true, capacityLabelField: "capacity", file: "data/free_parking.geojson" },
       horodateur:    { label: "Horodateurs",            icon: "meter",      color: "#F59E0B", geometry: "point", file: "data/parking_meters.geojson" },
       pmr:           { label: "Places PMR",             icon: "wheelchair", color: "#2563EB", geometry: "point", file: "data/accessible_parking.geojson" },
       arret_minute:  { label: "Arrêts minute",          icon: "clock",      color: "#8B5CF6", geometry: "point", file: "data/drop_off.geojson" },
@@ -724,6 +734,57 @@ function commerceIconExpression() {
   ];
 }
 
+const PARKING_COLORS = {
+  street: "#2563EB",
+  public: "#059669",
+  business: "#EA580C",
+  residential: "#7C3AED",
+};
+const PARKING_CATEGORY_EXPRESSION = [
+  "case",
+  [
+    "any",
+    ["==", ["geometry-type"], "LineString"],
+    [
+      "in",
+      ["get", "parking"],
+      ["literal", ["street_side", "on_street", "street", "lane", "half_on_kerb", "layby"]],
+    ],
+  ],
+  "street",
+  ["in", ["get", "access"], ["literal", ["customers", "business"]]],
+  "business",
+  [
+    "any",
+    ["in", ["get", "access"], ["literal", ["private", "residents"]]],
+    ["in", ["get", "parking_space"], ["literal", ["private", "residents"]]],
+  ],
+  "residential",
+  "public",
+];
+const PARKING_COLOR_EXPRESSION = [
+  "match",
+  PARKING_CATEGORY_EXPRESSION,
+  "street",
+  PARKING_COLORS.street,
+  "business",
+  PARKING_COLORS.business,
+  "residential",
+  PARKING_COLORS.residential,
+  PARKING_COLORS.public,
+];
+const PARKING_FILL_OPACITY_EXPRESSION = [
+  "match",
+  PARKING_CATEGORY_EXPRESSION,
+  "street",
+  0.22,
+  "business",
+  0.28,
+  "residential",
+  0.24,
+  0.32,
+];
+
 async function loadCommerceMarkerImages(map) {
   for (const [category, marker] of Object.entries(COMMERCE_MARKERS)) {
     await loadIconIntoMap(
@@ -969,6 +1030,7 @@ function renderDonut() {
 
   // Legend list
   const legend = document.getElementById("donut-legend");
+  document.getElementById("parking-legend").hidden = state.activeTheme !== "stationnement";
   legend.innerHTML = entries.map(([lk, meta]) => {
     const visible = state.visibleLayers[lk];
     const loading = state.loadingLayers[lk];
@@ -1183,6 +1245,7 @@ function setBasemap(id) {
   state.basemap = id;
   renderControls();
   const bm = BASEMAPS.find((b) => b.id === id);
+  map.setMaxZoom(id === "osm_fr" ? 24 : 22);
   map.setStyle(makeStyle(bm));
   scheduleHashUpdate();
 }
@@ -1302,7 +1365,7 @@ function fitCommuneBoundary(duration = 0) {
 const map = new maplibregl.Map({
   container: "map",
   style: makeStyle(BASEMAPS.find((b) => b.id === state.basemap)),
-  center: LONS_CENTER, zoom: 12, pitch: 0, bearing: 0, maxPitch: 75,
+  center: LONS_CENTER, zoom: 12, pitch: 0, bearing: 0, maxZoom: state.basemap === "osm_fr" ? 24 : 22, maxPitch: 75,
   attributionControl: { compact: true },
 });
 window.__map = map;
@@ -1322,7 +1385,7 @@ function keepOverlaysAboveBasemap() {
         meta.geometry === "line"
           ? [`${sourceId}-halo`, `${sourceId}-fill`]
           : meta.geometry === "polygon"
-            ? [`${sourceId}-fill`, `${sourceId}-outline`, `${sourceId}-symbol`, `${sourceId}-label`]
+            ? [`${sourceId}-fill`, `${sourceId}-outline`, `${sourceId}-line`, `${sourceId}-symbol`, `${sourceId}-label`]
             : [`${sourceId}-halo`, `${sourceId}-fill`, `${sourceId}-symbol`];
       layerIds.forEach((id) => {
         if (map.getLayer(id)) overlayIds.push(id);
@@ -1368,7 +1431,7 @@ function applyMapSources() {
   Object.entries(LAYERS).forEach(([tk, theme]) => {
     Object.entries(theme.items).forEach(([lk, meta]) => {
       const srcId = `osm-${lk}`;
-      const ids = [`${srcId}-halo`, `${srcId}-fill`, `${srcId}-outline`, `${srcId}-symbol`, `${srcId}-label`];
+      const ids = [`${srcId}-halo`, `${srcId}-fill`, `${srcId}-outline`, `${srcId}-line`, `${srcId}-symbol`, `${srcId}-label`];
       const isActive = tk === state.activeTheme && state.visibleLayers[lk] && state.layerData[lk];
       if (!isActive) {
         ids.forEach((id) => { if (map.getLayer(id)) map.removeLayer(id); });
@@ -1386,14 +1449,52 @@ function applyMapSources() {
         // Filled surface + colored outline + centered icon
         if (!map.getLayer(`${srcId}-fill`)) map.addLayer({
           id: `${srcId}-fill`, type: "fill", source: srcId,
-          filter: ["==", "$type", "Polygon"],
+          filter: meta.parkingStyle ? ["==", ["geometry-type"], "Polygon"] : ["==", "$type", "Polygon"],
           paint: { "fill-color": meta.color, "fill-opacity": 0.28 },
         });
         if (!map.getLayer(`${srcId}-outline`)) map.addLayer({
           id: `${srcId}-outline`, type: "line", source: srcId,
-          filter: ["==", "$type", "Polygon"],
+          filter: meta.parkingStyle ? ["==", ["geometry-type"], "Polygon"] : ["==", "$type", "Polygon"],
           layout: { "line-cap": "round", "line-join": "round" },
           paint: { "line-color": meta.color, "line-width": 2.2, "line-opacity": 0.95 },
+        });
+        if (meta.parkingStyle) {
+          map.setPaintProperty(`${srcId}-fill`, "fill-color", PARKING_COLOR_EXPRESSION);
+          map.setPaintProperty(`${srcId}-fill`, "fill-opacity", PARKING_FILL_OPACITY_EXPRESSION);
+          map.setPaintProperty(`${srcId}-outline`, "line-color", PARKING_COLOR_EXPRESSION);
+          map.setPaintProperty(`${srcId}-outline`, "line-width", 1.5);
+          if (!map.getLayer(`${srcId}-line`)) map.addLayer({
+            id: `${srcId}-line`, type: "line", source: srcId,
+            filter: ["==", ["geometry-type"], "LineString"],
+            layout: { "line-cap": "round", "line-join": "round" },
+            paint: {
+              "line-color": PARKING_COLOR_EXPRESSION,
+              "line-width": ["interpolate", ["linear"], ["zoom"], 11, 1.5, 16, 4],
+              "line-opacity": 0.9,
+              "line-dasharray": [2, 1],
+            },
+          });
+        }
+        if (meta.capacityLabelField && !map.getLayer(`${srcId}-label`)) map.addLayer({
+          id: `${srcId}-label`, type: "symbol", source: srcId, minzoom: 17,
+          filter: [
+            "all",
+            ["has", meta.capacityLabelField],
+            [">", ["to-number", ["get", meta.capacityLabelField], 0], 0],
+          ],
+          layout: {
+            "symbol-placement": "point",
+            "text-field": ["concat", ["to-string", ["get", meta.capacityLabelField]], " places"],
+            "text-font": ["Open Sans Semibold", "Arial Unicode MS Regular"],
+            "text-size": ["interpolate", ["linear"], ["zoom"], 17, 11, 19, 14],
+            "text-allow-overlap": false,
+            "text-ignore-placement": false,
+          },
+          paint: {
+            "text-color": "#0F172A",
+            "text-halo-color": "#FFFFFF",
+            "text-halo-width": 1.5,
+          },
         });
         if (meta.showIcon === false && map.getLayer(`${srcId}-symbol`)) {
           map.removeLayer(`${srcId}-symbol`);
@@ -1504,7 +1605,7 @@ map.on("styledata", () => {
 
 map.on("click", (e) => {
   const ids = [];
-  Object.keys(LAYERS).forEach((t) => Object.keys(LAYERS[t].items).forEach((k) => ids.push(`osm-${k}-fill`, `osm-${k}-symbol`)));
+  Object.keys(LAYERS).forEach((t) => Object.keys(LAYERS[t].items).forEach((k) => ids.push(`osm-${k}-fill`, `osm-${k}-line`, `osm-${k}-symbol`)));
   const existing = ids.filter((l) => map.getLayer(l));
   if (existing.length === 0) { state.selectedFeature = null; renderDetail(); return; }
   const bbox = [[e.point.x - 10, e.point.y - 10], [e.point.x + 10, e.point.y + 10]];
@@ -1531,7 +1632,7 @@ map.on("click", (e) => {
 
 ["mouseenter", "mouseleave"].forEach((ev) => {
   Object.keys(LAYERS).forEach((t) => Object.keys(LAYERS[t].items).forEach((k) => {
-    ["fill", "symbol"].forEach((s) => {
+    ["fill", "line", "symbol"].forEach((s) => {
       const id = `osm-${k}-${s}`;
       map.on(ev, id, () => (map.getCanvas().style.cursor = ev === "mouseenter" ? "pointer" : ""));
     });

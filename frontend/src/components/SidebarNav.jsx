@@ -153,6 +153,25 @@ export default function SidebarNav({
           })}
         </div>
 
+        {activeTheme === "stationnement" && (
+          <div className="mt-3 grid grid-cols-2 gap-x-2 gap-y-1 rounded-lg bg-slate-50 p-2 text-[10px] font-medium text-slate-600">
+            {[
+              ["#2563EB", "Rue"],
+              ["#059669", "Parking public"],
+              ["#EA580C", "Clientèle"],
+              ["#7C3AED", "Résidentiel / privé"],
+            ].map(([color, label]) => (
+              <div key={label} className="flex min-w-0 items-center gap-1.5">
+                <span
+                  className="h-2.5 w-2.5 shrink-0 rounded-sm"
+                  style={{ backgroundColor: color }}
+                />
+                <span className="truncate">{label}</span>
+              </div>
+            ))}
+          </div>
+        )}
+
         <div className="mt-6 rounded-xl bg-gradient-to-br from-[#003D7A] to-[#00559E] text-white p-4 relative overflow-hidden">
           <Sparkles className="w-16 h-16 absolute -right-3 -bottom-3 text-white/10" />
           <div className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/70">
