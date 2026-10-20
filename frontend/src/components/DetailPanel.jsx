@@ -1,6 +1,7 @@
-import React from "react";
-import { X, ExternalLink, MapPin, Tag, Info, Clock, Phone, Globe, Building2 } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { X, ExternalLink, MapPin, Tag, Info, Clock, Phone, Globe } from "lucide-react";
 import { LAYERS } from "@/lib/osm";
+import { findNearestPanoramaxImage } from "@/lib/panoramax";
 
 // Merge English OSM + French GeoDataMine schema labels
 const KEY_LABELS = {
@@ -30,6 +31,24 @@ const KEY_LABELS = {
   cycleway: "Type piste",
   // GeoDataMine French schema
   nom: "Nom",
+  adresse: "Adresse",
+  code_postal: "Code postal",
+  commune: "Commune",
+  acces: "Accès",
+  acces_libre: "Accès libre",
+  acces_premiers_secours: "Accès premiers secours",
+  acces_accessible: "Accès accessible",
+  etage: "Étage",
+  complement_acces: "Complément d'accès",
+  disponibilite_horaires: "Disponibilité",
+  etat_fonctionnement: "Fonctionnement",
+  statut: "Statut",
+  date_installation: "Date d'installation",
+  date_derniere_maintenance: "Dernière maintenance",
+  date_mise_a_jour: "Mise à jour des données",
+  exploitant: "Exploitant",
+  source_donnees: "Source des données",
+  licence: "Licence",
   capacite: "Capacité",
   capacite_cargo: "Capacité cargo",
   type_accroche: "Type d'accroche",
@@ -53,6 +72,15 @@ const KEY_LABELS = {
   adresse: "Adresse",
   enseigne: "Enseigne",
   type: "Type",
+  identifier: "Identifiant DiaLog",
+  organization: "Organisme",
+  category: "Nature de l'arrêté",
+  subject: "Motif",
+  measure_type: "Restriction",
+  start_date: "Début de validité",
+  end_date: "Fin de validité",
+  source: "Source",
+  document_url: "Arrêté officiel",
 };
 
 function humanize(v) {
@@ -65,6 +93,12 @@ function humanize(v) {
 
 export default function DetailPanel({ feature, onClose }) {
   if (!feature) return null;
+  return <DetailPanelContent feature={feature} onClose={onClose} />;
+}
+
+function DetailPanelContent({ feature, onClose }) {
+  const [panoramaxPhoto, setPanoramaxPhoto] = useState(null);
+  const [panoramaxStatus, setPanoramaxStatus] = useState("loading");
   const props = feature.properties || {};
   const themeKey = props._theme;
   const layerKey = props._layer;
@@ -72,6 +106,7 @@ export default function DetailPanel({ feature, onClose }) {
   const layerMeta = themeMeta?.items?.[layerKey];
 
   const title =
+    props.title ||
     props.name ||
     props.nom ||
     props.brand ||
@@ -82,6 +117,7 @@ export default function DetailPanel({ feature, onClose }) {
     "Objet cartographique";
 
   const category =
+    props.measure_type ||
     props.categorie ||
     props.shop ||
     props.amenity ||
@@ -129,7 +165,24 @@ export default function DetailPanel({ feature, onClose }) {
     });
 
   const osmType = props.osm_type || props.id_osm?.split("/")?.[0] || "node";
-  const osmId = props.osm_id || props.id_osm?.split("/")?.[1] || props.id;
+  const osmId = props.osm_id || props.id_osm?.split("/")?.[1];
+
+  useEffect(() => {
+    const controller = new AbortController();
+    setPanoramaxPhoto(null);
+    setPanoramaxStatus("loading");
+    findNearestPanoramaxImage(lon, lat, controller.signal)
+      .then((photo) => {
+        setPanoramaxPhoto(photo);
+        setPanoramaxStatus(photo ? "ready" : "empty");
+      })
+      .catch((error) => {
+        if (error.name === "AbortError") return;
+        console.error("Panoramax image loading error", error);
+        setPanoramaxStatus("error");
+      });
+    return () => controller.abort();
+  }, [lon, lat]);
 
   return (
     <div
@@ -137,7 +190,7 @@ export default function DetailPanel({ feature, onClose }) {
       className="slide-in-panel absolute top-4 right-4 bottom-4 w-[92vw] sm:w-[420px] bg-white rounded-2xl shadow-[0_30px_60px_rgba(8,112,184,0.18)] border border-slate-200 overflow-hidden flex flex-col z-40"
     >
       <div
-        className="p-5 relative overflow-hidden"
+        className="p-5 pr-16 relative overflow-hidden"
         style={{
           background: `linear-gradient(135deg, ${layerMeta?.color || "#003D7A"} 0%, #003D7A 100%)`,
         }}
@@ -156,6 +209,22 @@ export default function DetailPanel({ feature, onClose }) {
         >
           <X className="w-4 h-4 text-white" strokeWidth={2.5} />
         </button>
+        {osmId && (
+          <a
+            href={`https://www.openstreetmap.org/${osmType}/${osmId}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Voir cet objet sur OpenStreetMap"
+            title="OpenStreetMap"
+            className="absolute top-14 right-3 z-10 rounded-md bg-white/90 p-1 shadow-sm hover:bg-white transition-colors"
+          >
+            <img
+              src={`${process.env.PUBLIC_URL}/osm-logo.svg`}
+              alt="OpenStreetMap"
+              className="h-7 w-7"
+            />
+          </a>
+        )}
         <div
           data-testid="poi-category-badge"
           className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-[0.15em] mb-2"
@@ -190,7 +259,7 @@ export default function DetailPanel({ feature, onClose }) {
         )}
         {entries.map(([k, value]) => {
           const label = KEY_LABELS[k] || k.replace(/_/g, " ");
-          if (k === "website" || k === "url" || k === "site_web") {
+          if (k === "website" || k === "url" || k === "site_web" || k === "document_url") {
             const href = /^https?:\/\//.test(value) ? value : `https://${value}`;
             return (
               <a
@@ -251,16 +320,32 @@ export default function DetailPanel({ feature, onClose }) {
         })}
 
         <div className="pt-3 space-y-2">
-          {osmId && (
+          <div className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+            Photo Panoramax la plus proche
+          </div>
+          {panoramaxPhoto ? (
             <a
-              href={`https://www.openstreetmap.org/${osmType}/${osmId}`}
+              href={panoramaxPhoto.viewerUrl}
               target="_blank"
-              rel="noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#003D7A] hover:bg-[#002855] text-white text-sm font-bold transition-colors"
+              rel="noopener noreferrer"
+              aria-label="Ouvrir la photo Panoramax dans un nouvel onglet"
+              className="inline-block overflow-hidden rounded-lg border border-slate-200 hover:border-slate-400 transition-colors"
             >
-              <Building2 className="w-4 h-4" /> Voir sur OpenStreetMap
-              <ExternalLink className="w-4 h-4" />
+              <img
+                src={panoramaxPhoto.thumbnailUrl}
+                alt="Photo Panoramax la plus proche"
+                className="block h-24 w-36 object-cover"
+                loading="lazy"
+              />
             </a>
+          ) : (
+            <div className="text-sm text-slate-500" aria-live="polite">
+              {panoramaxStatus === "loading"
+                ? "Recherche de photos à proximité…"
+                : panoramaxStatus === "empty"
+                  ? "Aucune photo Panoramax à proximité."
+                  : "Les photos Panoramax sont temporairement indisponibles."}
+            </div>
           )}
         </div>
       </div>

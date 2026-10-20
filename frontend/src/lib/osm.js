@@ -1,109 +1,19 @@
-import axios from "axios";
-
-// GeoDataMine boundary ID for Lons-le-Saunier (admin_8, INSEE 39300)
-export const LONS_BOUNDARY_ID = "152508";
-export const LONS_INSEE = "39300";
-export const LONS_CENTER = { lat: 46.6739, lon: 5.5539 };
-
-const GEODATAMINE_BASE = "https://geodatamine.fr";
-
-// Public Overpass endpoints (client-side calls have better network reach than backend)
-const OVERPASS_ENDPOINTS = [
-  "https://overpass-api.de/api/interpreter",
-  "https://overpass.kumi.systems/api/interpreter",
-  "https://overpass.private.coffee/api/interpreter",
-];
-
-/** Fetch a theme from GeoDataMine as GeoJSON */
-export async function fetchGeoDataMine(themeId, radiusKm = null) {
-  const params = new URLSearchParams({ format: "geojson" });
-  if (radiusKm) params.set("radius", radiusKm.toString());
-  const url = `${GEODATAMINE_BASE}/data/${themeId}/${LONS_BOUNDARY_ID}?${params.toString()}`;
-  const { data } = await axios.get(url, { timeout: 45000 });
-  return data;
-}
-
-/** Fetch raw data via Overpass QL, trying multiple mirrors */
-export async function fetchOverpass(query) {
-  let lastErr;
-  for (const endpoint of OVERPASS_ENDPOINTS) {
-    try {
-      const { data } = await axios.post(
-        endpoint,
-        new URLSearchParams({ data: query }),
-        {
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          timeout: 45000,
-        }
-      );
-      if (data && Array.isArray(data.elements)) return data;
-    } catch (e) {
-      lastErr = e;
-    }
+export async function fetchLayerGeoJSON(filename) {
+  const response = await fetch(
+    `${process.env.PUBLIC_URL || ""}/data/${filename}`
+  );
+  if (!response.ok) {
+    throw new Error(`Unable to load ${filename}: HTTP ${response.status}`);
   }
-  throw lastErr || new Error("Overpass unavailable");
+
+  const geojson = await response.json();
+  if (geojson.type !== "FeatureCollection" || !Array.isArray(geojson.features)) {
+    throw new Error(`Invalid GeoJSON FeatureCollection: ${filename}`);
+  }
+
+  return geojson;
 }
 
-/** Convert Overpass elements → GeoJSON FeatureCollection */
-export function overpassToGeoJSON(elements, tagPrefix = "") {
-  const features = [];
-  const nodes = new Map();
-  elements.forEach((e) => {
-    if (e.type === "node") nodes.set(e.id, [e.lon, e.lat]);
-  });
-
-  elements.forEach((e) => {
-    if (e.type === "node") {
-      features.push({
-        type: "Feature",
-        geometry: { type: "Point", coordinates: [e.lon, e.lat] },
-        properties: {
-          id: `node/${e.id}`,
-          osm_type: "node",
-          osm_id: e.id,
-          ...(e.tags || {}),
-        },
-      });
-    } else if (e.type === "way" && e.geometry) {
-      features.push({
-        type: "Feature",
-        geometry: {
-          type: "LineString",
-          coordinates: e.geometry.map((g) => [g.lon, g.lat]),
-        },
-        properties: {
-          id: `way/${e.id}`,
-          osm_type: "way",
-          osm_id: e.id,
-          ...(e.tags || {}),
-        },
-      });
-    } else if (e.type === "relation" && e.members) {
-      e.members.forEach((m, idx) => {
-        if (m.geometry && m.geometry.length > 1) {
-          features.push({
-            type: "Feature",
-            geometry: {
-              type: "LineString",
-              coordinates: m.geometry.map((g) => [g.lon, g.lat]),
-            },
-            properties: {
-              id: `rel/${e.id}/${idx}`,
-              osm_type: "relation",
-              osm_id: e.id,
-              ...(e.tags || {}),
-            },
-          });
-        }
-      });
-    }
-  });
-
-  return { type: "FeatureCollection", features };
-}
-
-// -------- Layer registry --------
-// Each layer has: fetcher() → FeatureCollection, plus display metadata
 export const LAYERS = {
   mobility: {
     label: "Mobilité",
@@ -115,36 +25,28 @@ export const LAYERS = {
         icon: "Bike",
         color: "#059669",
         geometry: "point",
-        fetcher: async () => fetchGeoDataMine("bicycle_parking"),
+        file: "bike_parking.geojson",
       },
       cycle_lanes: {
         label: "Pistes cyclables",
         icon: "Navigation",
         color: "#10B981",
         geometry: "line",
-        fetcher: async () => fetchGeoDataMine("cycleway"),
+        file: "cycle_lanes.geojson",
       },
       bus_shelter: {
         label: "Arrêts & Abris bus",
         icon: "Bus",
         color: "#2563EB",
         geometry: "point",
-        fetcher: async () => {
-          const q = `[out:json][timeout:25];(node["highway"="bus_stop"](around:4000,${LONS_CENTER.lat},${LONS_CENTER.lon});node["amenity"="bus_station"](around:4000,${LONS_CENTER.lat},${LONS_CENTER.lon}););out body;`;
-          const raw = await fetchOverpass(q);
-          return overpassToGeoJSON(raw.elements);
-        },
+        file: "bus_stops.geojson",
       },
       bus_lines: {
         label: "Lignes de bus",
         icon: "Route",
         color: "#3B82F6",
         geometry: "line",
-        fetcher: async () => {
-          const q = `[out:json][timeout:40];relation["route"="bus"](around:4000,${LONS_CENTER.lat},${LONS_CENTER.lon});out body geom;`;
-          const raw = await fetchOverpass(q);
-          return overpassToGeoJSON(raw.elements);
-        },
+        file: "bus_lines.geojson",
       },
     },
   },
@@ -158,33 +60,198 @@ export const LAYERS = {
         icon: "ShoppingBag",
         color: "#8B5CF6",
         geometry: "point",
-        fetcher: async () => fetchGeoDataMine("shop_craft_office"),
+        file: "shops.geojson",
       },
       food: {
         label: "Restaurants, cafés & bars",
         icon: "Utensils",
         color: "#EC4899",
         geometry: "point",
-        fetcher: async () => fetchGeoDataMine("restaurant"),
+        file: "restaurants.geojson",
+      },
+    },
+  },
+  nature: {
+    label: "Nature",
+    subtitle: "Espaces verts",
+    color: "#16A34A",
+    items: {
+      parks: {
+        label: "Parcs & jardins",
+        icon: "Tree",
+        color: "#16A34A",
+        geometry: "polygon",
+        labelField: "name",
+        file: "parks.geojson",
+      },
+    },
+  },
+  stationnement: {
+    label: "Parking",
+    subtitle: "Se garer",
+    color: "#16A34A",
+    items: {
+      parking_free: {
+        label: "Stationnement gratuit",
+        icon: "Parking",
+        color: "#16A34A",
+        geometry: "polygon",
+        showIcon: false,
+        parkingStyle: true,
+        capacityLabelField: "capacity",
+        file: "free_parking.geojson",
+      },
+      parking_pay: {
+        label: "Stationnement payant",
+        icon: "Parking",
+        color: "#DC2626",
+        geometry: "polygon",
+        showIcon: false,
+        capacityLabelField: "capacity",
+        file: "paid_parking.geojson",
+      },
+    },
+  },
+  travaux: {
+    label: "Travaux",
+    subtitle: "Chantiers & perturbations",
+    color: "#B45309",
+    items: {
+      roadworks: {
+        label: "Travaux",
+        icon: "Construction",
+        color: "#DC2626",
+        geometry: "mixed",
+        file: "dialog_roadworks.geojson",
+      },
+      disruptions: {
+        label: "Perturbations temporaires",
+        icon: "TriangleAlert",
+        color: "#F59E0B",
+        geometry: "mixed",
+        file: "dialog_temporary_disruptions.geojson",
+      },
+    },
+  },
+  securite: {
+    label: "Sécurité",
+    subtitle: "Défibrillateurs",
+    color: "#DC2626",
+    items: {
+      dae: {
+        label: "Défibrillateurs (DAE)",
+        icon: "HeartPulse",
+        color: "#DC2626",
+        geometry: "point",
+        file: "dae.geojson",
       },
     },
   },
 };
 
-/** Enrich GeoJSON features with theme/layer metadata (for click handling / styling) */
+const FOOD_SHOP_TYPES = new Set([
+  "alcohol",
+  "bakery",
+  "beverages",
+  "butcher",
+  "cheese",
+  "confectionery",
+  "convenience",
+  "deli",
+  "greengrocer",
+  "seafood",
+  "supermarket",
+  "wine",
+]);
+
+const FASHION_SHOP_TYPES = new Set([
+  "bag",
+  "clothes",
+  "fabric",
+  "jewelry",
+  "shoes",
+  "watches",
+]);
+
+const HOME_SHOP_TYPES = new Set([
+  "bathroom_furnishing",
+  "doityourself",
+  "furniture",
+  "garden_centre",
+  "hardware",
+  "houseware",
+  "interior_decoration",
+  "kitchen",
+]);
+
+const AUTO_SHOP_TYPES = new Set([
+  "car",
+  "car_repair",
+  "car_parts",
+  "motorcycle",
+  "tyres",
+]);
+const HEALTH_SHOP_TYPES = new Set([
+  "chemist",
+  "hearing_aids",
+  "medical_supply",
+  "optician",
+  "pharmacy",
+]);
+const SERVICE_SHOP_TYPES = new Set([
+  "bank",
+  "company",
+  "driving_school",
+  "employment_agency",
+  "insurance",
+  "photographer",
+  "post_office",
+  "travel_agency",
+  "travel_agent",
+]);
+
+function commerceCategory(layerKey, properties = {}) {
+  if (layerKey === "food") {
+    if (properties.type === "cafe") return "cafe";
+    if (properties.type === "bar" || properties.type === "pub") return "bar";
+    if (properties.type === "fast_food") return "fast_food";
+    return "restaurant";
+  }
+
+  const shopType = properties.type;
+  if (FOOD_SHOP_TYPES.has(shopType)) return "food_shop";
+  if (FASHION_SHOP_TYPES.has(shopType)) return "fashion";
+  if (HOME_SHOP_TYPES.has(shopType)) return "home";
+  if (AUTO_SHOP_TYPES.has(shopType)) return "auto";
+  if (HEALTH_SHOP_TYPES.has(shopType)) return "health";
+  if (SERVICE_SHOP_TYPES.has(shopType)) return "services";
+  if (shopType === "estate_agent" || shopType === "property_management") return "home";
+  if (shopType === "beauty" || shopType === "hairdresser") return "beauty";
+  return "retail";
+}
+
+/** Add display metadata and a stable ID for map interaction. */
 export function stampFeatures(fc, themeKey, layerKey, meta) {
   return {
     type: "FeatureCollection",
-    features: (fc.features || []).map((f) => ({
-      ...f,
+    features: fc.features.map((feature, index) => ({
+      ...feature,
       properties: {
-        ...f.properties,
+        ...feature.properties,
         _theme: themeKey,
         _layer: layerKey,
         _color: meta.color,
         _icon: meta.icon,
         _label: meta.label,
-        id: f.properties?.id || f.properties?.id_osm || `${themeKey}-${layerKey}-${Math.random()}`,
+        _commerceCategory:
+          themeKey === "commerces"
+            ? commerceCategory(layerKey, feature.properties)
+            : undefined,
+        id:
+          feature.properties?.id ||
+          feature.properties?.id_osm ||
+          feature.properties?.osm_id ||
+          `${themeKey}-${layerKey}-${index}`,
       },
     })),
   };

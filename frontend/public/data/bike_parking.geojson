@@ -1,0 +1,5384 @@
+{
+  "type": "FeatureCollection",
+  "name": "sql_statement",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/10004781694",
+        "id_osm": "node/10004781694",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.562413299999999,
+          46.67471820022565
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022-08",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-11-14",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5624133,
+          46.67471820022564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/10004781695",
+        "id_osm": "node/10004781695",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5562546,
+          46.67338510022591
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022-08",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-06-06",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5562546,
+          46.67338510022591
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/10004781696",
+        "id_osm": "node/10004781696",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5553927,
+          46.675506500225495
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022-08",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2022-09-06",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5553927,
+          46.675506500225495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/10004781697",
+        "id_osm": "node/10004781697",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5534036,
+          46.673837200225826
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022-08",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2022-09-06",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5534036,
+          46.673837200225826
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/10005932280",
+        "id_osm": "node/10005932280",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5716472,
+          46.67942950022475
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2022-09-07",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5716472,
+          46.67942950022474
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/10005932281",
+        "id_osm": "node/10005932281",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5716596,
+          46.67943410022475
+        ],
+        "capacite": "5",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2022-09-07",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5716596,
+          46.679434100224746
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/10089777418",
+        "id_osm": "node/10089777418",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5595585,
+          46.674082700225775
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022-09",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2022-10-10",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5595585,
+          46.67408270022577
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/10212214217",
+        "id_osm": "node/10212214217",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.548717999999999,
+          46.668891500226756
+        ],
+        "capacite": "8",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2019",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.548718,
+          46.668891500226756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/10212214218",
+        "id_osm": "node/10212214218",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5478985,
+          46.669106200226715
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2021",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5478985,
+          46.669106200226715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/10212214317",
+        "id_osm": "node/10212214317",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.547875299999999,
+          46.66911030022672
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2021",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5478753,
+          46.66911030022672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/10212214417",
+        "id_osm": "node/10212214417",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.547871899999999,
+          46.669093200226705
+        ],
+        "capacite": null,
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2021",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5478719,
+          46.669093200226705
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/10561619988",
+        "id_osm": "node/10561619988",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5663538,
+          46.667640300227006
+        ],
+        "capacite": "5",
+        "capacite_cargo": null,
+        "type_accroche": null,
+        "mobilier": "AUTRE",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022-08",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2024-02-01",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5663538,
+          46.667640300227
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/10561619989",
+        "id_osm": "node/10561619989",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5698076,
+          46.68132150022439
+        ],
+        "capacite": "5",
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2023-01-17",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5698076,
+          46.68132150022439
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/10561619990",
+        "id_osm": "node/10561619990",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.557595200000001,
+          46.67798250022501
+        ],
+        "capacite": "3",
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2023-09-06",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5575952,
+          46.67798250022501
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/10561619991",
+        "id_osm": "node/10561619991",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.554250399999999,
+          46.67370370022584
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2023-01",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-01-17",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5542504,
+          46.67370370022584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/10824461248",
+        "id_osm": "node/10824461248",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5722295,
+          46.6775808002251
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2016",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2024-06-20",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5722295,
+          46.6775808002251
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/11053221178",
+        "id_osm": "node/11053221178",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.565192800000001,
+          46.667600100227006
+        ],
+        "capacite": "10",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2023-07",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "ECLA",
+        "date_maj": "2024-02-01",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5651928,
+          46.667600100227006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/11053221179",
+        "id_osm": "node/11053221179",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.579265,
+          46.682378600224204
+        ],
+        "capacite": "10",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2023-07",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-10-10",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.579265,
+          46.6823786002242
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/11053221180",
+        "id_osm": "node/11053221180",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.564108499999999,
+          46.68405860022387
+        ],
+        "capacite": "8",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2025-10",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "ECLA",
+        "date_maj": "2026-01-12",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5641085,
+          46.684058600223864
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/11053221181",
+        "id_osm": "node/11053221181",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5629565,
+          46.67061260022644
+        ],
+        "capacite": "10",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2023-07",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "ECLA",
+        "date_maj": "2024-06-20",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5629565,
+          46.670612600226434
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/11053221185",
+        "id_osm": "node/11053221185",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5740843,
+          46.68111810022443
+        ],
+        "capacite": "10",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2023",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-01-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5740843,
+          46.681118100224424
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/11054330499",
+        "id_osm": "node/11054330499",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.569111199999999,
+          46.68474230022373
+        ],
+        "capacite": "10",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2023-07",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-07-19",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5691112,
+          46.68474230022373
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/11054337895",
+        "id_osm": "node/11054337895",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.556996699999999,
+          46.676922100225234
+        ],
+        "capacite": "10",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2023-07",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-07-19",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5569967,
+          46.67692210022523
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/11054346802",
+        "id_osm": "node/11054346802",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5428149,
+          46.675629200225465
+        ],
+        "capacite": "8",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2023-07",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2024-11-12",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5428149,
+          46.675629200225465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/11054544538",
+        "id_osm": "node/11054544538",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5601707,
+          46.68208650022425
+        ],
+        "capacite": "10",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2023-07",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-07-19",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5601707,
+          46.682086500224244
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/11067033149",
+        "id_osm": "node/11067033149",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5550902,
+          46.678828500224874
+        ],
+        "capacite": "5",
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2023-07-25",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5550902,
+          46.678828500224874
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/11067033150",
+        "id_osm": "node/11067033150",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5593861,
+          46.683061300224054
+        ],
+        "capacite": "8",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2023-07-25",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5593861,
+          46.683061300224054
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/11067033151",
+        "id_osm": "node/11067033151",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.559325099999999,
+          46.683358800224006
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": null,
+        "mobilier": "AUTRE",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2023-07-25",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5593251,
+          46.683358800224006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/11190693956",
+        "id_osm": "node/11190693956",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5656425,
+          46.68037790022458
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2023",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2024-11-12",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5656425,
+          46.68037790022458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/11250999795",
+        "id_osm": "node/11250999795",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.570590999999999,
+          46.67202710022616
+        ],
+        "capacite": "3",
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2023-10-09",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.570591,
+          46.67202710022616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/11366178656",
+        "id_osm": "node/11366178656",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5574061,
+          46.67061980022642
+        ],
+        "capacite": null,
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2023-11-21",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5574061,
+          46.67061980022642
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/11491698596",
+        "id_osm": "node/11491698596",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.535352299999999,
+          46.66907340022673
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2012",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2024-06-20",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5353523,
+          46.66907340022672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/11676748792",
+        "id_osm": "node/11676748792",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5479529,
+          46.66935970022667
+        ],
+        "capacite": null,
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2024-02-29",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5479529,
+          46.66935970022667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/11792831219",
+        "id_osm": "node/11792831219",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5451853,
+          46.668353300226876
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": null,
+        "mobilier": "AUTRE",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2024-04-09",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5451853,
+          46.66835330022687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/11972538013",
+        "id_osm": "node/11972538013",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5655763,
+          46.68457140022378
+        ],
+        "capacite": "10",
+        "capacite_cargo": null,
+        "type_accroche": null,
+        "mobilier": "AUTRE",
+        "acces": null,
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2024-05",
+        "source": "OpenStreetMap",
+        "proprietaire": "ECLA",
+        "gestionnaire": null,
+        "date_maj": "2026-01-07",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5655763,
+          46.684571400223774
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/12012645269",
+        "id_osm": "node/12012645269",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.572789,
+          46.67776730022506
+        ],
+        "capacite": "10",
+        "capacite_cargo": null,
+        "type_accroche": null,
+        "mobilier": "AUTRE",
+        "acces": null,
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2024-05",
+        "source": "OpenStreetMap",
+        "proprietaire": "Commune de Lons-le-Saunier",
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-04-09",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.572789,
+          46.67776730022505
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/12093509130",
+        "id_osm": "node/12093509130",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5701887,
+          46.67733190022517
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2024",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2024-08-05",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5701887,
+          46.67733190022516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/12101248840",
+        "id_osm": "node/12101248840",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5652225,
+          46.666964100227126
+        ],
+        "capacite": "14",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": null,
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2024",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "ECLA",
+        "date_maj": "2026-01-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5652225,
+          46.66696410022712
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/12182043894",
+        "id_osm": "node/12182043894",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.571527399999999,
+          46.677953600225045
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2025-10-21",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5715274,
+          46.677953600225045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/12278467237",
+        "id_osm": "node/12278467237",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.568708699999999,
+          46.67153620022627
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2025-12-15",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5687087,
+          46.671536200226264
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/12336843016",
+        "id_osm": "node/12336843016",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.568431300000001,
+          46.67284430022601
+        ],
+        "capacite": null,
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2025-11-24",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5684313,
+          46.67284430022601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/12350901643",
+        "id_osm": "node/12350901643",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5513612,
+          46.66827490022688
+        ],
+        "capacite": "8",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-01-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5513612,
+          46.668274900226876
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/12536440309",
+        "id_osm": "node/12536440309",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5710882,
+          46.67371990022584
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2025-01-27",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5710882,
+          46.673719900225834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/12553585665",
+        "id_osm": "node/12553585665",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.544665099999999,
+          46.67469570022566
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "ECLA",
+        "date_maj": "2025-02-03",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5446651,
+          46.674695700225655
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/12606989122",
+        "id_osm": "node/12606989122",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5568681,
+          46.67167690022624
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2025-02-21",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5568681,
+          46.67167690022624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/12811265784",
+        "id_osm": "node/12811265784",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.542787599999999,
+          46.67126330022631
+        ],
+        "capacite": "18",
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2025-05-05",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5427876,
+          46.67126330022631
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/12909319694",
+        "id_osm": "node/12909319694",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5740847,
+          46.68139550022437
+        ],
+        "capacite": null,
+        "capacite_cargo": null,
+        "type_accroche": null,
+        "mobilier": "AUTRE",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2025-06-12",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5740847,
+          46.68139550022437
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/12953712196",
+        "id_osm": "node/12953712196",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.562987299999999,
+          46.67725770022516
+        ],
+        "capacite": null,
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Espérance Lédonienne",
+        "date_maj": "2025-06-26",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5629873,
+          46.67725770022516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/12994041314",
+        "id_osm": "node/12994041314",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5456434,
+          46.672005800226174
+        ],
+        "capacite": "8",
+        "capacite_cargo": null,
+        "type_accroche": null,
+        "mobilier": "AUTRE",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2025-07-11",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5456434,
+          46.672005800226174
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/13065432940",
+        "id_osm": "node/13065432940",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5591791,
+          46.67940880022474
+        ],
+        "capacite": "8",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": "true",
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-01-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5591791,
+          46.67940880022474
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/13144749723",
+        "id_osm": "node/13144749723",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5771918,
+          46.6791584002248
+        ],
+        "capacite": null,
+        "capacite_cargo": null,
+        "type_accroche": null,
+        "mobilier": "AUTRE",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "CONSIGNE COLLECTIVE FERMEE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Groupe Demain",
+        "date_maj": "2025-11-10",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5771918,
+          46.6791584002248
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/13264658076",
+        "id_osm": "node/13264658076",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5633478,
+          46.67000350022655
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-01-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5633478,
+          46.67000350022654
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/13388821902",
+        "id_osm": "node/13388821902",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.573835800000001,
+          46.6717944002262
+        ],
+        "capacite": null,
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "GO élan",
+        "date_maj": "2025-12-19",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5738358,
+          46.6717944002262
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/13446462128",
+        "id_osm": "node/13446462128",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.561395199999999,
+          46.68058500022453
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2026-01-12",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5613952,
+          46.68058500022454
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/13476374105",
+        "id_osm": "node/13476374105",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5531621,
+          46.668364600226845
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2024",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-01-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5531621,
+          46.668364600226845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/13476429709",
+        "id_osm": "node/13476429709",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5490981,
+          46.67153960022626
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2025",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-01-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5490981,
+          46.67153960022626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/13652600044",
+        "id_osm": "node/13652600044",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5607307,
+          46.671270900226325
+        ],
+        "capacite": "8",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": null,
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2026-03-16",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5607307,
+          46.671270900226325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/13695682342",
+        "id_osm": "node/13695682342",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5562391,
+          46.67464450022567
+        ],
+        "capacite": "10",
+        "capacite_cargo": null,
+        "type_accroche": null,
+        "mobilier": "AUTRE",
+        "acces": null,
+        "gratuit": "false",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2026-03",
+        "source": "OpenStreetMap",
+        "proprietaire": "ECLA",
+        "gestionnaire": "Espace Communautaire Lons Agglomération",
+        "date_maj": "2026-04-21",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5562391,
+          46.67464450022567
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/13819607986",
+        "id_osm": "node/13819607986",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5454306,
+          46.67329880022591
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Ville de Lons-le-Saunier",
+        "date_maj": "2026-05-11",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5454306,
+          46.67329880022591
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/13819607987",
+        "id_osm": "node/13819607987",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5454791,
+          46.673313300225914
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Ville de Lons-le-Saunier",
+        "date_maj": "2026-05-11",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5454791,
+          46.67331330022591
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/14107421244",
+        "id_osm": "node/14107421244",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.557609399999999,
+          46.672825600226005
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Ville de Lons-le-Saunier",
+        "date_maj": "2026-08-20",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5576094,
+          46.672825600226
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/14141702943",
+        "id_osm": "node/14141702943",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5636518,
+          46.67954960022473
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Ville de Lons-le-saunier",
+        "date_maj": "2026-09-02",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5636518,
+          46.679549600224725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/1417513371",
+        "id_osm": "node/1417513371",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5432713,
+          46.67520620022555
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2010",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5432713,
+          46.675206200225546
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/14291050260",
+        "id_osm": "node/14291050260",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5512601,
+          46.67664560022529
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2026-10-16",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5512601,
+          46.676645600225285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/14291050261",
+        "id_osm": "node/14291050261",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5513528,
+          46.67642610022533
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2026-10-16",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5513528,
+          46.67642610022532
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/14291050262",
+        "id_osm": "node/14291050262",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5514494999999995,
+          46.676599100225296
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2026-10-16",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5514495,
+          46.676599100225296
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/4872924122",
+        "id_osm": "node/4872924122",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.555306699999999,
+          46.67449560022569
+        ],
+        "capacite": "14",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2012",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-03-24",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5553067,
+          46.67449560022569
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/4878938458",
+        "id_osm": "node/4878938458",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5517639,
+          46.67411400022578
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2010",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2025-07-01",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5517639,
+          46.67411400022577
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/5083805859",
+        "id_osm": "node/5083805859",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5586691,
+          46.67181910022621
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-01-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5586691,
+          46.6718191002262
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/5085490522",
+        "id_osm": "node/5085490522",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5586823999999995,
+          46.67170460022623
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-01-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5586824,
+          46.67170460022622
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/5097901647",
+        "id_osm": "node/5097901647",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5588095,
+          46.67230280022612
+        ],
+        "capacite": "8",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2016",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5588095,
+          46.67230280022611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/5114994149",
+        "id_osm": "node/5114994149",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.555038399999999,
+          46.67352670022587
+        ],
+        "capacite": "8",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2017",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-06-06",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5550384,
+          46.673526700225864
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/5122123276",
+        "id_osm": "node/5122123276",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5590589,
+          46.67221700022612
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2016",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5590589,
+          46.67221700022612
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/5194199049",
+        "id_osm": "node/5194199049",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.560300099999999,
+          46.67161660022625
+        ],
+        "capacite": "10",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2012",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-03-16",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5603001,
+          46.67161660022625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/5269713110",
+        "id_osm": "node/5269713110",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5619232,
+          46.674069400225775
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2013",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5619232,
+          46.67406940022577
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/5271525217",
+        "id_osm": "node/5271525217",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5569946,
+          46.67332310022591
+        ],
+        "capacite": "16",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2017",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-05-11",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5569946,
+          46.67332310022591
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/5319774021",
+        "id_osm": "node/5319774021",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.546280699999999,
+          46.67360200022586
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2010",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5462807,
+          46.67360200022586
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/5319774022",
+        "id_osm": "node/5319774022",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5513468999999995,
+          46.67318290022595
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2013",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5513469,
+          46.673182900225946
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/5319774023",
+        "id_osm": "node/5319774023",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5543995,
+          46.67254270022608
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2010",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-03-19",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5543995,
+          46.672542700226074
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/5329267722",
+        "id_osm": "node/5329267722",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5682086,
+          46.67137530022629
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2023-09-02",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5682086,
+          46.67137530022628
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/5354198348",
+        "id_osm": "node/5354198348",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.549783199999999,
+          46.67388140022581
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2015",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-04-12",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5497832,
+          46.6738814002258
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/5374570595",
+        "id_osm": "node/5374570595",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.551596199999999,
+          46.67355020022588
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2021",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-04-13",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5515962,
+          46.67355020022588
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/5477505298",
+        "id_osm": "node/5477505298",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.557139499999999,
+          46.671623000226234
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2025-02-21",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5571395,
+          46.67162300022623
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/5488810484",
+        "id_osm": "node/5488810484",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5518075,
+          46.674184800225746
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2010",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5518075,
+          46.674184800225746
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/5772398141",
+        "id_osm": "node/5772398141",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5641912,
+          46.67042400022646
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2018",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5641912,
+          46.670424000226454
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/6218112468",
+        "id_osm": "node/6218112468",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.565005599999999,
+          46.66774010022697
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2011",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "ECLA",
+        "date_maj": "2026-01-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5650056,
+          46.66774010022697
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/6226786168",
+        "id_osm": "node/6226786168",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.554331699999999,
+          46.676308000225355
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2022-07-28",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5543317,
+          46.67630800022535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/6235794785",
+        "id_osm": "node/6235794785",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5583941,
+          46.67350780022589
+        ],
+        "capacite": "10",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2019-01",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-05-16",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5583941,
+          46.673507800225885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/6285555044",
+        "id_osm": "node/6285555044",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5455623,
+          46.6749732002256
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2009",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5455623,
+          46.6749732002256
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/6394004233",
+        "id_osm": "node/6394004233",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5580012,
+          46.67361470022587
+        ],
+        "capacite": "12",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2019-01",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-05-16",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5580012,
+          46.67361470022587
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/6490874442",
+        "id_osm": "node/6490874442",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5791075999999995,
+          46.68237910022419
+        ],
+        "capacite": "5",
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2023-05-11",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5791076,
+          46.68237910022418
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/6547110841",
+        "id_osm": "node/6547110841",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.541995,
+          46.672911400226
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2022-02-20",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.541995,
+          46.672911400226
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/6635116381",
+        "id_osm": "node/6635116381",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5743588,
+          46.68030590022459
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2010",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5743588,
+          46.68030590022458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/6639832131",
+        "id_osm": "node/6639832131",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5628595,
+          46.67455440022569
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2016",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5628595,
+          46.67455440022569
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/6690807732",
+        "id_osm": "node/6690807732",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5515103,
+          46.66864360022682
+        ],
+        "capacite": "15",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2025-02-21",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "SNCF",
+        "date_maj": "2025-02-21",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5515103,
+          46.668643600226815
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/6776299932",
+        "id_osm": "node/6776299932",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5536344,
+          46.67586910022542
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2010",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5536344,
+          46.67586910022543
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/6896490687",
+        "id_osm": "node/6896490687",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.553446299999999,
+          46.67471650022565
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022-07",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2022-08-17",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5534463,
+          46.67471650022564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/7066289994",
+        "id_osm": "node/7066289994",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.549362499999999,
+          46.67063840022644
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2019",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5493625,
+          46.67063840022643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/7412382131",
+        "id_osm": "node/7412382131",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.557475499999999,
+          46.694012800221984
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2020-04-16",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5574755,
+          46.69401280022198
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/7498301954",
+        "id_osm": "node/7498301954",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5656243,
+          46.6844052002238
+        ],
+        "capacite": "34",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2011",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "ECLA",
+        "date_maj": "2026-01-07",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5656243,
+          46.68440520022379
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/7501337834",
+        "id_osm": "node/7501337834",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.551715999999999,
+          46.68029330022459
+        ],
+        "capacite": "20",
+        "capacite_cargo": null,
+        "type_accroche": null,
+        "mobilier": "AUTRE",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2022-07-29",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.551716,
+          46.68029330022459
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/7501522005",
+        "id_osm": "node/7501522005",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5554128,
+          46.67885240022486
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2020-05-09",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5554128,
+          46.67885240022486
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/8236794181",
+        "id_osm": "node/8236794181",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.549390400000001,
+          46.67306070022595
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2020",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5493904,
+          46.673060700225946
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/8694769574",
+        "id_osm": "node/8694769574",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5548959,
+          46.677818600225066
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2010",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5548959,
+          46.677818600225066
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9355569619",
+        "id_osm": "node/9355569619",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.552984199999999,
+          46.67558830022549
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2021-12",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-05-17",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5529842,
+          46.67558830022549
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9355569821",
+        "id_osm": "node/9355569821",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5529713,
+          46.67564120022548
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2021-12",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-05-17",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5529713,
+          46.67564120022548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9374342510",
+        "id_osm": "node/9374342510",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5488701,
+          46.67433250022573
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2025-03-04",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5488701,
+          46.674332500225724
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9636240364",
+        "id_osm": "node/9636240364",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.548522799999999,
+          46.67214570022613
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2022-07-28",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5485228,
+          46.672145700226125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9681770217",
+        "id_osm": "node/9681770217",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5578718,
+          46.67149720022627
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022-04-20",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-01-08",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5578718,
+          46.67149720022626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9684720717",
+        "id_osm": "node/9684720717",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5583814,
+          46.67371940022584
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2021",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2025-12-09",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5583814,
+          46.673719400225835
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9685674097",
+        "id_osm": "node/9685674097",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5518732,
+          46.67274590022601
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-03-19",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5518732,
+          46.67274590022602
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9696759917",
+        "id_osm": "node/9696759917",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.554568,
+          46.671777600226214
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-04-08",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.554568,
+          46.67177760022621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9697473770",
+        "id_osm": "node/9697473770",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5791808,
+          46.68456740022377
+        ],
+        "capacite": "3",
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2012",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5791808,
+          46.68456740022377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9754768109",
+        "id_osm": "node/9754768109",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5594374,
+          46.682453600224186
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "La Vie Claire",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5594374,
+          46.68245360022418
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9766091214",
+        "id_osm": "node/9766091214",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5588611,
+          46.671739000226204
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022-05-23",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2022-07-28",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5588611,
+          46.6717390002262
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9769319427",
+        "id_osm": "node/9769319427",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.540511899999999,
+          46.67441910022571
+        ],
+        "capacite": null,
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2022-05-25",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5405119,
+          46.67441910022571
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9791898663",
+        "id_osm": "node/9791898663",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5427848,
+          46.67567210022546
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-05-11",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5427848,
+          46.675672100225455
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9791898664",
+        "id_osm": "node/9791898664",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5509864,
+          46.676897900225235
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022-06",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Centre hospitalier Jura Sud",
+        "date_maj": "2024-05-17",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5509864,
+          46.676897900225235
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9801642949",
+        "id_osm": "node/9801642949",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5538516,
+          46.67552960022549
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2019",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-04-14",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5538516,
+          46.67552960022548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9831385433",
+        "id_osm": "node/9831385433",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5538641,
+          46.67566690022547
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2026-10-11",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5538641,
+          46.67566690022547
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9838823117",
+        "id_osm": "node/9838823117",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.548238099999999,
+          46.674534400225674
+        ],
+        "capacite": "8",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2022-07-28",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5482381,
+          46.674534400225674
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9841634117",
+        "id_osm": "node/9841634117",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5498696999999995,
+          46.67364510022585
+        ],
+        "capacite": "3",
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2025-02-09",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5498697,
+          46.67364510022585
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9841636517",
+        "id_osm": "node/9841636517",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.549179299999999,
+          46.67467260022567
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2012",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5491793,
+          46.67467260022566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9841637717",
+        "id_osm": "node/9841637717",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5419922999999995,
+          46.67586880022544
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2024-11-12",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5419923,
+          46.67586880022543
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9882543358",
+        "id_osm": "node/9882543358",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.551702099999999,
+          46.67082540022639
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2025-09-14",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5517021,
+          46.67082540022639
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9882543359",
+        "id_osm": "node/9882543359",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5517619,
+          46.67134900022629
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-01-23",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5517619,
+          46.67134900022629
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9882543360",
+        "id_osm": "node/9882543360",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5518676,
+          46.67157890022625
+        ],
+        "capacite": "5",
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2023-01-23",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5518676,
+          46.671578900226244
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9897625419",
+        "id_osm": "node/9897625419",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5697961,
+          46.67218510022613
+        ],
+        "capacite": "8",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2022-07-28",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5697961,
+          46.67218510022612
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9900047717",
+        "id_osm": "node/9900047717",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.554151599999999,
+          46.67614930022536
+        ],
+        "capacite": "2",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2021",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5541516,
+          46.67614930022536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9901197117",
+        "id_osm": "node/9901197117",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.549243699999999,
+          46.6707985002264
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2022-11-15",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5492437,
+          46.67079850022639
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9916774972",
+        "id_osm": "node/9916774972",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.551353899999999,
+          46.66938550022667
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2024-01-16",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5513539,
+          46.66938550022667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9916979317",
+        "id_osm": "node/9916979317",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5531133,
+          46.67282070022601
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2021",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5531133,
+          46.672820700226005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9917256756",
+        "id_osm": "node/9917256756",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5496403,
+          46.67523140022556
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE",
+        "mobilier": "POTELET",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2020",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5496403,
+          46.675231400225556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9917256757",
+        "id_osm": "node/9917256757",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.551615399999999,
+          46.677280800225155
+        ],
+        "capacite": "8",
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2026-10-16",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5516154,
+          46.677280800225155
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9919161669",
+        "id_osm": "node/9919161669",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.562916199999999,
+          46.673916700225796
+        ],
+        "capacite": "20",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-09-22",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5629162,
+          46.673916700225796
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9957369042",
+        "id_osm": "node/9957369042",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5631067,
+          46.67410120022576
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2025-02-14",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5631067,
+          46.674101200225756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9958482449",
+        "id_osm": "node/9958482449",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5595291,
+          46.672739400226035
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022-07",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2022-08-17",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5595291,
+          46.67273940022603
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9958741194",
+        "id_osm": "node/9958741194",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5636152,
+          46.67066270022643
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022-07",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2022-08-17",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5636152,
+          46.67066270022642
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9959528272",
+        "id_osm": "node/9959528272",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5640662,
+          46.669641500226604
+        ],
+        "capacite": "6",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022-07",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-05-11",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5640662,
+          46.669641500226604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9959528273",
+        "id_osm": "node/9959528273",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.562303699999999,
+          46.671339500226296
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022-07",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2022-08-17",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5623037,
+          46.67133950022629
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9959528274",
+        "id_osm": "node/9959528274",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5525777,
+          46.674085500225765
+        ],
+        "capacite": "8",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022-07",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2025-01-07",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5525777,
+          46.67408550022576
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9959528275",
+        "id_osm": "node/9959528275",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5536619,
+          46.67476560022565
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "CADRE ET ROUE",
+        "mobilier": "ARCEAU",
+        "acces": "LIBRE ACCES",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": "2022-08",
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2023-05-17",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5536619,
+          46.67476560022565
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "node/9959528276",
+        "id_osm": "node/9959528276",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5595192,
+          46.67939230022475
+        ],
+        "capacite": "4",
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "false",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Commune de Lons-le-Saunier",
+        "date_maj": "2022-08-17",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5595192,
+          46.67939230022474
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "way/1320080767",
+        "id_osm": "way/1320080767",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.551583849997038,
+          46.671531550230824
+        ],
+        "capacite": null,
+        "capacite_cargo": null,
+        "type_accroche": "ROUE",
+        "mobilier": "RATELIER",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2025-11-01",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5515307,
+              46.67153140022625
+            ],
+            [
+              5.5516192,
+              46.67150430022626
+            ],
+            [
+              5.551637,
+              46.67153170022625
+            ],
+            [
+              5.5515485,
+              46.67155880022625
+            ],
+            [
+              5.5515307,
+              46.67153140022625
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "way/1359269325",
+        "id_osm": "way/1359269325",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5509777499986965,
+          46.66883070022862
+        ],
+        "capacite": null,
+        "capacite_cargo": null,
+        "type_accroche": null,
+        "mobilier": "AUTRE",
+        "acces": "LIBRE ACCES",
+        "gratuit": "false",
+        "protection": "CONSIGNE COLLECTIVE FERMEE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": "Espace Communautaire Lons Agglomération",
+        "date_maj": "2026-05-08",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5509326,
+              46.66882370022677
+            ],
+            [
+              5.5510164,
+              46.66881320022677
+            ],
+            [
+              5.5510229,
+              46.66883770022677
+            ],
+            [
+              5.5509391,
+              46.66884820022676
+            ],
+            [
+              5.5509326,
+              46.66882370022677
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "way/572111005",
+        "id_osm": "way/572111005",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.5417611765698584,
+          46.664401736792335
+        ],
+        "capacite": "7",
+        "capacite_cargo": null,
+        "type_accroche": null,
+        "mobilier": "AUTRE",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2018-11-19",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5417451,
+              46.66442360022761
+            ],
+            [
+              5.5417495,
+              46.664378600227614
+            ],
+            [
+              5.5417773,
+              46.66437990022761
+            ],
+            [
+              5.5417728,
+              46.6644249002276
+            ],
+            [
+              5.5417451,
+              46.66442360022761
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id_local": "way/667453179",
+        "id_osm": "way/667453179",
+        "code_com": "39300",
+        "coordonneesxy": [
+          5.550622902230539,
+          46.67017452184875
+        ],
+        "capacite": null,
+        "capacite_cargo": null,
+        "type_accroche": null,
+        "mobilier": "AUTRE",
+        "acces": "PRIVE",
+        "gratuit": "true",
+        "protection": "AUTRE",
+        "couverture": "true",
+        "surveillance": "false",
+        "lumiere": null,
+        "url_info": null,
+        "d_service": null,
+        "source": "OpenStreetMap",
+        "proprietaire": null,
+        "gestionnaire": null,
+        "date_maj": "2025-11-01",
+        "commentaires": null
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5506009,
+              46.670125900226516
+            ],
+            [
+              5.5506325,
+              46.670124000226544
+            ],
+            [
+              5.5506449,
+              46.670223200226516
+            ],
+            [
+              5.5506133,
+              46.670225000226495
+            ],
+            [
+              5.5506009,
+              46.670125900226516
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

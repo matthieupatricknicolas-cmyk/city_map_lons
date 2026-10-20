@@ -1,0 +1,5297 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5576479,
+          46.6731127
+        ]
+      },
+      "properties": {
+        "id": "node/939482601",
+        "osm_type": "node",
+        "osm_id": 939482601,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Cinémas Médiathèque",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200635",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONCINE1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5961553,
+          46.6928311
+        ]
+      },
+      "properties": {
+        "id": "node/939485024",
+        "osm_type": "node",
+        "osm_id": 939485024,
+        "alt_name": "Pannessières Monts",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Monts Jura",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200840",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5510626,
+          46.6796429
+        ]
+      },
+      "properties": {
+        "id": "node/2756680301",
+        "osm_type": "node",
+        "osm_id": 2756680301,
+        "alt_name": "Lycée Jean Michel",
+        "bench": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Jean Michel",
+        "panoramax": "4d245c9f-0786-4554-83c4-7a253d06ec8a",
+        "public_transport": "platform",
+        "ref:FR:CG71": "39300",
+        "ref:FR:Mobigo": "200679",
+        "shelter": "yes",
+        "was:ref:FR:Tallis": "LONJEAN2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5513276,
+          46.6797076
+        ]
+      },
+      "properties": {
+        "id": "node/2756680306",
+        "osm_type": "node",
+        "osm_id": 2756680306,
+        "alt_name": "Lycée Jean Michel",
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Jean Michel",
+        "panoramax": "3fae8e9c-7f55-40c5-968f-78054d9aca33",
+        "panoramax:0": "abbc165d-10ac-4920-a3f6-6242576e9f45",
+        "public_transport": "platform",
+        "ref:FR:CG71": "39300",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONJEAN1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5513609,
+          46.6695751
+        ]
+      },
+      "properties": {
+        "id": "node/2756681420",
+        "osm_type": "node",
+        "osm_id": 2756681420,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "kerb": "raised",
+        "kerb:approach_aid": "no",
+        "lit": "yes",
+        "name": "Briand",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200938",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONBRIA1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5061429,
+          46.6862695
+        ]
+      },
+      "properties": {
+        "id": "node/2756684163",
+        "osm_type": "node",
+        "osm_id": 2756684163,
+        "alt_name": "Montmorot Gd Sugny",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Grand Sugny",
+        "network": "Mobigo",
+        "network:wikidata": "Q48760545",
+        "network:wikipedia": "fr:Réseau interurbain de la Bourgogne-Franche-Comté",
+        "operator": "Conseil régional de Bourgogne-Franche-Comté",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200879",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5061738,
+          46.6865118
+        ]
+      },
+      "properties": {
+        "id": "node/2756684164",
+        "osm_type": "node",
+        "osm_id": 2756684164,
+        "alt_name": "Montmorot Gd Sugny",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Grand Sugny",
+        "network": "Mobigo",
+        "network:wikidata": "Q48760545",
+        "network:wikipedia": "fr:Réseau interurbain de la Bourgogne-Franche-Comté",
+        "operator": "Conseil régional de Bourgogne-Franche-Comté",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200879",
+        "shelter": "no",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5649085,
+          46.6800855
+        ]
+      },
+      "properties": {
+        "id": "node/3100461222",
+        "osm_type": "node",
+        "osm_id": 3100461222,
+        "alt_name": "Collège Saint-Exupéry",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Saint-Exupéry",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200504",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONSTEX1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5289531,
+          46.6728881
+        ]
+      },
+      "properties": {
+        "id": "node/4280753358",
+        "osm_type": "node",
+        "osm_id": 4280753358,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "check_date:shelter": "2023-12-29",
+        "highway": "bus_stop",
+        "name": "Pont SNCF",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200541",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5412172,
+          46.6727679
+        ]
+      },
+      "properties": {
+        "id": "node/4280779875",
+        "osm_type": "node",
+        "osm_id": 4280779875,
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Montciel",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200537",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5682094,
+          46.6647297
+        ]
+      },
+      "properties": {
+        "id": "node/4392145023",
+        "osm_type": "node",
+        "osm_id": 4392145023,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Casteljau",
+        "panoramax": "be64781c-534b-4919-a0cc-c2d9f9d252e4",
+        "panoramax:0": "01b2b839-6a08-4dcf-9eec-4d0afabee592",
+        "public_transport": "platform",
+        "shelter": "separate",
+        "tactile_paving": "no",
+        "was:name": "Perosey",
+        "was:ref:FR:Tallis": "LONCAST2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5639488,
+          46.6672254
+        ]
+      },
+      "properties": {
+        "id": "node/4393608835",
+        "osm_type": "node",
+        "osm_id": 4393608835,
+        "bench": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Cité des sports",
+        "panoramax": "0124e491-a9c0-4af4-be9b-29554764141b",
+        "panoramax:0": "06eba45c-792d-400f-8c85-68ce681d7c2a",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:name": "Pôle Sportif",
+        "was:ref:FR:Tallis": "LONPOSP2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5608663,
+          46.6707122
+        ]
+      },
+      "properties": {
+        "id": "node/4393616036",
+        "osm_type": "node",
+        "osm_id": 4393616036,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Avenue du Stade",
+        "panoramax": "d08c6809-aadd-4460-b7e0-6b5a02ba73f5",
+        "panoramax:0": "4a16e61d-1c85-47bf-9040-fbfe5c3cc263",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONAVST1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5596925,
+          46.6886143
+        ]
+      },
+      "properties": {
+        "id": "node/4871278421",
+        "osm_type": "node",
+        "osm_id": 4871278421,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Haut des Pendants",
+        "network": "Mobigo",
+        "network:wikidata": "Q48760545",
+        "panoramax": "2682ff3c-717f-4c57-88a0-690d6c63ccf5",
+        "panoramax:0": "ba7552e3-8e26-4231-a361-530dd3676d71",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONHTPE1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.558936,
+          46.6858057
+        ]
+      },
+      "properties": {
+        "id": "node/4871278422",
+        "osm_type": "node",
+        "osm_id": 4871278422,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Gounod",
+        "network": "Mobigo",
+        "network:wikidata": "Q48760545",
+        "panoramax": "4f26373a-10f3-496d-93ab-7291545c6b2c",
+        "panoramax:0": "44a25109-3aa1-4ed0-ae9b-13d1dd212b66",
+        "public_transport": "platform",
+        "ref": "Gounod",
+        "shelter": "no",
+        "start_date": "2024-08-01",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONGOUN1",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5617784,
+          46.6882295
+        ]
+      },
+      "properties": {
+        "id": "node/4871278622",
+        "osm_type": "node",
+        "osm_id": 4871278622,
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Berlioz",
+        "panoramax": "85f4d635-0136-447a-bea0-0693e3078dff",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONBERL1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5589459,
+          46.6831793
+        ]
+      },
+      "properties": {
+        "id": "node/4871278821",
+        "osm_type": "node",
+        "osm_id": 4871278821,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Impôts",
+        "panoramax": "ebd79887-5bd3-4d85-877c-0c75dff97baa",
+        "panoramax:0": "f16d1301-2858-4e93-a33b-9dec18d279f9",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONIMPO2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5608895,
+          46.6844768
+        ]
+      },
+      "properties": {
+        "id": "node/4871278822",
+        "osm_type": "node",
+        "osm_id": 4871278822,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Malpertuis",
+        "panoramax": "552f47df-e4d1-484c-92ad-b006381209e6",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONMALP1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5903944,
+          46.6597355
+        ]
+      },
+      "properties": {
+        "id": "node/4872584422",
+        "osm_type": "node",
+        "osm_id": 4872584422,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Vatagna",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200647",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5750887,
+          46.6688512
+        ]
+      },
+      "properties": {
+        "id": "node/4872593023",
+        "osm_type": "node",
+        "osm_id": 4872593023,
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Condamine",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200645",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5815262,
+          46.6655085
+        ]
+      },
+      "properties": {
+        "id": "node/4872593025",
+        "osm_type": "node",
+        "osm_id": 4872593025,
+        "alt_name": "Perrigny Scierie",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "highway": "bus_stop",
+        "name": "Scierie",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200646",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.559505,
+          46.6739284
+        ]
+      },
+      "properties": {
+        "id": "node/4872596921",
+        "osm_type": "node",
+        "osm_id": 4872596921,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Place du Marché",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200714",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONPLMA1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5811007,
+          46.666007
+        ]
+      },
+      "properties": {
+        "id": "node/4872597021",
+        "osm_type": "node",
+        "osm_id": 4872597021,
+        "alt_name": "Perrigny Scierie",
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Scierie",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200646",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5755998,
+          46.668765
+        ]
+      },
+      "properties": {
+        "id": "node/4872597022",
+        "osm_type": "node",
+        "osm_id": 4872597022,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Condamine",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200645",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5902168,
+          46.660092
+        ]
+      },
+      "properties": {
+        "id": "node/4872597221",
+        "osm_type": "node",
+        "osm_id": 4872597221,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Vatagna",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200647",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5539105,
+          46.6799229
+        ]
+      },
+      "properties": {
+        "id": "node/4872968323",
+        "osm_type": "node",
+        "osm_id": 4872968323,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Anne Frank",
+        "panoramax": "7b304982-933b-4814-8202-8fd0a36fcf36",
+        "panoramax:0": "ec4ccc2e-1a09-4ea6-9a40-57926bc65e24",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONANNE2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5514456,
+          46.6729526
+        ]
+      },
+      "properties": {
+        "id": "node/4872968424",
+        "osm_type": "node",
+        "osm_id": 4872968424,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Poste",
+        "panoramax": "e082ba2e-c923-4e63-9c0f-0bc6f331636c",
+        "panoramax:0": "ad1e3e4a-f515-4ba2-855c-565a9fe73b07",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONPOST1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5516802,
+          46.6716468
+        ]
+      },
+      "properties": {
+        "id": "node/4872968425",
+        "osm_type": "node",
+        "osm_id": 4872968425,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Préfecture",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONPREF1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5541722,
+          46.6733497
+        ]
+      },
+      "properties": {
+        "id": "node/4872968522",
+        "osm_type": "node",
+        "osm_id": 4872968522,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Théâtre",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONTHEA1",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5663103,
+          46.6835626
+        ]
+      },
+      "properties": {
+        "id": "node/4878976579",
+        "osm_type": "node",
+        "osm_id": 4878976579,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Aqua'Rel - Camping",
+        "panoramax": "4c1f0c5e-1af3-42a4-b284-0a7e8086013a",
+        "panoramax:0": "88cf8c34-e345-4693-8bc7-506da8b493ac",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONAQUA1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5465001,
+          46.6751099
+        ]
+      },
+      "properties": {
+        "id": "node/4900511925",
+        "osm_type": "node",
+        "osm_id": 4900511925,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Colbert",
+        "panoramax": "07834738-3361-487e-a090-99f9e7a026dc",
+        "panoramax:0": "23f1471b-384b-4bf6-95cc-39cf03d80cc9",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONCOLB1",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5326547,
+          46.6735653
+        ]
+      },
+      "properties": {
+        "id": "node/4900529121",
+        "osm_type": "node",
+        "osm_id": 4900529121,
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Rivoire",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200557",
+        "shelter": "no",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5369214,
+          46.6576406
+        ]
+      },
+      "properties": {
+        "id": "node/4931466482",
+        "osm_type": "node",
+        "osm_id": 4931466482,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "check_date:shelter": "2025-03-09",
+        "highway": "bus_stop",
+        "name": "Fontaine Daims Bas",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200669",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5367486,
+          46.6577123
+        ]
+      },
+      "properties": {
+        "id": "node/4931466483",
+        "osm_type": "node",
+        "osm_id": 4931466483,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Fontaine Daims Bas",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200669",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5704516,
+          46.6918167
+        ]
+      },
+      "properties": {
+        "id": "node/5014174694",
+        "osm_type": "node",
+        "osm_id": 5014174694,
+        "alt_name": "Chille RD157",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "RD 157",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200935",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5704727,
+          46.6920424
+        ]
+      },
+      "properties": {
+        "id": "node/5014174695",
+        "osm_type": "node",
+        "osm_id": 5014174695,
+        "alt_name": "Chille RD157",
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "RD 157",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200935",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5747372,
+          46.6944766
+        ]
+      },
+      "properties": {
+        "id": "node/5014187375",
+        "osm_type": "node",
+        "osm_id": 5014187375,
+        "alt_name": "Chille Fontaine",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Fontaine",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200936",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5716757,
+          46.6735605
+        ]
+      },
+      "properties": {
+        "id": "node/5218136548",
+        "osm_type": "node",
+        "osm_id": 5218136548,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Baronnes",
+        "panoramax": "f30ccb89-3df2-4a21-a89a-2b5e3a7e8a97",
+        "panoramax:0": "73d19001-30f9-4f78-941d-1d5a8dd0ea13",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONBARO1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5694148,
+          46.6811635
+        ]
+      },
+      "properties": {
+        "id": "node/5317135947",
+        "osm_type": "node",
+        "osm_id": 5317135947,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Ripley",
+        "panoramax": "8b1ce05d-87f0-4b2f-bea1-b0b597e05a8a",
+        "panoramax:0": "3ed22d4b-da86-4a97-bd34-d477358f9566",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONRIPL1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5620925,
+          46.6747719
+        ]
+      },
+      "properties": {
+        "id": "node/5317136128",
+        "osm_type": "node",
+        "osm_id": 5317136128,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Urssaf",
+        "panoramax": "847deaed-1952-444d-a3e4-44381ca605d5",
+        "panoramax:0": "1b4ef7b6-5a34-4576-a79d-2b6ab3a115c6",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONURSS",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5742929,
+          46.6735622
+        ]
+      },
+      "properties": {
+        "id": "node/5317136130",
+        "osm_type": "node",
+        "osm_id": 5317136130,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Bas des Gentianes",
+        "panoramax": "409fb6bd-f7dd-421e-bb2c-50559894551f",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "was:ref:FR:Tallis": "LONBASG1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5707843,
+          46.6796147
+        ]
+      },
+      "properties": {
+        "id": "node/5317136133",
+        "osm_type": "node",
+        "osm_id": 5317136133,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Centre commercial Marjorie",
+        "panoramax": "ce9498c9-20b0-4fd8-94a4-4d4d605a69be",
+        "panoramax:0": "17bd5694-bac8-4cfd-accd-ec006d56682b",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "was:ref:FR:Tallis": "LONCENT1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5741282,
+          46.6774001
+        ]
+      },
+      "properties": {
+        "id": "node/5317136236",
+        "osm_type": "node",
+        "osm_id": 5317136236,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Haut des Gentianes",
+        "panoramax": "9044204e-e607-4eba-bac6-e3b0a28cf8a1",
+        "panoramax:0": "a6856a4f-a1da-4019-a865-488a35a1a259",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONHTGE1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.57117,
+          46.6778436
+        ]
+      },
+      "properties": {
+        "id": "node/5317136238",
+        "osm_type": "node",
+        "osm_id": 5317136238,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Maison Commune",
+        "panoramax": "e79aa776-5dde-4bc2-8d2a-5e1bee524bdd",
+        "panoramax:0": "de340e85-4660-4370-8032-a388e9a4c72f",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "was:ref:FR:Tallis": "LONCOMM2",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5655734,
+          46.6746076
+        ]
+      },
+      "properties": {
+        "id": "node/5317136342",
+        "osm_type": "node",
+        "osm_id": 5317136342,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Pervenches",
+        "panoramax": "57783060-349a-4cd9-bcd2-367cb4de419b",
+        "panoramax:0": "095123c6-c7c7-4aa8-8b0b-ebad0503fbf2",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONPERV1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5680966,
+          46.6742476
+        ]
+      },
+      "properties": {
+        "id": "node/5317136343",
+        "osm_type": "node",
+        "osm_id": 5317136343,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Abbé Lemire",
+        "operator": "Lons Agglo Mobiités",
+        "panoramax": "963d90fa-5cad-477c-853c-4a57ccfe8fe6",
+        "panoramax:0": "1dce50fc-048d-4882-b208-15835dab9a0b",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONABBE1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.573539,
+          46.6728637
+        ]
+      },
+      "properties": {
+        "id": "node/5317136345",
+        "osm_type": "node",
+        "osm_id": 5317136345,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Église St Luc",
+        "panoramax": "6103cc98-6104-49a0-9681-b059df666dd1",
+        "panoramax:0": "3d1f7694-44b7-49a0-92c9-80dadb9ee8d7",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONEGLI2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5755971,
+          46.6751633
+        ]
+      },
+      "properties": {
+        "id": "node/5317136346",
+        "osm_type": "node",
+        "osm_id": 5317136346,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Acacias",
+        "panoramax": "81325ca0-6819-4322-b7cf-ae9dbf47168f",
+        "panoramax:0": "65231c84-388c-44e4-a982-7964546bfc52",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "was:ref:FR:Tallis": "LONACAC1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5641963,
+          46.6768131
+        ]
+      },
+      "properties": {
+        "id": "node/5318836899",
+        "osm_type": "node",
+        "osm_id": 5318836899,
+        "bench": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Mendès France",
+        "panoramax": "dbf48e7e-4934-4e73-8eeb-cbca0504d0ab",
+        "panoramax:0": "1d03526f-7153-4b0f-b9c7-2c5d54a14998",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONMEND1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5606781,
+          46.676443
+        ]
+      },
+      "properties": {
+        "id": "node/5318844632",
+        "osm_type": "node",
+        "osm_id": 5318844632,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Place des Déportés",
+        "panoramax": "42a8d9ac-0bc3-4a2f-ae32-45114af3af37",
+        "panoramax:0": "a829c0b6-90c0-4434-a6ee-7e3c5b6871aa",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONPLDP1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.564834,
+          46.6776463
+        ]
+      },
+      "properties": {
+        "id": "node/5318850571",
+        "osm_type": "node",
+        "osm_id": 5318850571,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Dunant",
+        "panoramax": "57287da6-4c85-4c4d-a038-74a0e930dcf5",
+        "panoramax:0": "36efc89b-8bfa-48bd-89e6-a26a199b804c",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONDUNA1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5651697,
+          46.6793465
+        ]
+      },
+      "properties": {
+        "id": "node/5318860774",
+        "osm_type": "node",
+        "osm_id": 5318860774,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "fixme": "Vérifier ref:FR:Tallis",
+        "highway": "bus_stop",
+        "name": "Saint-Exupéry",
+        "panoramax": "b9c8ca32-ce65-421c-a4a6-bee535bc7b1c",
+        "panoramax:0": "4e6ec332-47e8-4128-9496-aa7aebe341f0",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "was:ref:FR:Tallis": "LONSTEX2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5694251,
+          46.6812444
+        ]
+      },
+      "properties": {
+        "id": "node/5318869052",
+        "osm_type": "node",
+        "osm_id": 5318869052,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Ripley",
+        "panoramax": "07c702cc-523e-495f-a7bd-3b805d93821b",
+        "panoramax:0": "6ca2f457-adfa-46fa-b615-469cb1ec72d2",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONRIPL2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5709361,
+          46.67951
+        ]
+      },
+      "properties": {
+        "id": "node/5318873246",
+        "osm_type": "node",
+        "osm_id": 5318873246,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Centre commercial Marjorie",
+        "panoramax": "16b50871-45c0-4ff4-a28d-e146d166d2ce",
+        "panoramax:0": "f0f0d5cd-cf9d-4294-bd80-711a435341f5",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONCENT2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5712061,
+          46.6776595
+        ]
+      },
+      "properties": {
+        "id": "node/5318875942",
+        "osm_type": "node",
+        "osm_id": 5318875942,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Maison Commune",
+        "panoramax": "b1c48b18-f2b1-456d-891a-43f1a15a946b",
+        "panoramax:0": "2560fca8-f0fe-4e96-9682-dbd730aca33f",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONCOMM1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5742947,
+          46.6775028
+        ]
+      },
+      "properties": {
+        "id": "node/5318883571",
+        "osm_type": "node",
+        "osm_id": 5318883571,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Haut des Gentianes",
+        "panoramax": "8ccc7a8e-868c-4c1c-b88d-60f5321dc5f4",
+        "panoramax:0": "91b97d1b-2de8-417d-b45e-1f4347c433fe",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONHTGE2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5757177,
+          46.6750654
+        ]
+      },
+      "properties": {
+        "id": "node/5318889668",
+        "osm_type": "node",
+        "osm_id": 5318889668,
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Acacias",
+        "panoramax": "ec8b619b-cae7-4f23-8c5f-4b9fa7f28d81",
+        "panoramax:0": "93e884f1-458f-4670-8e1f-8f0764037c6e",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONACAC2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.574475,
+          46.6734183
+        ]
+      },
+      "properties": {
+        "id": "node/5318892536",
+        "osm_type": "node",
+        "osm_id": 5318892536,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Bas des Gentianes",
+        "panoramax": "04aa9ef6-bc40-446f-9cbe-8ee619b520d7",
+        "panoramax:0": "76c9a5f5-bba6-4dbb-b036-56ba0d3873c6",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONBASG2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5734162,
+          46.6729961
+        ]
+      },
+      "properties": {
+        "id": "node/5318893284",
+        "osm_type": "node",
+        "osm_id": 5318893284,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Église St Luc",
+        "panoramax": "68e72dba-adac-47c6-8e39-e2e7b1cbfc86",
+        "panoramax:0": "d01cf3f2-21fe-431e-ae17-2704bdbf5190",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONEGLI1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5717631,
+          46.6734914
+        ]
+      },
+      "properties": {
+        "id": "node/5318896337",
+        "osm_type": "node",
+        "osm_id": 5318896337,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Baronnes",
+        "panoramax": "bac1e49a-2c89-4571-b3ed-68d206db44ec",
+        "panoramax:0": "c5c56424-d525-4e6f-a710-deb27a33b46e",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONBARO2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5680067,
+          46.6741446
+        ]
+      },
+      "properties": {
+        "id": "node/5318898066",
+        "osm_type": "node",
+        "osm_id": 5318898066,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Abbé Lemire",
+        "panoramax": "7fd1eb5a-6953-47de-b242-1d67ed78d984",
+        "panoramax:0": "34f3f129-ea31-4e2b-a114-5d7d1a360b1d",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONABBE2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5656475,
+          46.6744912
+        ]
+      },
+      "properties": {
+        "id": "node/5318899103",
+        "osm_type": "node",
+        "osm_id": 5318899103,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "no",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Pervenches",
+        "panoramax": "2853f85a-4aa5-4cc1-b229-6cc54ec2548f",
+        "panoramax:0": "93a3f6da-a3ab-43ad-b133-7446f763dbb7",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONPERV2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5530726,
+          46.6726997
+        ]
+      },
+      "properties": {
+        "id": "node/5318922960",
+        "osm_type": "node",
+        "osm_id": 5318922960,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Thurel",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONTHUR1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5574962,
+          46.6727201
+        ]
+      },
+      "properties": {
+        "id": "node/5318935844",
+        "osm_type": "node",
+        "osm_id": 5318935844,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Marseillaise",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONMARS2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5484134,
+          46.6680588
+        ]
+      },
+      "properties": {
+        "id": "node/5398412747",
+        "osm_type": "node",
+        "osm_id": 5398412747,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Gauthier Villars",
+        "panoramax": "72acc5b3-733e-4abd-86c5-6bb9c43d76ba",
+        "panoramax:0": "608490b3-9153-4126-8fc7-af8f628c1812",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONGAUT1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5482679,
+          46.6680126
+        ]
+      },
+      "properties": {
+        "id": "node/5398412748",
+        "osm_type": "node",
+        "osm_id": 5398412748,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Gauthier Villars",
+        "panoramax": "b89714a4-8837-4bb9-b967-e4da85231aa8",
+        "panoramax:0": "fb695666-067c-4d07-ae39-69871596e6bc",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONGAUT2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.54476,
+          46.6665743
+        ]
+      },
+      "properties": {
+        "id": "node/5406092645",
+        "osm_type": "node",
+        "osm_id": 5406092645,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Route de Macornay",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONMACO1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5429417,
+          46.6694358
+        ]
+      },
+      "properties": {
+        "id": "node/5406098274",
+        "osm_type": "node",
+        "osm_id": 5406098274,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Rue du Couchant",
+        "panoramax": "fb2e6ab5-ded5-43a7-8347-936f5f79d228",
+        "panoramax:0": "0fe25772-4ed6-40c1-b054-7856d0bc9c5e",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONCOUC2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5432444,
+          46.669385
+        ]
+      },
+      "properties": {
+        "id": "node/5406099249",
+        "osm_type": "node",
+        "osm_id": 5406099249,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Rue du Couchant",
+        "panoramax": "74157f4c-b2d2-4074-a10a-6aa8ba71d7d6",
+        "panoramax:0": "efdfb2eb-63ed-43d7-8150-76c965deb80a",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONCOUC1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5416336,
+          46.670106
+        ]
+      },
+      "properties": {
+        "id": "node/5406105327",
+        "osm_type": "node",
+        "osm_id": 5406105327,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Rosiers",
+        "panoramax": "bb2e6004-43d0-4e8c-a117-9c05bae74262",
+        "panoramax:0": "1e0096c8-1aa6-4641-bb86-8f64e7e816e9",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONROSI2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5415572,
+          46.6702549
+        ]
+      },
+      "properties": {
+        "id": "node/5406105328",
+        "osm_type": "node",
+        "osm_id": 5406105328,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Rosiers",
+        "panoramax": "b2c4dcab-6ccc-4a20-b905-17a3e664176c",
+        "panoramax:0": "7fc3738a-4a81-48b3-8e68-6bce390b2106",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONROSI1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5413805,
+          46.6719768
+        ]
+      },
+      "properties": {
+        "id": "node/5406129452",
+        "osm_type": "node",
+        "osm_id": 5406129452,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Montciel",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "was:ref:FR:Tallis": "LONMON1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.544679,
+          46.67631
+        ]
+      },
+      "properties": {
+        "id": "node/5634641181",
+        "osm_type": "node",
+        "osm_id": 5634641181,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Chambre de Métiers",
+        "panoramax": "81e43c1f-3caf-4dae-90c3-771545f81ef6",
+        "panoramax:0": "9514eacb-aac5-4462-8eb5-d22163269d5b",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONCHAM1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5681868,
+          46.6585106
+        ]
+      },
+      "properties": {
+        "id": "node/5634681028",
+        "osm_type": "node",
+        "osm_id": 5634681028,
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5636973,
+          46.6677839
+        ]
+      },
+      "properties": {
+        "id": "node/5634937408",
+        "osm_type": "node",
+        "osm_id": 5634937408,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Cité des sports",
+        "panoramax": "18678a16-034c-4d7e-a49f-7875a28c8f7e",
+        "panoramax:0": "af09977c-4b48-468b-b24d-e33c8774f375",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "was:name": "Pôle Sportif",
+        "was:ref:FR:Tallis": "LONPOSP1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5193873,
+          46.664101
+        ]
+      },
+      "properties": {
+        "id": "node/5685376999",
+        "osm_type": "node",
+        "osm_id": 5685376999,
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aire de détente",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5190655,
+          46.6640941
+        ]
+      },
+      "properties": {
+        "id": "node/5685377000",
+        "osm_type": "node",
+        "osm_id": 5685377000,
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Aire de détente",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5365408,
+          46.6484055
+        ]
+      },
+      "properties": {
+        "id": "node/5689191685",
+        "osm_type": "node",
+        "osm_id": 5689191685,
+        "alt_name": "Macornay Revermont",
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Revermont",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200684",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.530084,
+          46.6535507
+        ]
+      },
+      "properties": {
+        "id": "node/5689191695",
+        "osm_type": "node",
+        "osm_id": 5689191695,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Place des Moulins",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5300699,
+          46.6533753
+        ]
+      },
+      "properties": {
+        "id": "node/5689191696",
+        "osm_type": "node",
+        "osm_id": 5689191696,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Place des Moulins",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5396098,
+          46.6572397
+        ]
+      },
+      "properties": {
+        "id": "node/5691952950",
+        "osm_type": "node",
+        "osm_id": 5691952950,
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Fontaine Daims Haut / RD 117",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200691",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5396893,
+          46.6575494
+        ]
+      },
+      "properties": {
+        "id": "node/5691952951",
+        "osm_type": "node",
+        "osm_id": 5691952951,
+        "alt_name": "Daims Haut",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Fontaine Daims Haut / RD 117",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5395763,
+          46.6457697
+        ]
+      },
+      "properties": {
+        "id": "node/5691967502",
+        "osm_type": "node",
+        "osm_id": 5691967502,
+        "alt_name": "Macornay GrScolaire",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Groupe scolaire",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200682",
+        "shelter": "no",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5402416,
+          46.6443595
+        ]
+      },
+      "properties": {
+        "id": "node/5691967690",
+        "osm_type": "node",
+        "osm_id": 5691967690,
+        "alt_name": "Macornay Pl. J. Moulin",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Place Jean Moulin",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200683",
+        "shelter": "no",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5593056,
+          46.6691255
+        ]
+      },
+      "properties": {
+        "id": "node/5753544430",
+        "osm_type": "node",
+        "osm_id": 5753544430,
+        "bench": "separate",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Rochettes",
+        "panoramax": "bd12caad-0908-4bda-a906-aa69d2bd8fa9",
+        "panoramax:0": "25d777fb-f931-4ed2-bce6-9590969b583c",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONROCH2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5790624,
+          46.6832265
+        ]
+      },
+      "properties": {
+        "id": "node/5786992954",
+        "osm_type": "node",
+        "osm_id": 5786992954,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Restaurant Municipal",
+        "panoramax": "a343716e-18d1-401d-9217-98c9228aebec",
+        "panoramax:0": "42a2acb9-9964-4d16-9d9f-359040a48102",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONAFPA1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5385054,
+          46.6751497
+        ]
+      },
+      "properties": {
+        "id": "node/5789103653",
+        "osm_type": "node",
+        "osm_id": 5789103653,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Juraparc",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONJUPA2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5518587,
+          46.6716048
+        ]
+      },
+      "properties": {
+        "id": "node/5803796053",
+        "osm_type": "node",
+        "osm_id": 5803796053,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Préfecture",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONPREF2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5507406,
+          46.6676219
+        ]
+      },
+      "properties": {
+        "id": "node/5926978055",
+        "osm_type": "node",
+        "osm_id": 5926978055,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Petits Quarts",
+        "panoramax": "d9127d62-d0c7-484f-9091-9fb2d115c813",
+        "panoramax:0": "1484e3b0-526f-4970-9763-6bca60dd6ab2",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONPETI1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5507007,
+          46.667494
+        ]
+      },
+      "properties": {
+        "id": "node/5926978056",
+        "osm_type": "node",
+        "osm_id": 5926978056,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Petits Quarts",
+        "panoramax": "ac3d31b3-ac7f-4fe9-89bc-0a78ebe90320",
+        "panoramax:0": "247a37bd-1898-4ee8-b22d-33e3ac283cd8",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONPETI2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5967118,
+          46.6930679
+        ]
+      },
+      "properties": {
+        "id": "node/5927140275",
+        "osm_type": "node",
+        "osm_id": 5927140275,
+        "alt_name": "Pannessières Monts",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Monts Jura",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200840"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5436254,
+          46.6662554
+        ]
+      },
+      "properties": {
+        "id": "node/5947946285",
+        "osm_type": "node",
+        "osm_id": 5947946285,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Rue du Midi",
+        "panoramax": "b40b3f29-5460-482a-9042-af509d814486",
+        "panoramax:0": "e4948705-4aec-43f6-ac43-f0d8b73b4753",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONMIDI1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5754185,
+          46.7057095
+        ]
+      },
+      "properties": {
+        "id": "node/6246241635",
+        "osm_type": "node",
+        "osm_id": 6246241635,
+        "alt_name": "Le Pin RD 70",
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "RD 70",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200942",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5821184,
+          46.6705654
+        ]
+      },
+      "properties": {
+        "id": "node/6246808796",
+        "osm_type": "node",
+        "osm_id": 6246808796,
+        "bench": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Transformateur",
+        "panoramax": "9fec0515-1019-40a7-9c22-fb49c1ae1b1d",
+        "panoramax:0": "2ec60f6f-2401-485e-b3c1-7c5bc6a646a0",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "was:ref:FR:Tallis": "PERTRAN1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5305164,
+          46.6769781
+        ]
+      },
+      "properties": {
+        "id": "node/6288300362",
+        "osm_type": "node",
+        "osm_id": 6288300362,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Mairie Montmorot",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "MONMONT1",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5795345,
+          46.6717266
+        ]
+      },
+      "properties": {
+        "id": "node/6382115755",
+        "osm_type": "node",
+        "osm_id": 6382115755,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Villard",
+        "panoramax": "99cf9ce2-c91a-426f-8457-8f6c5fe73a06",
+        "panoramax:0": "013dd44e-972a-48c4-baf8-3e297e270bf0",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "PERVILL2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5665943,
+          46.6834485
+        ]
+      },
+      "properties": {
+        "id": "node/6382115903",
+        "osm_type": "node",
+        "osm_id": 6382115903,
+        "bench": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Aqua'Rel - Camping",
+        "panoramax": "2eceec36-3f8b-448f-8fc3-46c491b648dd",
+        "panoramax:0": "aedfc95f-8105-4e9d-b91b-11ce66fdac7c",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "was:ref:FR:Tallis": "LONAQUA2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5972835,
+          46.6549332
+        ]
+      },
+      "properties": {
+        "id": "node/6437165069",
+        "osm_type": "node",
+        "osm_id": 6437165069,
+        "alt_name": "Conliège Village",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Village",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200698",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5845284,
+          46.6686339
+        ]
+      },
+      "properties": {
+        "id": "node/6437165175",
+        "osm_type": "node",
+        "osm_id": 6437165175,
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Église",
+        "public_transport": "platform",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5281712,
+          46.6520124
+        ]
+      },
+      "properties": {
+        "id": "node/6444276083",
+        "osm_type": "node",
+        "osm_id": 6444276083,
+        "alt_name": "Courbouzon Église",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Place Église",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200671",
+        "shelter": "no",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5280891,
+          46.6518833
+        ]
+      },
+      "properties": {
+        "id": "node/6444276084",
+        "osm_type": "node",
+        "osm_id": 6444276084,
+        "alt_name": "Courbouzon Église",
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Place Église",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200671",
+        "shelter": "no",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5540819,
+          46.6684894
+        ]
+      },
+      "properties": {
+        "id": "node/6782916194",
+        "osm_type": "node",
+        "osm_id": 6782916194,
+        "bench": "separate",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Montaigu Bas",
+        "panoramax": "62e03265-445e-4585-9fe8-38553d09a42b",
+        "panoramax:0": "6e6fc4d9-311f-49bc-8224-f9d535ba07e0",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONMOBA2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5539062,
+          46.6685014
+        ]
+      },
+      "properties": {
+        "id": "node/6782916195",
+        "osm_type": "node",
+        "osm_id": 6782916195,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Montaigu Bas",
+        "panoramax": "42d4664b-e310-4d2b-bde1-504a1f176248",
+        "panoramax:0": "1ccc4168-1b67-46e8-b707-73be8405d8ff",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONMOBA1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5586864,
+          46.6791931
+        ]
+      },
+      "properties": {
+        "id": "node/7542416530",
+        "osm_type": "node",
+        "osm_id": 7542416530,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Cimetière",
+        "panoramax": "0e33daf3-903e-41c1-8240-76f6ef8fb361",
+        "panoramax:0": "5c49d46b-8e15-4443-8a2b-c951fde096a4",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONCIME2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5833163,
+          46.6807507
+        ]
+      },
+      "properties": {
+        "id": "node/7545918326",
+        "osm_type": "node",
+        "osm_id": 7545918326,
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Lième",
+        "panoramax": "6fe8a674-e213-4dc8-ac12-6091dffa4ab4",
+        "panoramax:0": "c30df227-0d35-4824-bf38-b62ae292cda9",
+        "public_transport": "platform",
+        "was:ref:FR:Tallis": "PERLIEM1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5367752,
+          46.6835971
+        ]
+      },
+      "properties": {
+        "id": "node/7545918327",
+        "osm_type": "node",
+        "osm_id": 7545918327,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Savagna",
+        "panoramax": "d8d13cce-6abf-4a62-b058-2be579532a86",
+        "panoramax:0": "d0dce6a9-2782-434b-aa6b-78336bc106f9",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "MONSAVA1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5321009,
+          46.6791747
+        ]
+      },
+      "properties": {
+        "id": "node/7545918328",
+        "osm_type": "node",
+        "osm_id": 7545918328,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Passaquay",
+        "panoramax": "9bf17b98-3266-4e8a-9289-ba97e274661e",
+        "panoramax:0": "e05767ea-4457-4e24-8502-0df8598464e0",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "MONPASS1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5243757,
+          46.6752343
+        ]
+      },
+      "properties": {
+        "id": "node/7545918329",
+        "osm_type": "node",
+        "osm_id": 7545918329,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Mathy",
+        "panoramax": "39ab6159-32d2-41c0-9dcd-23b0566f25ac",
+        "panoramax:0": "a7ef3fec-9b01-4eb0-95fc-d7e049375721",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "MONMATH2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5245077,
+          46.6753249
+        ]
+      },
+      "properties": {
+        "id": "node/7545918330",
+        "osm_type": "node",
+        "osm_id": 7545918330,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Mathy",
+        "panoramax": "99ffe4c1-14e0-44ee-995d-95dd73912ea2",
+        "panoramax:0": "f26795f2-9b0a-4eba-b7a0-8d69b14de9e3",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "MONMATH1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5247109,
+          46.6670599
+        ]
+      },
+      "properties": {
+        "id": "node/7545918331",
+        "osm_type": "node",
+        "osm_id": 7545918331,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Hameau Chantrans",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "MONHACH1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5260155,
+          46.6705421
+        ]
+      },
+      "properties": {
+        "id": "node/7545918332",
+        "osm_type": "node",
+        "osm_id": 7545918332,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Chantrans",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "was:name": "Espace Chantrans",
+        "was:ref:FR:Tallis": "MONESCH1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5400431,
+          46.6792103
+        ]
+      },
+      "properties": {
+        "id": "node/7545918334",
+        "osm_type": "node",
+        "osm_id": 7545918334,
+        "bench": "no",
+        "bus": "yes",
+        "end_date": "2024-07-31",
+        "highway": "bus_stop",
+        "name": "En Bouland",
+        "panoramax": "58802d83-9f6b-48e7-a89b-d06e84ead8ce",
+        "public_transport": "platform",
+        "ref:FR:Tallis": "MONENBO2",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5402121,
+          46.6792667
+        ]
+      },
+      "properties": {
+        "id": "node/7545918335",
+        "osm_type": "node",
+        "osm_id": 7545918335,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "En Bouland",
+        "panoramax": "e65c1f6a-5f89-4d13-9acb-051a1f4b095e",
+        "panoramax:0": "6f92174a-1105-4ba8-85cc-9405d46d1f42",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "MONENBO1",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.526379,
+          46.6739501
+        ]
+      },
+      "properties": {
+        "id": "node/7545918336",
+        "osm_type": "node",
+        "osm_id": 7545918336,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Les Clusiaux",
+        "panoramax": "0c39b70a-e520-4e7c-8670-86958774c95b",
+        "panoramax:0": "277788e4-7232-4171-8e7f-e6c1db6c1a2e",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "MONCLUS2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5262771,
+          46.6740495
+        ]
+      },
+      "properties": {
+        "id": "node/7545918337",
+        "osm_type": "node",
+        "osm_id": 7545918337,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Les Clusiaux",
+        "panoramax": "258ad6c6-05bf-4548-aeb0-9e64e5738ccb",
+        "panoramax:0": "f0ad5b20-3697-497b-8988-aa8776044504",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "MONCLUS1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5349989,
+          46.6811863
+        ]
+      },
+      "properties": {
+        "id": "node/7545918340",
+        "osm_type": "node",
+        "osm_id": 7545918340,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Chardonnerets",
+        "panoramax": "d7f36646-a3b4-4a83-bc17-d97d80606db9",
+        "panoramax:0": "7537171b-6774-4069-9511-6357d3344bd1",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "MONCHAR1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.556485,
+          46.6774473
+        ]
+      },
+      "properties": {
+        "id": "node/7545918342",
+        "osm_type": "node",
+        "osm_id": 7545918342,
+        "bench": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Maison Vache qui rit",
+        "panoramax": "8be0271c-9b40-4c05-8feb-a07492468ace",
+        "panoramax:0": "0a55ee16-4599-4775-bcb8-ac6e5dcffa74",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONVACH1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5458509,
+          46.6736727
+        ]
+      },
+      "properties": {
+        "id": "node/7545918343",
+        "osm_type": "node",
+        "osm_id": 7545918343,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Sully",
+        "panoramax": "a4e38dbd-6077-47ed-a653-ea3077b2eb42",
+        "panoramax:0": "27f1fc13-819c-4235-a759-0651ebd277b0",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONSULL2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5474908,
+          46.6726782
+        ]
+      },
+      "properties": {
+        "id": "node/7545918344",
+        "osm_type": "node",
+        "osm_id": 7545918344,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Rouget de Lisle",
+        "panoramax": "546c60b7-6ff4-4c83-b3cb-dda42de777e7",
+        "panoramax:0": "b8ad769f-4292-44de-86b5-d2683fcaf41a",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONRODL2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.548042,
+          46.6727494
+        ]
+      },
+      "properties": {
+        "id": "node/7545918345",
+        "osm_type": "node",
+        "osm_id": 7545918345,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Rouget de Lisle",
+        "panoramax": "7595de13-db7c-490d-b483-9f7ed4759a47",
+        "panoramax:0": "424818c3-b4c9-48c9-9599-baba48e6f0a1",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200678",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5594619,
+          46.6692005
+        ]
+      },
+      "properties": {
+        "id": "node/7545918346",
+        "osm_type": "node",
+        "osm_id": 7545918346,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Rochettes",
+        "panoramax": "8b937039-92c9-47b9-a188-591d8d2d325e",
+        "panoramax:0": "a9880833-754f-4e1c-8d09-48cb31efb448",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONROCH1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5597182,
+          46.6735999
+        ]
+      },
+      "properties": {
+        "id": "node/7545918347",
+        "osm_type": "node",
+        "osm_id": 7545918347,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Place du Marché",
+        "passenger_information_display": "no",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONPLMA2",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5557307,
+          46.6786588
+        ]
+      },
+      "properties": {
+        "id": "node/7545918348",
+        "osm_type": "node",
+        "osm_id": 7545918348,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Palais de Justice",
+        "panoramax": "fdace0cc-5d41-43dc-9172-86bf326f8200",
+        "panoramax:0": "be33267e-74f0-4103-a6ee-f181494f6ed6",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONPALA2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5556437,
+          46.6787665
+        ]
+      },
+      "properties": {
+        "id": "node/7545918349",
+        "osm_type": "node",
+        "osm_id": 7545918349,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Palais de Justice",
+        "panoramax": "84a7b690-6bc3-440e-97db-c6fc74eabed0",
+        "panoramax:0": "0060ef66-94b5-4e99-ad38-341196fe1a50",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONPALA1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5624254,
+          46.6739382
+        ]
+      },
+      "properties": {
+        "id": "node/7545918350",
+        "osm_type": "node",
+        "osm_id": 7545918350,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Maison Médicale",
+        "panoramax": "c5252a20-d1fa-400e-a686-eba1aa6f6bf6",
+        "panoramax:0": "58428507-38b6-4d95-b186-3ac97c0c5c07",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONMEDI2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5506777,
+          46.6733613
+        ]
+      },
+      "properties": {
+        "id": "node/7545918351",
+        "osm_type": "node",
+        "osm_id": 7545918351,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Marronniers",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200680",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONMARR1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5484924,
+          46.6649443
+        ]
+      },
+      "properties": {
+        "id": "node/7545918352",
+        "osm_type": "node",
+        "osm_id": 7545918352,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Mancy",
+        "panoramax": "61de9093-0935-450d-a047-dbae3d08cc79",
+        "panoramax:0": "b1d648ad-2684-4557-9164-fe7b0415526a",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONMANC1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5588675,
+          46.6716895
+        ]
+      },
+      "properties": {
+        "id": "node/7545918353",
+        "osm_type": "node",
+        "osm_id": 7545918353,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Mairie - ECLA",
+        "panoramax": "38c6d318-2e24-43b3-86b2-3a009d828487",
+        "panoramax:0": "07ff47fa-9f32-46cb-90b8-0c41cb82a244",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONMAIR2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.559081,
+          46.6717705
+        ]
+      },
+      "properties": {
+        "id": "node/7545918354",
+        "osm_type": "node",
+        "osm_id": 7545918354,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Mairie - ECLA",
+        "panoramax": "6c74d4a3-7c69-4bea-bc74-9465a58d91c3",
+        "panoramax:0": "1def6ab1-b0ca-4bbf-aefb-eb896d940d37",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONMAIR1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5589575,
+          46.6664476
+        ]
+      },
+      "properties": {
+        "id": "node/7545918355",
+        "osm_type": "node",
+        "osm_id": 7545918355,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Lacuzon",
+        "panoramax": "960e95e2-22a3-4588-8220-aab463931f2a",
+        "panoramax:0": "cd5a120e-ef37-41fc-b954-73dbba9a8684",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONLACU1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.552025,
+          46.6687435
+        ]
+      },
+      "properties": {
+        "id": "node/7545918357",
+        "osm_type": "node",
+        "osm_id": 7545918357,
+        "bench": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "local_ref": "L",
+        "name": "Gare de Lons-le-Saunier",
+        "operator": "Espace Communautaire Lons Agglomération",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONGARE1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5595601,
+          46.6675802
+        ]
+      },
+      "properties": {
+        "id": "node/7545918358",
+        "osm_type": "node",
+        "osm_id": 7545918358,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Desvernois",
+        "panoramax": "774c42cd-e480-49dd-a757-b6b732b90f70",
+        "panoramax:0": "21e3ece5-c3a3-465c-98e7-173e4cc085f5",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONDESV1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5464914,
+          46.6749557
+        ]
+      },
+      "properties": {
+        "id": "node/7545918359",
+        "osm_type": "node",
+        "osm_id": 7545918359,
+        "bench": "no",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Colbert",
+        "panoramax": "6946585e-fb3d-4fa2-8b74-5b8789e70ecb",
+        "panoramax:0": "cf1a42c0-e089-4516-9170-dadb4b7ceaed",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONCOLB2",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5449326,
+          46.6682964
+        ]
+      },
+      "properties": {
+        "id": "node/7545918360",
+        "osm_type": "node",
+        "osm_id": 7545918360,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Clavel",
+        "panoramax": "91b7aca3-ed04-4c6a-8dfc-d3136164f2a5",
+        "panoramax:0": "09a0e127-dcb2-485d-94d6-41a039668731",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONCLAV2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.544462,
+          46.6685665
+        ]
+      },
+      "properties": {
+        "id": "node/7545918361",
+        "osm_type": "node",
+        "osm_id": 7545918361,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Clavel",
+        "panoramax": "645f62f6-29b9-4cf8-9d30-670bdddd490e",
+        "panoramax:0": "d30df2ef-9730-4aae-bbfa-3efcf62896f7",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONCLAV1",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5569924,
+          46.6739809
+        ]
+      },
+      "properties": {
+        "id": "node/7545918362",
+        "osm_type": "node",
+        "osm_id": 7545918362,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Chevalerie",
+        "panoramax": "5b9ad4a6-2ffc-496e-90dd-e5596059050c",
+        "panoramax:0": "c8ca2dce-305b-4cac-8709-7aee1655aeb8",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONCHEV2",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.556866,
+          46.6739404
+        ]
+      },
+      "properties": {
+        "id": "node/7545918363",
+        "osm_type": "node",
+        "osm_id": 7545918363,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Chevalerie",
+        "panoramax": "6202d80f-4a07-4a20-836a-8e8df7813176",
+        "panoramax:0": "1f586bc4-8494-4ed8-bdbc-e1f9777b5496",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONCHEV1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5679364,
+          46.664868
+        ]
+      },
+      "properties": {
+        "id": "node/7545918364",
+        "osm_type": "node",
+        "osm_id": 7545918364,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Casteljau",
+        "panoramax": "e95e988c-2920-4360-8177-dd3e32794a4f",
+        "panoramax:0": "061b28a3-f7c5-4cdb-9a66-09e57c34ce61",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONCAST1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5762278,
+          46.6828423
+        ]
+      },
+      "properties": {
+        "id": "node/7545918365",
+        "osm_type": "node",
+        "osm_id": 7545918365,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Camuset",
+        "panoramax": "d3b5a2b0-93ff-423c-9bb0-9ad1408f7cea",
+        "panoramax:0": "951800af-2525-43ea-a56a-14ce90c060ca",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONCAMU2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5762989,
+          46.6832182
+        ]
+      },
+      "properties": {
+        "id": "node/7545918366",
+        "osm_type": "node",
+        "osm_id": 7545918366,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Camuset",
+        "panoramax": "6d9caa4b-a4c6-4376-afad-8f89a7cbbd59",
+        "panoramax:0": "8fa28045-0c9e-49ed-9a83-04de077a5ef2",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONCAMU1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5514773,
+          46.6694702
+        ]
+      },
+      "properties": {
+        "id": "node/7545918367",
+        "osm_type": "node",
+        "osm_id": 7545918367,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Briand",
+        "panoramax": "ed9cb058-c4bd-485b-88e0-0f62dbf3e1fa",
+        "panoramax:0": "e932dd67-8a13-4a38-9f93-a699dd656a7a",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONBRIA2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5573178,
+          46.6805337
+        ]
+      },
+      "properties": {
+        "id": "node/7545918369",
+        "osm_type": "node",
+        "osm_id": 7545918369,
+        "bench": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Route de Besançon",
+        "panoramax": "dacc8fd3-213d-4779-9752-c1aaf459193a",
+        "panoramax:0": "aa818777-fed8-43cf-9784-a9919d411098",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONBESA2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5566101,
+          46.6833769
+        ]
+      },
+      "properties": {
+        "id": "node/7545918370",
+        "osm_type": "node",
+        "osm_id": 7545918370,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Bel Air",
+        "panoramax": "3b8ec575-460a-4a05-84ff-45b58f0f9351",
+        "panoramax:0": "5255eb92-d13b-48dc-870a-dda9b5ae5588",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONBELA1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5607825,
+          46.6706175
+        ]
+      },
+      "properties": {
+        "id": "node/7545918371",
+        "osm_type": "node",
+        "osm_id": 7545918371,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Avenue du Stade",
+        "panoramax": "7a221f75-226a-45b7-a5c2-17ff8d80c587",
+        "panoramax:0": "00dfcdb9-080b-4769-aab1-e66a4d3a9f90",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONAVST2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5827915,
+          46.6810994
+        ]
+      },
+      "properties": {
+        "id": "node/7545918374",
+        "osm_type": "node",
+        "osm_id": 7545918374,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Z.I. Perrigny",
+        "panoramax": "756d3590-018e-41ea-b57f-1c8b90f210e4",
+        "panoramax:0": "47b75436-895c-4dcb-8580-b4dd1867f5d0",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "PERZI1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5830588,
+          46.67988
+        ]
+      },
+      "properties": {
+        "id": "node/7545918375",
+        "osm_type": "node",
+        "osm_id": 7545918375,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "no",
+        "highway": "bus_stop",
+        "name": "Lième",
+        "panoramax": "f3c69e2c-7bac-4927-8529-535e6c679dc5",
+        "panoramax:0": "f0ad462f-7f70-4a8a-80c9-5d5b443e65d3",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "PERLIEM2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5303875,
+          46.675212
+        ]
+      },
+      "properties": {
+        "id": "node/7545918376",
+        "osm_type": "node",
+        "osm_id": 7545918376,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Square Journet",
+        "panoramax": "c04c5112-6258-4edb-a2ad-bc492c992c7f",
+        "panoramax:0": "14a97f1f-36d9-4bce-8024-ab9d96d68b8f",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "MONSQJO2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5302312,
+          46.6750834
+        ]
+      },
+      "properties": {
+        "id": "node/7545918377",
+        "osm_type": "node",
+        "osm_id": 7545918377,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Square Journet",
+        "panoramax": "9309fe75-47cc-4365-8792-87be889f8c08",
+        "panoramax:0": "3717d4da-7d0c-41d0-a9ed-de13aaa0f186",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "MONSQJO1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5460934,
+          46.6797665
+        ]
+      },
+      "properties": {
+        "id": "node/7598590188",
+        "osm_type": "node",
+        "osm_id": 7598590188,
+        "highway": "bus_stop",
+        "name": "Châlon",
+        "panoramax": "a9216d50-1982-4e50-9642-9324e9e326e9",
+        "pole": "public_transport",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONCHAL1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5787524,
+          46.6832755
+        ]
+      },
+      "properties": {
+        "id": "node/8789578647",
+        "osm_type": "node",
+        "osm_id": 8789578647,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "fixme": "Vérifier si le poteau Tallis a bien été déplacé au nouvel arrêt.",
+        "highway": "bus_stop",
+        "name": "Restaurant Municipal",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONAFPA2",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5476813,
+          46.6728384
+        ]
+      },
+      "properties": {
+        "id": "node/8926640176",
+        "osm_type": "node",
+        "osm_id": 8926640176,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Rouget de Lisle",
+        "panoramax": "02bc3afe-6bdb-4875-aed5-4a6f0a6d7860",
+        "panoramax:0": "4dadeb79-c8e7-4c20-a190-176cc5ccb7cd",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONRODL1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5525086,
+          46.6766537
+        ]
+      },
+      "properties": {
+        "id": "node/8951554528",
+        "osm_type": "node",
+        "osm_id": 8951554528,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Hôpital",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONHOPI1",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5820899,
+          46.6748338
+        ]
+      },
+      "properties": {
+        "id": "node/8951554547",
+        "osm_type": "node",
+        "osm_id": 8951554547,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "fixme": "Vérifier emplacement",
+        "highway": "bus_stop",
+        "name": "Route de Champagnole",
+        "panoramax": "df98f82b-ff31-42a3-a9ea-47816b740828",
+        "panoramax:0": "a5943d6c-6a43-4737-9b07-959429f40333",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "PERCHAM2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5707251,
+          46.6645917
+        ]
+      },
+      "properties": {
+        "id": "node/8953722205",
+        "osm_type": "node",
+        "osm_id": 8953722205,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "no",
+        "name": "Perosey",
+        "panoramax": "43b0531d-acb0-42ad-8fb6-13f2a1f7caa1",
+        "panoramax:0": "e24bc572-f4d3-4645-a79a-68df4501cafd",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONPERO1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5419617,
+          46.6646837
+        ]
+      },
+      "properties": {
+        "id": "node/8963579821",
+        "osm_type": "node",
+        "osm_id": 8963579821,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Toupes",
+        "panoramax": "76f17b45-8105-4a21-9eed-f9d3da95fa69",
+        "panoramax:0": "059f67a8-27fa-4632-b271-1c9e3d3c6708",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONTOUP1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5414939,
+          46.665451
+        ]
+      },
+      "properties": {
+        "id": "node/8963579824",
+        "osm_type": "node",
+        "osm_id": 8963579824,
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Lavoisier",
+        "panoramax": "4a7f2d83-1ac7-4445-9158-161d52606143",
+        "panoramax:0": "ba2c3e57-5c0a-4f09-975d-c07eafca8607",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONLAVO1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5229536,
+          46.6765599
+        ]
+      },
+      "properties": {
+        "id": "node/9282845850",
+        "osm_type": "node",
+        "osm_id": 9282845850,
+        "alt_name": "Montaigu Tour",
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Pré de la Tour",
+        "network": "JuraGo",
+        "operator": "Conseil régional de Bourgogne-Franche-Comté",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200877",
+        "shelter": "yes",
+        "tactile_paving": "no",
+        "wikidata": "Q3456880",
+        "wikipedia": "fr:JuraGo"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5295776,
+          46.6756832
+        ]
+      },
+      "properties": {
+        "id": "node/9314726817",
+        "osm_type": "node",
+        "osm_id": 9314726817,
+        "alt_name": "Montaigu Carf RD678",
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Carrefour RD 678 Centre",
+        "network": "JuraGo",
+        "operator": "Conseil régional de Bourgogne-Franche-Comté",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200878",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5671184,
+          46.6589301
+        ]
+      },
+      "properties": {
+        "id": "node/9562757478",
+        "osm_type": "node",
+        "osm_id": 9562757478,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Montaigu - Mairie",
+        "network": "Mobigo",
+        "network:wikidata": "Q48760545",
+        "network:wikipedia": "fr:Réseau interurbain de la Bourgogne-Franche-Comté",
+        "operator": "Conseil régional de Bourgogne-Franche-Comté",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5218375,
+          46.6628723
+        ]
+      },
+      "properties": {
+        "id": "node/9737151535",
+        "osm_type": "node",
+        "osm_id": 9737151535,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "yes",
+        "highway": "bus_stop",
+        "name": "Messia-sur-Sorne - Salle des Fêtes",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200558",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5419922,
+          46.6708493
+        ]
+      },
+      "properties": {
+        "id": "node/9753719291",
+        "osm_type": "node",
+        "osm_id": 9753719291,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5167662,
+          46.6592371
+        ]
+      },
+      "properties": {
+        "id": "node/10064292156",
+        "osm_type": "node",
+        "osm_id": 10064292156,
+        "alt_name": "Messia Rte de Lyon",
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "yes",
+        "highway": "bus_stop",
+        "name": "Messia-sur-Sorne - Route de Lyon",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200559",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5162874,
+          46.6590316
+        ]
+      },
+      "properties": {
+        "id": "node/10064292157",
+        "osm_type": "node",
+        "osm_id": 10064292157,
+        "alt_name": "Messia ZI",
+        "bench": "no",
+        "bus": "yes",
+        "covered": "yes",
+        "highway": "bus_stop",
+        "name": "Messia-sur-Sorne - ZI",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200540",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5220749,
+          46.6632029
+        ]
+      },
+      "properties": {
+        "id": "node/10064292158",
+        "osm_type": "node",
+        "osm_id": 10064292158,
+        "bench": "yes",
+        "bin": "no",
+        "bus": "yes",
+        "covered": "yes",
+        "highway": "bus_stop",
+        "name": "Messia-sur-Sorne - Village",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200539",
+        "shelter": "yes",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5702233,
+          46.6709472
+        ]
+      },
+      "properties": {
+        "id": "node/10539828152",
+        "osm_type": "node",
+        "osm_id": 10539828152,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Gendarmerie",
+        "panoramax": "13bdfc4e-882f-4136-8a0c-87e08c84b951",
+        "panoramax:0": "5d88819a-e88d-4fe6-8e05-323c51980c25",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "yes",
+        "was:ref:FR:Tallis": "LONGEND1",
+        "wheelchair": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5523491,
+          46.6688095
+        ]
+      },
+      "properties": {
+        "id": "node/10700347126",
+        "osm_type": "node",
+        "osm_id": 10700347126,
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "local_ref": "K",
+        "name": "Gare de Lons-le-Saunier",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200491",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5553009,
+          46.6724593
+        ]
+      },
+      "properties": {
+        "id": "node/10700444630",
+        "osm_type": "node",
+        "osm_id": 10700444630,
+        "bench": "no",
+        "bin": "no",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Marseillaise",
+        "panoramax": "c77e16b8-139a-4509-96ad-ca5f6f12cf70",
+        "panoramax:0": "e6f9bbce-18e4-449a-abc1-25df34e7fb50",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200838",
+        "shelter": "no",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5756856,
+          46.6700968
+        ]
+      },
+      "properties": {
+        "id": "node/10706975946",
+        "osm_type": "node",
+        "osm_id": 10706975946,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Centre Cial",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200841",
+        "shelter": "no",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5754076,
+          46.7055312
+        ]
+      },
+      "properties": {
+        "id": "node/10707660891",
+        "osm_type": "node",
+        "osm_id": 10707660891,
+        "alt_name": "Le Pin RD 70",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "RD 70",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200942",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5841084,
+          46.7006519
+        ]
+      },
+      "properties": {
+        "id": "node/10707660892",
+        "osm_type": "node",
+        "osm_id": 10707660892,
+        "alt_name": "Pannessières La Lième",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "La Lième",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200941"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5749317,
+          46.6943497
+        ]
+      },
+      "properties": {
+        "id": "node/10707660893",
+        "osm_type": "node",
+        "osm_id": 10707660893,
+        "alt_name": "Chille Fontaine",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Fontaine",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200936",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5618725,
+          46.6401802
+        ]
+      },
+      "properties": {
+        "id": "node/10707742173",
+        "osm_type": "node",
+        "osm_id": 10707742173,
+        "alt_name": "Moiron Village",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Village",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200685",
+        "shelter": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.520003,
+          46.677
+        ]
+      },
+      "properties": {
+        "id": "node/10707924033",
+        "osm_type": "node",
+        "osm_id": 10707924033,
+        "alt_name": "Montaigu Tour",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Pré de la Tour",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200877"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5294554,
+          46.6758442
+        ]
+      },
+      "properties": {
+        "id": "node/10707924037",
+        "osm_type": "node",
+        "osm_id": 10707924037,
+        "alt_name": "Montaigu Av Maillo",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Avenue Maillot",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200891",
+        "shelter": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5448596,
+          46.6780786
+        ]
+      },
+      "properties": {
+        "id": "node/10940016382",
+        "osm_type": "node",
+        "osm_id": 10940016382,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Hebmann",
+        "panoramax": "3e0e44f8-1960-4149-aef4-593e2224626a",
+        "panoramax:0": "fdd0b674-d17c-4757-9bf7-72109b47c000",
+        "public_transport": "platform",
+        "shelter": "no",
+        "was:ref:FR:Tallis": "LONHEBM1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5471227,
+          46.6761122
+        ]
+      },
+      "properties": {
+        "id": "node/10940016384",
+        "osm_type": "node",
+        "osm_id": 10940016384,
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Mermoz",
+        "public_transport": "platform",
+        "was:ref:FR:Tallis": "LONMERM1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5644592,
+          46.6724071
+        ]
+      },
+      "properties": {
+        "id": "node/10940016391",
+        "osm_type": "node",
+        "osm_id": 10940016391,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Parc des Bains",
+        "panoramax": "67eecc41-16fa-4ed2-a73d-13c7df2ab79e",
+        "panoramax:0": "bc1ce6e7-9f74-4f39-912b-39c5835695bc",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONPARC1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.56253,
+          46.6702698
+        ]
+      },
+      "properties": {
+        "id": "node/10940016393",
+        "osm_type": "node",
+        "osm_id": 10940016393,
+        "bench": "no",
+        "bin": "no",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Parc des Salines",
+        "panoramax": "85d5ed82-5fc7-4f98-8c94-dc6dfc222e54",
+        "panoramax:0": "e9c41fe9-979f-455c-a5e4-0879dd42a421",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONSALI1",
+        "wheelchair": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5375251,
+          46.6678058
+        ]
+      },
+      "properties": {
+        "id": "node/10940016394",
+        "osm_type": "node",
+        "osm_id": 10940016394,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Plateau Montciel",
+        "panoramax": "604b4cb0-3fa6-4eb3-9692-1f23b69c27f4",
+        "panoramax:0": "124602d6-bdb9-4c57-883f-fab7fb146bca",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONMONT1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5662917,
+          46.684696
+        ]
+      },
+      "properties": {
+        "id": "node/11756013571",
+        "osm_type": "node",
+        "osm_id": 11756013571,
+        "bus": "yes",
+        "highway": "bus_stop",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5346793,
+          46.6757248
+        ]
+      },
+      "properties": {
+        "id": "node/12070081661",
+        "osm_type": "node",
+        "osm_id": 12070081661,
+        "bus": "yes",
+        "fixme": "Emplacement à vérifier",
+        "highway": "bus_stop",
+        "name": "Vallière",
+        "public_transport": "platform",
+        "start_date": "2024-08-01"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.548666,
+          46.674904
+        ]
+      },
+      "properties": {
+        "id": "node/12070081663",
+        "osm_type": "node",
+        "osm_id": 12070081663,
+        "bus": "yes",
+        "fixme": "Emplacement à vérifier",
+        "highway": "bus_stop",
+        "name": "Lecourbe",
+        "public_transport": "platform",
+        "start_date": "2024-08-01"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5540276,
+          46.675353
+        ]
+      },
+      "properties": {
+        "id": "node/12070081665",
+        "osm_type": "node",
+        "osm_id": 12070081665,
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Arcades",
+        "panoramax": "71b29af2-aa4c-4df9-bd40-7d6a0cc648e5",
+        "public_transport": "platform",
+        "shelter": "no",
+        "start_date": "2024-08-01"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5589895,
+          46.6830079
+        ]
+      },
+      "properties": {
+        "id": "node/12070112472",
+        "osm_type": "node",
+        "osm_id": 12070112472,
+        "bus": "yes",
+        "fixme": "Emplacement à vérifier",
+        "highway": "bus_stop",
+        "name": "Impôts",
+        "public_transport": "platform",
+        "start_date": "2024-08-01"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5516,
+          46.6742285
+        ]
+      },
+      "properties": {
+        "id": "node/12070112474",
+        "osm_type": "node",
+        "osm_id": 12070112474,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "name": "Lafayette",
+        "public_transport": "platform",
+        "shelter": "no",
+        "start_date": "2024-08-01",
+        "tactile_paving": "no"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5583753,
+          46.6927259
+        ]
+      },
+      "properties": {
+        "id": "node/12071198687",
+        "osm_type": "node",
+        "osm_id": 12071198687,
+        "bus": "yes",
+        "fixme": "Emplacement à vérifier",
+        "highway": "bus_stop",
+        "name": "Bercaille",
+        "public_transport": "platform",
+        "start_date": "2024-08-01"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5583189,
+          46.6925645
+        ]
+      },
+      "properties": {
+        "id": "node/12071198688",
+        "osm_type": "node",
+        "osm_id": 12071198688,
+        "bus": "yes",
+        "fixme": "Emplacement à vérifier",
+        "highway": "bus_stop",
+        "name": "Bercaille",
+        "public_transport": "platform",
+        "start_date": "2024-08-01"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5595487,
+          46.6885436
+        ]
+      },
+      "properties": {
+        "id": "node/12071198689",
+        "osm_type": "node",
+        "osm_id": 12071198689,
+        "bus": "yes",
+        "fixme": "Emplacement à vérifier",
+        "highway": "bus_stop",
+        "name": "Haut des Pendants",
+        "public_transport": "platform",
+        "start_date": "2024-08-01"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.558215,
+          46.694788
+        ]
+      },
+      "properties": {
+        "id": "node/12073822663",
+        "osm_type": "node",
+        "osm_id": 12073822663,
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Feschaux",
+        "public_transport": "platform"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5131043,
+          46.6629091
+        ]
+      },
+      "properties": {
+        "id": "node/12093728323",
+        "osm_type": "node",
+        "osm_id": 12093728323,
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Route de Chilly",
+        "public_transport": "platform",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5129331,
+          46.66292
+        ]
+      },
+      "properties": {
+        "id": "node/12095284735",
+        "osm_type": "node",
+        "osm_id": 12095284735,
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Route de Chilly",
+        "note": "Absence de totem",
+        "public_transport": "platform",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5533451,
+          46.6690962
+        ]
+      },
+      "properties": {
+        "id": "node/12578528588",
+        "osm_type": "node",
+        "osm_id": 12578528588,
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "local_ref": "A",
+        "name": "Gare de Lons-le-Saunier",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200491",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5526125,
+          46.6688691
+        ]
+      },
+      "properties": {
+        "id": "node/12578588945",
+        "osm_type": "node",
+        "osm_id": 12578588945,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "local_ref": "J",
+        "name": "Gare de Lons-le-Saunier",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200491",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5504737,
+          46.6688439
+        ]
+      },
+      "properties": {
+        "id": "node/12578713586",
+        "osm_type": "node",
+        "osm_id": 12578713586,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "local_ref": "E",
+        "name": "Gare de Lons-le-Saunier",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200491",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5528801,
+          46.6689291
+        ]
+      },
+      "properties": {
+        "id": "node/12581565649",
+        "osm_type": "node",
+        "osm_id": 12581565649,
+        "bench": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "local_ref": "I",
+        "name": "Gare de Lons-le-Saunier",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200491",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5531492,
+          46.6689893
+        ]
+      },
+      "properties": {
+        "id": "node/12581565650",
+        "osm_type": "node",
+        "osm_id": 12581565650,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "local_ref": "H",
+        "name": "Gare de Lons-le-Saunier",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200491",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5534387,
+          46.6690526
+        ]
+      },
+      "properties": {
+        "id": "node/12598861237",
+        "osm_type": "node",
+        "osm_id": 12598861237,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "colour": "#4aa5ff",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "local_ref": "G",
+        "name": "Gare de Lons-le-Saunier",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200491",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.552981,
+          46.6690506
+        ]
+      },
+      "properties": {
+        "id": "node/12598861238",
+        "osm_type": "node",
+        "osm_id": 12598861238,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "local_ref": "B",
+        "name": "Gare de Lons-le-Saunier",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200491",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5524906,
+          46.6690112
+        ]
+      },
+      "properties": {
+        "id": "node/12598861239",
+        "osm_type": "node",
+        "osm_id": 12598861239,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "local_ref": "C",
+        "name": "Gare de Lons-le-Saunier",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200491",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5520818,
+          46.6689706
+        ]
+      },
+      "properties": {
+        "id": "node/12598861240",
+        "osm_type": "node",
+        "osm_id": 12598861240,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "local_ref": "D",
+        "name": "Gare de Lons-le-Saunier",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200491",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5500901,
+          46.6688687
+        ]
+      },
+      "properties": {
+        "id": "node/12598861241",
+        "osm_type": "node",
+        "osm_id": 12598861241,
+        "bench": "yes",
+        "bin": "yes",
+        "bus": "yes",
+        "highway": "bus_stop",
+        "lit": "yes",
+        "local_ref": "F",
+        "name": "Gare de Lons-le-Saunier",
+        "public_transport": "platform",
+        "ref:FR:Mobigo": "200491",
+        "shelter": "yes",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5448457,
+          46.6665161
+        ]
+      },
+      "properties": {
+        "id": "node/12846610853",
+        "osm_type": "node",
+        "osm_id": 12846610853,
+        "bench": "no",
+        "bin": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Route de Macornay",
+        "public_transport": "platform",
+        "shelter": "no",
+        "tactile_paving": "no",
+        "was:ref:FR:Tallis": "LONMACO1",
+        "wheelchair": "no"
+      }
+    }
+  ]
+}

@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App font-body">
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL || undefined}>
         <Routes>
           <Route path="/" element={<CartographyPage />} />
         </Routes>

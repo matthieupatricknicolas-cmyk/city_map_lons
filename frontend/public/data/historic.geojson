@@ -1,0 +1,4384 @@
+{
+  "type": "FeatureCollection",
+  "name": "sql_statement",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/10836845685",
+        "type": "stone",
+        "name": null,
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5546689,
+          46.67789040022504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/11557840938",
+        "type": "memorial",
+        "name": null,
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": "Les maquisards et résistants du Jura\nà leur camarade\nRobert Bouilloux\nassassiné par la milice\nle 8 juillet 1944 à l'âge de 29 ans",
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5552011,
+          46.67745610022512
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/1161751335",
+        "type": "fountain",
+        "name": "Vénus de Canova",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": "1844-10-04",
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5549661,
+          46.67788410022504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/11840878897",
+        "type": "memorial",
+        "name": null,
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": "Dans cette maison est né le 30 septembre 1918 René Rémond Grand Historien - Politologue Académicien français 1918 - 2017",
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5542958,
+          46.67381670022583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/12535709548",
+        "type": "memorial",
+        "name": null,
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": "Lieu de naissance de Maurice Chevassu",
+        "build_date": null,
+        "description": null,
+        "wikipedia": "fr:Maurice Chevassu",
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5548335,
+          46.674878300225636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/12617763718",
+        "type": "fountain",
+        "name": "Fontaine aux lions",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5529233,
+          46.67588910022542
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/12709788572",
+        "type": "memorial",
+        "name": null,
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5467339,
+          46.67277440022602
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/12920722431",
+        "type": "fountain",
+        "name": null,
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.560706,
+          46.672416000226086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/13633321978",
+        "type": "church",
+        "name": "Chapelle Notre-Dame de l’Ermitage de Montciel",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.537633,
+          46.670060000226535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/13633367517",
+        "type": "church",
+        "name": "Chapelle de l’Hôtel-Dieu",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": "2",
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.552201,
+          46.67637210022532
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/13850688610",
+        "type": "memorial",
+        "name": "Marcel Berger",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5552075,
+          46.67441530022569
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/13900885800",
+        "type": "memorial",
+        "name": "Valentin Abeille",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": "1942-1944\nDans cet immeuble où se trouvait l'imprimerie Louis Verpillat furent rédigés les premiers tracts de la résistance jurassienne. [...]",
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5516004,
+          46.66992380022655
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/1417503124",
+        "type": "memorial",
+        "name": null,
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5424232,
+          46.67248490022607
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/1572748364",
+        "type": "fountain",
+        "name": "Fontaine Wallace",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5555491,
+          46.67569940022547
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/1572774508",
+        "type": "fountain",
+        "name": "Source Lédonia",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5570452,
+          46.67660160022528
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/1785365692",
+        "type": "yes",
+        "name": "Maison natale de Rouget de Lisle",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5536884,
+          46.67532590022553
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/1997379211",
+        "type": "fountain",
+        "name": "Jet d'eau",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5634744,
+          46.671844100226195
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/2675864987",
+        "type": "fountain",
+        "name": "Fontaine aux dauphins",
+        "ref_mhs": "PA00101891",
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": "3",
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5544612,
+          46.6744162002257
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/2679396865",
+        "type": "manor",
+        "name": "Hôtel Guigue de Maisod",
+        "ref_mhs": "PA00101893",
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": "fr:Hôtel Guigue de Maisod",
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5547917,
+          46.67581500022545
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/2681329655",
+        "type": "archaeological_site",
+        "name": "Tumulus",
+        "ref_mhs": "PA00101945",
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": "fr:Tumulus",
+        "civilization": "prehistoric",
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5330355,
+          46.66869700022679
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/2917662748",
+        "type": "memorial",
+        "name": "Monument des Déportés",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5600488,
+          46.67625540022537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/3197478477",
+        "type": "memorial",
+        "name": null,
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": "Paul-Emile VICTOR explorateur-ethnologue fondateur des expéditions polaires françaises ET SA FAMILLE ONT HABITE CETTE MAISON de 1920 à 1933",
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5526027,
+          46.67036620022648
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/4231654230",
+        "type": "fountain",
+        "name": "Fontaine des Salines",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.546401,
+          46.673611200225864
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/4361224189",
+        "type": "memorial",
+        "name": "Stèle Damidaux",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": "Ici tomba pour la libération, le 25 août 1944, Gabriel Damidaux, 21 ans, chef de groupe F.F.I. À son chef héroïque, le groupe Charles.",
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.55137,
+          46.666842300227145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/4361242898",
+        "type": "memorial",
+        "name": null,
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5691321,
+          46.671389000226284
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/5053550658",
+        "type": "memorial",
+        "name": "Stèle en hommage aux Jurassiens mort en Afrique du Nord",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": "« Le Jura à ses morts en Afrique du nord 1952 - 1962 »",
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.55921,
+          46.67334230022591
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/5053558263",
+        "type": "memorial",
+        "name": "Première armée française",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": "« 1ère armée française commandée par le général de Lattre de Tassigny forgée en Afrique et en Italie débarquée en Provence grossie des forces françaises de l’intérieur. A pris part à la libération du Jura dans sa marche victorieuse au Rhin et au Danube »",
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5589828,
+          46.673151300225946
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/5098989608",
+        "type": "memorial",
+        "name": "Famille Daloz",
+        "ref_mhs": "PA39000113",
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": "3",
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5600865,
+          46.67963520022471
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/5098989609",
+        "type": "memorial",
+        "name": "Vigneron François Dufort",
+        "ref_mhs": "PA39000114",
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": "3",
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5600811,
+          46.67951010022474
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/5098989610",
+        "type": "memorial",
+        "name": "Chasseur Marin Gousset",
+        "ref_mhs": "PA39000115",
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": "3",
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5600811,
+          46.67927090022478
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/5098989611",
+        "type": "memorial",
+        "name": "Sculpteur Bourgeois et de sa femme",
+        "ref_mhs": "PA39000103",
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": "3",
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5600329,
+          46.67938330022475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/6039442812",
+        "type": "memorial",
+        "name": "Stèle du Général de Gaulle",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5594115,
+          46.67252850022605
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/6116178629",
+        "type": "fountain",
+        "name": null,
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5534157,
+          46.673720500225826
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/6232645813",
+        "type": "ruins",
+        "name": "Lido Lédo",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": "Bains minéraux et de natation",
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5569935,
+          46.677158200225186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/631878984",
+        "type": "memorial",
+        "name": "Monument à la gloire de la résistance jurassienne",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": "« A la gloire de la résistance jurassienne 1939 - 1945 »",
+        "build_date": "1950",
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5592036,
+          46.673200100225955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/6402616419",
+        "type": "memorial",
+        "name": "Maison natale de Théodore Vernier",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": "Ici est né et a vécu Théodore VERNIER 1731-1818 avocat, député, sénateur Comte de Montorient pair de France",
+        "build_date": null,
+        "description": "Maison natale de Théodore Vernier",
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5551921,
+          46.6745528002257
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/6412031979",
+        "type": "memorial",
+        "name": "Jean Moulin - Conseil National de la Résistance",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": "« Avenue Jean Moulin - «  Max » - 1899 -1943 - Fondateur et Premier Président du Conseil National de la Résistance - Préfet Martyr - Inhumé au Panthéon »",
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5585383,
+          46.673144500225945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/6772563487",
+        "type": "memorial",
+        "name": null,
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": "10 septembre 1912\nPremier atterrissage d'un avion militaire\nLieutenant Louis MAZIER",
+        "build_date": null,
+        "description": "10 septembre 1912 - Premier atterrissage d'un avion militaire - Lieutenant Louis Mazier",
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5372458,
+          46.66908130022672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/754254004",
+        "type": "fountain",
+        "name": null,
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.54924,
+          46.67463740022566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9560113328",
+        "type": "fountain",
+        "name": null,
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5512349,
+          46.67216950022614
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "relation/1243326",
+        "type": "manor",
+        "name": "Hôtel de Foissey",
+        "ref_mhs": "PA39000011",
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": "fr:Hôtel de Foissey",
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5547851,
+              46.675783600225444
+            ],
+            [
+              5.5549814,
+              46.67579760022544
+            ],
+            [
+              5.5549918,
+              46.67587010022541
+            ],
+            [
+              5.5551177,
+              46.67586310022543
+            ],
+            [
+              5.5551123,
+              46.67583190022543
+            ],
+            [
+              5.5550056,
+              46.67582940022543
+            ],
+            [
+              5.5550078,
+              46.67579960022544
+            ],
+            [
+              5.5552054,
+              46.675813800225434
+            ],
+            [
+              5.5552233,
+              46.675906500225416
+            ],
+            [
+              5.5551437,
+              46.6759205002254
+            ],
+            [
+              5.5551687,
+              46.67598250022542
+            ],
+            [
+              5.5550619,
+              46.675997600225415
+            ],
+            [
+              5.555054,
+              46.67597550022541
+            ],
+            [
+              5.5550279,
+              46.6759800002254
+            ],
+            [
+              5.554853,
+              46.6759801002254
+            ],
+            [
+              5.5548017,
+              46.67586320022544
+            ],
+            [
+              5.5547851,
+              46.675783600225444
+            ]
+          ],
+          [
+            [
+              5.5549966,
+              46.67589510022543
+            ],
+            [
+              5.5550005,
+              46.67592940022543
+            ],
+            [
+              5.5550624,
+              46.67592540022543
+            ],
+            [
+              5.5550536,
+              46.67589250022544
+            ],
+            [
+              5.5549966,
+              46.67589510022543
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/1041436735",
+        "type": "fountain",
+        "name": "Fontaine de la rue du Commerce",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5539733,
+              46.67551810022549
+            ],
+            [
+              5.5539738,
+              46.67551360022548
+            ],
+            [
+              5.5539765,
+              46.675509500225495
+            ],
+            [
+              5.5539812,
+              46.675506200225506
+            ],
+            [
+              5.5539871,
+              46.6755043002255
+            ],
+            [
+              5.5539937,
+              46.675503800225506
+            ],
+            [
+              5.5540001,
+              46.675504900225484
+            ],
+            [
+              5.5540056,
+              46.67550750022551
+            ],
+            [
+              5.5540095,
+              46.675511200225515
+            ],
+            [
+              5.5540112,
+              46.6755151002255
+            ],
+            [
+              5.5540111,
+              46.67551910022549
+            ],
+            [
+              5.5540092,
+              46.675522900225495
+            ],
+            [
+              5.5540057,
+              46.67552620022549
+            ],
+            [
+              5.5540009,
+              46.67552860022549
+            ],
+            [
+              5.5539952,
+              46.6755298002255
+            ],
+            [
+              5.5539893,
+              46.6755298002255
+            ],
+            [
+              5.5539837,
+              46.67552860022549
+            ],
+            [
+              5.5539789,
+              46.67552620022549
+            ],
+            [
+              5.5539751,
+              46.67552250022549
+            ],
+            [
+              5.5539733,
+              46.67551810022549
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/1136283229",
+        "type": "fountain",
+        "name": null,
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5549417,
+              46.67788440022504
+            ],
+            [
+              5.5549429,
+              46.67787860022504
+            ],
+            [
+              5.5549469,
+              46.677873500225054
+            ],
+            [
+              5.5549532,
+              46.67786960022506
+            ],
+            [
+              5.554961,
+              46.67786730022504
+            ],
+            [
+              5.5549695,
+              46.67786710022504
+            ],
+            [
+              5.5549776,
+              46.67786880022504
+            ],
+            [
+              5.5549839,
+              46.67787190022504
+            ],
+            [
+              5.5549885,
+              46.677876300225044
+            ],
+            [
+              5.5549909,
+              46.67788140022505
+            ],
+            [
+              5.5549908,
+              46.67788680022504
+            ],
+            [
+              5.5549882,
+              46.677891800225034
+            ],
+            [
+              5.5549835,
+              46.677896100225055
+            ],
+            [
+              5.5549771,
+              46.67789920022502
+            ],
+            [
+              5.5549696,
+              46.677900700225045
+            ],
+            [
+              5.5549618,
+              46.67790060022504
+            ],
+            [
+              5.5549544,
+              46.67789870022505
+            ],
+            [
+              5.5549478,
+              46.67789510022505
+            ],
+            [
+              5.5549434,
+              46.677890100225056
+            ],
+            [
+              5.5549417,
+              46.67788440022504
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/423630875",
+        "type": "fountain",
+        "name": null,
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5518831,
+              46.67410870022576
+            ],
+            [
+              5.5521203,
+              46.67404420022577
+            ],
+            [
+              5.552147,
+              46.67409310022577
+            ],
+            [
+              5.5519118,
+              46.67415820022576
+            ],
+            [
+              5.5518831,
+              46.67410870022576
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/517954807",
+        "type": "memorial",
+        "name": "Monument aux Morts",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5588292,
+              46.67330490022591
+            ],
+            [
+              5.5588297,
+              46.67330120022591
+            ],
+            [
+              5.5588316,
+              46.673294400225906
+            ],
+            [
+              5.5588347,
+              46.67328890022593
+            ],
+            [
+              5.5588378,
+              46.67328460022592
+            ],
+            [
+              5.5588455,
+              46.67327740022591
+            ],
+            [
+              5.5588533,
+              46.67327250022592
+            ],
+            [
+              5.5588616,
+              46.67326840022593
+            ],
+            [
+              5.5588694,
+              46.673265700225926
+            ],
+            [
+              5.5588787,
+              46.67326380022593
+            ],
+            [
+              5.5588897,
+              46.673262500225924
+            ],
+            [
+              5.5588977,
+              46.67326220022593
+            ],
+            [
+              5.5589054,
+              46.673262700225926
+            ],
+            [
+              5.5589117,
+              46.67326370022593
+            ],
+            [
+              5.5589173,
+              46.67326510022591
+            ],
+            [
+              5.5589272,
+              46.67326840022593
+            ],
+            [
+              5.5589359,
+              46.673273000225926
+            ],
+            [
+              5.5589452,
+              46.673280000225915
+            ],
+            [
+              5.5589522,
+              46.673288700225925
+            ],
+            [
+              5.5589555,
+              46.67329510022592
+            ],
+            [
+              5.5589574,
+              46.673303000225914
+            ],
+            [
+              5.5589575,
+              46.673309100225914
+            ],
+            [
+              5.5589559,
+              46.67331660022592
+            ],
+            [
+              5.5589509,
+              46.673325700225924
+            ],
+            [
+              5.5589419,
+              46.67333530022591
+            ],
+            [
+              5.5589311,
+              46.67334220022591
+            ],
+            [
+              5.5589173,
+              46.673347500225894
+            ],
+            [
+              5.5588988,
+              46.67335060022591
+            ],
+            [
+              5.5588809,
+              46.67335000022591
+            ],
+            [
+              5.558865,
+              46.67334630022591
+            ],
+            [
+              5.5588494,
+              46.67333900022591
+            ],
+            [
+              5.5588395,
+              46.67333090022591
+            ],
+            [
+              5.558833,
+              46.67332220022592
+            ],
+            [
+              5.55883,
+              46.67331460022592
+            ],
+            [
+              5.5588296,
+              46.673311700225916
+            ],
+            [
+              5.5588292,
+              46.6733085002259
+            ],
+            [
+              5.5588292,
+              46.67330490022591
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/737494825",
+        "type": "fountain",
+        "name": "Fontaine du Cygne",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5549416,
+              46.67329650022592
+            ],
+            [
+              5.554944,
+              46.67329070022592
+            ],
+            [
+              5.554949,
+              46.67328580022591
+            ],
+            [
+              5.554956,
+              46.673282300225914
+            ],
+            [
+              5.5549644,
+              46.673280600225915
+            ],
+            [
+              5.554973,
+              46.673280900225926
+            ],
+            [
+              5.5549811,
+              46.67328300022591
+            ],
+            [
+              5.5549878,
+              46.673286900225925
+            ],
+            [
+              5.5549922,
+              46.673292000225906
+            ],
+            [
+              5.5549939,
+              46.67329780022594
+            ],
+            [
+              5.5549929,
+              46.67330370022592
+            ],
+            [
+              5.5549891,
+              46.67330900022592
+            ],
+            [
+              5.554983,
+              46.67331310022592
+            ],
+            [
+              5.5549753,
+              46.673315800225915
+            ],
+            [
+              5.5549668,
+              46.67331650022591
+            ],
+            [
+              5.5549584,
+              46.67331540022592
+            ],
+            [
+              5.5549509,
+              46.67331240022592
+            ],
+            [
+              5.5549453,
+              46.6733079002259
+            ],
+            [
+              5.554942,
+              46.6733024002259
+            ],
+            [
+              5.5549416,
+              46.67329650022592
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82830219",
+        "type": "place_of_worship",
+        "name": "Temple",
+        "ref_mhs": null,
+        "religion": "christian",
+        "religion_denomination": "protestant",
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5536111,
+              46.677640100225084
+            ],
+            [
+              5.5536322,
+              46.67763960022509
+            ],
+            [
+              5.5536194,
+              46.677522700225104
+            ],
+            [
+              5.5536981,
+              46.67752230022513
+            ],
+            [
+              5.5537956,
+              46.677569000225105
+            ],
+            [
+              5.5538013,
+              46.67764170022509
+            ],
+            [
+              5.5538015,
+              46.67766300022509
+            ],
+            [
+              5.5536146,
+              46.677663600225095
+            ],
+            [
+              5.5536111,
+              46.677640100225084
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82831291",
+        "type": "manor",
+        "name": "Hôtel Abriot de Grusse",
+        "ref_mhs": "PA39000005",
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5556537,
+              46.6750045002256
+            ],
+            [
+              5.5559175,
+              46.67503400022558
+            ],
+            [
+              5.5559051,
+              46.67511240022558
+            ],
+            [
+              5.5558939,
+              46.675146500225566
+            ],
+            [
+              5.555898,
+              46.675165300225565
+            ],
+            [
+              5.5559046,
+              46.67517790022557
+            ],
+            [
+              5.555898,
+              46.67518530022557
+            ],
+            [
+              5.5558889,
+              46.67518700022558
+            ],
+            [
+              5.555877,
+              46.67518650022557
+            ],
+            [
+              5.555871,
+              46.67518410022557
+            ],
+            [
+              5.5558668,
+              46.675178700225565
+            ],
+            [
+              5.5558662,
+              46.67517300022556
+            ],
+            [
+              5.555872,
+              46.675157400225565
+            ],
+            [
+              5.5556608,
+              46.67513370022559
+            ],
+            [
+              5.5556537,
+              46.6750045002256
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82834297",
+        "type": "manor",
+        "name": "Château de Mireval",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5563721,
+              46.66593020022732
+            ],
+            [
+              5.5564553,
+              46.6659156002273
+            ],
+            [
+              5.5564582,
+              46.66592120022732
+            ],
+            [
+              5.5565489,
+              46.66590650022731
+            ],
+            [
+              5.5566029,
+              46.666053800227296
+            ],
+            [
+              5.556453,
+              46.666082000227306
+            ],
+            [
+              5.5564379,
+              46.666076200227295
+            ],
+            [
+              5.5564044,
+              46.66597960022731
+            ],
+            [
+              5.5563894,
+              46.66598150022731
+            ],
+            [
+              5.5563721,
+              46.66593020022732
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82834735",
+        "type": "yes",
+        "name": "Maison Colette",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5457287,
+              46.66471460022757
+            ],
+            [
+              5.5458538,
+              46.664683400227545
+            ],
+            [
+              5.5458875,
+              46.66474870022755
+            ],
+            [
+              5.5457634,
+              46.664779800227535
+            ],
+            [
+              5.5457287,
+              46.66471460022757
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82835038",
+        "type": "manor",
+        "name": null,
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5530332,
+              46.67050010022644
+            ],
+            [
+              5.553041,
+              46.67048930022644
+            ],
+            [
+              5.5530525,
+              46.67049030022645
+            ],
+            [
+              5.5530358,
+              46.67042190022646
+            ],
+            [
+              5.5530456,
+              46.67042040022647
+            ],
+            [
+              5.5530362,
+              46.67038120022647
+            ],
+            [
+              5.5531712,
+              46.67036550022649
+            ],
+            [
+              5.5531894,
+              46.670436500226465
+            ],
+            [
+              5.5532191,
+              46.670433000226474
+            ],
+            [
+              5.5532277,
+              46.670467800226454
+            ],
+            [
+              5.5531979,
+              46.67047150022647
+            ],
+            [
+              5.5532078,
+              46.67051240022646
+            ],
+            [
+              5.5531502,
+              46.67051920022645
+            ],
+            [
+              5.5531527,
+              46.67053100022644
+            ],
+            [
+              5.5530867,
+              46.670538400226455
+            ],
+            [
+              5.5530843,
+              46.67052970022646
+            ],
+            [
+              5.553058,
+              46.67053680022644
+            ],
+            [
+              5.5530384,
+              46.67052500022645
+            ],
+            [
+              5.5530332,
+              46.67050010022644
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82835359",
+        "type": "yes",
+        "name": null,
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.554707,
+              46.67462160022566
+            ],
+            [
+              5.5551691,
+              46.67451380022569
+            ],
+            [
+              5.5551839,
+              46.67453940022568
+            ],
+            [
+              5.5551921,
+              46.6745528002257
+            ],
+            [
+              5.555208,
+              46.67457960022567
+            ],
+            [
+              5.5550242,
+              46.67461830022565
+            ],
+            [
+              5.5550055,
+              46.67457890022567
+            ],
+            [
+              5.5549171,
+              46.67460080022565
+            ],
+            [
+              5.5549363,
+              46.67463840022565
+            ],
+            [
+              5.5547412,
+              46.67468290022565
+            ],
+            [
+              5.554707,
+              46.67462160022566
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82835447",
+        "type": "yes",
+        "name": "Imprimerie moderne",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5523586,
+              46.67047220022646
+            ],
+            [
+              5.5524016,
+              46.670455800226456
+            ],
+            [
+              5.5524007,
+              46.67045060022647
+            ],
+            [
+              5.5525938,
+              46.67041210022647
+            ],
+            [
+              5.5526734,
+              46.67070560022642
+            ],
+            [
+              5.5526911,
+              46.6707028002264
+            ],
+            [
+              5.5527093,
+              46.67075490022639
+            ],
+            [
+              5.5526622,
+              46.6707604002264
+            ],
+            [
+              5.5526552,
+              46.670736500226404
+            ],
+            [
+              5.5525777,
+              46.6707457002264
+            ],
+            [
+              5.5525701,
+              46.6707180002264
+            ],
+            [
+              5.5524299,
+              46.670735600226415
+            ],
+            [
+              5.5523586,
+              46.67047220022646
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82835500",
+        "type": "place_of_worship",
+        "name": "Église Saint-Luc",
+        "ref_mhs": null,
+        "religion": "christian",
+        "religion_denomination": "catholic",
+        "inscription": null,
+        "build_date": null,
+        "description": "Dernière modification (église -> chapelle) non avenue Source : http://clochers.org/Fichiers_HTML/Accueil/Accueil_clochers/39/accueil_39300a.htm",
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.572346,
+              46.67362800022585
+            ],
+            [
+              5.572479,
+              46.67361980022586
+            ],
+            [
+              5.5726066,
+              46.673612000225866
+            ],
+            [
+              5.572632,
+              46.67380620022582
+            ],
+            [
+              5.5723731,
+              46.67382320022582
+            ],
+            [
+              5.572364,
+              46.67375770022581
+            ],
+            [
+              5.5723536,
+              46.673691200225846
+            ],
+            [
+              5.572346,
+              46.67362800022585
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82835751",
+        "type": "place_of_worship",
+        "name": "Église Protestante Évangélique",
+        "ref_mhs": null,
+        "religion": "christian",
+        "religion_denomination": "evangelical",
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5496791,
+              46.67036620022648
+            ],
+            [
+              5.5497421,
+              46.67023880022651
+            ],
+            [
+              5.5499021,
+              46.670277900226495
+            ],
+            [
+              5.5498919,
+              46.670299100226494
+            ],
+            [
+              5.5499159,
+              46.670305300226495
+            ],
+            [
+              5.5498603,
+              46.67041490022647
+            ],
+            [
+              5.5497745,
+              46.67039440022648
+            ],
+            [
+              5.5497775,
+              46.67038940022648
+            ],
+            [
+              5.5496791,
+              46.67036620022648
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82836513",
+        "type": "manor",
+        "name": "Thermes Lédonia",
+        "ref_mhs": "PA39000043",
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": "fr:Thermes Lédonia",
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5601896,
+              46.67165210022623
+            ],
+            [
+              5.5602327,
+              46.67164520022622
+            ],
+            [
+              5.5602312,
+              46.671640800226236
+            ],
+            [
+              5.5603304,
+              46.67162540022624
+            ],
+            [
+              5.5603319,
+              46.67162980022624
+            ],
+            [
+              5.5604442,
+              46.67161220022624
+            ],
+            [
+              5.5604395,
+              46.67159680022624
+            ],
+            [
+              5.5604567,
+              46.67159460022623
+            ],
+            [
+              5.5604722,
+              46.67159270022624
+            ],
+            [
+              5.5604761,
+              46.671606600226234
+            ],
+            [
+              5.5604801,
+              46.671606200226236
+            ],
+            [
+              5.5604728,
+              46.67157770022626
+            ],
+            [
+              5.5604747,
+              46.67156960022625
+            ],
+            [
+              5.5604784,
+              46.67156510022626
+            ],
+            [
+              5.560508,
+              46.67154270022626
+            ],
+            [
+              5.5605133,
+              46.671539000226254
+            ],
+            [
+              5.560521,
+              46.67153370022624
+            ],
+            [
+              5.560548,
+              46.67155500022625
+            ],
+            [
+              5.5605873,
+              46.67153140022625
+            ],
+            [
+              5.5607471,
+              46.671656100226215
+            ],
+            [
+              5.5607587,
+              46.671671100226234
+            ],
+            [
+              5.5607605,
+              46.67168870022621
+            ],
+            [
+              5.5607524,
+              46.67170490022623
+            ],
+            [
+              5.5607359,
+              46.671717700226225
+            ],
+            [
+              5.5607139,
+              46.67172540022623
+            ],
+            [
+              5.5606896,
+              46.67172650022621
+            ],
+            [
+              5.5606508,
+              46.671713100226214
+            ],
+            [
+              5.5606354,
+              46.67171400022622
+            ],
+            [
+              5.5606694,
+              46.67180720022621
+            ],
+            [
+              5.5607018,
+              46.6718023002262
+            ],
+            [
+              5.5607044,
+              46.67178800022623
+            ],
+            [
+              5.5607187,
+              46.67177920022622
+            ],
+            [
+              5.5607278,
+              46.67177660022622
+            ],
+            [
+              5.5607403,
+              46.67177690022622
+            ],
+            [
+              5.560748,
+              46.67177820022619
+            ],
+            [
+              5.5607544,
+              46.67178150022621
+            ],
+            [
+              5.5607589,
+              46.671786000226206
+            ],
+            [
+              5.5607639,
+              46.6717944002262
+            ],
+            [
+              5.5608001,
+              46.67178840022619
+            ],
+            [
+              5.5608659,
+              46.67199110022616
+            ],
+            [
+              5.5608836,
+              46.67199020022616
+            ],
+            [
+              5.5608955,
+              46.67203240022615
+            ],
+            [
+              5.560909,
+              46.67203980022615
+            ],
+            [
+              5.560916,
+              46.67206710022616
+            ],
+            [
+              5.5609187,
+              46.67207740022616
+            ],
+            [
+              5.5609114,
+              46.67208400022615
+            ],
+            [
+              5.5608641,
+              46.67209080022614
+            ],
+            [
+              5.5608484,
+              46.67208650022615
+            ],
+            [
+              5.5608461,
+              46.67207820022615
+            ],
+            [
+              5.5608,
+              46.67208500022613
+            ],
+            [
+              5.5608009,
+              46.67208990022615
+            ],
+            [
+              5.5606876,
+              46.672106100226145
+            ],
+            [
+              5.5606861,
+              46.672103300226155
+            ],
+            [
+              5.5606574,
+              46.672108100226154
+            ],
+            [
+              5.5606587,
+              46.672113500226146
+            ],
+            [
+              5.56062,
+              46.67211890022615
+            ],
+            [
+              5.5605764,
+              46.67212490022613
+            ],
+            [
+              5.5605741,
+              46.67211850022616
+            ],
+            [
+              5.5605476,
+              46.672122000226146
+            ],
+            [
+              5.5605494,
+              46.67212500022614
+            ],
+            [
+              5.5604399,
+              46.67214070022614
+            ],
+            [
+              5.5604338,
+              46.67214160022614
+            ],
+            [
+              5.5604323,
+              46.67213670022613
+            ],
+            [
+              5.5603879,
+              46.67214370022614
+            ],
+            [
+              5.5603895,
+              46.67215090022613
+            ],
+            [
+              5.5603822,
+              46.67216190022614
+            ],
+            [
+              5.5603305,
+              46.67216850022612
+            ],
+            [
+              5.5603174,
+              46.672162300226134
+            ],
+            [
+              5.5603087,
+              46.672131500226136
+            ],
+            [
+              5.5603178,
+              46.67211520022616
+            ],
+            [
+              5.560304,
+              46.67207260022616
+            ],
+            [
+              5.5603255,
+              46.67206980022616
+            ],
+            [
+              5.5602784,
+              46.67191720022618
+            ],
+            [
+              5.5602634,
+              46.67186860022618
+            ],
+            [
+              5.5604639,
+              46.6718408002262
+            ],
+            [
+              5.5604623,
+              46.671834900226195
+            ],
+            [
+              5.5605289,
+              46.6718256002262
+            ],
+            [
+              5.5604827,
+              46.67173790022621
+            ],
+            [
+              5.5603825,
+              46.671752800226216
+            ],
+            [
+              5.5603997,
+              46.671817600226184
+            ],
+            [
+              5.5602489,
+              46.6718407002262
+            ],
+            [
+              5.560233,
+              46.6717903002262
+            ],
+            [
+              5.5602265,
+              46.67179130022622
+            ],
+            [
+              5.5602103,
+              46.67173970022622
+            ],
+            [
+              5.5601924,
+              46.671682300226216
+            ],
+            [
+              5.5601986,
+              46.67168140022622
+            ],
+            [
+              5.5601896,
+              46.67165210022623
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82836583",
+        "type": "manor",
+        "name": "Hôtel de Lezay-Marnézia",
+        "ref_mhs": "PA39000004",
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": "fr:Hôtel de Lezay-Marnézia",
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5533012,
+              46.67645610022532
+            ],
+            [
+              5.5535284,
+              46.67643410022531
+            ],
+            [
+              5.5535953,
+              46.67671600022526
+            ],
+            [
+              5.5536286,
+              46.676856700225244
+            ],
+            [
+              5.5536074,
+              46.67685910022524
+            ],
+            [
+              5.553554,
+              46.67686510022524
+            ],
+            [
+              5.5534728,
+              46.676566800225295
+            ],
+            [
+              5.5533622,
+              46.67657730022529
+            ],
+            [
+              5.5533736,
+              46.67661740022529
+            ],
+            [
+              5.5533547,
+              46.67661990022528
+            ],
+            [
+              5.5533012,
+              46.67645610022532
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82838766",
+        "type": "yes",
+        "name": "Hôtel-Dieu",
+        "ref_mhs": "PA00101892",
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": "fr:Hôtel-Dieu de Lons-le-Saunier",
+        "civilization": null,
+        "heritage": "2",
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.551836,
+              46.67582340022545
+            ],
+            [
+              5.5519839,
+              46.675800200225446
+            ],
+            [
+              5.5520829,
+              46.675980600225415
+            ],
+            [
+              5.5524087,
+              46.675898000225416
+            ],
+            [
+              5.552476,
+              46.67588140022543
+            ],
+            [
+              5.5525286,
+              46.67597790022541
+            ],
+            [
+              5.5521352,
+              46.6760783002254
+            ],
+            [
+              5.5522585,
+              46.67630760022536
+            ],
+            [
+              5.5526528,
+              46.67620540022536
+            ],
+            [
+              5.5527309,
+              46.67634830022534
+            ],
+            [
+              5.552664,
+              46.67636560022534
+            ],
+            [
+              5.5526401,
+              46.67631980022535
+            ],
+            [
+              5.5525774,
+              46.676336200225336
+            ],
+            [
+              5.5525846,
+              46.67634950022534
+            ],
+            [
+              5.5525619,
+              46.67635570022533
+            ],
+            [
+              5.552555,
+              46.676341900225324
+            ],
+            [
+              5.552453,
+              46.676368200225326
+            ],
+            [
+              5.5524612,
+              46.676382000225324
+            ],
+            [
+              5.5524398,
+              46.676387700225334
+            ],
+            [
+              5.5524326,
+              46.67637360022533
+            ],
+            [
+              5.5524004,
+              46.67638210022532
+            ],
+            [
+              5.5524387,
+              46.67645390022531
+            ],
+            [
+              5.5524085,
+              46.67646190022531
+            ],
+            [
+              5.5523513,
+              46.6764763002253
+            ],
+            [
+              5.5524124,
+              46.67659450022528
+            ],
+            [
+              5.5524578,
+              46.67656010022531
+            ],
+            [
+              5.5526517,
+              46.676411900225325
+            ],
+            [
+              5.552751,
+              46.67638480022533
+            ],
+            [
+              5.5527741,
+              46.676427000225324
+            ],
+            [
+              5.552722,
+              46.67646930022531
+            ],
+            [
+              5.5525876,
+              46.67657820022529
+            ],
+            [
+              5.5523341,
+              46.676746300225254
+            ],
+            [
+              5.5521759,
+              46.676453400225306
+            ],
+            [
+              5.5521525,
+              46.676459600225314
+            ],
+            [
+              5.5520931,
+              46.676350700225335
+            ],
+            [
+              5.5521172,
+              46.676344400225325
+            ],
+            [
+              5.5520876,
+              46.67628950022536
+            ],
+            [
+              5.5520629,
+              46.676295700225346
+            ],
+            [
+              5.5520557,
+              46.676281900225355
+            ],
+            [
+              5.5520359,
+              46.67628680022534
+            ],
+            [
+              5.5519879,
+              46.676197800225374
+            ],
+            [
+              5.5520074,
+              46.67619320022536
+            ],
+            [
+              5.5520002,
+              46.676180200225375
+            ],
+            [
+              5.5520252,
+              46.676173700225355
+            ],
+            [
+              5.5519943,
+              46.67611670022538
+            ],
+            [
+              5.5519689,
+              46.67612240022538
+            ],
+            [
+              5.551965,
+              46.67611550022539
+            ],
+            [
+              5.5519534,
+              46.67609430022538
+            ],
+            [
+              5.5519171,
+              46.676027600225396
+            ],
+            [
+              5.5519427,
+              46.6760210002254
+            ],
+            [
+              5.5518494,
+              46.675847700225425
+            ],
+            [
+              5.551836,
+              46.67582340022545
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82843774",
+        "type": "place_of_worship",
+        "name": "Mosquée Nur Muhammed Camii",
+        "ref_mhs": null,
+        "religion": "muslim",
+        "religion_denomination": "sunni",
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5716492,
+              46.67419040022576
+            ],
+            [
+              5.5717046,
+              46.67410560022577
+            ],
+            [
+              5.5721802,
+              46.67425430022573
+            ],
+            [
+              5.5721893,
+              46.674256900225735
+            ],
+            [
+              5.5721326,
+              46.674338100225725
+            ],
+            [
+              5.5717356,
+              46.67421680022576
+            ],
+            [
+              5.5716492,
+              46.67419040022576
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82845477",
+        "type": "place_of_worship",
+        "name": "Mosquée As-Salaam",
+        "ref_mhs": null,
+        "religion": "muslim",
+        "religion_denomination": "sunni",
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5641984,
+              46.673836500225825
+            ],
+            [
+              5.5644537,
+              46.673785700225814
+            ],
+            [
+              5.5644923,
+              46.67387670022582
+            ],
+            [
+              5.5642336,
+              46.673926500225804
+            ],
+            [
+              5.5642238,
+              46.6739015002258
+            ],
+            [
+              5.5641984,
+              46.673836500225825
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82846334",
+        "type": "manor",
+        "name": null,
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5536688,
+              46.671382600226295
+            ],
+            [
+              5.5538746,
+              46.67136740022628
+            ],
+            [
+              5.5538525,
+              46.67120800022632
+            ],
+            [
+              5.5540883,
+              46.671189000226306
+            ],
+            [
+              5.5540876,
+              46.67118070022633
+            ],
+            [
+              5.5541476,
+              46.671176200226306
+            ],
+            [
+              5.554149,
+              46.67118630022631
+            ],
+            [
+              5.5541641,
+              46.67118540022632
+            ],
+            [
+              5.5541855,
+              46.67134510022629
+            ],
+            [
+              5.5543178,
+              46.67133310022629
+            ],
+            [
+              5.5543192,
+              46.67134200022629
+            ],
+            [
+              5.5543267,
+              46.671390100226276
+            ],
+            [
+              5.5540961,
+              46.67140820022629
+            ],
+            [
+              5.5536791,
+              46.67144110022627
+            ],
+            [
+              5.5536688,
+              46.671382600226295
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82846929",
+        "type": "yes",
+        "name": "Théâtre",
+        "ref_mhs": "PA00101944",
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": "fr:Théâtre de Lons-le-Saunier",
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5537101,
+              46.67354540022587
+            ],
+            [
+              5.5537904,
+              46.67352310022587
+            ],
+            [
+              5.5537662,
+              46.67348210022588
+            ],
+            [
+              5.5537613,
+              46.67347380022588
+            ],
+            [
+              5.5539191,
+              46.673429800225904
+            ],
+            [
+              5.5545387,
+              46.67325790022593
+            ],
+            [
+              5.5545436,
+              46.673266200225925
+            ],
+            [
+              5.5545475,
+              46.67327280022594
+            ],
+            [
+              5.5545532,
+              46.67328250022592
+            ],
+            [
+              5.5546137,
+              46.67338500022591
+            ],
+            [
+              5.5546888,
+              46.673512500225875
+            ],
+            [
+              5.5546937,
+              46.67352080022587
+            ],
+            [
+              5.5539119,
+              46.673737900225824
+            ],
+            [
+              5.553907,
+              46.67372950022584
+            ],
+            [
+              5.553879,
+              46.67368220022585
+            ],
+            [
+              5.5538032,
+              46.673703200225845
+            ],
+            [
+              5.5537595,
+              46.67362900022585
+            ],
+            [
+              5.5537101,
+              46.67354540022587
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82849051",
+        "type": "manor",
+        "name": "Hôtel Petitjean de Rotalier",
+        "ref_mhs": "PA39000003",
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": "fr:Hôtel Petitjean de Rotalier",
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5551143,
+              46.676232900225365
+            ],
+            [
+              5.5553761,
+              46.67619630022538
+            ],
+            [
+              5.5553985,
+              46.67637040022534
+            ],
+            [
+              5.555163,
+              46.676368300225334
+            ],
+            [
+              5.5551143,
+              46.676232900225365
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82849323",
+        "type": "manor",
+        "name": "Hôtel de Balay",
+        "ref_mhs": "PA39000002",
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5551751,
+              46.67435440022571
+            ],
+            [
+              5.5552283,
+              46.67433970022572
+            ],
+            [
+              5.5552297,
+              46.67434250022573
+            ],
+            [
+              5.5553233,
+              46.67431830022575
+            ],
+            [
+              5.5554233,
+              46.67429240022573
+            ],
+            [
+              5.5554222,
+              46.674290300225735
+            ],
+            [
+              5.5554664,
+              46.67427870022573
+            ],
+            [
+              5.5554534,
+              46.674255800225744
+            ],
+            [
+              5.5554514,
+              46.67425290022573
+            ],
+            [
+              5.5554564,
+              46.67425160022572
+            ],
+            [
+              5.5555297,
+              46.674233100225734
+            ],
+            [
+              5.5555984,
+              46.67435810022572
+            ],
+            [
+              5.555538,
+              46.67437360022573
+            ],
+            [
+              5.5555585,
+              46.67441200022571
+            ],
+            [
+              5.555553,
+              46.67441350022569
+            ],
+            [
+              5.5555488,
+              46.67441470022571
+            ],
+            [
+              5.5554985,
+              46.67442860022571
+            ],
+            [
+              5.5554957,
+              46.6744248002257
+            ],
+            [
+              5.5553071,
+              46.67447610022568
+            ],
+            [
+              5.5553078,
+              46.674478400225695
+            ],
+            [
+              5.555252,
+              46.67449260022569
+            ],
+            [
+              5.5551751,
+              46.67435440022571
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82849648",
+        "type": "manor",
+        "name": null,
+        "ref_mhs": "PA39000006",
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": "3",
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5539286,
+              46.67146710022625
+            ],
+            [
+              5.553959,
+              46.67146510022626
+            ],
+            [
+              5.5540869,
+              46.67145650022628
+            ],
+            [
+              5.5541049,
+              46.671455600226274
+            ],
+            [
+              5.5541028,
+              46.67144450022627
+            ],
+            [
+              5.5540961,
+              46.67140820022629
+            ],
+            [
+              5.5543267,
+              46.671390100226276
+            ],
+            [
+              5.5543362,
+              46.671451500226276
+            ],
+            [
+              5.5542065,
+              46.67146190022626
+            ],
+            [
+              5.5542055,
+              46.67145590022626
+            ],
+            [
+              5.5541521,
+              46.671460000226276
+            ],
+            [
+              5.554184,
+              46.67164580022622
+            ],
+            [
+              5.5542341,
+              46.67164260022623
+            ],
+            [
+              5.5542335,
+              46.67163750022625
+            ],
+            [
+              5.5543639,
+              46.67162680022624
+            ],
+            [
+              5.5543734,
+              46.67168840022623
+            ],
+            [
+              5.5543509,
+              46.67168990022622
+            ],
+            [
+              5.5542427,
+              46.671697300226214
+            ],
+            [
+              5.5542201,
+              46.67169880022624
+            ],
+            [
+              5.5541233,
+              46.67170540022622
+            ],
+            [
+              5.5541162,
+              46.671659000226235
+            ],
+            [
+              5.5540644,
+              46.67166220022622
+            ],
+            [
+              5.5540402,
+              46.671663800226206
+            ],
+            [
+              5.5539932,
+              46.67166670022624
+            ],
+            [
+              5.5539739,
+              46.67166790022623
+            ],
+            [
+              5.5539631,
+              46.67166860022622
+            ],
+            [
+              5.5539554,
+              46.671616000226244
+            ],
+            [
+              5.5539836,
+              46.67161440022625
+            ],
+            [
+              5.5539675,
+              46.671517700226254
+            ],
+            [
+              5.5539363,
+              46.671519700226256
+            ],
+            [
+              5.5539286,
+              46.67146710022625
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82849667",
+        "type": "yes",
+        "name": null,
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": "yes",
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5487502,
+              46.67287950022599
+            ],
+            [
+              5.5488258,
+              46.67286620022601
+            ],
+            [
+              5.548894,
+              46.67302900022595
+            ],
+            [
+              5.5489218,
+              46.673095600225956
+            ],
+            [
+              5.5492179,
+              46.67303770022597
+            ],
+            [
+              5.5492834,
+              46.67319230022593
+            ],
+            [
+              5.5492945,
+              46.673218700225924
+            ],
+            [
+              5.5489257,
+              46.67328850022591
+            ],
+            [
+              5.5488462,
+              46.67310330022597
+            ],
+            [
+              5.5488392,
+              46.67308710022596
+            ],
+            [
+              5.5487502,
+              46.67287950022599
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82849840",
+        "type": "manor",
+        "name": null,
+        "ref_mhs": "PA39000015",
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": "3",
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5620257,
+              46.672928300225976
+            ],
+            [
+              5.562093,
+              46.67291960022599
+            ],
+            [
+              5.5620919,
+              46.67291700022599
+            ],
+            [
+              5.5621125,
+              46.672914400225984
+            ],
+            [
+              5.562133,
+              46.672911700226
+            ],
+            [
+              5.5621492,
+              46.67296870022598
+            ],
+            [
+              5.5621729,
+              46.67305200022596
+            ],
+            [
+              5.5621252,
+              46.673058000225964
+            ],
+            [
+              5.5621292,
+              46.673071900225956
+            ],
+            [
+              5.5620678,
+              46.67308080022596
+            ],
+            [
+              5.5620288,
+              46.672938900225994
+            ],
+            [
+              5.5620257,
+              46.672928300225976
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82850026",
+        "type": "manor",
+        "name": "Château de Beauregard",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5563733,
+              46.66704300022711
+            ],
+            [
+              5.5563736,
+              46.66701580022711
+            ],
+            [
+              5.5564024,
+              46.66701180022711
+            ],
+            [
+              5.5564022,
+              46.666966000227134
+            ],
+            [
+              5.5565679,
+              46.66696640022711
+            ],
+            [
+              5.5565689,
+              46.66701510022711
+            ],
+            [
+              5.5565534,
+              46.667014900227116
+            ],
+            [
+              5.5565549,
+              46.6670870002271
+            ],
+            [
+              5.5565703,
+              46.66708750022711
+            ],
+            [
+              5.5565707,
+              46.6671294002271
+            ],
+            [
+              5.5565062,
+              46.667128800227076
+            ],
+            [
+              5.556505,
+              46.66713730022709
+            ],
+            [
+              5.5564257,
+              46.66713600022708
+            ],
+            [
+              5.5563981,
+              46.66711510022711
+            ],
+            [
+              5.5563986,
+              46.6670497002271
+            ],
+            [
+              5.5563733,
+              46.66704300022711
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82850701",
+        "type": "church",
+        "name": "Église Saint-Désiré",
+        "ref_mhs": "PA00101890",
+        "religion": "christian",
+        "religion_denomination": "catholic",
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": "fr:Église Saint-Désiré de Lons-le-Saunier",
+        "civilization": null,
+        "heritage": "2",
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5504319,
+              46.67190750022618
+            ],
+            [
+              5.5504561,
+              46.67186430022618
+            ],
+            [
+              5.5504874,
+              46.671808900226196
+            ],
+            [
+              5.5507146,
+              46.6718588002262
+            ],
+            [
+              5.5510241,
+              46.67193300022618
+            ],
+            [
+              5.5509823,
+              46.67200540022617
+            ],
+            [
+              5.5509992,
+              46.672015900226164
+            ],
+            [
+              5.5510212,
+              46.67202190022616
+            ],
+            [
+              5.551017,
+              46.67202950022616
+            ],
+            [
+              5.550991,
+              46.67202230022617
+            ],
+            [
+              5.5509762,
+              46.67204790022616
+            ],
+            [
+              5.5509902,
+              46.67205480022615
+            ],
+            [
+              5.5509814,
+              46.67206310022617
+            ],
+            [
+              5.5509667,
+              46.67205640022617
+            ],
+            [
+              5.5509336,
+              46.672066000226174
+            ],
+            [
+              5.550938,
+              46.672083700226146
+            ],
+            [
+              5.550927,
+              46.67208540022615
+            ],
+            [
+              5.5509222,
+              46.672066900226156
+            ],
+            [
+              5.5508901,
+              46.67205770022616
+            ],
+            [
+              5.550881,
+              46.672073300226145
+            ],
+            [
+              5.5508693,
+              46.67207000022614
+            ],
+            [
+              5.5508792,
+              46.672054500226146
+            ],
+            [
+              5.5508432,
+              46.67204350022616
+            ],
+            [
+              5.5508402,
+              46.67204660022616
+            ],
+            [
+              5.5508467,
+              46.67205900022616
+            ],
+            [
+              5.5508345,
+              46.672072800226154
+            ],
+            [
+              5.5508133,
+              46.672073600226156
+            ],
+            [
+              5.5508,
+              46.67209610022615
+            ],
+            [
+              5.5508132,
+              46.67210000022615
+            ],
+            [
+              5.5508103,
+              46.67210670022614
+            ],
+            [
+              5.5508087,
+              46.67210910022615
+            ],
+            [
+              5.5508062,
+              46.67211280022613
+            ],
+            [
+              5.550792,
+              46.672109800226146
+            ],
+            [
+              5.5507886,
+              46.67211630022614
+            ],
+            [
+              5.550761,
+              46.67210890022615
+            ],
+            [
+              5.550767,
+              46.67209720022615
+            ],
+            [
+              5.5507187,
+              46.67208350022614
+            ],
+            [
+              5.5507126,
+              46.672092700226145
+            ],
+            [
+              5.5506906,
+              46.672086700226146
+            ],
+            [
+              5.5506873,
+              46.67207260022616
+            ],
+            [
+              5.5505948,
+              46.67204690022615
+            ],
+            [
+              5.5504887,
+              46.67201770022616
+            ],
+            [
+              5.5504319,
+              46.67190750022618
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82850863",
+        "type": "church",
+        "name": "Église des Cordeliers",
+        "ref_mhs": "PA00101889",
+        "religion": "christian",
+        "religion_denomination": "catholic",
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": "fr:Église des Cordeliers de Lons-le-Saunier",
+        "civilization": null,
+        "heritage": "2",
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5553647,
+              46.67397860022579
+            ],
+            [
+              5.5553775,
+              46.67397800022578
+            ],
+            [
+              5.5553738,
+              46.67395580022579
+            ],
+            [
+              5.555368,
+              46.6739508002258
+            ],
+            [
+              5.5555383,
+              46.67393970022578
+            ],
+            [
+              5.5556982,
+              46.67393110022578
+            ],
+            [
+              5.5558663,
+              46.67392210022579
+            ],
+            [
+              5.5560041,
+              46.6739143002258
+            ],
+            [
+              5.556154,
+              46.67390600022581
+            ],
+            [
+              5.5561543,
+              46.6739205002258
+            ],
+            [
+              5.5561343,
+              46.6739217002258
+            ],
+            [
+              5.5561358,
+              46.67393130022579
+            ],
+            [
+              5.5561396,
+              46.6739557002258
+            ],
+            [
+              5.5561485,
+              46.6739576002258
+            ],
+            [
+              5.5561412,
+              46.67397720022578
+            ],
+            [
+              5.5561827,
+              46.67399870022579
+            ],
+            [
+              5.5561885,
+              46.674050900225765
+            ],
+            [
+              5.5561414,
+              46.67407810022578
+            ],
+            [
+              5.5560949,
+              46.67408090022577
+            ],
+            [
+              5.5560942,
+              46.67408790022577
+            ],
+            [
+              5.5561126,
+              46.67408720022579
+            ],
+            [
+              5.5561325,
+              46.67409870022578
+            ],
+            [
+              5.5561343,
+              46.674114700225765
+            ],
+            [
+              5.556116,
+              46.67413120022576
+            ],
+            [
+              5.5560996,
+              46.67413200022575
+            ],
+            [
+              5.5561015,
+              46.674151400225746
+            ],
+            [
+              5.5558411,
+              46.674164600225744
+            ],
+            [
+              5.5558076,
+              46.67416630022576
+            ],
+            [
+              5.5557742,
+              46.674168000225755
+            ],
+            [
+              5.5555609,
+              46.674178800225754
+            ],
+            [
+              5.5555578,
+              46.67416250022575
+            ],
+            [
+              5.5555526,
+              46.67413550022575
+            ],
+            [
+              5.5554907,
+              46.674139300225754
+            ],
+            [
+              5.5554163,
+              46.67414380022576
+            ],
+            [
+              5.5554171,
+              46.67414660022577
+            ],
+            [
+              5.5553895,
+              46.67414600022576
+            ],
+            [
+              5.5553767,
+              46.67406400022579
+            ],
+            [
+              5.5553705,
+              46.674019600225776
+            ],
+            [
+              5.5553647,
+              46.67397860022579
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82851453",
+        "type": "yes",
+        "name": "Maison de Clarisses",
+        "ref_mhs": "PA39000044",
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": "3",
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5547435,
+              46.67765190022509
+            ],
+            [
+              5.5547653,
+              46.67754300022511
+            ],
+            [
+              5.554773,
+              46.67750510022511
+            ],
+            [
+              5.5548252,
+              46.677509600225115
+            ],
+            [
+              5.5548197,
+              46.67753970022511
+            ],
+            [
+              5.554895,
+              46.677546100225115
+            ],
+            [
+              5.5548722,
+              46.67766300022509
+            ],
+            [
+              5.5547435,
+              46.67765190022509
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82851651",
+        "type": "manor",
+        "name": "Château des Rochettes",
+        "ref_mhs": null,
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": null,
+        "civilization": null,
+        "heritage": "yes",
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5554079,
+              46.66887690022677
+            ],
+            [
+              5.5555511,
+              46.66879120022677
+            ],
+            [
+              5.5557685,
+              46.66895990022672
+            ],
+            [
+              5.5556225,
+              46.66904830022675
+            ],
+            [
+              5.5554079,
+              46.66887690022677
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82852409",
+        "type": "tower",
+        "name": "Tour de l'Horloge",
+        "ref_mhs": "PA39000040",
+        "religion": null,
+        "religion_denomination": null,
+        "inscription": null,
+        "build_date": null,
+        "description": null,
+        "wikipedia": "fr:Tour de l'Horloge (Lons-le-Saunier)",
+        "civilization": null,
+        "heritage": "3",
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5524606,
+              46.674083500225784
+            ],
+            [
+              5.5524839,
+              46.67407350022576
+            ],
+            [
+              5.552507,
+              46.674063700225766
+            ],
+            [
+              5.552512,
+              46.674068800225776
+            ],
+            [
+              5.5525539,
+              46.67411130022577
+            ],
+            [
+              5.552504,
+              46.67413200022575
+            ],
+            [
+              5.5524606,
+              46.674083500225784
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

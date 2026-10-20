@@ -5,7 +5,7 @@ import SidebarNav from "@/components/SidebarNav";
 import MapView from "@/components/MapView";
 import MapControls from "@/components/MapControls";
 import DetailPanel from "@/components/DetailPanel";
-import { LAYERS, stampFeatures } from "@/lib/osm";
+import { fetchLayerGeoJSON, LAYERS, stampFeatures } from "@/lib/osm";
 
 const DEFAULT_VISIBLE = {
   mobility: {
@@ -18,18 +18,53 @@ const DEFAULT_VISIBLE = {
     shops: true,
     food: true,
   },
+  nature: {
+    parks: true,
+  },
+  stationnement: {
+    parking_pay: true,
+    parking_free: true,
+  },
+  travaux: {
+    roadworks: true,
+    disruptions: true,
+  },
+  securite: {
+    dae: true,
+  },
 };
+
+const INITIAL_VISIBLE = Object.fromEntries(
+  Object.keys(LAYERS.mobility.items).map((layerKey) => [layerKey, false])
+);
 
 export default function CartographyPage() {
   const [activeTheme, setActiveTheme] = useState("mobility");
-  const [visibleLayers, setVisibleLayers] = useState(DEFAULT_VISIBLE.mobility);
+  const [visibleLayers, setVisibleLayers] = useState(INITIAL_VISIBLE);
   const [basemap, setBasemap] = useState("cartodb_voyager");
-  const [buildings3D, setBuildings3D] = useState(true);
+  const [basemapOpacity, setBasemapOpacity] = useState(100);
+  const [buildings3D, setBuildings3D] = useState(false);
   const [layerData, setLayerData] = useState({}); // layerKey -> FeatureCollection (stamped)
+  const [boundaryData, setBoundaryData] = useState(null);
   const [loadingLayers, setLoadingLayers] = useState({});
   const [selectedFeature, setSelectedFeature] = useState(null);
   const mapRef = useRef(null);
   const inflight = useRef(new Set());
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchLayerGeoJSON("commune_boundary.geojson")
+      .then((geojson) => {
+        if (!cancelled) setBoundaryData(geojson);
+      })
+      .catch((error) => {
+        console.error("Commune boundary loading error", error);
+        toast.error("Impossible de charger la limite communale");
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const fetchLayerIfMissing = useCallback(
     async (themeKey, layerKey) => {
@@ -39,14 +74,14 @@ export default function CartographyPage() {
       inflight.current.add(layerKey);
       setLoadingLayers((s) => ({ ...s, [layerKey]: true }));
       try {
-        const fc = await meta.fetcher();
+        const fc = await fetchLayerGeoJSON(meta.file);
         const stamped = stampFeatures(fc, themeKey, layerKey, meta);
         setLayerData((s) => ({ ...s, [layerKey]: stamped }));
         toast.success(`${meta.label} · ${stamped.features.length} objets`, {
           duration: 2200,
         });
       } catch (e) {
-        console.error("Fetch error", layerKey, e);
+        console.error("GeoJSON loading error", layerKey, e);
         toast.error(`Impossible de charger « ${meta.label} »`);
       } finally {
         inflight.current.delete(layerKey);
@@ -138,8 +173,10 @@ export default function CartographyPage() {
           <MapView
             ref={mapRef}
             basemap={basemap}
+            basemapOpacity={basemapOpacity}
             buildings3D={buildings3D}
             layerData={activeLayerData}
+            boundaryData={boundaryData}
             onFeatureClick={handleFeatureClick}
             onEmptyClick={() => setSelectedFeature(null)}
             selectedId={selectedFeature?.properties?.id}
@@ -147,6 +184,8 @@ export default function CartographyPage() {
           <MapControls
             currentBasemap={basemap}
             onBasemapChange={setBasemap}
+            basemapOpacity={basemapOpacity}
+            onBasemapOpacityChange={setBasemapOpacity}
             buildings3D={buildings3D}
             onBuildings3DToggle={() => setBuildings3D((v) => !v)}
             onResetCamera={handleResetCamera}

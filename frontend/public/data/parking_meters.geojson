@@ -1,0 +1,691 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5555909,
+          46.673149
+        ]
+      },
+      "properties": {
+        "id": "node/631764329",
+        "osm_type": "node",
+        "osm_id": 631764329,
+        "amenity": "vending_machine",
+        "check_date": "2025-08-29",
+        "currency:EUR": "yes",
+        "operator": "Ville de Lons-le-Saunier",
+        "payment:coins": "yes",
+        "payment:credit_cards": "yes",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5495202,
+          46.6755149
+        ]
+      },
+      "properties": {
+        "id": "node/1578645190",
+        "osm_type": "node",
+        "osm_id": 1578645190,
+        "amenity": "vending_machine",
+        "check_date": "2025-07-07",
+        "operator": "Ville de Lons-le-Saunier",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5550573,
+          46.6731675
+        ]
+      },
+      "properties": {
+        "id": "node/9720252939",
+        "osm_type": "node",
+        "osm_id": 9720252939,
+        "amenity": "vending_machine",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5484919,
+          46.674998
+        ]
+      },
+      "properties": {
+        "id": "node/10169335085",
+        "osm_type": "node",
+        "osm_id": 10169335085,
+        "amenity": "vending_machine",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5531732,
+          46.6743443
+        ]
+      },
+      "properties": {
+        "id": "node/10904606180",
+        "osm_type": "node",
+        "osm_id": 10904606180,
+        "amenity": "vending_machine",
+        "currency:EUR": "yes",
+        "payment:coins": "yes",
+        "payment:debit_cards": "yes",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.551869,
+          46.671719
+        ]
+      },
+      "properties": {
+        "id": "node/10917787348",
+        "osm_type": "node",
+        "osm_id": 10917787348,
+        "amenity": "vending_machine",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5503648,
+          46.6733001
+        ]
+      },
+      "properties": {
+        "id": "node/10919462063",
+        "osm_type": "node",
+        "osm_id": 10919462063,
+        "amenity": "vending_machine",
+        "currency:EUR": "yes",
+        "operator": "Commune de Lons le Saunier",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5526187,
+          46.672895
+        ]
+      },
+      "properties": {
+        "id": "node/10964863445",
+        "osm_type": "node",
+        "osm_id": 10964863445,
+        "amenity": "vending_machine",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5499876,
+          46.6738826
+        ]
+      },
+      "properties": {
+        "id": "node/11080249105",
+        "osm_type": "node",
+        "osm_id": 11080249105,
+        "amenity": "vending_machine",
+        "survey:date": "2023-08-01",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5493995,
+          46.6741078
+        ]
+      },
+      "properties": {
+        "id": "node/11545796908",
+        "osm_type": "node",
+        "osm_id": 11545796908,
+        "amenity": "vending_machine",
+        "survey:date": "2023-08-01",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5511333,
+          46.6754349
+        ]
+      },
+      "properties": {
+        "id": "node/11955464760",
+        "osm_type": "node",
+        "osm_id": 11955464760,
+        "amenity": "vending_machine",
+        "panoramax": "6875d8cc-2876-4991-8a7a-3f79962f4b2e",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5539471,
+          46.6727474
+        ]
+      },
+      "properties": {
+        "id": "node/12134676956",
+        "osm_type": "node",
+        "osm_id": 12134676956,
+        "amenity": "vending_machine",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5540132,
+          46.673264
+        ]
+      },
+      "properties": {
+        "id": "node/12416066031",
+        "osm_type": "node",
+        "osm_id": 12416066031,
+        "amenity": "vending_machine",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.553128,
+          46.6735824
+        ]
+      },
+      "properties": {
+        "id": "node/12416066032",
+        "osm_type": "node",
+        "osm_id": 12416066032,
+        "amenity": "vending_machine",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5545912,
+          46.6728711
+        ]
+      },
+      "properties": {
+        "id": "node/12416079872",
+        "osm_type": "node",
+        "osm_id": 12416079872,
+        "amenity": "vending_machine",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5530102,
+          46.6755517
+        ]
+      },
+      "properties": {
+        "id": "node/12426267563",
+        "osm_type": "node",
+        "osm_id": 12426267563,
+        "amenity": "vending_machine",
+        "currency:EUR": "yes",
+        "payment:coins": "yes",
+        "payment:debit_cards": "yes",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5558528,
+          46.6729625
+        ]
+      },
+      "properties": {
+        "id": "node/12447024857",
+        "osm_type": "node",
+        "osm_id": 12447024857,
+        "amenity": "vending_machine",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5565975,
+          46.6729677
+        ]
+      },
+      "properties": {
+        "id": "node/12447024858",
+        "osm_type": "node",
+        "osm_id": 12447024858,
+        "amenity": "vending_machine",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.552186,
+          46.675293
+        ]
+      },
+      "properties": {
+        "id": "node/12484533696",
+        "osm_type": "node",
+        "osm_id": 12484533696,
+        "amenity": "vending_machine",
+        "currency:EUR": "yes",
+        "payment:coins": "yes",
+        "payment:debit_cards": "yes",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.553944,
+          46.6755902
+        ]
+      },
+      "properties": {
+        "id": "node/12509127751",
+        "osm_type": "node",
+        "osm_id": 12509127751,
+        "amenity": "vending_machine",
+        "currency:EUR": "yes",
+        "payment:coins": "yes",
+        "payment:debit_cards": "yes",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5539058,
+          46.6750969
+        ]
+      },
+      "properties": {
+        "id": "node/12509127752",
+        "osm_type": "node",
+        "osm_id": 12509127752,
+        "amenity": "vending_machine",
+        "currency:EUR": "yes",
+        "payment:coins": "yes",
+        "payment:debit_cards": "yes",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5535145,
+          46.6747952
+        ]
+      },
+      "properties": {
+        "id": "node/12509127753",
+        "osm_type": "node",
+        "osm_id": 12509127753,
+        "amenity": "vending_machine",
+        "currency:EUR": "yes",
+        "panoramax": "609d00d0-d749-42ee-8262-c192db3ef840",
+        "payment:coins": "yes",
+        "payment:debit_cards": "yes",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5527591,
+          46.6742171
+        ]
+      },
+      "properties": {
+        "id": "node/12509127754",
+        "osm_type": "node",
+        "osm_id": 12509127754,
+        "amenity": "vending_machine",
+        "currency:EUR": "yes",
+        "payment:coins": "yes",
+        "payment:debit_cards": "yes",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5493512,
+          46.6747187
+        ]
+      },
+      "properties": {
+        "id": "node/12511995807",
+        "osm_type": "node",
+        "osm_id": 12511995807,
+        "amenity": "vending_machine",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5501276,
+          46.674528
+        ]
+      },
+      "properties": {
+        "id": "node/12511995808",
+        "osm_type": "node",
+        "osm_id": 12511995808,
+        "amenity": "vending_machine",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5506329,
+          46.674686
+        ]
+      },
+      "properties": {
+        "id": "node/12512358683",
+        "osm_type": "node",
+        "osm_id": 12512358683,
+        "amenity": "vending_machine",
+        "survey:date": "2025-01-18",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5498777,
+          46.668756
+        ]
+      },
+      "properties": {
+        "id": "node/12607039047",
+        "osm_type": "node",
+        "osm_id": 12607039047,
+        "amenity": "vending_machine",
+        "operator": "Commune de Lons-le-Saunier",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5562341,
+          46.6755109
+        ]
+      },
+      "properties": {
+        "id": "node/12709905325",
+        "osm_type": "node",
+        "osm_id": 12709905325,
+        "amenity": "vending_machine",
+        "currency:EUR": "yes",
+        "operator": "Ville de Lons-le-Saunier",
+        "payment:coins": "yes",
+        "payment:debit_cards": "yes",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5516418,
+          46.6751736
+        ]
+      },
+      "properties": {
+        "id": "node/13283025267",
+        "osm_type": "node",
+        "osm_id": 13283025267,
+        "amenity": "vending_machine",
+        "survey:date": "2025-11-05",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.553552,
+          46.6735802
+        ]
+      },
+      "properties": {
+        "id": "node/13563816606",
+        "osm_type": "node",
+        "osm_id": 13563816606,
+        "amenity": "vending_machine",
+        "level": "-1",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5578501,
+          46.6760091
+        ]
+      },
+      "properties": {
+        "id": "node/13615703559",
+        "osm_type": "node",
+        "osm_id": 13615703559,
+        "amenity": "vending_machine",
+        "operator": "Ville de Lons-le-Saunier",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5495862,
+          46.6758015
+        ]
+      },
+      "properties": {
+        "id": "node/13668949530",
+        "osm_type": "node",
+        "osm_id": 13668949530,
+        "amenity": "vending_machine",
+        "survey:date": "2026-03-22",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5526946,
+          46.6748914
+        ]
+      },
+      "properties": {
+        "id": "node/13750361194",
+        "osm_type": "node",
+        "osm_id": 13750361194,
+        "amenity": "vending_machine",
+        "operator": "Ville de Lons-le-Saunier",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5523362,
+          46.6752814
+        ]
+      },
+      "properties": {
+        "id": "node/13750398009",
+        "osm_type": "node",
+        "osm_id": 13750398009,
+        "amenity": "vending_machine",
+        "currency:EUR": "yes",
+        "payment:coins": "yes",
+        "payment:debit_cards": "yes",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5501057,
+          46.6719328
+        ]
+      },
+      "properties": {
+        "id": "node/13750580110",
+        "osm_type": "node",
+        "osm_id": 13750580110,
+        "amenity": "vending_machine",
+        "currency:EUR": "yes",
+        "payment:coins": "yes",
+        "payment:debit_cards": "yes",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5575033,
+          46.6756815
+        ]
+      },
+      "properties": {
+        "id": "node/13964314303",
+        "osm_type": "node",
+        "osm_id": 13964314303,
+        "amenity": "vending_machine",
+        "level": "-1",
+        "operator": "Ville de Lons-le-Saunier",
+        "vending": "parking_tickets"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5509655,
+          46.6765485
+        ]
+      },
+      "properties": {
+        "id": "node/14280274922",
+        "osm_type": "node",
+        "osm_id": 14280274922,
+        "amenity": "vending_machine",
+        "vending": "parking_tickets"
+      }
+    }
+  ]
+}

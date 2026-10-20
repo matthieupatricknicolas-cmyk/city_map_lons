@@ -1,5 +1,5 @@
 import React from "react";
-import { MapPin, Radio } from "lucide-react";
+import { Database, MapPin } from "lucide-react";
 
 export default function Header({ counts = {} }) {
   const total = Object.values(counts).reduce((s, n) => s + (n || 0), 0);
@@ -25,14 +25,14 @@ export default function Header({ counts = {} }) {
       </div>
 
       <div className="hidden md:flex items-center gap-3">
-        <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-50 border border-red-100">
-          <span className="live-dot w-2 h-2 rounded-full bg-[#E30613]" />
-          <span className="text-[11px] font-semibold uppercase tracking-wider text-[#B8000B]">
-            Données OSM · Direct
+        <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200">
+          <Database className="w-3.5 h-3.5 text-slate-500" />
+          <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-600">
+            Données GeoJSON · Locales
           </span>
         </div>
         <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 border border-slate-200">
-          <Radio className="w-3.5 h-3.5 text-slate-500" />
+          <MapPin className="w-3.5 h-3.5 text-slate-500" />
           <span className="text-xs font-semibold text-slate-700 font-mono">
             {total} objets chargés
           </span>

@@ -1,0 +1,3903 @@
+{
+  "type": "FeatureCollection",
+  "name": "sql_statement",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/10601054745",
+        "type": "bar",
+        "name": "Café du Chemin de Fer",
+        "operator": "Dominique Lanthermann",
+        "brand": null,
+        "opening_hours": "Mo-Fr 06:00-21:00; Sa 06:00-20:00; Su 16:00-21:00; PH 16:00-21:00",
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "48534906200011",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5511978,
+          46.66907120022672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/11085145079",
+        "type": "fast_food",
+        "name": "Hot Dog Town",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": "hot_dog",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "48354573700064",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5532467,
+          46.672621300226034
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/11656314172",
+        "type": "restaurant",
+        "name": "Aux Plaisirs d’Antan",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": "french",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "42276122100056",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5549128,
+          46.672368100226095
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/11676746868",
+        "type": "cafe",
+        "name": "Café du Boulevard",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "35199595600015",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5475556,
+          46.66936870022668
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/12181536054",
+        "type": "fast_food",
+        "name": "Burger King",
+        "operator": null,
+        "brand": "Burger King",
+        "opening_hours": "Mo-Th 11:00-24:00; Fr-Sa 11:00-01:00; Su 11:00-24:00",
+        "wheelchair": "designated",
+        "cuisine": "burger",
+        "delivery": null,
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": "yes",
+        "wikidata": null,
+        "brand_wikidata": "Q177054",
+        "siret": "92880457400020",
+        "phone": "+33 3 39 29 02 09",
+        "website": "https://www.burgerking.fr/restaurants/lons-le-saunier",
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5689159,
+          46.67153440022627
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/12640494398",
+        "type": "fast_food",
+        "name": "Bistrot du Parc des Bains",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Jul,Aug,Sep Mo-Su 09:30-21:30",
+        "wheelchair": null,
+        "cuisine": "burger;salad;crepe;ice_cream",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": "no",
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": null,
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5649379,
+          46.67192700022616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/12759222824",
+        "type": "cafe",
+        "name": "Bar des Copains",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": null,
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5651289,
+          46.67621970022537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/12918799472",
+        "type": "restaurant",
+        "name": "La Table Orientale",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "12:00-14:30,19:00-22:00",
+        "wheelchair": "yes",
+        "cuisine": "oriental",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": "100",
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": null,
+        "phone": "+33 6 71 71 96 83",
+        "website": "https://latableorientale.fr",
+        "facebook": null,
+        "vegetarian": "yes",
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5684599,
+          46.6719209002262
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/13982963359",
+        "type": "ice_cream",
+        "name": "Pelen",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": null,
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5520452,
+          46.67390730022579
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/13982963360",
+        "type": "cafe",
+        "name": "Pelen",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": null,
+        "phone": "+33 3 84 24 31 39",
+        "website": "https://www.pelen.fr/nos-magasins-adresse-horaires-telephone-chocolaterie-lons-le-saunier-lyon",
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5520082,
+          46.67380390022583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/13983082645",
+        "type": "ice_cream",
+        "name": "K'rine La marchande",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": "only",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": null,
+        "phone": null,
+        "website": null,
+        "facebook": "https://www.facebook.com/Karinelamarchandelons/",
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5615002,
+          46.671986300226166
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/2634884683",
+        "type": "restaurant",
+        "name": "Le Loft",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "12:00-13:45,19:00-22:00; Sa 19:00-22:00",
+        "wheelchair": null,
+        "cuisine": "french;regional",
+        "delivery": null,
+        "takeaway": "no",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "34268163200010",
+        "phone": "+33 3 84 87 06 06",
+        "website": "https://www.casino-lonslesaunier.com/restaurant-bar",
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.564654,
+          46.68481410022372
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/2634893375",
+        "type": "bar",
+        "name": "Bar de La Marjorie",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Su 07:00-20:00",
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "35384993800025",
+        "phone": "+33 3 84 24 83 67",
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.571054,
+          46.679594800224706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/2679326307",
+        "type": "pub",
+        "name": "Le Pub irlandais",
+        "operator": "Vladimir Munsch",
+        "brand": null,
+        "opening_hours": "Mo-Sa 08:00-01:00; Su 15:00-01:00",
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "34141691500013",
+        "phone": null,
+        "website": null,
+        "facebook": "PubIrlandaisLons",
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5536102,
+          46.675126400225565
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/2679326333",
+        "type": "fast_food",
+        "name": "Rest'O Chaud",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Sa 07:00-19:00",
+        "wheelchair": null,
+        "cuisine": "sandwich",
+        "delivery": null,
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "80845672700011",
+        "phone": "+33 3 84 24 16 14",
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5534315,
+          46.6744464002257
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/2679396804",
+        "type": "restaurant",
+        "name": "La Lanterna",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Sa 11:45-13:15,17:30-21:00",
+        "wheelchair": null,
+        "cuisine": "italian",
+        "delivery": "no",
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "39369677800017",
+        "phone": "+33 3 84 24 07 17",
+        "website": "https://www.lalanterna-lons.fr/",
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5544816,
+          46.67563930022548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/2679396869",
+        "type": "restaurant",
+        "name": "Nam Saïgon",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Sa 11:30-14:00,19:00-21:30",
+        "wheelchair": null,
+        "cuisine": "vietnamese",
+        "delivery": null,
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "98989694900017",
+        "phone": "+33 3 63 67 21 12",
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5546937,
+          46.67592990022541
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/2792867318",
+        "type": "restaurant",
+        "name": "Le Bistrot des Marronniers",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Fr 12:00-14:30,19:00-21:30; We 12:00-14:30; Sa 19:00-21:30",
+        "wheelchair": "no",
+        "cuisine": "french",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "45148938900010",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": "no",
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5495402,
+          46.673892500225804
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/2813275164",
+        "type": "restaurant",
+        "name": "Grand Café du Théâtre",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Su 07:30-24:00",
+        "wheelchair": null,
+        "cuisine": "brasserie;french",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "85400461100018",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5537965,
+          46.67361570022587
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/3195151430",
+        "type": "restaurant",
+        "name": "La Boîte à Muffin",
+        "operator": "Lucy Vaesken",
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": "brunch;pastry",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "92898575300013",
+        "phone": "+33 6 95 66 90 50",
+        "website": "https://www.laboiteamuffin.fr",
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": "yes",
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5480055,
+          46.67411380022576
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/3195151457",
+        "type": "bar",
+        "name": "Le sphinx",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Tu,We 07:30-22:00; Th,Fr 07:30-01:00; Su 10:00-14:00",
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "89913722800016",
+        "phone": "+33 3 70 06 85 04",
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5454986,
+          46.67336920022591
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/3196585043",
+        "type": "bar",
+        "name": "La Paix",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Tu-Fr 16:00-01:00; Sa 15:00-01:00",
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "83989605700016",
+        "phone": "+33 3 84 24 19 91",
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5539222,
+          46.67381990022583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/3196908894",
+        "type": "bar",
+        "name": "L'Estaminet",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo 07:30-12:00,13:30-17:00; We-Su 07:30-22:30",
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "95115390700013",
+        "phone": "+33 3 84 24 17 04",
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5561777,
+          46.675085200225574
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/3196908906",
+        "type": "fast_food",
+        "name": "Special food",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "98903807000011",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5560721,
+          46.67506940022559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/3196919480",
+        "type": "bar",
+        "name": "Le Troquet",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Fr 08:00-01:00, Sa 10:00-14:00,17:00-01:00",
+        "wheelchair": "no",
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "10471790500012",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": "outside",
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5544406,
+          46.67197360022617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/3197078459",
+        "type": "restaurant",
+        "name": "L'Odyssée",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-We 07:00-21:00; Th-Sa 07:00-22:00",
+        "wheelchair": null,
+        "cuisine": "brasserie",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "49004192800014",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5491162,
+          46.67454480022569
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/3197402222",
+        "type": "restaurant",
+        "name": "Ô Tablier",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Tu,Sa 12:00-14:00; Mo,Th,Fr 12:00-14:00,19:00-22:00",
+        "wheelchair": "yes",
+        "cuisine": "regional;french",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "84764729400010",
+        "phone": "+33 3 84 24 26 59",
+        "website": null,
+        "facebook": null,
+        "vegetarian": "yes",
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5497139,
+          46.67406540022578
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/3197669130",
+        "type": "restaurant",
+        "name": "Restaurant Nord",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": "yes",
+        "cuisine": "french",
+        "delivery": null,
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "98512677000017",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5613983,
+          46.68468790022376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/3198108079",
+        "type": "restaurant",
+        "name": "La Table de Perraud",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Tu-Sa 11:45-13:30,19:30-21:30",
+        "wheelchair": null,
+        "cuisine": "french",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "83180005700018",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": "outside",
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5546563,
+          46.67603550022538
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/3198131643",
+        "type": "restaurant",
+        "name": "Le Grill",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Su 12:00-14:00,19:00-21:30",
+        "wheelchair": null,
+        "cuisine": "barbecue;pizza",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "48831864300019",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5632865,
+          46.68670590022335
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/3535348724",
+        "type": "restaurant",
+        "name": "L'Hibiscus",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Tu 12:00-14:00,18:00-23:00",
+        "wheelchair": null,
+        "cuisine": "french",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "90368482700012",
+        "phone": "+33 3 84 85 96 71",
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5543855,
+          46.67393830022581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/3869286657",
+        "type": "bar",
+        "name": "Le Cygne Noir",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-We 08:00-23:00, Th-Sa 08:00-01:00",
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "94906461200029",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5548073,
+          46.673060700225946
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/4674964425",
+        "type": "restaurant",
+        "name": "Le Manguier",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Tu-Fr 12:00-15:00,19:00-23:00; Sa 12:00-23:00",
+        "wheelchair": null,
+        "cuisine": "french;grill",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "81835614900026",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5508585,
+          46.67375040022584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/4723720405",
+        "type": "bar",
+        "name": "La Vigne",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "43756898300021",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5485424,
+          46.67427780022573
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/5053572239",
+        "type": "restaurant",
+        "name": "Pizzaline",
+        "operator": "Vincent Bridellet",
+        "brand": null,
+        "opening_hours": "We 18:30-21:00; Th 11:45-13:30,18:30-21:00; Fr 11:45-13:30,18:30-21:30; Sa 18:30-21:30; Su 11:45-13:30,18:30-21:00",
+        "wheelchair": null,
+        "cuisine": "pizza",
+        "delivery": "no",
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "90925952500014",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": "yes",
+        "vegan": null,
+        "smoking": null,
+        "internet_access": "wlan",
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5463381,
+          46.673431800225906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/5113274411",
+        "type": "cafe",
+        "name": "Caféteria",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": null,
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5521871,
+          46.67686880022525
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/5672135151",
+        "type": "restaurant",
+        "name": "Le Mijoté",
+        "operator": "Janny Pouillard",
+        "brand": null,
+        "opening_hours": "Tu-Th 11:45-14:00; Fr-Su 11:45-14:00,19:00-21:30",
+        "wheelchair": null,
+        "cuisine": "french",
+        "delivery": null,
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "90907901400017",
+        "phone": "+33 3 84 85 24 04",
+        "website": "https://restaurant-lemijote.fr",
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5538982,
+          46.676057200225394
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/6251420792",
+        "type": "fast_food",
+        "name": "Lon's Burger",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo 17:30-22:00; Tu-Fr 11:30-14:30,18:00-22:00; Sa 11:00-15:00,17:30-22:30; Su 17:00-22:30",
+        "wheelchair": "yes",
+        "cuisine": "burger",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "98500097500013",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5547708,
+          46.675708600225455
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/6759331654",
+        "type": "fast_food",
+        "name": "Devran Kebab",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Tu-Sa 11:00-14:30,18:00-23:00",
+        "wheelchair": null,
+        "cuisine": "kebab",
+        "delivery": null,
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "79211625300016",
+        "phone": "+33 3 84 86 08 75",
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5551466,
+          46.67658700022528
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/6759331655",
+        "type": "restaurant",
+        "name": "Le Grain de Sel",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo,Th,Fr,Su 12:00-13:30,19:00-21:00; Tu 12:00-13:30; Sa 19:00-21:00",
+        "wheelchair": null,
+        "cuisine": "french",
+        "delivery": null,
+        "takeaway": "no",
+        "stars": null,
+        "capacity": "100",
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "49922811200011",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5551761,
+          46.67673770022527
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/6843815165",
+        "type": "restaurant",
+        "name": "Les 2 Flèches",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Sa 12:00-14:00,19:00-00:00; We,Th off; Su 12:00-18:00",
+        "wheelchair": null,
+        "cuisine": "french",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": null,
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5509141,
+          46.67395780022579
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/6843815180",
+        "type": "bar",
+        "name": "Café de la Perle",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Tu-Sa 09:00-22:00",
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "51409330100018",
+        "phone": "+33 3 84 47 28 67",
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5517003,
+          46.674487800225684
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/6843905404",
+        "type": "fast_food",
+        "name": "Le Croustil",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Fr 09:00-14:00,17:00-22:00; Sa 09:00-14:00,17:00-23:00; Su 17:00-22:00",
+        "wheelchair": null,
+        "cuisine": "sandwich",
+        "delivery": null,
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "37826471700018",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": "yes",
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.550511,
+          46.67362450022587
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/6843905406",
+        "type": "pub",
+        "name": "Le 12",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo,We-Sa 10:00-22:00",
+        "wheelchair": "limited",
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "98194183400013",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5510618,
+          46.674302600225715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/7066289995",
+        "type": "bar",
+        "name": "Le Saint Dé",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Sa 16:00-01:00",
+        "wheelchair": "no",
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "92520813400013",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5507406,
+          46.67238330022611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/7101170780",
+        "type": "restaurant",
+        "name": "L'Italien",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Tu 18:30-21:30; We,Th 12:00-13:00,19:00-21:00; Fr,Sa 12:00-13:00,19:00-22:00",
+        "wheelchair": null,
+        "cuisine": "pizza",
+        "delivery": "no",
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "84804759300019",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": "no",
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5510458,
+          46.67289880022599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/7101170781",
+        "type": "fast_food",
+        "name": "Le Bek Food",
+        "operator": "Ibrahim et Youssef Bekhtaoui",
+        "brand": null,
+        "opening_hours": "Mo-Su 11:00-14:00,17:00-00:00",
+        "wheelchair": null,
+        "cuisine": "burger;pizza",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "88895320500018",
+        "phone": "+33 3 84 35 89 80",
+        "website": null,
+        "facebook": "https://www.facebook.com/LE-BEK-FOOD-111572064020360",
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.55056,
+          46.67243700022609
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/7101170782",
+        "type": "cafe",
+        "name": "Papotes et Parlotes",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "98838851800017",
+        "phone": "+33 3 70 06 13 38",
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5506559,
+          46.67227490022612
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/7227131729",
+        "type": "cafe",
+        "name": "Wachkyrie Café",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": null,
+        "phone": null,
+        "website": "https://www.lamaisondelavachequirit.com/pause-gourmande",
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5557455,
+          46.67711490022519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/7409176488",
+        "type": "fast_food",
+        "name": "Au temps gourmand des saisons",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": "salad",
+        "delivery": null,
+        "takeaway": "only",
+        "stars": null,
+        "capacity": null,
+        "drive_through": "no",
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": null,
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5525006,
+          46.67408900022577
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/7409176489",
+        "type": "bar",
+        "name": "Caveau",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": "yes",
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "94209981300019",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5531635,
+          46.67388430022581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/7409176491",
+        "type": "fast_food",
+        "name": "Miam",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Sa 07:00-19:00",
+        "wheelchair": null,
+        "cuisine": "french",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "52118930800039",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5530595,
+          46.673911600225814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/7409176492",
+        "type": "bar",
+        "name": "Le Tonneau",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Sa 07:00-20:00",
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "88375923500012",
+        "phone": "+33 3 84 24 05 55",
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": "outside",
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5529221,
+          46.67395070022579
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/7409687545",
+        "type": "fast_food",
+        "name": "L'Atelier du Strasbourg",
+        "operator": "Thomas Chapelle",
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": "yes",
+        "cuisine": "french",
+        "delivery": null,
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "44298422500023",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5542037,
+          46.67318950022594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/7409687555",
+        "type": "restaurant",
+        "name": "Casa d'Italia",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Tu-Sa 12:00-14:00,19:00-21:45",
+        "wheelchair": null,
+        "cuisine": "pizza",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "42210229300020",
+        "phone": "+33 3 84 86 18 98",
+        "website": "https://www.restaurant-casaditalia.fr",
+        "facebook": "casa.italia039",
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.553328,
+          46.67348520022589
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/7416535734",
+        "type": "fast_food",
+        "name": "L'Instant Gourmand",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "44497379600022",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5410978,
+          46.67437450022573
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/7558615199",
+        "type": "restaurant",
+        "name": "Le 14",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": "french;regional",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "88977756100032",
+        "phone": null,
+        "website": "https://www.restaurant-le-14-lons-le-saunier.fr",
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5537074,
+          46.67391360022581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/7596262017",
+        "type": "restaurant",
+        "name": "Le Taj Mahal",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Sa 12:00-13:30, Su 12:00-13:30,18:30-21:00, Mo-Sa 19:00-21:30",
+        "wheelchair": null,
+        "cuisine": "indian",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "80281177800017",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5580118,
+          46.68090470022447
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/7616215957",
+        "type": "restaurant",
+        "name": "La Comédie",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Tu-Sa 12:00-14:00,19:00-22:00",
+        "wheelchair": "yes",
+        "cuisine": "french;regional",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "83180005700018",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": "yes",
+        "vegan": null,
+        "smoking": "no",
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5554081,
+          46.67544050022552
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/8563239704",
+        "type": "fast_food",
+        "name": "Burger One",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": "burger",
+        "delivery": null,
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "97982680700013",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5512607,
+          46.6691691002267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/8874584118",
+        "type": "restaurant",
+        "name": "Sushi box",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Tu-Th 12:00-14:00,18:00-22:00; Fr 12:00-14:00,18:00-23:00; Sa 12:00-23:00",
+        "wheelchair": null,
+        "cuisine": "sushi",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "90011978500013",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5543313,
+          46.67381940022582
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/939482566",
+        "type": "restaurant",
+        "name": "Le Strasbourg",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Fr 07:00-15:00,18:00-00:00; Sa 07:00-00:00; Su 07:00-24:00",
+        "wheelchair": null,
+        "cuisine": "brasserie;regional",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "44298422500015",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": "outside",
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5545026,
+          46.67331640022591
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9595104982",
+        "type": "fast_food",
+        "name": "BBS Snack",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Fr 11:45-14:00,17:30-23:00; Tu off; Th 11:45-13:00,17:30-23:00; Sa 17:30-23:00",
+        "wheelchair": null,
+        "cuisine": "tacos;sandwich;burger",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "80905670800013",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5445409,
+          46.672894700226
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9603224168",
+        "type": "restaurant",
+        "name": "Crêperie des Délices",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Sa 11:30-14:00,18:30-22:00",
+        "wheelchair": null,
+        "cuisine": "crepe",
+        "delivery": "yes",
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "94100069700016",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5541981,
+          46.67384030022582
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9603224170",
+        "type": "cafe",
+        "name": "Nouvelle Vague Café",
+        "operator": "Hakki Uygur",
+        "brand": null,
+        "opening_hours": "Tu-Su 08:00-19:00",
+        "wheelchair": null,
+        "cuisine": "coffee_shop",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "92914343600012",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5545067,
+          46.67417910022577
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9603224174",
+        "type": "restaurant",
+        "name": "Le Kebab",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Tu-Th 11:00-14:00,18:00-22:00; Fr,Sa 11:00-14:00,18:00-22:30; Su 18:00-22:00",
+        "wheelchair": null,
+        "cuisine": "kebab",
+        "delivery": null,
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "44322505700019",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": "limited",
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5543921,
+          46.67424130022574
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9603224175",
+        "type": "cafe",
+        "name": "La Douce Heure",
+        "operator": "Charline Bureau",
+        "brand": null,
+        "opening_hours": "We-Sa 09:00-18:30",
+        "wheelchair": "no",
+        "cuisine": "french",
+        "delivery": null,
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "99448433500017",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": "limited",
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5543233,
+          46.674101600225754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9613186004",
+        "type": "restaurant",
+        "name": "L’Imprévu",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": "pizza;barbecue",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "93895119100015",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5546527,
+          46.67447740022568
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9613186005",
+        "type": "cafe",
+        "name": "Au Café des merveilles",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": "turkish",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "10142418200018",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5546209,
+          46.67440800022572
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9621016889",
+        "type": "fast_food",
+        "name": "SOS Pizzas",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "We-Th 11:30-13:30,18:00-22:00; Fr-Sa 11:30-13:30,18:00-23:00; Su 18:00-22:00",
+        "wheelchair": null,
+        "cuisine": "pizza",
+        "delivery": null,
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "98799315100016",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": "yes",
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5468313,
+          46.67357580022587
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9626815196",
+        "type": "fast_food",
+        "name": "Yellow 27",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Tu-Sa 11:30-14:00,18:00-22:00",
+        "wheelchair": null,
+        "cuisine": "mexican",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "82350865000012",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5501754,
+          46.67439220022571
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9629095390",
+        "type": "restaurant",
+        "name": "Chez Georges",
+        "operator": "Sandrine Morel",
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": "burger;regional;french",
+        "delivery": "yes",
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "92808017500013",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5537793,
+          46.6738585002258
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9629095392",
+        "type": "restaurant",
+        "name": "Jem",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": "french",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "93827886800014",
+        "phone": "+33 3 84 35 42 28",
+        "website": "https://www.jemrestaurant.fr",
+        "facebook": "https://www.facebook.com/profile.php?id=61575724657151&rdid=iWIOJQyTNuPOlyeS&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AV8XU5frV%2F",
+        "vegetarian": "yes",
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5544498,
+          46.67368030022585
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9629612468",
+        "type": "restaurant",
+        "name": "La Romana",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Tu-Sa 11:00-14:00, 18:00-22:00; Mo, Su 18:00-22:00",
+        "wheelchair": null,
+        "cuisine": "pizza",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "51498703100010",
+        "phone": "+33 3 84 25 98 66",
+        "website": null,
+        "facebook": "Pizzeria-La-Romana-153856477977907",
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5556279,
+          46.67293170022599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9629729959",
+        "type": "restaurant",
+        "name": "Le Rouget de Lisle",
+        "operator": "ADLCA",
+        "brand": null,
+        "opening_hours": "Mo-Su 12:00-13:30, 19:00-21:30",
+        "wheelchair": null,
+        "cuisine": "regional;french",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "39922668700032",
+        "phone": "+33 3 84 86 10 20",
+        "website": "https://www.hotel-parc.fr/fr/brasserie-restaurant-rouget-lisle-lons-le-saunier/",
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5573804,
+          46.67295040022598
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9642784241",
+        "type": "fast_food",
+        "name": "Yummy You me",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": "snackbar",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "39369677800033",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5542651,
+          46.675650700225475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9683371749",
+        "type": "fast_food",
+        "name": "Jura Food",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Fr 11:00-14:00,17:00-24:00; Sa-Su 11:30-24:00",
+        "wheelchair": null,
+        "cuisine": "burger;sandwich;kebab;chicken;fried_chicken;salad",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": "no",
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "87971849200017",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.553365,
+          46.67295190022598
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9684689949",
+        "type": "fast_food",
+        "name": "Allo Pizza",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Su-Th 18:30-22:00; Fr-Sa 11:30-13:30,18:30-22:00",
+        "wheelchair": null,
+        "cuisine": "pizza",
+        "delivery": "yes",
+        "takeaway": "only",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "42243327600017",
+        "phone": "+33 3 84 86 04 04",
+        "website": "https://www.allo-pizza-lonslesaunier.com",
+        "facebook": null,
+        "vegetarian": "yes",
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5524527,
+          46.67292050022599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9685441463",
+        "type": "bar",
+        "name": "Café de la Mairie",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Sa 09:00-01:00; Fr 07:00-01:00",
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "82466518600014",
+        "phone": "+33 3 84 24 05 33",
+        "website": null,
+        "facebook": "Café-de-la-Mairie-1854408238154634",
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": "outside",
+        "internet_access": "no",
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5539503,
+          46.67585300022543
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9697762642",
+        "type": "bar",
+        "name": "L'Ornithorynque",
+        "operator": "Loïc Richard",
+        "brand": null,
+        "opening_hours": "Tu-Fr 08:30-01:00; We 14:00-01:00; Sa 19:00-01:00",
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "91238990500015",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5498433,
+          46.67462740022567
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9697814120",
+        "type": "restaurant",
+        "name": "Au Pirate",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo,We,Fr 09:00-00:30, Tu,Th 08:00-00:00, Sa 08:00-01:00",
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "53279496300019",
+        "phone": "+33 3 84 47 56 07",
+        "website": null,
+        "facebook": "douriaudpatricia",
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5501633,
+          46.674542900225674
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9697841791",
+        "type": "fast_food",
+        "name": "L'Anatolie",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Tu-Sa 11:00-14:00,18:00-22:00",
+        "wheelchair": null,
+        "cuisine": "kebab",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "48808752900019",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5502405,
+          46.67452240022571
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9734427209",
+        "type": "fast_food",
+        "name": "Le Punjab",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo 17:00-23:00; Tu-Su 11:00-15:00,17:00-23:00",
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "88924288900026",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5637743,
+          46.67449420022568
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9743827982",
+        "type": "restaurant",
+        "name": "Les 5 épis",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Tu-Sa 11:30-14:00,18:45-22:00",
+        "wheelchair": null,
+        "cuisine": "french;alsace",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "98972866200010",
+        "phone": "+33 3 84 24 16 27",
+        "website": "https://les5epislons.wixsite.com/restaurant-de-flamme",
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5415606,
+          46.673042300225966
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9743827984",
+        "type": "fast_food",
+        "name": "Étoile Kebab",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Sa 11:30-14:00,17:00-23:00",
+        "wheelchair": null,
+        "cuisine": "kebab",
+        "delivery": null,
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "48138513600025",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5488669,
+          46.6743927002257
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9814867611",
+        "type": "fast_food",
+        "name": "L'Authentik",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Tu-Su 11:30-14:30,18:30-22:00",
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "85176921600025",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.552603,
+          46.67468690022566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9822185989",
+        "type": "restaurant",
+        "name": "Le Saïgon",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Th 11:00-14:00; Fr,Sa 11:00-14:00,17:30-21:30",
+        "wheelchair": null,
+        "cuisine": "asian",
+        "delivery": "no",
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "84248256400015",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5529658,
+          46.675258700225534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9849631440",
+        "type": "restaurant",
+        "name": "Akami Sushi",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Tu-Sa 11:00-14:00,17:30-22:00",
+        "wheelchair": "no",
+        "cuisine": "sushi",
+        "delivery": null,
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "90487447600016",
+        "phone": "+33 7 84 22 19 29",
+        "website": "https://www.akamisushi.fr",
+        "facebook": null,
+        "vegetarian": "yes",
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5495425,
+          46.67418630022574
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9956297197",
+        "type": "restaurant",
+        "name": "La Paillote",
+        "operator": null,
+        "brand": null,
+        "opening_hours": null,
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "99123971600020",
+        "phone": "+33 7 68 02 17 25",
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5541234,
+          46.67445570022571
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "node/9994495182",
+        "type": "bar",
+        "name": "Café du Palais",
+        "operator": "Stéphanie Gaudillière",
+        "brand": null,
+        "opening_hours": "Mo 08:00-20:00; Tu 08:00-24:00; We 00:00-01:00,11:30-24:00; Th,Fr 00:00-01:00,08:00-24:00; Sa 00:00-01:00,09:00-24:00; Su 00:00-01:00,10:30-15:30",
+        "wheelchair": null,
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "84018339600018",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5531782,
+          46.67551910022549
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/340124797",
+        "type": "restaurant",
+        "name": "O’Rustik",
+        "operator": "Killian Mollard",
+        "brand": null,
+        "opening_hours": "Mo-Su 10:00-22:00",
+        "wheelchair": "yes",
+        "cuisine": null,
+        "delivery": null,
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": "200",
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "80248234900015",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5677635,
+              46.669098600226725
+            ],
+            [
+              5.5678319,
+              46.66895000022675
+            ],
+            [
+              5.5681227,
+              46.66901310022673
+            ],
+            [
+              5.5680544,
+              46.6691616002267
+            ],
+            [
+              5.5678588,
+              46.66911920022671
+            ],
+            [
+              5.5677635,
+              46.669098600226725
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/463500978",
+        "type": "restaurant",
+        "name": "Buffalo Grill",
+        "operator": null,
+        "brand": "Buffalo Grill",
+        "opening_hours": "Mo-Th 11:30-14:30,18:00-22:00; Fr-Sa 11:30-14:30,18:00-22:30; Su 11:30-14:30,18:00-22:00",
+        "wheelchair": null,
+        "cuisine": "steak_house",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": "Q944655",
+        "siret": "44944328200024",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5574571,
+              46.694119300221935
+            ],
+            [
+              5.5576258,
+              46.693979200221975
+            ],
+            [
+              5.5577338,
+              46.69404100022196
+            ],
+            [
+              5.5578291,
+              46.69409560022195
+            ],
+            [
+              5.557633,
+              46.69425660022193
+            ],
+            [
+              5.557512,
+              46.69418760022192
+            ],
+            [
+              5.5575334,
+              46.69416600022195
+            ],
+            [
+              5.5574571,
+              46.694119300221935
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/682700872",
+        "type": "fast_food",
+        "name": "McDonald's",
+        "operator": null,
+        "brand": "McDonald's",
+        "opening_hours": "Mo-Th 09:00-24:00; Fr-Su 09:00-01:00",
+        "wheelchair": null,
+        "cuisine": "burger",
+        "delivery": null,
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": "yes",
+        "wikidata": null,
+        "brand_wikidata": "Q38076",
+        "siret": "42432774000017",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5488972,
+              46.66880790022677
+            ],
+            [
+              5.5489128,
+              46.668806000226766
+            ],
+            [
+              5.5494148,
+              46.668745100226786
+            ],
+            [
+              5.5494467,
+              46.66887000022676
+            ],
+            [
+              5.5493398,
+              46.668882900226755
+            ],
+            [
+              5.5493422,
+              46.66889220022675
+            ],
+            [
+              5.5493129,
+              46.668895700226756
+            ],
+            [
+              5.5493105,
+              46.668886500226776
+            ],
+            [
+              5.5491908,
+              46.668900900226745
+            ],
+            [
+              5.5491932,
+              46.66891030022676
+            ],
+            [
+              5.54905,
+              46.66892760022676
+            ],
+            [
+              5.5490476,
+              46.66891820022674
+            ],
+            [
+              5.5489293,
+              46.66893290022675
+            ],
+            [
+              5.5489163,
+              46.66888230022676
+            ],
+            [
+              5.5489061,
+              46.66884270022676
+            ],
+            [
+              5.5488972,
+              46.66880790022677
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82851449",
+        "type": "restaurant",
+        "name": "La Petite Auberge",
+        "operator": null,
+        "brand": null,
+        "opening_hours": "Mo-Fr 12:00-14:00,19:30-22:00; Su 12:00-14:00",
+        "wheelchair": null,
+        "cuisine": "french",
+        "delivery": null,
+        "takeaway": null,
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "47751306300016",
+        "phone": null,
+        "website": null,
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5574507,
+              46.694925200221796
+            ],
+            [
+              5.5575328,
+              46.6949213002218
+            ],
+            [
+              5.5575302,
+              46.69489530022179
+            ],
+            [
+              5.5576398,
+              46.6948892002218
+            ],
+            [
+              5.5576419,
+              46.69491370022179
+            ],
+            [
+              5.5576938,
+              46.6949107002218
+            ],
+            [
+              5.5576956,
+              46.69493010022178
+            ],
+            [
+              5.557703,
+              46.695009100221775
+            ],
+            [
+              5.557543,
+              46.695017900221785
+            ],
+            [
+              5.5575383,
+              46.69497480022178
+            ],
+            [
+              5.5574562,
+              46.69497890022177
+            ],
+            [
+              5.5574507,
+              46.694925200221796
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osm_id": "way/82851915",
+        "type": "restaurant",
+        "name": "L'assiette d'ici",
+        "operator": "SICOPAL",
+        "brand": null,
+        "opening_hours": "Mo-Fr 11:30-13:00",
+        "wheelchair": "yes",
+        "cuisine": "regional;french",
+        "delivery": "yes",
+        "takeaway": "yes",
+        "stars": null,
+        "capacity": null,
+        "drive_through": null,
+        "wikidata": null,
+        "brand_wikidata": null,
+        "siret": "20001653300016",
+        "phone": null,
+        "website": "https://restaurant-municipal-lons.fr",
+        "facebook": null,
+        "vegetarian": null,
+        "vegan": null,
+        "smoking": null,
+        "internet_access": null,
+        "com_insee": "39300",
+        "com_nom": "Lons-le-Saunier"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5.5787098,
+              46.68259860022414
+            ],
+            [
+              5.5787589,
+              46.68257290022415
+            ],
+            [
+              5.5787482,
+              46.68256330022414
+            ],
+            [
+              5.5788245,
+              46.68252230022417
+            ],
+            [
+              5.5789231,
+              46.68261060022414
+            ],
+            [
+              5.5789561,
+              46.68259300022415
+            ],
+            [
+              5.5789482,
+              46.682585900224126
+            ],
+            [
+              5.5789407,
+              46.682578300224165
+            ],
+            [
+              5.578935,
+              46.68257080022415
+            ],
+            [
+              5.578932,
+              46.68255920022415
+            ],
+            [
+              5.5789355,
+              46.682547000224154
+            ],
+            [
+              5.5789462,
+              46.682536000224154
+            ],
+            [
+              5.5789585,
+              46.68252960022417
+            ],
+            [
+              5.5788463,
+              46.68242890022417
+            ],
+            [
+              5.5789992,
+              46.6823487002242
+            ],
+            [
+              5.5790499,
+              46.68232210022419
+            ],
+            [
+              5.5790146,
+              46.68229150022421
+            ],
+            [
+              5.5790164,
+              46.6822781002242
+            ],
+            [
+              5.5790936,
+              46.682235200224206
+            ],
+            [
+              5.5791142,
+              46.682237100224214
+            ],
+            [
+              5.5791512,
+              46.682268900224194
+            ],
+            [
+              5.5791602,
+              46.682277000224204
+            ],
+            [
+              5.5791691,
+              46.682285000224205
+            ],
+            [
+              5.5791974,
+              46.68231050022421
+            ],
+            [
+              5.5791127,
+              46.68235550022418
+            ],
+            [
+              5.5790837,
+              46.68232980022418
+            ],
+            [
+              5.5790647,
+              46.68233970022419
+            ],
+            [
+              5.5790516,
+              46.6823466002242
+            ],
+            [
+              5.5791463,
+              46.68243160022418
+            ],
+            [
+              5.5792226,
+              46.682500100224175
+            ],
+            [
+              5.5792406,
+              46.68249060022418
+            ],
+            [
+              5.5792607,
+              46.68250860022416
+            ],
+            [
+              5.5792805,
+              46.68249820022416
+            ],
+            [
+              5.5792917,
+              46.68250820022416
+            ],
+            [
+              5.5793028,
+              46.68251830022416
+            ],
+            [
+              5.5792824,
+              46.682529000224164
+            ],
+            [
+              5.5792888,
+              46.68253470022415
+            ],
+            [
+              5.5793201,
+              46.68256280022416
+            ],
+            [
+              5.5793685,
+              46.68260620022415
+            ],
+            [
+              5.5792834,
+              46.682650800224124
+            ],
+            [
+              5.5791984,
+              46.68269540022413
+            ],
+            [
+              5.5791722,
+              46.682671900224136
+            ],
+            [
+              5.579154,
+              46.682681400224126
+            ],
+            [
+              5.5791358,
+              46.68269100022413
+            ],
+            [
+              5.5789025,
+              46.68281330022411
+            ],
+            [
+              5.5788333,
+              46.68275120022412
+            ],
+            [
+              5.5788252,
+              46.68274400022411
+            ],
+            [
+              5.5787933,
+              46.68276080022412
+            ],
+            [
+              5.5787672,
+              46.68277450022411
+            ],
+            [
+              5.5787099,
+              46.68272320022412
+            ],
+            [
+              5.5787974,
+              46.682677100224126
+            ],
+            [
+              5.5787098,
+              46.68259860022414
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

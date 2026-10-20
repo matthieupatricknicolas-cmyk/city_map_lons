@@ -63,12 +63,11 @@
   .brand-title .main .subtitle { color: var(--lons-red); font-weight: 700; }
   .badges { display: flex; align-items: center; gap: 12px; }
   .badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
-  .badge-live { background: var(--lons-red); color: white; border: 1px solid var(--lons-red-hover); transition: all 0.25s; }
+  .badge-live { background: #EFF6FF; color: #1E3A8A; border: 1px solid #BFDBFE; transition: all 0.25s; }
   .badge-live.offline { background: #F59E0B; border-color: #D97706; }
   .badge-live.offline .live-dot { animation: none; }
   .badge-count { background: #F3F4F6; border: 1px solid #E5E7EB; color: #374151; font-family: "JetBrains Mono", monospace; letter-spacing: 0; }
-  .live-dot { width: 8px; height: 8px; border-radius: 50%; background: white; animation: livePulse 1.8s infinite; }
-  @keyframes livePulse { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.6); } 70% { box-shadow: 0 0 0 8px rgba(255,255,255,0); } 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); } }
+  .live-dot { width: 8px; height: 8px; border-radius: 50%; background: #2563EB; }
 
   .body-row { flex: 1; display: flex; overflow: hidden; }
 
@@ -85,7 +84,7 @@
   .rail-btn.active::before { content: ""; position: absolute; left: -10px; top: 20%; bottom: 20%; width: 4px; border-radius: 0 4px 4px 0; background: var(--lons-red); }
 
   /* Sidebar */
-  aside.sidebar { width: 300px; flex-shrink: 0; border-right: 1px solid var(--lons-border); background: white; display: flex; flex-direction: column; position: relative; z-index: 20; }
+  aside.sidebar { width: 280px; flex-shrink: 0; border-right: 1px solid var(--lons-border); background: white; display: flex; flex-direction: column; position: relative; z-index: 20; }
   .sidebar-header { padding: 18px 18px 4px; }
   .sidebar-header .kicker { font-size: 10px; text-transform: uppercase; letter-spacing: 0.22em; font-weight: 700; color: var(--lons-red); }
   .sidebar-header .title { font-family: "Bricolage Grotesque", sans-serif; font-size: 22px; font-weight: 800; margin-top: 2px; color: var(--lons-ink); line-height: 1.1; }
@@ -114,7 +113,7 @@
   #map { position: absolute; inset: 0; width: 100%; height: 100%; }
 
   /* Donut menu — floating layers panel opened on theme click */
-  .donut-panel { position: absolute; top: 24px; left: 24px; z-index: 25; width: 420px; max-width: calc(100vw - 60px); background: white; border-radius: 22px; border: 1px solid var(--lons-border); box-shadow: 0 24px 60px rgba(15,23,42,0.22), 0 0 0 1px rgba(15,23,42,0.04); padding: 22px 22px 14px; animation: donut-in 0.28s cubic-bezier(0.34, 1.6, 0.64, 1); }
+  .donut-panel { position: absolute; top: 24px; left: 24px; z-index: 25; width: 380px; max-width: calc(100vw - 60px); background: white; border-radius: 22px; border: 1px solid var(--lons-border); box-shadow: 0 24px 60px rgba(15,23,42,0.22), 0 0 0 1px rgba(15,23,42,0.04); padding: 20px 20px 12px; animation: donut-in 0.28s cubic-bezier(0.34, 1.6, 0.64, 1); }
   .donut-panel[hidden] { display: none; }
   @keyframes donut-in { from { opacity: 0; transform: translateY(-10px) scale(0.96); } to { opacity: 1; transform: none; } }
   .donut-close { position: absolute; top: 12px; right: 12px; width: 34px; height: 34px; border: 1px solid var(--lons-border); background: white; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--lons-muted); transition: all 0.2s; padding: 0; z-index: 2; }
@@ -146,23 +145,30 @@
   .donut-legend-count { font-size: 10px; color: var(--lons-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 1px; }
   .donut-legend-row.err .donut-legend-count { color: var(--lons-red); font-weight: 600; }
   .donut-tip { display: flex; align-items: center; gap: 6px; padding: 10px 2px 0; font-size: 11px; color: var(--lons-muted); border-top: 1px solid #F3F4F6; margin-top: 6px; }
+  .parking-legend { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px; padding: 8px 4px 2px; font-size: 10px; font-weight: 600; color: #475569; }
+  .parking-legend[hidden] { display: none; }
+  .parking-legend-item { display: flex; align-items: center; gap: 6px; min-width: 0; }
+  .parking-legend-swatch { width: 10px; height: 10px; flex-shrink: 0; border-radius: 3px; }
 
   /* Map controls */
-  .map-controls { position: absolute; top: 16px; right: 16px; z-index: 30; display: flex; flex-direction: column; gap: 10px; align-items: flex-end; transition: opacity 0.25s, transform 0.25s; }
+  .map-controls { position: absolute; top: 16px; right: 16px; z-index: 30; display: flex; flex-direction: column; gap: 8px; align-items: stretch; width: 240px; transition: opacity 0.25s, transform 0.25s; }
   main.map-area.detail-open .map-controls { opacity: 0; pointer-events: none; transform: translateX(24px); }
-  .ctrl-btn { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 12px; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border: 1px solid var(--lons-border); box-shadow: 0 8px 20px rgba(15,23,42,0.08); cursor: pointer; font-family: inherit; transition: transform 0.2s; }
+  .basemap-opacity { padding: 9px 12px; border-radius: 12px; background: rgba(255,255,255,0.96); border: 1px solid var(--lons-border); box-shadow: 0 8px 20px rgba(15,23,42,0.08); backdrop-filter: blur(10px); }
+  .basemap-opacity-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; color: var(--lons-muted); font-size: 9px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+  .basemap-opacity input { width: 100%; height: 16px; margin: 0; accent-color: var(--lons-red); cursor: pointer; }
+  .ctrl-btn { display: flex; align-items: center; gap: 8px; width: 100%; min-height: 56px; padding: 8px 12px; border-radius: 12px; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border: 1px solid var(--lons-border); box-shadow: 0 8px 20px rgba(15,23,42,0.08); cursor: pointer; font-family: inherit; transition: transform 0.2s; text-align: left; }
   .ctrl-btn:hover { transform: translateY(-1px); }
   .ctrl-btn.active { background: var(--lons-red); color: white; border-color: var(--lons-red); }
   .ctrl-btn .ctrl-icon-wrap { width: 32px; height: 32px; border-radius: 8px; background: var(--lons-red-light); display: flex; align-items: center; justify-content: center; color: var(--lons-red); flex-shrink: 0; }
   .ctrl-btn.active .ctrl-icon-wrap { background: rgba(255,255,255,0.15); color: white; }
-  .ctrl-btn .ctrl-label { line-height: 1.15; }
+  .ctrl-btn .ctrl-label { line-height: 1.15; min-width: 0; flex: 1; }
   .ctrl-btn .ctrl-top { font-size: 9px; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #9CA3AF; }
   .ctrl-btn.active .ctrl-top { color: rgba(255,255,255,0.7); }
-  .ctrl-btn .ctrl-main { font-size: 12px; font-weight: 700; }
+  .ctrl-btn .ctrl-main { font-size: 12px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
   /* Compact vertical action-pill (recentrer / locate) — positioned left of the MapLibre nav stack */
-  .bottom-controls { position: absolute; bottom: 28px; right: 56px; z-index: 30; display: flex; flex-direction: column; background: white; border-radius: 14px; box-shadow: 0 6px 18px rgba(15,23,42,0.18), 0 0 0 1px rgba(15,23,42,0.04); overflow: hidden; }
-  .icon-btn { width: 40px; height: 40px; border: none; cursor: pointer; background: white; display: flex; align-items: center; justify-content: center; transition: background 0.15s, color 0.15s; padding: 0; position: relative; }
+  .bottom-controls { position: absolute; bottom: 132px; right: 10px; z-index: 30; display: flex; flex-direction: column; background: rgba(255,255,255,0.96); border: 1px solid var(--lons-border); border-radius: 6px; box-shadow: 0 2px 6px rgba(15,23,42,0.12); overflow: hidden; }
+  .icon-btn { width: 29px; height: 29px; border: none; cursor: pointer; background: transparent; display: flex; align-items: center; justify-content: center; transition: background 0.15s, color 0.15s; padding: 0; position: relative; }
   .icon-btn + .icon-btn { border-top: 1px solid #F1F1F0; }
   .icon-btn:hover { background: var(--lons-red-light); }
   .icon-btn:active { background: var(--lons-red); }
@@ -184,25 +190,28 @@
   .detail-panel { position: absolute; top: 16px; right: 16px; bottom: 16px; width: min(440px, 92vw); background: white; border-radius: 16px; box-shadow: 0 30px 60px rgba(227,6,19,0.15); border: 1px solid var(--lons-border); overflow: hidden; display: flex; flex-direction: column; z-index: 40; animation: slideInRight 320ms cubic-bezier(0.22,1,0.36,1); }
   @keyframes slideInRight { from { transform: translateX(24px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
   .detail-header { padding: 22px; position: relative; overflow: hidden; color: white; }
+  .detail-header { padding-right: 72px; }
   .detail-header::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.15) 0%, transparent 60%); pointer-events: none; }
   .detail-close { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.2); border: none; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(6px); transition: background 0.2s; z-index: 2; }
   .detail-close:hover { background: rgba(255,255,255,0.35); }
+  .osm-logo-link { position: absolute; top: 56px; right: 14px; z-index: 2; padding: 4px; border-radius: 6px; background: rgba(255,255,255,0.94); box-shadow: 0 2px 8px rgba(0,0,0,0.18); line-height: 0; }
+  .osm-logo-link:hover { background: white; transform: translateY(-1px); }
+  .osm-logo-link img { display: block; width: 28px; height: 28px; }
   .detail-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,0.22); backdrop-filter: blur(4px); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 8px; position: relative; z-index: 1; }
   .detail-title { font-family: "Bricolage Grotesque", sans-serif; font-size: 24px; font-weight: 800; line-height: 1.15; margin: 0; position: relative; z-index: 1; }
   .detail-coords { margin-top: 8px; display: flex; align-items: center; gap: 6px; font-family: "JetBrains Mono", monospace; font-size: 12px; color: rgba(255,255,255,0.85); position: relative; z-index: 1; }
   .detail-body { padding: 20px; overflow-y: auto; flex: 1; }
+  .panoramax-preview { margin-top: 18px; }
+  .panoramax-preview-label { margin-bottom: 8px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: var(--lons-muted); }
+  .panoramax-preview-status { font-size: 12px; color: var(--lons-muted); }
+  .panoramax-preview a { display: inline-block; overflow: hidden; border: 1px solid var(--lons-border); border-radius: 8px; line-height: 0; }
+  .panoramax-preview a:hover { border-color: #9CA3AF; }
+  .panoramax-preview img { display: block; width: 144px; height: 96px; object-fit: cover; }
   .detail-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid #F3F4F6; }
   .detail-row:last-of-type { border-bottom: none; }
   .detail-row .k { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: var(--lons-muted); }
   .detail-row .v { font-size: 14px; font-weight: 600; text-align: right; color: #1F2937; max-width: 60%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .detail-empty { padding: 16px; background: #FAFAF7; border-radius: 10px; color: var(--lons-muted); font-size: 13px; display: flex; gap: 10px; align-items: flex-start; margin-bottom: 12px; }
-  .action-btn { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 10px; padding: 13px; border-radius: 12px; color: white; text-decoration: none; font-weight: 700; font-size: 13px; transition: transform 0.2s, box-shadow 0.2s; letter-spacing: 0.02em; }
-  .action-btn:hover { transform: translateY(-1px); }
-  .action-btn.panoramax { background: var(--lons-red); box-shadow: 0 8px 20px rgba(227,6,19,0.3); }
-  .action-btn.panoramax:hover { background: var(--lons-red-hover); box-shadow: 0 12px 24px rgba(227,6,19,0.4); }
-  .action-btn.osm { background: white; color: var(--lons-red); border: 2px solid var(--lons-red); box-shadow: 0 4px 12px rgba(227,6,19,0.15); }
-  .action-btn.osm:hover { background: var(--lons-red-light); }
-
   /* Toasts */
   .toasts { position: absolute; bottom: 20px; right: 20px; z-index: 50; display: flex; flex-direction: column; gap: 8px; pointer-events: none; }
   .toast { pointer-events: auto; padding: 12px 16px; background: white; border-radius: 10px; border: 1px solid var(--lons-border); box-shadow: 0 10px 25px rgba(15,23,42,0.1); font-size: 13px; font-weight: 600; color: #374151; min-width: 240px; display: flex; align-items: center; gap: 10px; animation: toastIn 240ms cubic-bezier(0.22,1,0.36,1); }
@@ -210,10 +219,6 @@
   .toast.error { border-left: 4px solid var(--lons-red); }
   .toast.loading { border-left: 4px solid var(--lons-red); }
   @keyframes toastIn { from { transform: translateY(8px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-
-  @keyframes spinRotate { from { transform: rotate(0); } to { transform: rotate(360deg); } }
-  .spin { animation: spinRotate 1s linear infinite; }
-  .action-btn:disabled { opacity: 0.75; cursor: wait; }
 
   /* Scrollbar */
   ::-webkit-scrollbar { width: 6px; }
@@ -223,10 +228,14 @@
   /* MapLibre tweaks */
   .maplibregl-ctrl-attrib { font-size: 10px !important; background: rgba(255,255,255,0.75) !important; backdrop-filter: blur(6px); }
   .maplibregl-ctrl-attrib a { color: var(--lons-red) !important; }
+  @media (max-width: 600px) {
+    .map-controls { top: 12px; right: 12px; width: 208px; }
+    .bottom-controls { right: 10px; bottom: 132px; }
+  }
 
   @media (max-width: 900px) {
     aside.theme-rail { width: 68px; padding: 12px 6px; }
-    aside.sidebar { width: 240px; }
+    aside.sidebar { width: 230px; }
     .detail-panel { width: 92vw; right: 12px; top: 80px; bottom: 12px; }
   }
 </style>
@@ -260,8 +269,8 @@
       <button id="btn-export" class="badge badge-export" title="Exporter les couches visibles (GeoJSON)" data-testid="btn-export">
         <i data-lucide="download" style="width:14px;height:14px"></i> Export GeoJSON
       </button>
-      <div class="badge badge-live" id="live-badge"><span class="live-dot"></span> <span id="live-text">Données OSM · Direct</span></div>
-      <div class="badge badge-count"><i data-lucide="radio" style="width:14px;height:14px"></i> <span id="header-count">0</span> objets chargés</div>
+      <div class="badge badge-live" id="live-badge"><span class="live-dot"></span> <span id="live-text">Données GeoJSON · Locales</span></div>
+      <div class="badge badge-count"><i data-lucide="database" style="width:14px;height:14px"></i> <span id="header-count">0</span> objets chargés</div>
     </div>
   </header>
 
@@ -285,6 +294,12 @@
           <svg id="donut-svg" viewBox="-140 -140 280 280" preserveAspectRatio="xMidYMid meet"></svg>
         </div>
         <div class="donut-legend" id="donut-legend"></div>
+        <div class="parking-legend" id="parking-legend" hidden>
+          <div class="parking-legend-item"><span class="parking-legend-swatch" style="background:#2563EB"></span>Rue</div>
+          <div class="parking-legend-item"><span class="parking-legend-swatch" style="background:#059669"></span>Parking public</div>
+          <div class="parking-legend-item"><span class="parking-legend-swatch" style="background:#EA580C"></span>Clientèle</div>
+          <div class="parking-legend-item"><span class="parking-legend-swatch" style="background:#7C3AED"></span>Résidentiel / privé</div>
+        </div>
         <div class="donut-tip">
           <i data-lucide="lightbulb" style="width:12px;height:12px"></i>
           Cliquez sur un segment ou une ligne pour activer / désactiver la couche.
@@ -301,15 +316,6 @@
 <script>
 /* ---------------- Configuration ---------------- */
 const LONS_CENTER = [5.5539, 46.6739];
-const LONS_BOUNDARY_ID = "152508"; // GeoDataMine ID (admin_8)
-const LONS_OSM_RELATION = 152508;   // OSM relation ID (identique)
-const GEODATAMINE_BASE = "https://geodatamine.fr";
-const OVERPASS_ENDPOINTS = [
-  "https://overpass.kumi.systems/api/interpreter",
-  "https://overpass-api.de/api/interpreter",
-  "https://overpass.osm.ch/api/interpreter",
-  "https://overpass.private.coffee/api/interpreter",
-];
 const NOMINATIM_BASE = "https://nominatim.openstreetmap.org";
 const PHOTON_BASE = "https://photon.komoot.io";  // Fallback: CORS-friendly geocoder
 const PANORAMAX_BASE = "https://api.panoramax.xyz/";
@@ -330,6 +336,16 @@ const ICON_PATHS = {
   bus:        `<rect x="4" y="6" width="16" height="11" rx="2"/><path d="M4 11h16M9 17v2M15 17v2"/><circle cx="8" cy="17" r="1.4"/><circle cx="16" cy="17" r="1.4"/><path d="M8 8h2M14 8h2"/>`,
   bus_stop:   `<path d="M12 4v10M8 4h8M7 14h10v2H7zM12 16v5"/><circle cx="12" cy="18" r="1"/>`,
   shop:       `<path d="M5 8h14l-1 12H6L5 8ZM9 8V6a3 3 0 0 1 6 0v2"/>`,
+  basket:     `<path d="M3 10h18l-2 10H5L3 10Z"/><path d="m8 10 4-6 4 6M8 14v3M12 14v3M16 14v3"/>`,
+  shirt:      `<path d="m8 5-5 3 3 5 3-2v9h6v-9l3 2 3-5-5-3a5 5 0 0 1-8 0Z"/>`,
+  scissors:   `<circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><path d="m8 8 12 12M8 16 20 4"/>`,
+  home:       `<path d="m3 11 9-8 9 8M5 10v11h14V10M9 21v-7h6v7"/>`,
+  health:     `<path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7z"/>`,
+  briefcase:  `<rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V5h8v3M3 13h18M10 13v3h4v-3"/>`,
+  car:        `<path d="m5 11 2-5h10l2 5 2 2v6h-2v-2H5v2H3v-6l2-2ZM5 11h14M6 15h.01M18 15h.01"/>`,
+  burger:     `<path d="M4 10a8 8 0 0 1 16 0H4ZM3 12h18v3H3zM5 17h14v3H5z"/>`,
+  coffee:     `<path d="M5 9h12v8a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V9ZM17 11h2a2 2 0 0 1 0 4h-2M8 5V3M12 5V3"/>`,
+  glass:      `<path d="M5 4h14l-2 8a5 5 0 0 1-10 0L5 4ZM12 17v4M8 21h8"/>`,
   utensils:   `<path d="M7 3v8M4 3v5a3 3 0 0 0 3 3M10 3v18M4 11l6 0M14 3v9h3l-1-9h-2ZM14 12v9"/>`,
   landmark:   `<path d="M12 3l10 6H2l10-6Z"/><path d="M5 10v9M10 10v9M14 10v9M19 10v9"/><path d="M3 19h18v2H3z"/>`,
   film:       `<rect x="3" y="3" width="18" height="18" rx="1"/><path d="M7 3v18M17 3v18M3 8h4M3 12h4M3 16h4M17 8h4M17 12h4M17 16h4"/>`,
@@ -348,6 +364,9 @@ const ICON_PATHS = {
   wheelchair: `<circle cx="10" cy="4.5" r="1.6"/><path d="M10 6.5v6h6M10 12.5l3 5"/><circle cx="10" cy="16.5" r="4"/>`,
   clock:      `<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/>`,
   truck:      `<rect x="1.5" y="7" width="12" height="9" rx="1"/><path d="M13.5 10h4l3 3v3h-7z"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>`,
+  construction: `<path d="M2 20h20M5 20V8l7-4 7 4v12M9 20v-6h6v6M8 9h.01M12 9h.01M16 9h.01"/>`,
+  alert: `<path d="M10.3 3.9 2.2 18a2 2 0 0 0 1.7 3h16.2a2 2 0 0 0 1.7-3l-8.1-14.1a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/>`,
+  "heart-pulse": `<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/><path d="M3.5 12h4l2-3 3 6 2-3h5"/>`,
 };
 
 const LAYERS = {
@@ -355,50 +374,71 @@ const LAYERS = {
     label: "Mobilité", subtitle: "Déplacement",
     tabIcon: "bike",
     items: {
-      bike_parking: { label: "Parkings vélos", icon: "bike", color: "#059669", geometry: "point", source: "geodatamine", theme: "bicycle_parking" },
-      cycle_lanes:  { label: "Pistes cyclables", icon: "navigation", color: "#10B981", geometry: "line", source: "geodatamine", theme: "cycleway" },
-      bus_shelter:  { label: "Arrêts & Abris bus", icon: "bus", color: "#2563EB", geometry: "point", source: "overpass", query: `[out:json][timeout:25];(node["highway"="bus_stop"](around:4000,46.6739,5.5539);node["amenity"="bus_station"](around:4000,46.6739,5.5539););out body;` },
-      bus_lines:    { label: "Lignes de bus", icon: "route", color: "#3B82F6", geometry: "line", source: "overpass", query: `[out:json][timeout:40];relation["route"="bus"](around:4000,46.6739,5.5539);out body geom;` },
+      bike_parking: { label: "Parkings vélos", icon: "bike", color: "#059669", geometry: "point", file: "data/bike_parking.geojson" },
+      cycle_lanes:  { label: "Pistes cyclables", icon: "navigation", color: "#10B981", geometry: "line", file: "data/cycle_lanes.geojson" },
+      bus_shelter:  { label: "Arrêts & Abris bus", icon: "bus", color: "#2563EB", geometry: "point", file: "data/bus_stops.geojson" },
+      bus_lines:    { label: "Lignes de bus", icon: "route", color: "#3B82F6", geometry: "line", file: "data/bus_lines.geojson" },
     },
   },
   commerces: {
     label: "Commerces", subtitle: "Vie locale",
     tabIcon: "shopping-bag",
     items: {
-      shops: { label: "Boutiques & Magasins", icon: "shop", color: "#8B5CF6", geometry: "point", source: "geodatamine", theme: "shop_craft_office" },
-      food:  { label: "Restaurants, cafés & bars", icon: "utensils", color: "#EC4899", geometry: "point", source: "geodatamine", theme: "restaurant" },
+      shops: { label: "Boutiques & Magasins", icon: "shop", color: "#8B5CF6", geometry: "point", file: "data/shops.geojson" },
+      food:  { label: "Restaurants, cafés & bars", icon: "utensils", color: "#EC4899", geometry: "point", file: "data/restaurants.geojson" },
     },
   },
   culture: {
     label: "Culture", subtitle: "Patrimoine",
     tabIcon: "landmark",
     items: {
-      historic: { label: "Patrimoine historique", icon: "landmark", color: "#B45309", geometry: "point", source: "geodatamine", theme: "historic" },
-      cinema:   { label: "Cinémas", icon: "film", color: "#DB2777", geometry: "point", source: "geodatamine", theme: "cinema" },
-      library:  { label: "Bibliothèques", icon: "library", color: "#0891B2", geometry: "point", source: "geodatamine", theme: "library" },
-      arts:     { label: "Musées, théâtres, arts", icon: "theater", color: "#7C3AED", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["tourism"="museum"](around:5000,46.6739,5.5539);node["amenity"~"^(theatre|arts_centre|community_centre|studio)$"](around:5000,46.6739,5.5539);node["tourism"="artwork"](around:5000,46.6739,5.5539););out body;` },
+      historic: { label: "Patrimoine historique", icon: "landmark", color: "#B45309", geometry: "point", file: "data/historic.geojson" },
+      cinema:   { label: "Cinémas", icon: "film", color: "#DB2777", geometry: "point", file: "data/cinemas.geojson" },
+      library:  { label: "Bibliothèques", icon: "library", color: "#0891B2", geometry: "point", file: "data/libraries.geojson" },
+      arts:     { label: "Musées, théâtres, arts", icon: "theater", color: "#7C3AED", geometry: "point", file: "data/arts_venues.geojson" },
     },
   },
   nature: {
     label: "Nature", subtitle: "Espaces verts",
     tabIcon: "trees",
     items: {
-      parks:       { label: "Parcs & jardins", icon: "tree", color: "#16A34A", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["leisure"~"^(park|garden)$"](around:4500,46.6739,5.5539);way["leisure"~"^(park|garden)$"](around:4500,46.6739,5.5539););out center;` },
-      playgrounds: { label: "Aires de jeux", icon: "playground", color: "#F59E0B", geometry: "point", source: "local", file: "playground.geojson" },
-      fountains:   { label: "Fontaines & points d'eau", icon: "droplet", color: "#0EA5E9", geometry: "point", source: "overpass", query: `[out:json][timeout:25];(node["amenity"="fountain"](around:4500,46.6739,5.5539);node["amenity"="drinking_water"](around:4500,46.6739,5.5539););out body;` },
-      greens:      { label: "Espaces verts", icon: "leaf", color: "#65A30D", geometry: "line", source: "overpass", query: `[out:json][timeout:35];(way["landuse"~"^(grass|recreation_ground|meadow|forest)$"](around:4000,46.6739,5.5539);way["leisure"~"^(nature_reserve|common)$"](around:4000,46.6739,5.5539);way["natural"="wood"](around:4000,46.6739,5.5539););out geom;` },
+      parks:       { label: "Parcs & jardins", icon: "tree", color: "#16A34A", geometry: "polygon", labelField: "name", file: "data/parks.geojson" },
+      playgrounds: { label: "Aires de jeux", icon: "playground", color: "#F59E0B", geometry: "point", file: "data/playgrounds.geojson" },
+      fountains:   { label: "Fontaines & points d'eau", icon: "droplet", color: "#0EA5E9", geometry: "point", file: "data/fountains.geojson" },
+      greens:      { label: "Espaces verts", icon: "leaf", color: "#65A30D", geometry: "line", file: "data/green_spaces.geojson" },
     },
   },
   stationnement: {
-    label: "Stationnement", subtitle: "Se garer",
+    label: "Parking", subtitle: "Se garer",
     tabIcon: "square-parking",
     items: {
-      parking_pay:   { label: "Stationnement payant",  icon: "parking",    color: "#DC2626", geometry: "polygon", source: "overpass", query: `[out:json][timeout:30];(way["amenity"="parking"]["fee"!="no"](around:4000,46.6739,5.5539);relation["amenity"="parking"]["fee"!="no"](around:4000,46.6739,5.5539););out geom;` },
-      parking_free:  { label: "Stationnement gratuit", icon: "parking",    color: "#16A34A", geometry: "polygon", source: "overpass", query: `[out:json][timeout:30];(way["amenity"="parking"]["fee"="no"](around:4000,46.6739,5.5539);relation["amenity"="parking"]["fee"="no"](around:4000,46.6739,5.5539););out geom;` },
-      horodateur:    { label: "Horodateurs",            icon: "meter",      color: "#F59E0B", geometry: "point", source: "overpass", query: `[out:json][timeout:25];(node["amenity"="vending_machine"]["vending"~"parking_tickets"](around:4000,46.6739,5.5539);node["vending"="parking_tickets"](around:4000,46.6739,5.5539););out body;` },
-      pmr:           { label: "Places PMR",             icon: "wheelchair", color: "#2563EB", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["parking_space"="disabled"](around:5000,46.6739,5.5539);way["parking_space"="disabled"](around:5000,46.6739,5.5539);node["capacity:disabled"](around:5000,46.6739,5.5539);way["capacity:disabled"](around:5000,46.6739,5.5539);node["amenity"="parking_space"]["wheelchair"~"^(yes|designated)$"](around:5000,46.6739,5.5539););out center;` },
-      arret_minute:  { label: "Arrêts minute",          icon: "clock",      color: "#8B5CF6", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["amenity"="parking_space"]["parking_space"="drop_off"](around:4000,46.6739,5.5539);node["amenity"="parking"]["maxstay"](around:4000,46.6739,5.5539);way["amenity"="parking"]["maxstay"](around:4000,46.6739,5.5539);node["parking:condition"~"drop_off|short_term"](around:4000,46.6739,5.5539););out center;` },
-      livraison:     { label: "Livraison",              icon: "truck",      color: "#B45309", geometry: "point", source: "overpass", query: `[out:json][timeout:30];(node["amenity"="parking"]["access"~"delivery|hgv"](around:4000,46.6739,5.5539);way["amenity"="parking"]["access"~"delivery|hgv"](around:4000,46.6739,5.5539);node["amenity"="loading_dock"](around:4000,46.6739,5.5539);node["parking:condition"="loading"](around:4000,46.6739,5.5539);node["highway"="loading"](around:4000,46.6739,5.5539););out center;` },
+      parking_pay:   { label: "Stationnement payant",  icon: "parking",    color: "#DC2626", geometry: "polygon", showIcon: false, capacityLabelField: "capacity", file: "data/paid_parking.geojson" },
+      parking_free:  { label: "Stationnement gratuit", icon: "parking",    color: "#16A34A", geometry: "polygon", showIcon: false, parkingStyle: true, capacityLabelField: "capacity", file: "data/free_parking.geojson" },
+      horodateur:    { label: "Horodateurs",            icon: "meter",      color: "#F59E0B", geometry: "point", file: "data/parking_meters.geojson" },
+      pmr:           { label: "Places PMR",             icon: "wheelchair", color: "#2563EB", geometry: "point", file: "data/accessible_parking.geojson" },
+      arret_minute:  { label: "Arrêts minute",          icon: "clock",      color: "#8B5CF6", geometry: "point", file: "data/drop_off.geojson" },
+      livraison:     { label: "Livraison",              icon: "truck",      color: "#B45309", geometry: "point", file: "data/loading_zones.geojson" },
+    },
+  },
+  travaux: {
+    label: "Travaux", subtitle: "Chantiers & perturbations",
+    tabIcon: "construction",
+    items: {
+      roadworks: { label: "Travaux", icon: "construction", color: "#DC2626", geometry: "mixed", file: "data/dialog_roadworks.geojson" },
+      disruptions: { label: "Perturbations temporaires", icon: "alert", color: "#F59E0B", geometry: "mixed", file: "data/dialog_temporary_disruptions.geojson" },
+    },
+  },
+  securite: {
+    label: "Sécurité", subtitle: "Défibrillateurs",
+    tabIcon: "heart-pulse",
+    items: {
+      dae: {
+        label: "Défibrillateurs (DAE)",
+        icon: "heart-pulse",
+        color: "#DC2626",
+        geometry: "point",
+        file: "data/dae.geojson",
+      },
     },
   },
 };
@@ -409,6 +449,8 @@ const DEFAULT_VISIBLE = {
   culture:   { historic: true, cinema: true, library: true, arts: true },
   nature:    { parks: true, playgrounds: true, fountains: true, greens: false },
   stationnement: { parking_pay: true, parking_free: true, horodateur: false, pmr: true, arret_minute: true, livraison: false },
+  travaux: { roadworks: true, disruptions: true },
+  securite: { dae: true },
 };
 
 const KEY_LABELS = {
@@ -426,7 +468,19 @@ const KEY_LABELS = {
   bidirect: "Bidirectionnel", categorie: "Catégorie", telephone: "Téléphone",
   site_web: "Site web", horaires: "Horaires", adresse: "Adresse",
   enseigne: "Enseigne", type: "Type", source: "Source", date_maj: "Mise à jour",
+  identifier: "Identifiant DiaLog", organization: "Organisme",
+  category: "Nature de l'arrêté", subject: "Motif", measure_type: "Restriction",
+  start_date: "Début de validité", end_date: "Fin de validité",
+  document_url: "Arrêté officiel",
   d_service: "Mise en service",
+  adresse: "Adresse", code_postal: "Code postal", commune: "Commune",
+  acces: "Accès", acces_libre: "Accès libre",
+  acces_premiers_secours: "Accès premiers secours", acces_accessible: "Accès accessible",
+  etage: "Étage", complement_acces: "Complément d'accès",
+  disponibilite_horaires: "Disponibilité", etat_fonctionnement: "Fonctionnement",
+  statut: "Statut", date_installation: "Date d'installation",
+  date_derniere_maintenance: "Dernière maintenance", date_mise_a_jour: "Mise à jour des données",
+  exploitant: "Exploitant", source_donnees: "Source des données", licence: "Licence",
   // Parking-related
   parking: "Type de parking",
   parking_space: "Type de place",
@@ -615,6 +669,16 @@ function humanize(v) {
   return String(v);
 }
 
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (character) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;",
+  })[character]);
+}
+
 function makeStyle(bm) {
   if (bm.type === "style") return bm.style;
   return {
@@ -649,6 +713,128 @@ const LAYER_EMOJI = {
   livraison:    "🚚",
 };
 
+const COMMERCE_MARKERS = {
+  food_shop: { color: "#16A34A", icon: "basket" },
+  fashion: { color: "#7C3AED", icon: "shirt" },
+  beauty: { color: "#DB2777", icon: "scissors" },
+  home: { color: "#D97706", icon: "home" },
+  auto: { color: "#2563EB", icon: "car" },
+  health: { color: "#0891B2", icon: "health" },
+  services: { color: "#475569", icon: "briefcase" },
+  retail: { color: "#6D28D9", icon: "shop" },
+  restaurant: { color: "#DC2626", icon: "utensils" },
+  fast_food: { color: "#EA580C", icon: "burger" },
+  cafe: { color: "#92400E", icon: "coffee" },
+  bar: { color: "#7E22CE", icon: "glass" },
+};
+
+const FOOD_SHOP_TYPES = new Set([
+  "alcohol", "bakery", "beverages", "butcher", "cheese", "confectionery",
+  "convenience", "deli", "greengrocer", "seafood", "supermarket", "wine",
+]);
+const FASHION_SHOP_TYPES = new Set(["bag", "clothes", "fabric", "jewelry", "shoes", "watches"]);
+const HOME_SHOP_TYPES = new Set([
+  "bathroom_furnishing", "doityourself", "furniture", "garden_centre",
+  "hardware", "houseware", "interior_decoration", "kitchen",
+]);
+const AUTO_SHOP_TYPES = new Set(["car", "car_repair", "car_parts", "motorcycle", "tyres"]);
+const HEALTH_SHOP_TYPES = new Set(["chemist", "hearing_aids", "medical_supply", "optician", "pharmacy"]);
+const SERVICE_SHOP_TYPES = new Set([
+  "bank", "company", "driving_school", "employment_agency", "insurance",
+  "photographer", "post_office", "travel_agency", "travel_agent",
+]);
+
+function commerceCategory(layerKey, properties = {}) {
+  if (layerKey === "food") {
+    if (properties.type === "cafe") return "cafe";
+    if (properties.type === "bar" || properties.type === "pub") return "bar";
+    if (properties.type === "fast_food") return "fast_food";
+    return "restaurant";
+  }
+  if (FOOD_SHOP_TYPES.has(properties.type)) return "food_shop";
+  if (FASHION_SHOP_TYPES.has(properties.type)) return "fashion";
+  if (HOME_SHOP_TYPES.has(properties.type)) return "home";
+  if (AUTO_SHOP_TYPES.has(properties.type)) return "auto";
+  if (HEALTH_SHOP_TYPES.has(properties.type)) return "health";
+  if (SERVICE_SHOP_TYPES.has(properties.type)) return "services";
+  if (properties.type === "estate_agent" || properties.type === "property_management") return "home";
+  if (properties.type === "beauty" || properties.type === "hairdresser") return "beauty";
+  return "retail";
+}
+
+function commerceIconExpression() {
+  return [
+    "match",
+    ["get", "_commerceCategory"],
+    ...Object.keys(COMMERCE_MARKERS).flatMap((category) => [
+      category,
+      `commerce-${category}`,
+    ]),
+    "commerce-retail",
+  ];
+}
+
+const PARKING_COLORS = {
+  street: "#2563EB",
+  public: "#059669",
+  business: "#EA580C",
+  residential: "#7C3AED",
+};
+const PARKING_CATEGORY_EXPRESSION = [
+  "case",
+  [
+    "any",
+    ["==", ["geometry-type"], "LineString"],
+    [
+      "in",
+      ["get", "parking"],
+      ["literal", ["street_side", "on_street", "street", "lane", "half_on_kerb", "layby"]],
+    ],
+  ],
+  "street",
+  ["in", ["get", "access"], ["literal", ["customers", "business"]]],
+  "business",
+  [
+    "any",
+    ["in", ["get", "access"], ["literal", ["private", "residents"]]],
+    ["in", ["get", "parking_space"], ["literal", ["private", "residents"]]],
+  ],
+  "residential",
+  "public",
+];
+const PARKING_COLOR_EXPRESSION = [
+  "match",
+  PARKING_CATEGORY_EXPRESSION,
+  "street",
+  PARKING_COLORS.street,
+  "business",
+  PARKING_COLORS.business,
+  "residential",
+  PARKING_COLORS.residential,
+  PARKING_COLORS.public,
+];
+const PARKING_FILL_OPACITY_EXPRESSION = [
+  "match",
+  PARKING_CATEGORY_EXPRESSION,
+  "street",
+  0.22,
+  "business",
+  0.28,
+  "residential",
+  0.24,
+  0.32,
+];
+
+async function loadCommerceMarkerImages(map) {
+  for (const [category, marker] of Object.entries(COMMERCE_MARKERS)) {
+    await loadIconIntoMap(
+      map,
+      `commerce-${category}`,
+      makePinDataUrl(marker.color, marker.icon)
+    );
+  }
+}
+
 /** Cercle avec icône SVG au centre. Rendu 100% vectoriel = universel. */
 function makePinDataUrl(color, iconKey) {
   const iconInner = ICON_PATHS[iconKey] || `<circle cx="12" cy="12" r="2"/>`;
@@ -678,43 +864,15 @@ async function loadIconIntoMap(map, iconId, dataUrl) {
   if (!map.hasImage(iconId)) map.addImage(iconId, img, { pixelRatio: 2 });
 }
 
-async function fetchGeoDataMine(theme) {
-  const r = await fetch(`${GEODATAMINE_BASE}/data/${theme}/${LONS_BOUNDARY_ID}?format=geojson`);
-  if (!r.ok) throw new Error(`geodatamine ${theme} HTTP ${r.status}`);
-  return await r.json();
-}
-
-async function fetchOverpass(query) {
-  let lastErr;
-  for (const endpoint of OVERPASS_ENDPOINTS) {
-    const ctrl = new AbortController();
-    const timeoutId = setTimeout(() => ctrl.abort(), 20000); // per-endpoint 20 s hard cap
-    try {
-      const r = await fetch(endpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({ data: query }),
-        signal: ctrl.signal,
-      });
-      clearTimeout(timeoutId);
-      if (!r.ok) { lastErr = `HTTP ${r.status}`; continue; }
-      const j = await r.json();
-      if (Array.isArray(j.elements)) return overpassToGeoJSON(j.elements);
-    } catch (e) {
-      clearTimeout(timeoutId);
-      lastErr = e?.name === "AbortError" ? `timeout (${endpoint})` : e;
-    }
-  }
-  throw new Error("Overpass indisponible: " + lastErr);
-}
-
-/** Load a GeoJSON file bundled next to the HTML (fastest path — no network round-trip). */
+/** Load an editable GeoJSON snapshot bundled with this page. */
 async function fetchLocalGeoJSON(file) {
   const url = new URL(file, location.href).toString();
-  const r = await fetch(url, { cache: "force-cache" });
+  const r = await fetch(url);
   if (!r.ok) throw new Error(`Fichier local introuvable (${file}): HTTP ${r.status}`);
   const j = await r.json();
-  if (!j || !Array.isArray(j.features)) throw new Error(`Fichier local invalide (${file}): pas un FeatureCollection`);
+  if (j?.type !== "FeatureCollection" || !Array.isArray(j.features)) {
+    throw new Error(`Fichier local invalide (${file}): pas un FeatureCollection`);
+  }
   // Ensure every feature has an id — required for click handlers
   j.features = j.features.map((f, i) => {
     if (!f.properties) f.properties = {};
@@ -724,92 +882,43 @@ async function fetchLocalGeoJSON(file) {
   return j;
 }
 
-function overpassToGeoJSON(elements) {
-  const features = [];
-  elements.forEach((e) => {
-    if (e.type === "node") {
-      features.push({ type: "Feature", geometry: { type: "Point", coordinates: [e.lon, e.lat] }, properties: { id: `node/${e.id}`, osm_type: "node", osm_id: e.id, ...(e.tags || {}) } });
-    } else if (e.type === "way" && e.geometry) {
-      const coords = e.geometry.map((g) => [g.lon, g.lat]);
-      const first = coords[0], last = coords[coords.length - 1];
-      const closed = coords.length >= 4 && first[0] === last[0] && first[1] === last[1];
-      const geom = closed ? { type: "Polygon", coordinates: [coords] } : { type: "LineString", coordinates: coords };
-      features.push({ type: "Feature", geometry: geom, properties: { id: `way/${e.id}`, osm_type: "way", osm_id: e.id, ...(e.tags || {}) } });
-    } else if (e.type === "way" && e.center) {
-      // `out center` collapses ways/polygons to their centroid point
-      features.push({ type: "Feature", geometry: { type: "Point", coordinates: [e.center.lon, e.center.lat] }, properties: { id: `way/${e.id}`, osm_type: "way", osm_id: e.id, ...(e.tags || {}) } });
-    } else if (e.type === "relation" && e.members) {
-      e.members.forEach((m, i) => {
-        if (m.geometry && m.geometry.length > 1) {
-          features.push({ type: "Feature", geometry: { type: "LineString", coordinates: m.geometry.map((g) => [g.lon, g.lat]) }, properties: { id: `rel/${e.id}/${i}`, osm_type: "relation", osm_id: e.id, ...(e.tags || {}) } });
-        }
-      });
-    }
-  });
-  return { type: "FeatureCollection", features };
-}
-
-/** Panoramax: find the nearest street-level picture around a POI and open the viewer on it. */
-async function openPanoramaxNearest(lon, lat) {
-  // Search progressively wider bboxes until we find a picture (max ~500 m)
+/** Panoramax: find the nearest street-level picture around a POI. */
+async function findNearestPanoramaxImage(lon, lat) {
   const deltas = [0.001, 0.003, 0.006, 0.012];
+  let nearest = null;
+  let nearestDistance = Infinity;
   for (const d of deltas) {
     const bbox = `${(lon - d).toFixed(6)},${(lat - d).toFixed(6)},${(lon + d).toFixed(6)},${(lat + d).toFixed(6)}`;
-    try {
-      const r = await fetch(`${PANORAMAX_BASE}api/search?bbox=${bbox}&limit=5`);
-      if (!r.ok) continue;
-      const j = await r.json();
-      const feats = j.features || [];
-      if (feats.length === 0) continue;
-      let best = feats[0], bestDist = Infinity;
-      for (const f of feats) {
-        const [flon, flat] = f.geometry?.coordinates || [];
-        if (typeof flon !== "number") continue;
-        const dx = (flon - lon), dy = (flat - lat);
-        const dist = dx * dx + dy * dy;
-        if (dist < bestDist) { bestDist = dist; best = f; }
-      }
-      if (best?.id) {
-        return `${PANORAMAX_BASE}?focus=pic&pic=${best.id}&map=18/${lat.toFixed(6)}/${lon.toFixed(6)}`;
-      }
-    } catch (_) { /* try next delta */ }
-  }
-  return null;
-}
-
-/** Fetch commune polygon boundary. Tries Nominatim first, falls back to Overpass. */
-async function fetchCommuneBoundary() {
-  // 1) Nominatim (fast + clean geometry)
-  try {
-    const url = `${NOMINATIM_BASE}/lookup?osm_ids=R${LONS_OSM_RELATION}&format=geojson&polygon_geojson=1`;
-    const r = await fetch(url, { headers: { "Accept-Language": "fr" } });
-    if (r.ok) return await r.json();
-  } catch (_) { /* fall back to Overpass */ }
-
-  // 2) Overpass fallback — assemble outer ways into a polyline (visual outline only)
-  try {
-    const query = `[out:json][timeout:30];relation(${LONS_OSM_RELATION});out geom;`;
-    for (const endpoint of OVERPASS_ENDPOINTS) {
-      try {
-        const r = await fetch(endpoint, { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams({ data: query }) });
-        if (!r.ok) continue;
-        const j = await r.json();
-        const rel = j.elements?.find((e) => e.type === "relation");
-        if (!rel?.members) continue;
-        const outerLines = rel.members
-          .filter((m) => m.type === "way" && m.role === "outer" && m.geometry?.length > 1)
-          .map((m) => m.geometry.map((g) => [g.lon, g.lat]));
-        if (outerLines.length === 0) continue;
-        return {
-          type: "FeatureCollection",
-          features: [{ type: "Feature", geometry: { type: "MultiLineString", coordinates: outerLines }, properties: {} }],
-        };
-      } catch (_) { /* try next endpoint */ }
+    const response = await fetch(`${PANORAMAX_BASE}api/search?bbox=${bbox}&limit=100`);
+    if (!response.ok) {
+      throw new Error(`Panoramax search failed: HTTP ${response.status}`);
     }
-  } catch (e) {
-    console.warn("Limite communale (Overpass) indisponible:", e);
+    const result = await response.json();
+    for (const feature of result.features || []) {
+      const [imageLon, imageLat] = feature.geometry?.coordinates || [];
+      if (!feature.id || typeof imageLon !== "number" || typeof imageLat !== "number") continue;
+      const meanLat = ((lat + imageLat) / 2) * (Math.PI / 180);
+      const dx = (imageLon - lon) * Math.cos(meanLat);
+      const dy = imageLat - lat;
+      const distance = dx * dx + dy * dy;
+      if (distance < nearestDistance) {
+        nearestDistance = distance;
+        nearest = feature;
+      }
+    }
+    const nearestOutsideDistance = d * Math.cos(lat * (Math.PI / 180));
+    if (nearest && nearestDistance <= nearestOutsideDistance ** 2) break;
   }
-  return null;
+  if (!nearest) return null;
+  const thumbnailUrl = nearest.assets?.thumb?.href || nearest.properties?.["geovisio:thumbnail"];
+  if (!thumbnailUrl) return null;
+  const viewerUrl = new URL("/", PANORAMAX_BASE);
+  viewerUrl.search = new URLSearchParams({
+    focus: "pic",
+    pic: nearest.id,
+    map: `18/${lat.toFixed(6)}/${lon.toFixed(6)}`,
+  }).toString();
+  return { thumbnailUrl, viewerUrl: viewerUrl.toString() };
 }
 
 function stampFeatures(fc, themeKey, layerKey, meta) {
@@ -817,7 +926,16 @@ function stampFeatures(fc, themeKey, layerKey, meta) {
     type: "FeatureCollection",
     features: (fc.features || []).map((f) => ({
       ...f,
-      properties: { ...f.properties, _theme: themeKey, _layer: layerKey, _color: meta.color, _label: meta.label, _icon: meta.icon, id: f.properties?.id || f.properties?.id_osm || `${layerKey}-${Math.random()}` },
+      properties: {
+        ...f.properties,
+        _theme: themeKey,
+        _layer: layerKey,
+        _color: meta.color,
+        _label: meta.label,
+        _icon: meta.icon,
+        _commerceCategory: themeKey === "commerces" ? commerceCategory(layerKey, f.properties) : undefined,
+        id: f.properties?.id || f.properties?.id_osm || f.properties?.osm_id || `${layerKey}-${i}`,
+      },
     })),
   };
 }
@@ -825,9 +943,11 @@ function stampFeatures(fc, themeKey, layerKey, meta) {
 /* ---------------- State ---------------- */
 const state = {
   activeTheme: "mobility",
-  visibleLayers: { ...DEFAULT_VISIBLE.mobility },
+  visibleLayers: Object.fromEntries(Object.keys(LAYERS.mobility.items).map((key) => [key, false])),
   basemap: "cartodb_voyager",
-  buildings3D: true,
+  basemapOpacity: 100,
+  buildings3D: false,
+  communeBoundary: null,
   layerData: {},
   loadingLayers: {},
   failedLayers: {},
@@ -951,18 +1071,17 @@ function renderDonut() {
 
   // Legend list
   const legend = document.getElementById("donut-legend");
+  document.getElementById("parking-legend").hidden = state.activeTheme !== "stationnement";
   legend.innerHTML = entries.map(([lk, meta]) => {
     const visible = state.visibleLayers[lk];
     const loading = state.loadingLayers[lk];
     const failed = state.failedLayers[lk] && !state.layerData[lk];
     const count = state.layerData[lk]?.features.length || 0;
     let status;
-    if (loading) status = "Chargement OSM…";
+    if (loading) status = "Chargement des données…";
     else if (failed) status = "⚠ Erreur — cliquer pour réessayer";
     else if (visible) {
-      const meta = LAYERS[state.activeTheme].items[lk];
-      const badge = meta?.source === "local" ? "⚡ " : meta?.source === "geodatamine" ? "" : "";
-      status = `${badge}${count} objets en direct`;
+      status = `${count} objets chargés`;
     }
     else status = "Désactivé";
     return `
@@ -1013,6 +1132,13 @@ function renderControls() {
         `).join("")}
       </div>
     </div>
+    <div class="basemap-opacity">
+      <div class="basemap-opacity-header">
+        <label for="basemap-opacity-slider">Opacité du fond</label>
+        <output id="basemap-opacity-value" for="basemap-opacity-slider">${state.basemapOpacity}%</output>
+      </div>
+      <input id="basemap-opacity-slider" type="range" min="0" max="100" step="1" value="${state.basemapOpacity}" aria-label="Opacité du fond de carte">
+    </div>
   `;
 
   // Small icon-only bottom-right buttons (mobile-app style)
@@ -1035,6 +1161,15 @@ function renderControls() {
     b.addEventListener("click", () => { setBasemap(b.dataset.bm); document.getElementById("basemap-menu").classList.remove("open"); });
   });
   document.getElementById("btn-3d").addEventListener("click", toggle3D);
+  document.getElementById("basemap-opacity-slider").addEventListener("input", (event) => {
+    state.basemapOpacity = Number(event.currentTarget.value);
+    document.getElementById("basemap-opacity-value").textContent = `${state.basemapOpacity}%`;
+    if (map.isStyleLoaded()) {
+      ensureBasemapOpacityLayer();
+      keepOverlaysAboveBasemap();
+    }
+    scheduleHashUpdate();
+  });
   document.getElementById("btn-reset").addEventListener("click", resetCamera);
   document.getElementById("btn-locate").addEventListener("click", locate);
 }
@@ -1048,8 +1183,8 @@ function renderDetail() {
   if (mapArea) mapArea.classList.add("detail-open");
   const props = f.properties || {};
   const layerMeta = LAYERS[props._theme]?.items?.[props._layer];
-  const title = props.name || props.nom || props.brand || props.enseigne || props.operator || props.ref || layerMeta?.label || "Objet";
-  const category = props.categorie || props.shop || props.amenity || props.historic || props.tourism || props.highway || props.type || layerMeta?.label || "OSM";
+  const title = props.title || props.name || props.nom || props.brand || props.enseigne || props.operator || props.ref || layerMeta?.label || "Objet";
+  const category = props.measure_type || props.categorie || props.shop || props.amenity || props.historic || props.tourism || props.highway || props.type || layerMeta?.label || "OSM";
   let lon = 0, lat = 0;
   if (f._clickCoords) [lon, lat] = f._clickCoords;
   else if (Array.isArray(props.coordonneesxy)) [lon, lat] = props.coordonneesxy;
@@ -1067,65 +1202,62 @@ function renderDetail() {
       return pa - pb;
     });
   const osmType = props.osm_type || props.id_osm?.split("/")?.[0] || "node";
-  const osmId = props.osm_id || props.id_osm?.split("/")?.[1] || String(props.id).split("/").pop();
+  const osmId = props.osm_id || props.id_osm?.split("/")?.[1];
 
   const panel = document.createElement("div");
   panel.className = "detail-panel";
   panel.innerHTML = `
     <div class="detail-header" style="background:linear-gradient(135deg, #E30613 0%, #7A020B 100%)">
       <button class="detail-close"><i data-lucide="x" style="width:16px;height:16px"></i></button>
-      <div class="detail-badge"><span style="font-size:14px;line-height:1">${LAYER_EMOJI[props._layer] || "📍"}</span>${humanize(category)}</div>
-      <h2 class="detail-title">${humanize(title)}</h2>
+      ${osmId ? `<a class="osm-logo-link" href="https://www.openstreetmap.org/${osmType}/${osmId}" target="_blank" rel="noopener noreferrer" aria-label="Voir cet objet sur OpenStreetMap" title="OpenStreetMap">
+        <img src="osm-logo.svg" alt="OpenStreetMap">
+      </a>` : ""}
+      <div class="detail-badge"><span style="font-size:14px;line-height:1">${LAYER_EMOJI[props._layer] || "📍"}</span>${escapeHtml(humanize(category))}</div>
+      <h2 class="detail-title">${escapeHtml(humanize(title))}</h2>
       <div class="detail-coords"><i data-lucide="map-pin" style="width:12px;height:12px"></i>${lat.toFixed(5)}, ${lon.toFixed(5)}</div>
     </div>
     <div class="detail-body">
       ${entries.length === 0 ? `<div class="detail-empty"><i data-lucide="info" style="width:16px;height:16px;flex-shrink:0;margin-top:2px"></i>Pas de données détaillées supplémentaires.</div>` : ""}
       ${entries.map(([k, v]) => {
         const label = KEY_LABELS[k] || k.replace(/_/g, " ");
-        if (k === "website" || k === "site_web" || k === "url") {
-          const href = /^https?:\/\//.test(v) ? v : `https://${v}`;
-          return `<a href="${href}" target="_blank" rel="noreferrer" class="detail-row" style="text-decoration:none"><span class="k">${label}</span><span class="v" style="color:var(--lons-red)">${v} ↗</span></a>`;
+        if (k === "website" || k === "site_web" || k === "url" || k === "document_url") {
+          const href = /^https?:\/\//i.test(v) ? v : (k === "document_url" ? "" : `https://${v}`);
+          if (href) return `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer" class="detail-row" style="text-decoration:none"><span class="k">${escapeHtml(label)}</span><span class="v" style="color:var(--lons-red)">${escapeHtml(v)} ↗</span></a>`;
         }
-        return `<div class="detail-row"><span class="k">${label}</span><span class="v" title="${humanize(v)}">${humanize(v)}</span></div>`;
+        return `<div class="detail-row"><span class="k">${escapeHtml(label)}</span><span class="v" title="${escapeHtml(humanize(v))}">${escapeHtml(humanize(v))}</span></div>`;
       }).join("")}
 
-      <button class="action-btn panoramax" data-panoramax data-lon="${lon}" data-lat="${lat}">
-        <i data-lucide="camera" style="width:16px;height:16px"></i>
-        <span>Voir la photo Panoramax la plus proche</span>
-        <i data-lucide="external-link" style="width:14px;height:14px;opacity:0.75"></i>
-      </button>
-      ${osmId ? `<a class="action-btn osm" href="https://www.openstreetmap.org/${osmType}/${osmId}" target="_blank" rel="noreferrer">
-        <i data-lucide="map" style="width:16px;height:16px"></i>Voir sur OpenStreetMap
-      </a>` : ""}
+      <div class="panoramax-preview">
+        <div class="panoramax-preview-label">Photo Panoramax la plus proche</div>
+        <div class="panoramax-preview-status" data-panoramax-preview aria-live="polite">Recherche de photos à proximité…</div>
+      </div>
     </div>
   `;
   document.querySelector("main.map-area").appendChild(panel);
   panel.querySelector(".detail-close").addEventListener("click", () => { state.selectedFeature = null; renderDetail(); });
 
-  // Panoramax button — fetch nearest picture, then open viewer
-  const pxBtn = panel.querySelector("[data-panoramax]");
-  if (pxBtn) {
-    pxBtn.addEventListener("click", async () => {
-      const plon = parseFloat(pxBtn.dataset.lon);
-      const plat = parseFloat(pxBtn.dataset.lat);
-      const originalHTML = pxBtn.innerHTML;
-      pxBtn.disabled = true;
-      pxBtn.innerHTML = `<i data-lucide="loader" style="width:16px;height:16px" class="spin"></i> <span>Recherche de la photo la plus proche…</span>`;
-      lucide.createIcons();
-      try {
-        const url = await openPanoramaxNearest(plon, plat);
-        if (url) {
-          window.open(url, "_blank", "noopener");
-        } else {
-          toast("Aucune photo Panoramax à proximité (rayon ~1 km)", "error");
-        }
-      } finally {
-        pxBtn.disabled = false;
-        pxBtn.innerHTML = originalHTML;
-        lucide.createIcons();
-      }
-    });
-  }
+  const photoPreview = panel.querySelector("[data-panoramax-preview]");
+  findNearestPanoramaxImage(lon, lat).then((photo) => {
+    if (!panel.isConnected) return;
+    if (!photo) {
+      photoPreview.textContent = "Aucune photo Panoramax à proximité.";
+      return;
+    }
+    const link = document.createElement("a");
+    link.href = photo.viewerUrl;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.setAttribute("aria-label", "Ouvrir la photo Panoramax dans un nouvel onglet");
+    const image = document.createElement("img");
+    image.src = photo.thumbnailUrl;
+    image.alt = "Photo Panoramax la plus proche";
+    image.loading = "lazy";
+    link.appendChild(image);
+    photoPreview.replaceWith(link);
+  }).catch((error) => {
+    console.error("Panoramax image loading error", error);
+    if (panel.isConnected) photoPreview.textContent = "Les photos Panoramax sont temporairement indisponibles.";
+  });
 
   lucide.createIcons();
 }
@@ -1144,6 +1276,7 @@ function setActiveTheme(themeKey) {
   state.activeTheme = themeKey;
   state.visibleLayers = { ...DEFAULT_VISIBLE[themeKey] };
   state.selectedFeature = null;
+  setOfflineIndicator(false);
   renderTabs(); renderDonut(); renderDetail();
   ensureLayers();
   applyMapSources();
@@ -1170,6 +1303,7 @@ function setBasemap(id) {
   state.basemap = id;
   renderControls();
   const bm = BASEMAPS.find((b) => b.id === id);
+  map.setMaxZoom(id === "osm_fr" ? 24 : 22);
   map.setStyle(makeStyle(bm));
   scheduleHashUpdate();
 }
@@ -1178,7 +1312,8 @@ function toggle3D() { state.buildings3D = !state.buildings3D; renderControls(); 
 
 function resetCamera() {
   state.selectedFeature = null; renderDetail();
-  map.flyTo({ center: LONS_CENTER, zoom: 15, pitch: 55, bearing: -17.6, duration: 1400 });
+  if (state.communeBoundary) fitCommuneBoundary(1400);
+  else map.flyTo({ center: LONS_CENTER, zoom: 12, pitch: 0, bearing: 0, duration: 1400 });
 }
 
 function locate() {
@@ -1193,21 +1328,19 @@ async function ensureLayers() {
   for (const [layerKey, visible] of Object.entries(state.visibleLayers)) {
     if (!visible) continue;
     if (state.layerData[layerKey] || state.inflight.has(layerKey)) continue;
-    const meta = LAYERS[state.activeTheme].items[layerKey];
+    const themeKey = state.activeTheme;
+    const meta = LAYERS[themeKey].items[layerKey];
     if (!meta) continue;
     state.inflight.add(layerKey);
     state.loadingLayers[layerKey] = true;
     state.failedLayers[layerKey] = false;
     renderLayers();
     try {
-      const raw = meta.source === "geodatamine"
-        ? await fetchGeoDataMine(meta.theme)
-        : meta.source === "local"
-          ? await fetchLocalGeoJSON(meta.file)
-          : await fetchOverpass(meta.query);
-      state.layerData[layerKey] = stampFeatures(raw, state.activeTheme, layerKey, meta);
+      const raw = await fetchLocalGeoJSON(meta.file);
+      state.layerData[layerKey] = stampFeatures(raw, themeKey, layerKey, meta);
       cacheSet(layerKey, state.layerData[layerKey]);
-      await loadIconIntoMap(map, `pin-${layerKey}`, makePinDataUrl(meta.color, meta.icon));
+      if (themeKey === "commerces") await loadCommerceMarkerImages(map);
+      else if (meta.showIcon !== false) await loadIconIntoMap(map, `pin-${layerKey}`, makePinDataUrl(meta.color, meta.icon));
       toast(`${meta.label} · ${state.layerData[layerKey].features.length} objets`);
       // Any successful fetch clears the offline banner
       if (!Object.values(state.fromCache || {}).some(Boolean)) setOfflineIndicator(false);
@@ -1216,9 +1349,10 @@ async function ensureLayers() {
       // Try offline cache before showing error
       const cached = cacheGet(layerKey);
       if (cached) {
-        state.layerData[layerKey] = cached.fc;
+        state.layerData[layerKey] = stampFeatures(cached.fc, themeKey, layerKey, meta);
         state.fromCache = { ...(state.fromCache || {}), [layerKey]: true };
-        await loadIconIntoMap(map, `pin-${layerKey}`, makePinDataUrl(meta.color, meta.icon));
+        if (themeKey === "commerces") await loadCommerceMarkerImages(map);
+        else if (meta.showIcon !== false) await loadIconIntoMap(map, `pin-${layerKey}`, makePinDataUrl(meta.color, meta.icon));
         toast(`${meta.label} · ${cached.fc.features.length} objets (cache hors ligne)`, "success");
         setOfflineIndicator(true, Date.now() - cached.at);
       } else {
@@ -1234,40 +1368,140 @@ async function ensureLayers() {
   }
 }
 
+let communeBoundaryPromise;
+
 async function addCommuneBoundary() {
-  const gj = await fetchCommuneBoundary();
-  if (!gj) return;
-  // Nominatim returns FeatureCollection or GeoJSON with polygon
-  const feature = gj.features?.[0] || gj;
-  if (!feature?.geometry) return;
   if (map.getSource("commune-boundary")) return;
-  map.addSource("commune-boundary", { type: "geojson", data: feature });
-  // Halo / gloss inside
-  map.addLayer({
-    id: "commune-halo", type: "line", source: "commune-boundary",
-    paint: { "line-color": "#E30613", "line-width": 10, "line-opacity": 0.15, "line-blur": 4 },
-  });
-  // Contour épais
-  map.addLayer({
-    id: "commune-outline", type: "line", source: "commune-boundary",
-    layout: { "line-cap": "round", "line-join": "round" },
-    paint: { "line-color": "#E30613", "line-width": 3, "line-dasharray": [3, 2] },
-  });
+  if (!communeBoundaryPromise) {
+    communeBoundaryPromise = fetchLocalGeoJSON("data/commune_boundary.geojson")
+      .then((geojson) => {
+        if (map.getSource("commune-boundary")) return;
+        const feature = geojson.features[0];
+        if (!feature?.geometry) {
+          throw new Error("Le GeoJSON de la limite communale ne contient aucune géométrie");
+        }
+        state.communeBoundary = geojson;
+        map.addSource("commune-boundary", { type: "geojson", data: feature });
+        map.addLayer({
+          id: "commune-halo", type: "line", source: "commune-boundary",
+          paint: { "line-color": "#E30613", "line-width": 10, "line-opacity": 0.15, "line-blur": 4 },
+        });
+        map.addLayer({
+          id: "commune-outline", type: "line", source: "commune-boundary",
+          layout: { "line-cap": "round", "line-join": "round" },
+          paint: { "line-color": "#E30613", "line-width": 3, "line-dasharray": [3, 2] },
+        });
+        keepOverlaysAboveBasemap();
+      })
+      .finally(() => {
+        communeBoundaryPromise = null;
+      });
+  }
+  return communeBoundaryPromise;
+}
+
+function fitCommuneBoundary(duration = 0) {
+  const coordinates = [];
+  const visit = (value) => {
+    if (Array.isArray(value) && typeof value[0] === "number" && typeof value[1] === "number") {
+      coordinates.push(value);
+    } else if (Array.isArray(value)) {
+      value.forEach(visit);
+    }
+  };
+  visit(state.communeBoundary?.features?.[0]?.geometry?.coordinates);
+  if (!coordinates.length) return false;
+  const bounds = coordinates.reduce(
+    (result, point) => result.extend([point[0], point[1]]),
+    new maplibregl.LngLatBounds([coordinates[0][0], coordinates[0][1]], [coordinates[0][0], coordinates[0][1]])
+  );
+  map.fitBounds(bounds, { padding: 48, duration, pitch: 0, bearing: 0 });
+  return true;
 }
 
 /* ---------------- Map ---------------- */
 const map = new maplibregl.Map({
   container: "map",
   style: makeStyle(BASEMAPS.find((b) => b.id === state.basemap)),
-  center: LONS_CENTER, zoom: 14.5, pitch: 55, bearing: -17.6, maxPitch: 75,
+  center: LONS_CENTER, zoom: 12, pitch: 0, bearing: 0, maxZoom: state.basemap === "osm_fr" ? 24 : 22, maxPitch: 75,
   attributionControl: { compact: true },
 });
 window.__map = map;
 map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-right");
 map.addControl(new maplibregl.ScaleControl({ maxWidth: 120 }), "bottom-left");
 
+function keepOverlaysAboveBasemap() {
+  const overlayIds = [];
+  if (map.getLayer("3d-buildings")) overlayIds.push("3d-buildings");
+  ["commune-halo", "commune-outline"].forEach((id) => {
+    if (map.getLayer(id)) overlayIds.push(id);
+  });
+  Object.values(LAYERS).forEach((theme) => {
+    Object.entries(theme.items).forEach(([layerKey, meta]) => {
+      const sourceId = `osm-${layerKey}`;
+      const layerIds =
+        meta.geometry === "mixed"
+          ? [`${sourceId}-halo`, `${sourceId}-line`, `${sourceId}-area`, `${sourceId}-outline`, `${sourceId}-fill`, `${sourceId}-symbol`]
+          : meta.geometry === "line"
+          ? [`${sourceId}-halo`, `${sourceId}-fill`]
+          : meta.geometry === "polygon"
+            ? [`${sourceId}-fill`, `${sourceId}-outline`, `${sourceId}-line`, `${sourceId}-symbol`, `${sourceId}-label`]
+            : [`${sourceId}-halo`, `${sourceId}-fill`, `${sourceId}-symbol`];
+      layerIds.forEach((id) => {
+        if (map.getLayer(id)) overlayIds.push(id);
+      });
+    });
+  });
+  const layers = map.getStyle()?.layers || [];
+  const expectedTopLayerIds = ["basemap-opacity-layer", ...overlayIds];
+  const topLayerIds = layers.slice(-expectedTopLayerIds.length).map((layer) => layer.id);
+  if (expectedTopLayerIds.every((id, index) => id === topLayerIds[index])) return;
+  overlayIds.forEach((id) => map.moveLayer(id));
+  if (overlayIds.length) map.moveLayer("basemap-opacity-layer", overlayIds[0]);
+  else map.moveLayer("basemap-opacity-layer");
+}
+
+function ensureBasemapOpacityLayer() {
+  if (!map.getSource("basemap-opacity-source")) {
+    map.addSource("basemap-opacity-source", {
+      type: "geojson",
+      data: {
+        type: "FeatureCollection",
+        features: [{
+          type: "Feature",
+          properties: {},
+          geometry: {
+            type: "Polygon",
+            coordinates: [[
+              [-180, -85.051129],
+              [180, -85.051129],
+              [180, 85.051129],
+              [-180, 85.051129],
+              [-180, -85.051129],
+            ]],
+          },
+        }],
+      },
+    });
+  }
+  if (!map.getLayer("basemap-opacity-layer")) {
+    map.addLayer({
+      id: "basemap-opacity-layer",
+      type: "fill",
+      source: "basemap-opacity-source",
+      paint: { "fill-color": "#FFFFFF", "fill-opacity": 0 },
+    });
+  }
+  const fillOpacity = 1 - state.basemapOpacity / 100;
+  if (map.getPaintProperty("basemap-opacity-layer", "fill-opacity") !== fillOpacity) {
+    map.setPaintProperty("basemap-opacity-layer", "fill-opacity", fillOpacity);
+  }
+}
+
 function applyMapSources() {
   if (!map.isStyleLoaded()) return;
+
+  ensureBasemapOpacityLayer();
 
   // 3D buildings
   if (state.buildings3D) {
@@ -1297,7 +1531,7 @@ function applyMapSources() {
   Object.entries(LAYERS).forEach(([tk, theme]) => {
     Object.entries(theme.items).forEach(([lk, meta]) => {
       const srcId = `osm-${lk}`;
-      const ids = [`${srcId}-halo`, `${srcId}-fill`, `${srcId}-outline`, `${srcId}-symbol`];
+      const ids = [`${srcId}-halo`, `${srcId}-fill`, `${srcId}-area`, `${srcId}-outline`, `${srcId}-line`, `${srcId}-symbol`, `${srcId}-label`];
       const isActive = tk === state.activeTheme && state.visibleLayers[lk] && state.layerData[lk];
       if (!isActive) {
         ids.forEach((id) => { if (map.getLayer(id)) map.removeLayer(id); });
@@ -1308,24 +1542,90 @@ function applyMapSources() {
       if (map.getSource(srcId)) map.getSource(srcId).setData(fc);
       else map.addSource(srcId, { type: "geojson", data: fc });
 
-      if (meta.geometry === "line") {
+      if (meta.geometry === "mixed") {
+        const lineFilter = ["any", ["==", ["geometry-type"], "LineString"], ["==", ["geometry-type"], "MultiLineString"]];
+        const polygonFilter = ["any", ["==", ["geometry-type"], "Polygon"], ["==", ["geometry-type"], "MultiPolygon"]];
+        if (!map.getLayer(`${srcId}-halo`)) map.addLayer({
+          id: `${srcId}-halo`, type: "line", source: srcId, filter: lineFilter,
+          paint: { "line-color": meta.color, "line-width": 10, "line-opacity": 0.2, "line-blur": 3 },
+        });
+        if (!map.getLayer(`${srcId}-line`)) map.addLayer({
+          id: `${srcId}-line`, type: "line", source: srcId, filter: lineFilter,
+          layout: { "line-cap": "round", "line-join": "round" },
+          paint: { "line-color": meta.color, "line-width": 3.6 },
+        });
+        if (!map.getLayer(`${srcId}-area`)) map.addLayer({
+          id: `${srcId}-area`, type: "fill", source: srcId, filter: polygonFilter,
+          paint: { "fill-color": meta.color, "fill-opacity": 0.28 },
+        });
+        if (!map.getLayer(`${srcId}-outline`)) map.addLayer({
+          id: `${srcId}-outline`, type: "line", source: srcId, filter: polygonFilter,
+          paint: { "line-color": meta.color, "line-width": 2.2 },
+        });
+        if (!map.getLayer(`${srcId}-fill`)) map.addLayer({
+          id: `${srcId}-fill`, type: "circle", source: srcId,
+          filter: ["==", ["geometry-type"], "Point"],
+          paint: { "circle-radius": 8, "circle-color": meta.color, "circle-stroke-width": 2, "circle-stroke-color": "#FFFFFF" },
+        });
+      } else if (meta.geometry === "line") {
         if (!map.getLayer(`${srcId}-halo`)) map.addLayer({ id: `${srcId}-halo`, type: "line", source: srcId, paint: { "line-color": meta.color, "line-width": 10, "line-opacity": 0.2, "line-blur": 3 } });
         if (!map.getLayer(`${srcId}-fill`)) map.addLayer({ id: `${srcId}-fill`, type: "line", source: srcId, layout: { "line-cap": "round", "line-join": "round" }, paint: { "line-color": meta.color, "line-width": 3.6 } });
       } else if (meta.geometry === "polygon") {
         // Filled surface + colored outline + centered icon
         if (!map.getLayer(`${srcId}-fill`)) map.addLayer({
           id: `${srcId}-fill`, type: "fill", source: srcId,
-          filter: ["==", "$type", "Polygon"],
+          filter: meta.parkingStyle ? ["==", ["geometry-type"], "Polygon"] : ["==", "$type", "Polygon"],
           paint: { "fill-color": meta.color, "fill-opacity": 0.28 },
         });
         if (!map.getLayer(`${srcId}-outline`)) map.addLayer({
           id: `${srcId}-outline`, type: "line", source: srcId,
-          filter: ["==", "$type", "Polygon"],
+          filter: meta.parkingStyle ? ["==", ["geometry-type"], "Polygon"] : ["==", "$type", "Polygon"],
           layout: { "line-cap": "round", "line-join": "round" },
           paint: { "line-color": meta.color, "line-width": 2.2, "line-opacity": 0.95 },
         });
+        if (meta.parkingStyle) {
+          map.setPaintProperty(`${srcId}-fill`, "fill-color", PARKING_COLOR_EXPRESSION);
+          map.setPaintProperty(`${srcId}-fill`, "fill-opacity", PARKING_FILL_OPACITY_EXPRESSION);
+          map.setPaintProperty(`${srcId}-outline`, "line-color", PARKING_COLOR_EXPRESSION);
+          map.setPaintProperty(`${srcId}-outline`, "line-width", 1.5);
+          if (!map.getLayer(`${srcId}-line`)) map.addLayer({
+            id: `${srcId}-line`, type: "line", source: srcId,
+            filter: ["==", ["geometry-type"], "LineString"],
+            layout: { "line-cap": "round", "line-join": "round" },
+            paint: {
+              "line-color": PARKING_COLOR_EXPRESSION,
+              "line-width": ["interpolate", ["linear"], ["zoom"], 11, 1.5, 16, 4],
+              "line-opacity": 0.9,
+              "line-dasharray": [2, 1],
+            },
+          });
+        }
+        if (meta.capacityLabelField && !map.getLayer(`${srcId}-label`)) map.addLayer({
+          id: `${srcId}-label`, type: "symbol", source: srcId, minzoom: 17,
+          filter: [
+            "all",
+            ["has", meta.capacityLabelField],
+            [">", ["to-number", ["get", meta.capacityLabelField], 0], 0],
+          ],
+          layout: {
+            "symbol-placement": "point",
+            "text-field": ["to-string", ["get", meta.capacityLabelField]],
+            "text-font": ["Open Sans Semibold", "Arial Unicode MS Regular"],
+            "text-size": ["interpolate", ["linear"], ["zoom"], 17, 11, 19, 14],
+            "text-allow-overlap": false,
+            "text-ignore-placement": false,
+          },
+          paint: {
+            "text-color": "#0F172A",
+            "text-halo-color": "#FFFFFF",
+            "text-halo-width": 1.5,
+          },
+        });
+        if (meta.showIcon === false && map.getLayer(`${srcId}-symbol`)) {
+          map.removeLayer(`${srcId}-symbol`);
+        }
         // Centroid icon (works for both Point + Polygon via symbol-placement:"point")
-        if (!map.getLayer(`${srcId}-symbol`) && map.hasImage(`pin-${lk}`)) {
+        if (meta.showIcon !== false && !meta.labelField && !map.getLayer(`${srcId}-symbol`) && map.hasImage(`pin-${lk}`)) {
           map.addLayer({
             id: `${srcId}-symbol`, type: "symbol", source: srcId,
             layout: {
@@ -1338,9 +1638,42 @@ function applyMapSources() {
             },
           });
         }
+        if (meta.labelField && !map.getLayer(`${srcId}-label`)) {
+          map.addLayer({
+            id: `${srcId}-label`, type: "symbol", source: srcId,
+            filter: ["has", meta.labelField],
+            layout: {
+              "symbol-placement": "point",
+              "text-field": ["coalesce", ["get", meta.labelField], ["get", "alt_name"]],
+              "text-font": ["Open Sans Semibold", "Arial Unicode MS Regular"],
+              "text-size": 12,
+              "text-max-width": 12,
+              "text-allow-overlap": false,
+              "text-ignore-placement": false,
+            },
+            paint: {
+              "text-color": "#14532D",
+              "text-halo-color": "#FFFFFF",
+              "text-halo-width": 1.5,
+            },
+          });
+        }
       } else {
         // Thematic circular icon (anchor center → point stays on the location)
-        if (!map.getLayer(`${srcId}-symbol`) && map.hasImage(`pin-${lk}`)) {
+        if (tk === "commerces") {
+          if (!map.getLayer(`${srcId}-symbol`)) map.addLayer({
+            id: `${srcId}-symbol`,
+            type: "symbol",
+            source: srcId,
+            layout: {
+              "icon-image": commerceIconExpression(),
+              "icon-size": ["interpolate", ["linear"], ["zoom"], 12, 0.42, 15, 0.7, 18, 0.95],
+              "icon-allow-overlap": true,
+              "icon-anchor": "center",
+              "symbol-sort-key": 1,
+            },
+          });
+        } else if (!map.getLayer(`${srcId}-symbol`) && map.hasImage(`pin-${lk}`)) {
           map.addLayer({
             id: `${srcId}-symbol`,
             type: "symbol",
@@ -1364,32 +1697,40 @@ function applyMapSources() {
     });
   });
 
-  // Ensure ALL point symbols (icons) sit on TOP of line/surface layers
-  Object.keys(LAYERS).forEach((tk) => Object.entries(LAYERS[tk].items).forEach(([lk, meta]) => {
-    const sid = `osm-${lk}-symbol`;
-    const fid = `osm-${lk}-fill`;
-    if (meta.geometry === "point") {
-      if (map.getLayer(fid)) map.moveLayer(fid);
-      if (map.getLayer(sid)) map.moveLayer(sid);
-    } else if (meta.geometry === "polygon") {
-      // Polygon: keep fill below, outline & symbol on top
-      if (map.getLayer(`${sid}`)) map.moveLayer(sid);
-    }
-  }));
+  keepOverlaysAboveBasemap();
 }
 
-map.on("load", async () => {
+map.on("load", () => {
   applyMapSources();
-  await addCommuneBoundary();
+  addCommuneBoundary().then(() => {
+    if (!_hashState) fitCommuneBoundary();
+  }).catch((error) => console.error("Limite communale GeoJSON indisponible:", error));
 });
-map.on("styledata", async () => {
+let commerceMarkerLoadInProgress = false;
+map.on("styledata", () => {
+  if (!map.isStyleLoaded()) return;
+  const hasCommerceData = ["shops", "food"].some((layerKey) => state.layerData[layerKey]);
+  if (hasCommerceData && !map.hasImage("commerce-retail")) {
+    if (commerceMarkerLoadInProgress) return;
+    commerceMarkerLoadInProgress = true;
+    loadCommerceMarkerImages(map)
+      .then(() => {
+        commerceMarkerLoadInProgress = false;
+        applyMapSources();
+      })
+      .catch((error) => {
+        commerceMarkerLoadInProgress = false;
+        console.error("Icônes des commerces indisponibles:", error);
+      });
+    return;
+  }
   applyMapSources();
-  await addCommuneBoundary();
+  addCommuneBoundary().catch((error) => console.error("Limite communale GeoJSON indisponible:", error));
 });
 
 map.on("click", (e) => {
   const ids = [];
-  Object.keys(LAYERS).forEach((t) => Object.keys(LAYERS[t].items).forEach((k) => ids.push(`osm-${k}-fill`, `osm-${k}-symbol`)));
+  Object.keys(LAYERS).forEach((t) => Object.keys(LAYERS[t].items).forEach((k) => ids.push(`osm-${k}-fill`, `osm-${k}-line`, `osm-${k}-area`, `osm-${k}-symbol`)));
   const existing = ids.filter((l) => map.getLayer(l));
   if (existing.length === 0) { state.selectedFeature = null; renderDetail(); return; }
   const bbox = [[e.point.x - 10, e.point.y - 10], [e.point.x + 10, e.point.y + 10]];
@@ -1416,7 +1757,7 @@ map.on("click", (e) => {
 
 ["mouseenter", "mouseleave"].forEach((ev) => {
   Object.keys(LAYERS).forEach((t) => Object.keys(LAYERS[t].items).forEach((k) => {
-    ["fill", "symbol"].forEach((s) => {
+    ["fill", "line", "symbol"].forEach((s) => {
       const id = `osm-${k}-${s}`;
       map.on(ev, id, () => (map.getCanvas().style.cursor = ev === "mouseenter" ? "pointer" : ""));
     });
@@ -1479,7 +1820,9 @@ function setOfflineIndicator(offline, cacheAgeMs) {
     text.textContent = hours < 24 ? `Mode hors ligne · cache ${hours} h` : `Mode hors ligne · cache ${Math.round(hours / 24)} j`;
   } else {
     badge.classList.remove("offline");
-    text.textContent = "Données OSM · Direct";
+    text.textContent = state.activeTheme === "securite"
+      ? "Géo'DAE · API data.gouv.fr"
+      : "Données GeoJSON · Locales";
   }
 }
 
@@ -1494,6 +1837,7 @@ function encodeState() {
     p: map.getPitch().toFixed(0),
     b: map.getBearing().toFixed(0),
     bm: state.basemap,
+    o: state.basemapOpacity,
     d: state.buildings3D ? "1" : "0",
   };
   const usp = new URLSearchParams();
@@ -1525,6 +1869,9 @@ async function applyHashState(st) {
   if (!st) return;
   // Basemap
   if (st.bm && BASEMAPS.find((b) => b.id === st.bm)) state.basemap = st.bm;
+  if (st.o != null && Number.isFinite(Number(st.o))) {
+    state.basemapOpacity = Math.max(0, Math.min(100, Number(st.o)));
+  }
   // 3D
   if (st.d != null) state.buildings3D = st.d === "1";
   // Theme
@@ -1767,6 +2114,9 @@ if (_hashState) {
   // Set theme + visibility synchronously; camera is applied via map.on("load")
   if (_hashState.t && LAYERS[_hashState.t]) state.activeTheme = _hashState.t;
   if (_hashState.bm && BASEMAPS.find((b) => b.id === _hashState.bm)) state.basemap = _hashState.bm;
+  if (_hashState.o != null && Number.isFinite(Number(_hashState.o))) {
+    state.basemapOpacity = Math.max(0, Math.min(100, Number(_hashState.o)));
+  }
   if (_hashState.d != null) state.buildings3D = _hashState.d === "1";
   if (_hashState.l != null) {
     const wanted = new Set(_hashState.l.split(",").filter(Boolean));

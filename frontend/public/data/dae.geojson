@@ -1,0 +1,1298 @@
+{
+  "type": "FeatureCollection",
+  "name": "dae_lons_ecla",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "dae-52571",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.51257,
+          46.6771
+        ]
+      },
+      "properties": {
+        "id": "dae-52571",
+        "nom": "DAE Station de Traitement de Montmorot",
+        "adresse": "6 Le Rocher",
+        "code_postal": "39570",
+        "code_insee": "39362",
+        "commune": "Montmorot",
+        "acces": "Intérieur",
+        "acces_libre": "Non",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Non",
+        "etage": "0",
+        "complement_acces": "DAE dans l'accueil du batiment administratif, visible depuis l'entrée par la porte principale",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": "2022-12-02",
+        "date_derniere_maintenance": "2022-12-02",
+        "date_mise_a_jour": null,
+        "exploitant": "CA ECLA  (ESPACE COMMUNAUTAIRE LONS AGGLOMERATION)",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-80248",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5426455,
+          46.671795
+        ]
+      },
+      "properties": {
+        "id": "dae-80248",
+        "nom": "Salle Tschaen",
+        "adresse": "475 Boulevard Jules Ferry",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": null,
+        "etage": "1er étage",
+        "complement_acces": null,
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": "2019-12-11",
+        "date_derniere_maintenance": "2026-02-18",
+        "date_mise_a_jour": "2026-02-18",
+        "exploitant": "ECLA LONS AGGLOMERATION",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-80249",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.553852,
+          46.673603
+        ]
+      },
+      "properties": {
+        "id": "dae-80249",
+        "nom": "Théâtre",
+        "adresse": "2 Rue Jean Jaurès",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": null,
+        "complement_acces": "A côté accueil",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": "2019-11-20",
+        "date_derniere_maintenance": "2020-08-12",
+        "date_mise_a_jour": "2026-02-16",
+        "exploitant": "ECLA LONS AGGLOMERATION",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-80250",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.56642,
+          46.667725
+        ]
+      },
+      "properties": {
+        "id": "dae-80250",
+        "nom": "Tennis municipal",
+        "adresse": "131 Rue des Pérosey",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": null,
+        "complement_acces": "Au fond de l'établissement à gauche rez de chaussé",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": "2019-11-20",
+        "date_derniere_maintenance": "2026-02-17",
+        "date_mise_a_jour": "2026-02-17",
+        "exploitant": "ECLA LONS AGGLOMERATION",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-80251",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.554583,
+          46.67634
+        ]
+      },
+      "properties": {
+        "id": "dae-80251",
+        "nom": "Conservatoire",
+        "adresse": "4 Place Perraud",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": null,
+        "complement_acces": "Hall d'entrée",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": "2019-11-20",
+        "date_derniere_maintenance": "2026-02-18",
+        "date_mise_a_jour": "2026-02-18",
+        "exploitant": "ECLA LONS AGGLOMERATION",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-80252",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.56423,
+          46.66947
+        ]
+      },
+      "properties": {
+        "id": "dae-80252",
+        "nom": "Stade municipal",
+        "adresse": "24 Rue de l'Argentelle",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": null,
+        "complement_acces": "Après le portail du stade à gauche, sur la façade du batiment",
+        "disponibilite_horaires": "24/7",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": "2019-12-11",
+        "date_derniere_maintenance": "2026-02-17",
+        "date_mise_a_jour": "2026-02-17",
+        "exploitant": "ECLA LONS AGGLOMERATION",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-80253",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5640903,
+          46.66968
+        ]
+      },
+      "properties": {
+        "id": "dae-80253",
+        "nom": "Gymnase",
+        "adresse": "24 Rue de l'Argentelle",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Extérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": null,
+        "complement_acces": "Entree salle de sport",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": "2019-12-11",
+        "date_derniere_maintenance": "2026-02-17",
+        "date_mise_a_jour": "2026-02-17",
+        "exploitant": "ECLA LONS AGGLOMERATION",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-80254",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5639434,
+          46.684113
+        ]
+      },
+      "properties": {
+        "id": "dae-80254",
+        "nom": "Complexe sportif",
+        "adresse": "190 Place de Malpertuis",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Extérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": null,
+        "complement_acces": "Facade bâtiment à l'entree",
+        "disponibilite_horaires": "24/7",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": "2019-12-11",
+        "date_derniere_maintenance": "2026-02-18",
+        "date_mise_a_jour": "2026-02-18",
+        "exploitant": "ECLA LONS AGGLOMERATION",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-80255",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.565072,
+          46.667778
+        ]
+      },
+      "properties": {
+        "id": "dae-80255",
+        "nom": "Dojo",
+        "adresse": "105 Rue du Colonel de Casteljau",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Extérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": null,
+        "acces_accessible": "Oui",
+        "etage": null,
+        "complement_acces": "Sur la facade d'entrée à droite",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": "2019-12-11",
+        "date_derniere_maintenance": "2026-02-17",
+        "date_mise_a_jour": "2026-02-17",
+        "exploitant": "ECLA LONS AGGLOMERATION",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-80256",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.532884,
+          46.677326
+        ]
+      },
+      "properties": {
+        "id": "dae-80256",
+        "nom": "Gymnase des Crochères",
+        "adresse": "10 Rue du Stade",
+        "code_postal": "39570",
+        "code_insee": "39362",
+        "commune": "Montmorot",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": null,
+        "acces_accessible": null,
+        "etage": null,
+        "complement_acces": "A l'entrée à droite",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": "2019-11-20",
+        "date_derniere_maintenance": "2026-02-18",
+        "date_mise_a_jour": "2026-02-18",
+        "exploitant": "ECLA LONS AGGLOMERATION",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99121",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.57053,
+          46.6742
+        ]
+      },
+      "properties": {
+        "id": "dae-99121",
+        "nom": "Groupe scolaire Jacques Prévert",
+        "adresse": "14 Rue des Jonquilles",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": "0",
+        "complement_acces": "sas entrée restaurant",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2026-02-16",
+        "date_mise_a_jour": "2026-02-16",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99122",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.55795,
+          46.6784
+        ]
+      },
+      "properties": {
+        "id": "dae-99122",
+        "nom": "Groupe scolaire Richebourg",
+        "adresse": "147 Rue Désiré Monnier",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": "0",
+        "complement_acces": "hall rdc",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2026-02-18",
+        "date_mise_a_jour": "2026-02-18",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99123",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.57294,
+          46.677
+        ]
+      },
+      "properties": {
+        "id": "dae-99123",
+        "nom": "Groupe Scolaire Maternelle François Rollet",
+        "adresse": "250 Rue des Violettes",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": "0",
+        "complement_acces": "hall d'entrée",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2026-02-16",
+        "date_mise_a_jour": "2026-02-16",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99124",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.57237,
+          46.6771
+        ]
+      },
+      "properties": {
+        "id": "dae-99124",
+        "nom": "Groupe scolaire Elémentaire François Rollet",
+        "adresse": "280 Rue des Violettes",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": "0",
+        "complement_acces": "hall d'entrée",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2026-02-16",
+        "date_mise_a_jour": "2026-02-16",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99125",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.53647,
+          46.6836
+        ]
+      },
+      "properties": {
+        "id": "dae-99125",
+        "nom": "Centre de Loisirs de Savagna",
+        "adresse": "895 Avenue Passaquay",
+        "code_postal": "39570",
+        "code_insee": "39362",
+        "commune": "Montmorot",
+        "acces": "Intérieur",
+        "acces_libre": "Non",
+        "acces_premiers_secours": null,
+        "acces_accessible": null,
+        "etage": null,
+        "complement_acces": "couloir entrée principale",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": null,
+        "date_installation": null,
+        "date_derniere_maintenance": "2023-08-17",
+        "date_mise_a_jour": "2025-08-14",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99126",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.56172,
+          46.6741
+        ]
+      },
+      "properties": {
+        "id": "dae-99126",
+        "nom": "Maison commune Espace Les Mouillères",
+        "adresse": "1 Rue des Mouillères",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": null,
+        "complement_acces": "hall d'entrée mur de gauche",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2026-02-18",
+        "date_mise_a_jour": "2026-02-18",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99127",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5569,
+          46.6767
+        ]
+      },
+      "properties": {
+        "id": "dae-99127",
+        "nom": "Puits Salé",
+        "adresse": "",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Non",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Non",
+        "etage": "0",
+        "complement_acces": "à droite hall d'entrée  grande salle",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2026-02-16",
+        "date_mise_a_jour": "2026-02-16",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99128",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.53965,
+          46.6758
+        ]
+      },
+      "properties": {
+        "id": "dae-99128",
+        "nom": "Juraparc",
+        "adresse": "5 Chemin de l’Abattoir",
+        "code_postal": "39570",
+        "code_insee": "39362",
+        "commune": "Montmorot",
+        "acces": "Intérieur",
+        "acces_libre": "Non",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": "0",
+        "complement_acces": "hall d'entrée A",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2026-02-17",
+        "date_mise_a_jour": "2026-02-17",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99129",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.54251,
+          46.6757
+        ]
+      },
+      "properties": {
+        "id": "dae-99129",
+        "nom": "Le Bœuf sur le Toit - Salle Darius Millaud",
+        "adresse": "135 Place du Maréchal Juin",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Non",
+        "etage": null,
+        "complement_acces": "hall d'entrée à gauche",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2025-03-04",
+        "date_mise_a_jour": "2025-08-18",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99130",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.55338,
+          46.6758
+        ]
+      },
+      "properties": {
+        "id": "dae-99130",
+        "nom": "Hôtel d’Honneur",
+        "adresse": "2 Place de l'Hôtel de Ville",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Non",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Non",
+        "etage": "1",
+        "complement_acces": "Hall 1 er étage",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2026-02-17",
+        "date_mise_a_jour": "2026-02-17",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99131",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5594,
+          46.6723
+        ]
+      },
+      "properties": {
+        "id": "dae-99131",
+        "nom": "Centre social Pavigny",
+        "adresse": "2 Rue de Pavigny",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": "0",
+        "complement_acces": "hall d'entrée",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2026-02-17",
+        "date_mise_a_jour": "2026-02-17",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99132",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.57213,
+          46.6775
+        ]
+      },
+      "properties": {
+        "id": "dae-99132",
+        "nom": "Maison commune La Marjorie",
+        "adresse": "1025 Rue des Gentianes",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Non",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": "0",
+        "complement_acces": "halle d'entrée",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2025-03-04",
+        "date_mise_a_jour": "2025-08-18",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99133",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.55542,
+          46.674
+        ]
+      },
+      "properties": {
+        "id": "dae-99133",
+        "nom": "Église des cordeliers",
+        "adresse": "9 Rue des Cordeliers",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": "0",
+        "complement_acces": "Sas d'entrée",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2026-02-16",
+        "date_mise_a_jour": "2026-02-16",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99134",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5506,
+          46.672
+        ]
+      },
+      "properties": {
+        "id": "dae-99134",
+        "nom": "Église Saint Désiré",
+        "adresse": "53 Rue Saint Désiré",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": "0",
+        "complement_acces": "Sas d'entrée",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2026-02-17",
+        "date_mise_a_jour": "2026-02-17",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99135",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.56046,
+          46.6716
+        ]
+      },
+      "properties": {
+        "id": "dae-99135",
+        "nom": "Établissement thermal",
+        "adresse": "4 Rue de Pavigny",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Non",
+        "acces_premiers_secours": null,
+        "acces_accessible": null,
+        "etage": null,
+        "complement_acces": "armoire derrière hall d'acceuil \"actuellement en contrat\"",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2024-01-01",
+        "date_mise_a_jour": "2025-08-14",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99136",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.57917,
+          46.6826
+        ]
+      },
+      "properties": {
+        "id": "dae-99136",
+        "nom": "Restaurant Municipal",
+        "adresse": "415 Rue Victor Puiseux",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": null,
+        "complement_acces": "mur intérieur entrée principal",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2026-02-18",
+        "date_mise_a_jour": "2026-02-18",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99137",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.55419,
+          46.6735
+        ]
+      },
+      "properties": {
+        "id": "dae-99137",
+        "nom": "CARCOM et Office du tourisme",
+        "adresse": "4 Rue Jean Jaurès",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Non",
+        "etage": "2",
+        "complement_acces": "3 étage",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2026-02-16",
+        "date_mise_a_jour": "2026-02-16",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99138",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.55444,
+          46.6735
+        ]
+      },
+      "properties": {
+        "id": "dae-99138",
+        "nom": "CARCOM et Office du tourisme",
+        "adresse": "2 Rue de Ronde",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Non",
+        "acces_premiers_secours": null,
+        "acces_accessible": null,
+        "etage": null,
+        "complement_acces": "rdc entrée couloir bureaux \"actuellement contrat Mr Brunet\"",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2024-01-01",
+        "date_mise_a_jour": "2025-08-14",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99139",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.55397,
+          46.6737
+        ]
+      },
+      "properties": {
+        "id": "dae-99139",
+        "nom": "Grand Café du Théâtre",
+        "adresse": "8 Rue de Ronde",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": "0",
+        "complement_acces": "Entrée cuisine",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2026-02-16",
+        "date_mise_a_jour": "2026-02-16",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99140",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.56306,
+          46.6738
+        ]
+      },
+      "properties": {
+        "id": "dae-99140",
+        "nom": "Maison de santé",
+        "adresse": "2 Rue des Mouillères",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Non",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": "0",
+        "complement_acces": "hall d'entrée",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2025-03-04",
+        "date_mise_a_jour": "2025-08-18",
+        "exploitant": "Commune de Lons-le-Saunier",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99141",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.56457,
+          46.684
+        ]
+      },
+      "properties": {
+        "id": "dae-99141",
+        "nom": "Centre Aquarel",
+        "adresse": "475 Rue Robert Schuman",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Non",
+        "acces_premiers_secours": null,
+        "acces_accessible": null,
+        "etage": null,
+        "complement_acces": "infirmerie \"actuellement en contrat\"",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2024-01-01",
+        "date_mise_a_jour": "2025-08-14",
+        "exploitant": "Espace Communautaire Lons Agglomération",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99142",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.55562,
+          46.6745
+        ]
+      },
+      "properties": {
+        "id": "dae-99142",
+        "nom": "Médiathèque",
+        "adresse": "7 Rue des cordeliers",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": "0",
+        "complement_acces": "Sas entrée principal",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2026-02-16",
+        "date_mise_a_jour": "2026-02-16",
+        "exploitant": "Espace Communautaire Lons Agglomération",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99143",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.54189,
+          46.6766
+        ]
+      },
+      "properties": {
+        "id": "dae-99143",
+        "nom": "Stade Dumas",
+        "adresse": "Place du Maréchal Juin",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Non",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": "0",
+        "complement_acces": "Bureaux",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2026-02-17",
+        "date_mise_a_jour": "2026-02-17",
+        "exploitant": "Espace Communautaire Lons Agglomération",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99147",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.56517,
+          46.6668
+        ]
+      },
+      "properties": {
+        "id": "dae-99147",
+        "nom": "Cité des Sports",
+        "adresse": "245 Rue du Colonel de Casteljau",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Non",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": "0",
+        "complement_acces": null,
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": "2024-01-01",
+        "date_derniere_maintenance": "2026-02-17",
+        "date_mise_a_jour": "2026-02-17",
+        "exploitant": "Espace Communautaire Lons Agglomération",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-99148",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5487,
+          46.6478
+        ]
+      },
+      "properties": {
+        "id": "dae-99148",
+        "nom": "terrain de foot de MACORNAY",
+        "adresse": "110 Rue du Stade",
+        "code_postal": "39570",
+        "code_insee": "39306",
+        "commune": "Macornay",
+        "acces": "Intérieur",
+        "acces_libre": "Non",
+        "acces_premiers_secours": null,
+        "acces_accessible": null,
+        "etage": null,
+        "complement_acces": "dans le vestiaire des arbitres",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": null,
+        "date_installation": "2018-02-28",
+        "date_derniere_maintenance": "2024-01-01",
+        "date_mise_a_jour": "2025-08-14",
+        "exploitant": "Espace Communautaire Lons Agglomération",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-164888",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.572113,
+          46.677486
+        ]
+      },
+      "properties": {
+        "id": "dae-164888",
+        "nom": "Salle communale le Marjorie",
+        "adresse": "1025 Rue des Gentianes",
+        "code_postal": "39000",
+        "code_insee": "39300",
+        "commune": "Lons-le-Saunier",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": null,
+        "complement_acces": null,
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2026-02-16",
+        "date_mise_a_jour": "2026-02-16",
+        "exploitant": "CA ECLA  (ESPACE COMMUNAUTAIRE LONS AGGLOMERATION)",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-165076",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5365076,
+          46.683567
+        ]
+      },
+      "properties": {
+        "id": "dae-165076",
+        "nom": "Salle Savagna",
+        "adresse": "895 Avenue Passaquay",
+        "code_postal": "39570",
+        "code_insee": "39362",
+        "commune": "Montmorot",
+        "acces": "Intérieur",
+        "acces_libre": "Oui",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Oui",
+        "etage": null,
+        "complement_acces": "Couloir d'entrée",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2026-02-18",
+        "date_mise_a_jour": "2026-02-18",
+        "exploitant": "CA ECLA  (ESPACE COMMUNAUTAIRE LONS AGGLOMERATION)",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "dae-165103",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.5486836,
+          46.647957
+        ]
+      },
+      "properties": {
+        "id": "dae-165103",
+        "nom": "Stade Macornay",
+        "adresse": "110 Rue du Stade",
+        "code_postal": "39570",
+        "code_insee": "39306",
+        "commune": "Macornay",
+        "acces": "Intérieur",
+        "acces_libre": "Non",
+        "acces_premiers_secours": "Non",
+        "acces_accessible": "Non",
+        "etage": null,
+        "complement_acces": "Vestiaire de l'arbitre",
+        "disponibilite_horaires": "Mo-Su off",
+        "etat_fonctionnement": "En fonctionnement",
+        "statut": "Actif",
+        "date_installation": null,
+        "date_derniere_maintenance": "2026-02-18",
+        "date_mise_a_jour": "2026-02-18",
+        "exploitant": "CA ECLA  (ESPACE COMMUNAUTAIRE LONS AGGLOMERATION)",
+        "source_donnees": "G?o'DAE ? Atlasant? / data.gouv.fr",
+        "licence": "Licence Ouverte 2.0"
+      }
+    }
+  ]
+}

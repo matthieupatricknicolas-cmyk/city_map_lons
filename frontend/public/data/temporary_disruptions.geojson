@@ -1,0 +1,7 @@
+{
+  "type": "FeatureCollection",
+  "name": "temporary_disruptions",
+  "features": [
+    {"type":"Feature","properties":{"name":"Visite du Musée - Stationnement interdit","duree":"21/10/2026","motif":"Une visite exceptionnelle du musée oblige l'aménagement de l'espace de stationnement pour accueillir des bus"},"geometry":{"type":"LineString","coordinates":[[5.552484293175556,46.67568536593069],[5.553043813102568,46.67560127308887],[5.553677935686514,46.67562686657632],[5.553677935686514,46.67562686657632]]}}
+  ]
+}

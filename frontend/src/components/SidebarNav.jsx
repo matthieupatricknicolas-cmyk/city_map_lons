@@ -6,12 +6,27 @@ import {
   Route,
   ShoppingBag,
   Utensils,
+  Construction,
+  HeartPulse,
+  TriangleAlert,
+  SquareParking,
   Layers as LayersIcon,
   Sparkles,
 } from "lucide-react";
 import { LAYERS } from "@/lib/osm";
 
-const ICON_MAP = { Bike, Bus, Navigation, Route, ShoppingBag, Utensils };
+const ICON_MAP = {
+  Bike,
+  Bus,
+  Navigation,
+  Route,
+  ShoppingBag,
+  Utensils,
+  Construction,
+  HeartPulse,
+  TriangleAlert,
+  Parking: SquareParking,
+};
 
 export default function SidebarNav({
   activeTheme,
@@ -24,7 +39,7 @@ export default function SidebarNav({
   const themeKeys = Object.keys(LAYERS);
 
   return (
-    <aside className="w-[300px] shrink-0 border-r border-slate-200 bg-white flex flex-col relative z-20">
+    <aside className="w-[280px] shrink-0 border-r border-slate-200 bg-white flex flex-col relative z-20">
       {/* Theme rail */}
       <div className="px-4 pt-5 pb-3">
         <div className="text-[10px] uppercase tracking-[0.22em] font-bold text-slate-400 mb-2">
@@ -49,11 +64,11 @@ export default function SidebarNav({
                   <span className="absolute -left-[1px] top-3 bottom-3 w-[3px] rounded-r tab-active-indicator" />
                 )}
                 <div className="flex items-center gap-2">
-                  {key === "mobility" ? (
-                    <Bike className="w-4 h-4" />
-                  ) : (
-                    <ShoppingBag className="w-4 h-4" />
-                  )}
+                  {key === "mobility" ? <Bike className="w-4 h-4" /> :
+                    key === "travaux" ? <Construction className="w-4 h-4" /> :
+                    key === "stationnement" ? <SquareParking className="w-4 h-4" /> :
+                    key === "securite" ? <HeartPulse className="w-4 h-4" /> :
+                    <ShoppingBag className="w-4 h-4" />}
                   <span className="font-display font-bold text-sm">
                     {theme.label}
                   </span>
@@ -63,7 +78,7 @@ export default function SidebarNav({
                     active ? "text-white/70" : "text-slate-400"
                   }`}
                 >
-                  {key === "mobility" ? "Déplacement" : "Vie locale"}
+                  {theme.subtitle}
                 </div>
               </button>
             );
@@ -113,9 +128,9 @@ export default function SidebarNav({
                   </div>
                   <div className="text-[11px] text-slate-500 font-mono">
                     {isLoading
-                      ? "Chargement OSM…"
+                      ? "Chargement des données…"
                       : isVisible
-                      ? `${count} objets en direct`
+                      ? `${count} objets chargés`
                       : "Cliquez pour activer"}
                   </div>
                 </div>
@@ -140,6 +155,25 @@ export default function SidebarNav({
             );
           })}
         </div>
+
+        {activeTheme === "stationnement" && (
+          <div className="mt-3 grid grid-cols-2 gap-x-2 gap-y-1 rounded-lg bg-slate-50 p-2 text-[10px] font-medium text-slate-600">
+            {[
+              ["#2563EB", "Rue"],
+              ["#059669", "Parking public"],
+              ["#EA580C", "Clientèle"],
+              ["#7C3AED", "Résidentiel / privé"],
+            ].map(([color, label]) => (
+              <div key={label} className="flex min-w-0 items-center gap-1.5">
+                <span
+                  className="h-2.5 w-2.5 shrink-0 rounded-sm"
+                  style={{ backgroundColor: color }}
+                />
+                <span className="truncate">{label}</span>
+              </div>
+            ))}
+          </div>
+        )}
 
         <div className="mt-6 rounded-xl bg-gradient-to-br from-[#003D7A] to-[#00559E] text-white p-4 relative overflow-hidden">
           <Sparkles className="w-16 h-16 absolute -right-3 -bottom-3 text-white/10" />
