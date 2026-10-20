@@ -18,6 +18,12 @@ const DEFAULT_VISIBLE = {
     shops: true,
     food: true,
   },
+  nature: {
+    parks: true,
+  },
+  stationnement: {
+    parking_free: true,
+  },
   travaux: {
     roadworks: true,
     disruptions: true,

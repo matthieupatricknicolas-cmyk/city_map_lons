@@ -8,6 +8,7 @@ import {
   Utensils,
   Construction,
   TriangleAlert,
+  SquareParking,
   Layers as LayersIcon,
   Sparkles,
 } from "lucide-react";
@@ -22,6 +23,7 @@ const ICON_MAP = {
   Utensils,
   Construction,
   TriangleAlert,
+  Parking: SquareParking,
 };
 
 export default function SidebarNav({
@@ -35,7 +37,7 @@ export default function SidebarNav({
   const themeKeys = Object.keys(LAYERS);
 
   return (
-    <aside className="w-[300px] shrink-0 border-r border-slate-200 bg-white flex flex-col relative z-20">
+    <aside className="w-[280px] shrink-0 border-r border-slate-200 bg-white flex flex-col relative z-20">
       {/* Theme rail */}
       <div className="px-4 pt-5 pb-3">
         <div className="text-[10px] uppercase tracking-[0.22em] font-bold text-slate-400 mb-2">
@@ -62,6 +64,7 @@ export default function SidebarNav({
                 <div className="flex items-center gap-2">
                   {key === "mobility" ? <Bike className="w-4 h-4" /> :
                     key === "travaux" ? <Construction className="w-4 h-4" /> :
+                    key === "stationnement" ? <SquareParking className="w-4 h-4" /> :
                     <ShoppingBag className="w-4 h-4" />}
                   <span className="font-display font-bold text-sm">
                     {theme.label}

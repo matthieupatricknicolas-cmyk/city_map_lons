@@ -100,24 +100,24 @@ export default function MapControls({
         )}
       </div>
 
-      <div className="absolute bottom-[112px] right-2 z-30 flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white/95 shadow-lg backdrop-blur-md">
+      <div className="absolute bottom-[132px] right-[10px] z-30 flex flex-col overflow-hidden rounded-md border border-slate-200 bg-white/95 shadow-md backdrop-blur-md">
         <button
           data-testid="map-reset-camera-button"
           onClick={onResetCamera}
           aria-label="Recentrer la carte"
           title="Recentrer la carte"
-          className="flex h-11 w-11 items-center justify-center text-[#003D7A] hover:bg-slate-100"
+          className="flex h-[29px] w-[29px] items-center justify-center text-[#003D7A] hover:bg-slate-100"
         >
-          <Compass className="h-5 w-5" strokeWidth={2.5} />
+          <Compass className="h-4 w-4" strokeWidth={2.5} />
         </button>
         <button
           data-testid="map-locate-button"
           onClick={onLocate}
           aria-label="Ma position"
           title="Ma position"
-          className="flex h-11 w-11 items-center justify-center border-t border-slate-200 text-[#E30613] hover:bg-slate-100"
+          className="flex h-[29px] w-[29px] items-center justify-center border-t border-slate-200 text-[#E30613] hover:bg-slate-100"
         >
-          <Crosshair className="h-5 w-5" strokeWidth={2.5} />
+          <Crosshair className="h-4 w-4" strokeWidth={2.5} />
         </button>
       </div>
     </>

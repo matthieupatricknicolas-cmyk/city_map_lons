@@ -84,7 +84,7 @@
   .rail-btn.active::before { content: ""; position: absolute; left: -10px; top: 20%; bottom: 20%; width: 4px; border-radius: 0 4px 4px 0; background: var(--lons-red); }
 
   /* Sidebar */
-  aside.sidebar { width: 300px; flex-shrink: 0; border-right: 1px solid var(--lons-border); background: white; display: flex; flex-direction: column; position: relative; z-index: 20; }
+  aside.sidebar { width: 280px; flex-shrink: 0; border-right: 1px solid var(--lons-border); background: white; display: flex; flex-direction: column; position: relative; z-index: 20; }
   .sidebar-header { padding: 18px 18px 4px; }
   .sidebar-header .kicker { font-size: 10px; text-transform: uppercase; letter-spacing: 0.22em; font-weight: 700; color: var(--lons-red); }
   .sidebar-header .title { font-family: "Bricolage Grotesque", sans-serif; font-size: 22px; font-weight: 800; margin-top: 2px; color: var(--lons-ink); line-height: 1.1; }
@@ -113,7 +113,7 @@
   #map { position: absolute; inset: 0; width: 100%; height: 100%; }
 
   /* Donut menu — floating layers panel opened on theme click */
-  .donut-panel { position: absolute; top: 24px; left: 24px; z-index: 25; width: 420px; max-width: calc(100vw - 60px); background: white; border-radius: 22px; border: 1px solid var(--lons-border); box-shadow: 0 24px 60px rgba(15,23,42,0.22), 0 0 0 1px rgba(15,23,42,0.04); padding: 22px 22px 14px; animation: donut-in 0.28s cubic-bezier(0.34, 1.6, 0.64, 1); }
+  .donut-panel { position: absolute; top: 24px; left: 24px; z-index: 25; width: 380px; max-width: calc(100vw - 60px); background: white; border-radius: 22px; border: 1px solid var(--lons-border); box-shadow: 0 24px 60px rgba(15,23,42,0.22), 0 0 0 1px rgba(15,23,42,0.04); padding: 20px 20px 12px; animation: donut-in 0.28s cubic-bezier(0.34, 1.6, 0.64, 1); }
   .donut-panel[hidden] { display: none; }
   @keyframes donut-in { from { opacity: 0; transform: translateY(-10px) scale(0.96); } to { opacity: 1; transform: none; } }
   .donut-close { position: absolute; top: 12px; right: 12px; width: 34px; height: 34px; border: 1px solid var(--lons-border); background: white; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--lons-muted); transition: all 0.2s; padding: 0; z-index: 2; }
@@ -160,8 +160,8 @@
   .ctrl-btn .ctrl-main { font-size: 12px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
   /* Compact vertical action-pill (recentrer / locate) — positioned left of the MapLibre nav stack */
-  .bottom-controls { position: absolute; bottom: 124px; right: 16px; z-index: 30; display: flex; flex-direction: column; background: white; border-radius: 12px; box-shadow: 0 6px 18px rgba(15,23,42,0.18), 0 0 0 1px rgba(15,23,42,0.04); overflow: hidden; }
-  .icon-btn { width: 40px; height: 40px; border: none; cursor: pointer; background: white; display: flex; align-items: center; justify-content: center; transition: background 0.15s, color 0.15s; padding: 0; position: relative; }
+  .bottom-controls { position: absolute; bottom: 132px; right: 10px; z-index: 30; display: flex; flex-direction: column; background: rgba(255,255,255,0.96); border: 1px solid var(--lons-border); border-radius: 6px; box-shadow: 0 2px 6px rgba(15,23,42,0.12); overflow: hidden; }
+  .icon-btn { width: 29px; height: 29px; border: none; cursor: pointer; background: transparent; display: flex; align-items: center; justify-content: center; transition: background 0.15s, color 0.15s; padding: 0; position: relative; }
   .icon-btn + .icon-btn { border-top: 1px solid #F1F1F0; }
   .icon-btn:hover { background: var(--lons-red-light); }
   .icon-btn:active { background: var(--lons-red); }
@@ -223,12 +223,12 @@
   .maplibregl-ctrl-attrib a { color: var(--lons-red) !important; }
   @media (max-width: 600px) {
     .map-controls { top: 12px; right: 12px; width: 208px; }
-    .bottom-controls { right: 12px; bottom: 116px; }
+    .bottom-controls { right: 10px; bottom: 132px; }
   }
 
   @media (max-width: 900px) {
     aside.theme-rail { width: 68px; padding: 12px 6px; }
-    aside.sidebar { width: 240px; }
+    aside.sidebar { width: 230px; }
     .detail-panel { width: 92vw; right: 12px; top: 80px; bottom: 12px; }
   }
 </style>
@@ -378,7 +378,7 @@ const LAYERS = {
     label: "Nature", subtitle: "Espaces verts",
     tabIcon: "trees",
     items: {
-      parks:       { label: "Parcs & jardins", icon: "tree", color: "#16A34A", geometry: "point", file: "data/parks.geojson" },
+      parks:       { label: "Parcs & jardins", icon: "tree", color: "#16A34A", geometry: "polygon", labelField: "name", file: "data/parks.geojson" },
       playgrounds: { label: "Aires de jeux", icon: "playground", color: "#F59E0B", geometry: "point", file: "data/playgrounds.geojson" },
       fountains:   { label: "Fontaines & points d'eau", icon: "droplet", color: "#0EA5E9", geometry: "point", file: "data/fountains.geojson" },
       greens:      { label: "Espaces verts", icon: "leaf", color: "#65A30D", geometry: "line", file: "data/green_spaces.geojson" },
@@ -389,7 +389,7 @@ const LAYERS = {
     tabIcon: "square-parking",
     items: {
       parking_pay:   { label: "Stationnement payant",  icon: "parking",    color: "#DC2626", geometry: "polygon", file: "data/paid_parking.geojson" },
-      parking_free:  { label: "Stationnement gratuit", icon: "parking",    color: "#16A34A", geometry: "polygon", file: "data/free_parking.geojson" },
+      parking_free:  { label: "Stationnement gratuit", icon: "parking",    color: "#16A34A", geometry: "polygon", showIcon: false, file: "data/free_parking.geojson" },
       horodateur:    { label: "Horodateurs",            icon: "meter",      color: "#F59E0B", geometry: "point", file: "data/parking_meters.geojson" },
       pmr:           { label: "Places PMR",             icon: "wheelchair", color: "#2563EB", geometry: "point", file: "data/accessible_parking.geojson" },
       arret_minute:  { label: "Arrêts minute",          icon: "clock",      color: "#8B5CF6", geometry: "point", file: "data/drop_off.geojson" },
@@ -1127,7 +1127,7 @@ async function ensureLayers() {
       const raw = await fetchLocalGeoJSON(meta.file);
       state.layerData[layerKey] = stampFeatures(raw, state.activeTheme, layerKey, meta);
       cacheSet(layerKey, state.layerData[layerKey]);
-      await loadIconIntoMap(map, `pin-${layerKey}`, makePinDataUrl(meta.color, meta.icon));
+      if (meta.showIcon !== false) await loadIconIntoMap(map, `pin-${layerKey}`, makePinDataUrl(meta.color, meta.icon));
       toast(`${meta.label} · ${state.layerData[layerKey].features.length} objets`);
       // Any successful fetch clears the offline banner
       if (!Object.values(state.fromCache || {}).some(Boolean)) setOfflineIndicator(false);
@@ -1138,7 +1138,7 @@ async function ensureLayers() {
       if (cached) {
         state.layerData[layerKey] = cached.fc;
         state.fromCache = { ...(state.fromCache || {}), [layerKey]: true };
-        await loadIconIntoMap(map, `pin-${layerKey}`, makePinDataUrl(meta.color, meta.icon));
+        if (meta.showIcon !== false) await loadIconIntoMap(map, `pin-${layerKey}`, makePinDataUrl(meta.color, meta.icon));
         toast(`${meta.label} · ${cached.fc.features.length} objets (cache hors ligne)`, "success");
         setOfflineIndicator(true, Date.now() - cached.at);
       } else {
@@ -1229,7 +1229,7 @@ function keepOverlaysAboveBasemap() {
         meta.geometry === "line"
           ? [`${sourceId}-halo`, `${sourceId}-fill`]
           : meta.geometry === "polygon"
-            ? [`${sourceId}-fill`, `${sourceId}-outline`, `${sourceId}-symbol`]
+            ? [`${sourceId}-fill`, `${sourceId}-outline`, `${sourceId}-symbol`, `${sourceId}-label`]
             : [`${sourceId}-halo`, `${sourceId}-fill`, `${sourceId}-symbol`];
       layerIds.forEach((id) => {
         if (map.getLayer(id)) overlayIds.push(id);
@@ -1275,7 +1275,7 @@ function applyMapSources() {
   Object.entries(LAYERS).forEach(([tk, theme]) => {
     Object.entries(theme.items).forEach(([lk, meta]) => {
       const srcId = `osm-${lk}`;
-      const ids = [`${srcId}-halo`, `${srcId}-fill`, `${srcId}-outline`, `${srcId}-symbol`];
+      const ids = [`${srcId}-halo`, `${srcId}-fill`, `${srcId}-outline`, `${srcId}-symbol`, `${srcId}-label`];
       const isActive = tk === state.activeTheme && state.visibleLayers[lk] && state.layerData[lk];
       if (!isActive) {
         ids.forEach((id) => { if (map.getLayer(id)) map.removeLayer(id); });
@@ -1302,8 +1302,11 @@ function applyMapSources() {
           layout: { "line-cap": "round", "line-join": "round" },
           paint: { "line-color": meta.color, "line-width": 2.2, "line-opacity": 0.95 },
         });
+        if (meta.showIcon === false && map.getLayer(`${srcId}-symbol`)) {
+          map.removeLayer(`${srcId}-symbol`);
+        }
         // Centroid icon (works for both Point + Polygon via symbol-placement:"point")
-        if (!map.getLayer(`${srcId}-symbol`) && map.hasImage(`pin-${lk}`)) {
+        if (meta.showIcon !== false && !meta.labelField && !map.getLayer(`${srcId}-symbol`) && map.hasImage(`pin-${lk}`)) {
           map.addLayer({
             id: `${srcId}-symbol`, type: "symbol", source: srcId,
             layout: {
@@ -1313,6 +1316,26 @@ function applyMapSources() {
               "icon-anchor": "center",
               "symbol-placement": "point",
               "symbol-sort-key": 1,
+            },
+          });
+        }
+        if (meta.labelField && !map.getLayer(`${srcId}-label`)) {
+          map.addLayer({
+            id: `${srcId}-label`, type: "symbol", source: srcId,
+            filter: ["has", meta.labelField],
+            layout: {
+              "symbol-placement": "point",
+              "text-field": ["coalesce", ["get", meta.labelField], ["get", "alt_name"]],
+              "text-font": ["Open Sans Semibold", "Arial Unicode MS Regular"],
+              "text-size": 12,
+              "text-max-width": 12,
+              "text-allow-overlap": false,
+              "text-ignore-placement": false,
+            },
+            paint: {
+              "text-color": "#14532D",
+              "text-halo-color": "#FFFFFF",
+              "text-halo-width": 1.5,
             },
           });
         }

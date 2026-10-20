@@ -71,6 +71,36 @@ export const LAYERS = {
       },
     },
   },
+  nature: {
+    label: "Nature",
+    subtitle: "Espaces verts",
+    color: "#16A34A",
+    items: {
+      parks: {
+        label: "Parcs & jardins",
+        icon: "Tree",
+        color: "#16A34A",
+        geometry: "polygon",
+        labelField: "name",
+        file: "parks.geojson",
+      },
+    },
+  },
+  stationnement: {
+    label: "Parking",
+    subtitle: "Se garer",
+    color: "#16A34A",
+    items: {
+      parking_free: {
+        label: "Stationnement gratuit",
+        icon: "Parking",
+        color: "#16A34A",
+        geometry: "polygon",
+        showIcon: false,
+        file: "free_parking.geojson",
+      },
+    },
+  },
   travaux: {
     label: "Travaux",
     subtitle: "Chantiers & perturbations",

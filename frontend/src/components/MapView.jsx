@@ -54,7 +54,7 @@ function keepOverlaysAboveBasemap(map) {
         meta.geometry === "line"
           ? [`${sourceId}-halo`, `${sourceId}-fill`]
           : meta.geometry === "polygon"
-            ? [`${sourceId}-fill`, `${sourceId}-outline`, `${sourceId}-symbol`]
+            ? [`${sourceId}-fill`, `${sourceId}-outline`, `${sourceId}-symbol`, `${sourceId}-label`]
             : [`${sourceId}-halo`, `${sourceId}-fill`, `${sourceId}-symbol`];
       layerIds.forEach((id) => {
         if (map.getLayer(id)) overlayIds.push(id);
@@ -158,7 +158,13 @@ const MapView = React.forwardRef(function MapView(
     Object.entries(LAYERS).forEach(([themeKey, theme]) => {
       Object.entries(theme.items).forEach(([layerKey, meta]) => {
         const srcId = `osm-${layerKey}`;
-        const layerIds = [`${srcId}-halo`, `${srcId}-fill`, `${srcId}-outline`];
+        const layerIds = [
+          `${srcId}-halo`,
+          `${srcId}-fill`,
+          `${srcId}-outline`,
+          `${srcId}-symbol`,
+          `${srcId}-label`,
+        ];
         const fc = layerData[layerKey];
 
         if (!fc) {
@@ -216,6 +222,32 @@ const MapView = React.forwardRef(function MapView(
               type: "line",
               source: srcId,
               paint: { "line-color": meta.color, "line-width": 2.2 },
+            });
+          }
+          if (meta.labelField && !map.getLayer(`${srcId}-label`)) {
+            map.addLayer({
+              id: `${srcId}-label`,
+              type: "symbol",
+              source: srcId,
+              filter: ["has", meta.labelField],
+              layout: {
+                "symbol-placement": "point",
+                "text-field": [
+                  "coalesce",
+                  ["get", meta.labelField],
+                  ["get", "alt_name"],
+                ],
+                "text-font": ["Open Sans Semibold", "Arial Unicode MS Regular"],
+                "text-size": 12,
+                "text-max-width": 12,
+                "text-allow-overlap": false,
+                "text-ignore-placement": false,
+              },
+              paint: {
+                "text-color": "#14532D",
+                "text-halo-color": "#FFFFFF",
+                "text-halo-width": 1.5,
+              },
             });
           }
         } else {
