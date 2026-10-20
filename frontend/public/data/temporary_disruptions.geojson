@@ -1,4 +1,8 @@
 {
-  "type": "FeatureCollection",
-  "features": []
+"type": "FeatureCollection",
+"name": "temporary_disruptions",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3857" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "Visite du Musée - Stationnement interdit", "duree": "21/10/2026", "motif": "Une visite exceptionnelle du musée oblige l'aménagement de l'espace de stationnement pour accueillir des bus" }, "geometry": { "type": "LineString", "coordinates": [ [ 618099.724153952323832, 5889297.403592584654689 ], [ 618162.009627316030674, 5889283.760107942856848 ], [ 618232.599830461433157, 5889287.912472833879292 ], [ 618232.599830461433157, 5889287.912472833879292 ] ] } }
+]
 }
