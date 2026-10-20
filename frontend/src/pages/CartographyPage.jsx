@@ -42,6 +42,7 @@ export default function CartographyPage() {
   const [activeTheme, setActiveTheme] = useState("mobility");
   const [visibleLayers, setVisibleLayers] = useState(INITIAL_VISIBLE);
   const [basemap, setBasemap] = useState("cartodb_voyager");
+  const [basemapOpacity, setBasemapOpacity] = useState(100);
   const [buildings3D, setBuildings3D] = useState(false);
   const [layerData, setLayerData] = useState({}); // layerKey -> FeatureCollection (stamped)
   const [boundaryData, setBoundaryData] = useState(null);
@@ -172,6 +173,7 @@ export default function CartographyPage() {
           <MapView
             ref={mapRef}
             basemap={basemap}
+            basemapOpacity={basemapOpacity}
             buildings3D={buildings3D}
             layerData={activeLayerData}
             boundaryData={boundaryData}
@@ -182,6 +184,8 @@ export default function CartographyPage() {
           <MapControls
             currentBasemap={basemap}
             onBasemapChange={setBasemap}
+            basemapOpacity={basemapOpacity}
+            onBasemapOpacityChange={setBasemapOpacity}
             buildings3D={buildings3D}
             onBuildings3DToggle={() => setBuildings3D((v) => !v)}
             onResetCamera={handleResetCamera}

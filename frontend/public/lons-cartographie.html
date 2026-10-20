@@ -153,6 +153,9 @@
   /* Map controls */
   .map-controls { position: absolute; top: 16px; right: 16px; z-index: 30; display: flex; flex-direction: column; gap: 8px; align-items: stretch; width: 240px; transition: opacity 0.25s, transform 0.25s; }
   main.map-area.detail-open .map-controls { opacity: 0; pointer-events: none; transform: translateX(24px); }
+  .basemap-opacity { padding: 9px 12px; border-radius: 12px; background: rgba(255,255,255,0.96); border: 1px solid var(--lons-border); box-shadow: 0 8px 20px rgba(15,23,42,0.08); backdrop-filter: blur(10px); }
+  .basemap-opacity-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; color: var(--lons-muted); font-size: 9px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+  .basemap-opacity input { width: 100%; height: 16px; margin: 0; accent-color: var(--lons-red); cursor: pointer; }
   .ctrl-btn { display: flex; align-items: center; gap: 8px; width: 100%; min-height: 56px; padding: 8px 12px; border-radius: 12px; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border: 1px solid var(--lons-border); box-shadow: 0 8px 20px rgba(15,23,42,0.08); cursor: pointer; font-family: inherit; transition: transform 0.2s; text-align: left; }
   .ctrl-btn:hover { transform: translateY(-1px); }
   .ctrl-btn.active { background: var(--lons-red); color: white; border-color: var(--lons-red); }
@@ -942,6 +945,7 @@ const state = {
   activeTheme: "mobility",
   visibleLayers: Object.fromEntries(Object.keys(LAYERS.mobility.items).map((key) => [key, false])),
   basemap: "cartodb_voyager",
+  basemapOpacity: 100,
   buildings3D: false,
   communeBoundary: null,
   layerData: {},
@@ -1128,6 +1132,13 @@ function renderControls() {
         `).join("")}
       </div>
     </div>
+    <div class="basemap-opacity">
+      <div class="basemap-opacity-header">
+        <label for="basemap-opacity-slider">Opacité du fond</label>
+        <output id="basemap-opacity-value" for="basemap-opacity-slider">${state.basemapOpacity}%</output>
+      </div>
+      <input id="basemap-opacity-slider" type="range" min="0" max="100" step="1" value="${state.basemapOpacity}" aria-label="Opacité du fond de carte">
+    </div>
   `;
 
   // Small icon-only bottom-right buttons (mobile-app style)
@@ -1150,6 +1161,15 @@ function renderControls() {
     b.addEventListener("click", () => { setBasemap(b.dataset.bm); document.getElementById("basemap-menu").classList.remove("open"); });
   });
   document.getElementById("btn-3d").addEventListener("click", toggle3D);
+  document.getElementById("basemap-opacity-slider").addEventListener("input", (event) => {
+    state.basemapOpacity = Number(event.currentTarget.value);
+    document.getElementById("basemap-opacity-value").textContent = `${state.basemapOpacity}%`;
+    if (map.isStyleLoaded()) {
+      ensureBasemapOpacityLayer();
+      keepOverlaysAboveBasemap();
+    }
+    scheduleHashUpdate();
+  });
   document.getElementById("btn-reset").addEventListener("click", resetCamera);
   document.getElementById("btn-locate").addEventListener("click", locate);
 }
@@ -1432,16 +1452,56 @@ function keepOverlaysAboveBasemap() {
       });
     });
   });
-  if (!overlayIds.length) return;
-
   const layers = map.getStyle()?.layers || [];
-  const topLayerIds = layers.slice(-overlayIds.length).map((layer) => layer.id);
-  if (overlayIds.every((id, index) => id === topLayerIds[index])) return;
+  const expectedTopLayerIds = ["basemap-opacity-layer", ...overlayIds];
+  const topLayerIds = layers.slice(-expectedTopLayerIds.length).map((layer) => layer.id);
+  if (expectedTopLayerIds.every((id, index) => id === topLayerIds[index])) return;
   overlayIds.forEach((id) => map.moveLayer(id));
+  if (overlayIds.length) map.moveLayer("basemap-opacity-layer", overlayIds[0]);
+  else map.moveLayer("basemap-opacity-layer");
+}
+
+function ensureBasemapOpacityLayer() {
+  if (!map.getSource("basemap-opacity-source")) {
+    map.addSource("basemap-opacity-source", {
+      type: "geojson",
+      data: {
+        type: "FeatureCollection",
+        features: [{
+          type: "Feature",
+          properties: {},
+          geometry: {
+            type: "Polygon",
+            coordinates: [[
+              [-180, -85.051129],
+              [180, -85.051129],
+              [180, 85.051129],
+              [-180, 85.051129],
+              [-180, -85.051129],
+            ]],
+          },
+        }],
+      },
+    });
+  }
+  if (!map.getLayer("basemap-opacity-layer")) {
+    map.addLayer({
+      id: "basemap-opacity-layer",
+      type: "fill",
+      source: "basemap-opacity-source",
+      paint: { "fill-color": "#FFFFFF", "fill-opacity": 0 },
+    });
+  }
+  const fillOpacity = 1 - state.basemapOpacity / 100;
+  if (map.getPaintProperty("basemap-opacity-layer", "fill-opacity") !== fillOpacity) {
+    map.setPaintProperty("basemap-opacity-layer", "fill-opacity", fillOpacity);
+  }
 }
 
 function applyMapSources() {
   if (!map.isStyleLoaded()) return;
+
+  ensureBasemapOpacityLayer();
 
   // 3D buildings
   if (state.buildings3D) {
@@ -1777,6 +1837,7 @@ function encodeState() {
     p: map.getPitch().toFixed(0),
     b: map.getBearing().toFixed(0),
     bm: state.basemap,
+    o: state.basemapOpacity,
     d: state.buildings3D ? "1" : "0",
   };
   const usp = new URLSearchParams();
@@ -1808,6 +1869,9 @@ async function applyHashState(st) {
   if (!st) return;
   // Basemap
   if (st.bm && BASEMAPS.find((b) => b.id === st.bm)) state.basemap = st.bm;
+  if (st.o != null && Number.isFinite(Number(st.o))) {
+    state.basemapOpacity = Math.max(0, Math.min(100, Number(st.o)));
+  }
   // 3D
   if (st.d != null) state.buildings3D = st.d === "1";
   // Theme
@@ -2050,6 +2114,9 @@ if (_hashState) {
   // Set theme + visibility synchronously; camera is applied via map.on("load")
   if (_hashState.t && LAYERS[_hashState.t]) state.activeTheme = _hashState.t;
   if (_hashState.bm && BASEMAPS.find((b) => b.id === _hashState.bm)) state.basemap = _hashState.bm;
+  if (_hashState.o != null && Number.isFinite(Number(_hashState.o))) {
+    state.basemapOpacity = Math.max(0, Math.min(100, Number(_hashState.o)));
+  }
   if (_hashState.d != null) state.buildings3D = _hashState.d === "1";
   if (_hashState.l != null) {
     const wanted = new Set(_hashState.l.split(",").filter(Boolean));

@@ -68,6 +68,27 @@ const PARKING_FILL_OPACITY_EXPRESSION = [
   0.24,
   0.32,
 ];
+const BASEMAP_OPACITY_SOURCE = "basemap-opacity-source";
+const BASEMAP_OPACITY_LAYER = "basemap-opacity-layer";
+const BASEMAP_OPACITY_MASK = {
+  type: "FeatureCollection",
+  features: [
+    {
+      type: "Feature",
+      properties: {},
+      geometry: {
+        type: "Polygon",
+        coordinates: [[
+          [-180, -85.051129],
+          [180, -85.051129],
+          [180, 85.051129],
+          [-180, 85.051129],
+          [-180, -85.051129],
+        ]],
+      },
+    },
+  ],
+};
 
 function addCommerceMarkerImages(map) {
   Object.entries(COMMERCE_MARKERS).forEach(([category, marker]) => {
@@ -338,11 +359,45 @@ function keepOverlaysAboveBasemap(map) {
   });
 
   const layers = map.getStyle()?.layers || [];
-  const topLayerIds = layers.slice(-overlayIds.length).map((layer) => layer.id);
-  if (overlayIds.length && overlayIds.every((id, index) => id === topLayerIds[index])) {
+  const expectedTopLayerIds = [BASEMAP_OPACITY_LAYER, ...overlayIds];
+  const topLayerIds = layers
+    .slice(-expectedTopLayerIds.length)
+    .map((layer) => layer.id);
+  if (
+    expectedTopLayerIds.every((id, index) => id === topLayerIds[index])
+  ) {
     return;
   }
   overlayIds.forEach((id) => map.moveLayer(id));
+  if (overlayIds.length) {
+    map.moveLayer(BASEMAP_OPACITY_LAYER, overlayIds[0]);
+  } else {
+    map.moveLayer(BASEMAP_OPACITY_LAYER);
+  }
+}
+
+function ensureBasemapOpacityLayer(map, opacity) {
+  if (!map.getSource(BASEMAP_OPACITY_SOURCE)) {
+    map.addSource(BASEMAP_OPACITY_SOURCE, {
+      type: "geojson",
+      data: BASEMAP_OPACITY_MASK,
+    });
+  }
+  if (!map.getLayer(BASEMAP_OPACITY_LAYER)) {
+    map.addLayer({
+      id: BASEMAP_OPACITY_LAYER,
+      type: "fill",
+      source: BASEMAP_OPACITY_SOURCE,
+      paint: { "fill-color": "#FFFFFF" },
+    });
+  }
+  const fillOpacity = 1 - opacity / 100;
+  if (
+    map.getPaintProperty(BASEMAP_OPACITY_LAYER, "fill-opacity") !==
+    fillOpacity
+  ) {
+    map.setPaintProperty(BASEMAP_OPACITY_LAYER, "fill-opacity", fillOpacity);
+  }
 }
 
 function makeStyle(basemap) {
@@ -351,7 +406,7 @@ function makeStyle(basemap) {
 }
 
 const MapView = React.forwardRef(function MapView(
-  { basemap, buildings3D, layerData, boundaryData, onFeatureClick, onEmptyClick, selectedId },
+  { basemap, basemapOpacity, buildings3D, layerData, boundaryData, onFeatureClick, onEmptyClick, selectedId },
   ref
 ) {
   const containerRef = useRef(null);
@@ -373,6 +428,8 @@ const MapView = React.forwardRef(function MapView(
   const applyAllSources = useCallback(() => {
     const map = mapRef.current;
     if (!map || !map.isStyleLoaded()) return;
+
+    ensureBasemapOpacityLayer(map, basemapOpacity);
 
     // 3D buildings
     if (buildings3D) {
@@ -725,7 +782,7 @@ const MapView = React.forwardRef(function MapView(
     }
 
     keepOverlaysAboveBasemap(map);
-  }, [layerData, buildings3D, selectedId, boundaryData]);
+  }, [basemapOpacity, layerData, buildings3D, selectedId, boundaryData]);
 
   // Init map
   useEffect(() => {
@@ -749,7 +806,7 @@ const MapView = React.forwardRef(function MapView(
     map.addControl(new maplibregl.ScaleControl({ maxWidth: 120 }), "bottom-left");
 
     map.on("load", () => applyRef.current());
-    map.on("styledata", () => applyRef.current());
+    map.on("style.load", () => applyRef.current());
 
     map.on("click", (e) => {
       const allIds = [];

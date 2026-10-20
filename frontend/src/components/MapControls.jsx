@@ -5,6 +5,8 @@ import { BASEMAPS } from "@/lib/basemaps";
 export default function MapControls({
   currentBasemap,
   onBasemapChange,
+  basemapOpacity,
+  onBasemapOpacityChange,
   buildings3D,
   onBuildings3DToggle,
   onResetCamera,
@@ -67,6 +69,37 @@ export default function MapControls({
               ))}
             </div>
           )}
+        </div>
+
+        <div className="rounded-xl border border-slate-200 bg-white/95 px-3 py-2.5 shadow-lg backdrop-blur-md">
+          <div className="mb-1 flex items-center justify-between">
+            <label
+              htmlFor="basemap-opacity-slider"
+              className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-500"
+            >
+              Opacité du fond
+            </label>
+            <output
+              htmlFor="basemap-opacity-slider"
+              className="text-[11px] font-semibold tabular-nums text-slate-700"
+            >
+              {basemapOpacity}%
+            </output>
+          </div>
+          <input
+            id="basemap-opacity-slider"
+            data-testid="basemap-opacity-slider"
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+            value={basemapOpacity}
+            onChange={(event) =>
+              onBasemapOpacityChange(Number(event.target.value))
+            }
+            aria-label="Opacité du fond de carte"
+            className="h-2 w-full cursor-pointer accent-[#003D7A]"
+          />
         </div>
 
         <button
