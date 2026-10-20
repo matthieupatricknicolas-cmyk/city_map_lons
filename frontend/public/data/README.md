@@ -1,10 +1,10 @@
 # Données des couches cartographiques
 
-Les couches thématiques et la limite communale sont chargées depuis les
-fichiers GeoJSON versionnés dans le dépôt. Elles ne sont pas téléchargées depuis
-GeoDataMine, Overpass ou Nominatim au lancement de l’application. Les fichiers
-sont des instantanés exportés le 18 octobre 2026 ; ils peuvent être modifiés ou
-remplacés indépendamment du code.
+La plupart des couches thématiques et la limite communale sont chargées depuis
+les fichiers GeoJSON versionnés dans le dépôt. La couche des DAE utilise l'API
+open data officielle Géo'DAE, filtrée sur la commune de Lons-le-Saunier
+(code INSEE 39300). Les autres fichiers sont des instantanés exportés le
+18 octobre 2026 ; ils peuvent être modifiés ou remplacés indépendamment du code.
 
 | Fichier | Couche | Source de l’instantané |
 | --- | --- | --- |
@@ -31,6 +31,9 @@ remplacés indépendamment du code.
 | `commune_boundary.geojson` | Limite communale | [Nominatim](https://nominatim.openstreetmap.org/) · relation OSM 152508 |
 | `roadworks.geojson` | Travaux | Couche locale vide · géométries `Polygon` / `MultiPolygon` |
 | `temporary_disruptions.geojson` | Perturbations temporaires | Couche locale vide · géométries `LineString` / `MultiLineString` |
+| API Géo'DAE | Défibrillateurs automatisés externes | [API tabulaire data.gouv.fr](https://tabular-api.data.gouv.fr/api/resources/edb6a9e1-2f16-4bbf-99e7-c3eb6b90794c/data/?c_com_insee__exact=39300&page_size=100) · filtrée sur le code INSEE 39300 |
+
+Les données Géo'DAE sont publiées par [Atlasanté](https://www.data.gouv.fr/datasets/geodae-base-nationale-des-defibrillateurs/) sous [Licence Ouverte 2.0](https://www.etalab.gouv.fr/licence-ouverte-open-licence/).
 
 Les données OpenStreetMap sont © [contributeurs OpenStreetMap](https://www.openstreetmap.org/copyright)
 et disponibles sous licence [ODbL](https://opendatacommons.org/licenses/odbl/).

@@ -7,6 +7,7 @@ import {
   ShoppingBag,
   Utensils,
   Construction,
+  HeartPulse,
   TriangleAlert,
   SquareParking,
   Layers as LayersIcon,
@@ -22,6 +23,7 @@ const ICON_MAP = {
   ShoppingBag,
   Utensils,
   Construction,
+  HeartPulse,
   TriangleAlert,
   Parking: SquareParking,
 };
@@ -65,6 +67,7 @@ export default function SidebarNav({
                   {key === "mobility" ? <Bike className="w-4 h-4" /> :
                     key === "travaux" ? <Construction className="w-4 h-4" /> :
                     key === "stationnement" ? <SquareParking className="w-4 h-4" /> :
+                    key === "securite" ? <HeartPulse className="w-4 h-4" /> :
                     <ShoppingBag className="w-4 h-4" />}
                   <span className="font-display font-bold text-sm">
                     {theme.label}
@@ -125,7 +128,7 @@ export default function SidebarNav({
                   </div>
                   <div className="text-[11px] text-slate-500 font-mono">
                     {isLoading
-                      ? "Chargement GeoJSON…"
+                      ? "Chargement des données…"
                       : isVisible
                       ? `${count} objets chargés`
                       : "Cliquez pour activer"}
