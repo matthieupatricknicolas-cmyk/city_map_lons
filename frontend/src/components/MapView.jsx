@@ -3,6 +3,221 @@ import maplibregl from "maplibre-gl";
 import { BASEMAPS, buildRasterStyle } from "@/lib/basemaps";
 import { LAYERS } from "@/lib/osm";
 
+const COMMERCE_MARKERS = {
+  food_shop: { color: "#16A34A", icon: "basket" },
+  fashion: { color: "#7C3AED", icon: "shirt" },
+  beauty: { color: "#DB2777", icon: "scissors" },
+  home: { color: "#D97706", icon: "home" },
+  auto: { color: "#2563EB", icon: "car" },
+  health: { color: "#0891B2", icon: "health" },
+  services: { color: "#475569", icon: "briefcase" },
+  retail: { color: "#6D28D9", icon: "bag" },
+  restaurant: { color: "#DC2626", icon: "restaurant" },
+  fast_food: { color: "#EA580C", icon: "burger" },
+  cafe: { color: "#92400E", icon: "coffee" },
+  bar: { color: "#7E22CE", icon: "glass" },
+};
+
+function addCommerceMarkerImages(map) {
+  Object.entries(COMMERCE_MARKERS).forEach(([category, marker]) => {
+    const imageId = `commerce-${category}`;
+    if (map.hasImage(imageId)) return;
+
+    const canvas = document.createElement("canvas");
+    canvas.width = 48;
+    canvas.height = 48;
+    const context = canvas.getContext("2d");
+    if (!context) throw new Error("Unable to create commerce marker canvas");
+
+    context.fillStyle = marker.color;
+    context.beginPath();
+    context.arc(24, 24, 22, 0, Math.PI * 2);
+    context.fill();
+    context.strokeStyle = "#FFFFFF";
+    context.lineWidth = 2;
+    context.stroke();
+    context.strokeStyle = "#FFFFFF";
+    context.fillStyle = "#FFFFFF";
+    context.lineWidth = 2.4;
+    context.lineCap = "round";
+    context.lineJoin = "round";
+
+    if (marker.icon === "bag" || marker.icon === "basket") {
+      context.strokeRect(13, 20, 22, 16);
+      context.beginPath();
+      context.moveTo(18, 20);
+      context.lineTo(20, 14);
+      context.lineTo(28, 14);
+      context.lineTo(30, 20);
+      context.stroke();
+      if (marker.icon === "basket") {
+        context.beginPath();
+        context.moveTo(17, 25);
+        context.lineTo(31, 25);
+        context.moveTo(21, 21);
+        context.lineTo(22, 34);
+        context.moveTo(27, 21);
+        context.lineTo(26, 34);
+        context.stroke();
+      }
+    } else if (marker.icon === "shirt") {
+      context.beginPath();
+      context.moveTo(18, 15);
+      context.lineTo(12, 19);
+      context.lineTo(16, 25);
+      context.lineTo(19, 23);
+      context.lineTo(19, 35);
+      context.lineTo(29, 35);
+      context.lineTo(29, 23);
+      context.lineTo(32, 25);
+      context.lineTo(36, 19);
+      context.lineTo(30, 15);
+      context.quadraticCurveTo(24, 21, 18, 15);
+      context.stroke();
+    } else if (marker.icon === "scissors") {
+      context.beginPath();
+      context.arc(15, 31, 4, 0, Math.PI * 2);
+      context.arc(15, 17, 4, 0, Math.PI * 2);
+      context.moveTo(18, 19);
+      context.lineTo(33, 33);
+      context.moveTo(18, 29);
+      context.lineTo(33, 15);
+      context.stroke();
+    } else if (marker.icon === "home") {
+      context.beginPath();
+      context.moveTo(12, 23);
+      context.lineTo(24, 13);
+      context.lineTo(36, 23);
+      context.lineTo(33, 23);
+      context.lineTo(33, 35);
+      context.lineTo(15, 35);
+      context.lineTo(15, 23);
+      context.stroke();
+      context.strokeRect(22, 27, 5, 8);
+    } else if (marker.icon === "health") {
+      context.beginPath();
+      context.moveTo(21, 13);
+      context.lineTo(27, 13);
+      context.lineTo(27, 21);
+      context.lineTo(35, 21);
+      context.lineTo(35, 27);
+      context.lineTo(27, 27);
+      context.lineTo(27, 35);
+      context.lineTo(21, 35);
+      context.lineTo(21, 27);
+      context.lineTo(13, 27);
+      context.lineTo(13, 21);
+      context.lineTo(21, 21);
+      context.closePath();
+      context.fill();
+    } else if (marker.icon === "briefcase") {
+      context.beginPath();
+      context.roundRect(12, 19, 24, 16, 3);
+      context.stroke();
+      context.beginPath();
+      context.moveTo(19, 19);
+      context.lineTo(19, 15);
+      context.lineTo(29, 15);
+      context.lineTo(29, 19);
+      context.moveTo(12, 25);
+      context.lineTo(36, 25);
+      context.moveTo(22, 25);
+      context.lineTo(22, 28);
+      context.lineTo(26, 28);
+      context.lineTo(26, 25);
+      context.stroke();
+    } else if (marker.icon === "car") {
+      context.beginPath();
+      context.moveTo(12, 29);
+      context.lineTo(15, 21);
+      context.lineTo(19, 18);
+      context.lineTo(29, 18);
+      context.lineTo(33, 21);
+      context.lineTo(36, 29);
+      context.lineTo(36, 33);
+      context.lineTo(12, 33);
+      context.closePath();
+      context.stroke();
+      context.beginPath();
+      context.arc(17, 33, 2, 0, Math.PI * 2);
+      context.arc(31, 33, 2, 0, Math.PI * 2);
+      context.fill();
+    } else if (marker.icon === "burger") {
+      context.beginPath();
+      context.moveTo(13, 22);
+      context.arc(24, 22, 11, Math.PI, 0);
+      context.lineTo(35, 24);
+      context.lineTo(13, 24);
+      context.moveTo(13, 27);
+      context.lineTo(35, 27);
+      context.lineTo(32, 31);
+      context.lineTo(16, 31);
+      context.closePath();
+      context.stroke();
+      context.beginPath();
+      context.moveTo(15, 34);
+      context.lineTo(33, 34);
+      context.stroke();
+    } else if (marker.icon === "coffee") {
+      context.beginPath();
+      context.moveTo(14, 21);
+      context.lineTo(32, 21);
+      context.lineTo(30, 34);
+      context.lineTo(16, 34);
+      context.closePath();
+      context.moveTo(32, 24);
+      context.lineTo(35, 24);
+      context.quadraticCurveTo(39, 24, 36, 29);
+      context.lineTo(31, 29);
+      context.moveTo(19, 17);
+      context.lineTo(19, 14);
+      context.moveTo(25, 17);
+      context.lineTo(25, 14);
+      context.stroke();
+    } else if (marker.icon === "glass") {
+      context.beginPath();
+      context.moveTo(14, 15);
+      context.lineTo(34, 15);
+      context.lineTo(30, 25);
+      context.quadraticCurveTo(24, 32, 18, 25);
+      context.closePath();
+      context.moveTo(24, 30);
+      context.lineTo(24, 36);
+      context.moveTo(19, 36);
+      context.lineTo(29, 36);
+      context.stroke();
+    } else {
+      context.beginPath();
+      context.moveTo(17, 16);
+      context.lineTo(17, 35);
+      context.moveTo(14, 16);
+      context.lineTo(14, 22);
+      context.moveTo(20, 16);
+      context.lineTo(20, 22);
+      context.moveTo(30, 16);
+      context.bezierCurveTo(34, 20, 34, 25, 30, 26);
+      context.lineTo(30, 35);
+      context.stroke();
+    }
+
+    map.addImage(imageId, context.getImageData(0, 0, 48, 48), {
+      pixelRatio: 2,
+    });
+  });
+}
+
+function commerceIconExpression() {
+  return [
+    "match",
+    ["get", "_commerceCategory"],
+    ...Object.keys(COMMERCE_MARKERS).flatMap((category) => [
+      category,
+      `commerce-${category}`,
+    ]),
+    "commerce-retail",
+  ];
+}
+
 const LONS_CENTER = [5.5539, 46.6739];
 const DEFAULT_VIEW = {
   center: LONS_CENTER,
@@ -155,6 +370,7 @@ const MapView = React.forwardRef(function MapView(
     }
 
     // Data layers
+    addCommerceMarkerImages(map);
     Object.entries(LAYERS).forEach(([themeKey, theme]) => {
       Object.entries(theme.items).forEach(([layerKey, meta]) => {
         const srcId = `osm-${layerKey}`;
@@ -165,6 +381,7 @@ const MapView = React.forwardRef(function MapView(
           `${srcId}-symbol`,
           `${srcId}-label`,
         ];
+        if (themeKey === "commerces") layerIds.push(`${srcId}-symbol`);
         const fc = layerData[layerKey];
 
         if (!fc) {
@@ -287,6 +504,19 @@ const MapView = React.forwardRef(function MapView(
               11, 7,
             ]);
           }
+          if (themeKey === "commerces" && !map.getLayer(`${srcId}-symbol`)) {
+            map.addLayer({
+              id: `${srcId}-symbol`,
+              type: "symbol",
+              source: srcId,
+              layout: {
+                "icon-image": commerceIconExpression(),
+                "icon-size": 1,
+                "icon-allow-overlap": true,
+                "icon-ignore-placement": true,
+              },
+            });
+          }
         }
       });
     });
@@ -343,7 +573,9 @@ const MapView = React.forwardRef(function MapView(
     map.on("click", (e) => {
       const allIds = [];
       Object.keys(LAYERS).forEach((t) =>
-        Object.keys(LAYERS[t].items).forEach((k) => allIds.push(`osm-${k}-fill`))
+        Object.keys(LAYERS[t].items).forEach((k) =>
+          allIds.push(`osm-${k}-fill`, `osm-${k}-symbol`)
+        )
       );
       const existing = allIds.filter((l) => map.getLayer(l));
       if (existing.length === 0) return onEmptyClick?.();
