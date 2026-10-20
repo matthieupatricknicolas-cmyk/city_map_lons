@@ -409,7 +409,7 @@ const LAYERS = {
     label: "Parking", subtitle: "Se garer",
     tabIcon: "square-parking",
     items: {
-      parking_pay:   { label: "Stationnement payant",  icon: "parking",    color: "#DC2626", geometry: "polygon", file: "data/paid_parking.geojson" },
+      parking_pay:   { label: "Stationnement payant",  icon: "parking",    color: "#DC2626", geometry: "polygon", capacityLabelField: "capacity", file: "data/paid_parking.geojson" },
       parking_free:  { label: "Stationnement gratuit", icon: "parking",    color: "#16A34A", geometry: "polygon", showIcon: false, parkingStyle: true, capacityLabelField: "capacity", file: "data/free_parking.geojson" },
       horodateur:    { label: "Horodateurs",            icon: "meter",      color: "#F59E0B", geometry: "point", file: "data/parking_meters.geojson" },
       pmr:           { label: "Places PMR",             icon: "wheelchair", color: "#2563EB", geometry: "point", file: "data/accessible_parking.geojson" },
@@ -437,7 +437,12 @@ const LAYERS = {
         api: {
           url: "https://tabular-api.data.gouv.fr/api/resources/edb6a9e1-2f16-4bbf-99e7-c3eb6b90794c/data/",
           filterField: "c_com_insee",
-          filterValue: "39300",
+          filterValues: [
+            "39041", "39066", "39079", "39088", "39145", "39146", "39162", "39164",
+            "39169", "39170", "39171", "39217", "39241", "39250", "39251", "39300",
+            "39306", "39327", "39334", "39348", "39362", "39404", "39411", "39421",
+            "39445", "39458", "39480", "39537", "39550", "39552", "39558", "39567",
+          ],
         },
       },
     },
@@ -1587,7 +1592,7 @@ function applyMapSources() {
           ],
           layout: {
             "symbol-placement": "point",
-            "text-field": ["concat", ["to-string", ["get", meta.capacityLabelField]], " places"],
+            "text-field": ["to-string", ["get", meta.capacityLabelField]],
             "text-font": ["Open Sans Semibold", "Arial Unicode MS Regular"],
             "text-size": ["interpolate", ["linear"], ["zoom"], 17, 11, 19, 14],
             "text-allow-overlap": false,

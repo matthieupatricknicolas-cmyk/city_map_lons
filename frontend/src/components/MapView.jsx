@@ -531,11 +531,7 @@ const MapView = React.forwardRef(function MapView(
               ],
               layout: {
                 "symbol-placement": "point",
-                "text-field": [
-                  "concat",
-                  ["to-string", ["get", meta.capacityLabelField]],
-                  " places",
-                ],
+                "text-field": ["to-string", ["get", meta.capacityLabelField]],
                 "text-font": ["Open Sans Semibold", "Arial Unicode MS Regular"],
                 "text-size": ["interpolate", ["linear"], ["zoom"], 17, 11, 19, 14],
                 "text-allow-overlap": false,

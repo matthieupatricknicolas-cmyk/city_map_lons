@@ -73,7 +73,7 @@ async function fetchDaeGeoJSON(api) {
 
   while (features.length < total) {
     const url = new URL(api.url);
-    url.searchParams.set(`${api.filterField}__exact`, api.filterValue);
+    url.searchParams.set(`${api.filterField}__in`, api.filterValues.join(","));
     url.searchParams.set("columns", DAE_API_COLUMNS.join(","));
     url.searchParams.set("page_size", "100");
     url.searchParams.set("page", String(page));
@@ -93,7 +93,7 @@ async function fetchDaeGeoJSON(api) {
     total = result.meta.total;
 
     result.data
-      .filter((row) => row[api.filterField] === api.filterValue)
+      .filter((row) => api.filterValues.includes(row[api.filterField]))
       .forEach((row) => {
         const longitude = Number(row.c_long_coor1);
         const latitude = Number(row.c_lat_coor1);
@@ -216,6 +216,14 @@ export const LAYERS = {
         capacityLabelField: "capacity",
         file: "free_parking.geojson",
       },
+      parking_pay: {
+        label: "Stationnement payant",
+        icon: "Parking",
+        color: "#DC2626",
+        geometry: "polygon",
+        capacityLabelField: "capacity",
+        file: "paid_parking.geojson",
+      },
     },
   },
   travaux: {
@@ -252,7 +260,12 @@ export const LAYERS = {
         api: {
           url: "https://tabular-api.data.gouv.fr/api/resources/edb6a9e1-2f16-4bbf-99e7-c3eb6b90794c/data/",
           filterField: "c_com_insee",
-          filterValue: "39300",
+          filterValues: [
+            "39041", "39066", "39079", "39088", "39145", "39146", "39162", "39164",
+            "39169", "39170", "39171", "39217", "39241", "39250", "39251", "39300",
+            "39306", "39327", "39334", "39348", "39362", "39404", "39411", "39421",
+            "39445", "39458", "39480", "39537", "39550", "39552", "39558", "39567",
+          ],
         },
       },
     },

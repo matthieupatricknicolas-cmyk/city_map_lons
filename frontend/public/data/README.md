@@ -2,8 +2,8 @@
 
 La plupart des couches thématiques et la limite communale sont chargées depuis
 les fichiers GeoJSON versionnés dans le dépôt. La couche des DAE utilise l'API
-open data officielle Géo'DAE, filtrée sur la commune de Lons-le-Saunier
-(code INSEE 39300). Les autres fichiers sont des instantanés exportés le
+open data officielle Géo'DAE, filtrée sur les 32 communes d'ECLA, dont
+Lons-le-Saunier. Les autres fichiers sont des instantanés exportés le
 18 octobre 2026 ; ils peuvent être modifiés ou remplacés indépendamment du code.
 
 | Fichier | Couche | Source de l’instantané |
@@ -22,7 +22,7 @@ open data officielle Géo'DAE, filtrée sur la commune de Lons-le-Saunier
 | `playgrounds.geojson` | Aires de jeux | Jeu GeoJSON déjà présent dans le dépôt |
 | `fountains.geojson` | Fontaines et eau potable | [Overpass API](https://overpass-api.de/) · rayon de 4,5 km |
 | `green_spaces.geojson` | Espaces verts | [Overpass API](https://overpass-api.de/) · rayon de 4 km |
-| `paid_parking.geojson` | Stationnement payant | [Overpass API](https://overpass-api.de/) · rayon de 4 km · instantané actuellement vide |
+| `paid_parking.geojson` | Stationnement payant | [Overpass API](https://overpass-api.de/) · rayon de 4 km · coordonnées reprojetées en WGS 84 |
 | `free_parking.geojson` | Stationnement gratuit | [Overpass API](https://overpass-api.de/) · rayon de 4 km |
 | `parking_meters.geojson` | Horodateurs | [Overpass API](https://overpass-api.de/) · rayon de 4 km |
 | `accessible_parking.geojson` | Places PMR | [Overpass API](https://overpass-api.de/) · rayon de 5 km |
@@ -31,7 +31,7 @@ open data officielle Géo'DAE, filtrée sur la commune de Lons-le-Saunier
 | `commune_boundary.geojson` | Limite communale | [Nominatim](https://nominatim.openstreetmap.org/) · relation OSM 152508 |
 | `roadworks.geojson` | Travaux | Couche locale vide · géométries `Polygon` / `MultiPolygon` |
 | `temporary_disruptions.geojson` | Perturbations temporaires | Couche locale vide · géométries `LineString` / `MultiLineString` |
-| API Géo'DAE | Défibrillateurs automatisés externes | [API tabulaire data.gouv.fr](https://tabular-api.data.gouv.fr/api/resources/edb6a9e1-2f16-4bbf-99e7-c3eb6b90794c/data/?c_com_insee__exact=39300&page_size=100) · filtrée sur le code INSEE 39300 |
+| API Géo'DAE | Défibrillateurs automatisés externes | [API tabulaire data.gouv.fr](https://tabular-api.data.gouv.fr/api/resources/edb6a9e1-2f16-4bbf-99e7-c3eb6b90794c/data/) · filtrée sur les codes INSEE des [32 communes d'ECLA](https://geo.api.gouv.fr/epcis/200071116/communes?fields=nom%2Ccode&format=json) |
 
 Les données Géo'DAE sont publiées par [Atlasanté](https://www.data.gouv.fr/datasets/geodae-base-nationale-des-defibrillateurs/) sous [Licence Ouverte 2.0](https://www.etalab.gouv.fr/licence-ouverte-open-licence/).
 

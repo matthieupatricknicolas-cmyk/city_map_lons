@@ -22,6 +22,7 @@ const DEFAULT_VISIBLE = {
     parks: true,
   },
   stationnement: {
+    parking_pay: true,
     parking_free: true,
   },
   travaux: {
