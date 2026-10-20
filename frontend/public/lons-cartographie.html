@@ -147,20 +147,20 @@
   .donut-tip { display: flex; align-items: center; gap: 6px; padding: 10px 2px 0; font-size: 11px; color: var(--lons-muted); border-top: 1px solid #F3F4F6; margin-top: 6px; }
 
   /* Map controls */
-  .map-controls { position: absolute; top: 16px; right: 16px; z-index: 30; display: flex; flex-direction: column; gap: 10px; align-items: flex-end; transition: opacity 0.25s, transform 0.25s; }
+  .map-controls { position: absolute; top: 16px; right: 16px; z-index: 30; display: flex; flex-direction: column; gap: 8px; align-items: stretch; width: 240px; transition: opacity 0.25s, transform 0.25s; }
   main.map-area.detail-open .map-controls { opacity: 0; pointer-events: none; transform: translateX(24px); }
-  .ctrl-btn { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 12px; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border: 1px solid var(--lons-border); box-shadow: 0 8px 20px rgba(15,23,42,0.08); cursor: pointer; font-family: inherit; transition: transform 0.2s; }
+  .ctrl-btn { display: flex; align-items: center; gap: 8px; width: 100%; min-height: 56px; padding: 8px 12px; border-radius: 12px; background: rgba(255,255,255,0.96); backdrop-filter: blur(10px); border: 1px solid var(--lons-border); box-shadow: 0 8px 20px rgba(15,23,42,0.08); cursor: pointer; font-family: inherit; transition: transform 0.2s; text-align: left; }
   .ctrl-btn:hover { transform: translateY(-1px); }
   .ctrl-btn.active { background: var(--lons-red); color: white; border-color: var(--lons-red); }
   .ctrl-btn .ctrl-icon-wrap { width: 32px; height: 32px; border-radius: 8px; background: var(--lons-red-light); display: flex; align-items: center; justify-content: center; color: var(--lons-red); flex-shrink: 0; }
   .ctrl-btn.active .ctrl-icon-wrap { background: rgba(255,255,255,0.15); color: white; }
-  .ctrl-btn .ctrl-label { line-height: 1.15; }
+  .ctrl-btn .ctrl-label { line-height: 1.15; min-width: 0; flex: 1; }
   .ctrl-btn .ctrl-top { font-size: 9px; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; color: #9CA3AF; }
   .ctrl-btn.active .ctrl-top { color: rgba(255,255,255,0.7); }
-  .ctrl-btn .ctrl-main { font-size: 12px; font-weight: 700; }
+  .ctrl-btn .ctrl-main { font-size: 12px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
   /* Compact vertical action-pill (recentrer / locate) — positioned left of the MapLibre nav stack */
-  .bottom-controls { position: absolute; bottom: 28px; right: 56px; z-index: 30; display: flex; flex-direction: column; background: white; border-radius: 14px; box-shadow: 0 6px 18px rgba(15,23,42,0.18), 0 0 0 1px rgba(15,23,42,0.04); overflow: hidden; }
+  .bottom-controls { position: absolute; bottom: 124px; right: 16px; z-index: 30; display: flex; flex-direction: column; background: white; border-radius: 12px; box-shadow: 0 6px 18px rgba(15,23,42,0.18), 0 0 0 1px rgba(15,23,42,0.04); overflow: hidden; }
   .icon-btn { width: 40px; height: 40px; border: none; cursor: pointer; background: white; display: flex; align-items: center; justify-content: center; transition: background 0.15s, color 0.15s; padding: 0; position: relative; }
   .icon-btn + .icon-btn { border-top: 1px solid #F1F1F0; }
   .icon-btn:hover { background: var(--lons-red-light); }
@@ -221,6 +221,10 @@
   /* MapLibre tweaks */
   .maplibregl-ctrl-attrib { font-size: 10px !important; background: rgba(255,255,255,0.75) !important; backdrop-filter: blur(6px); }
   .maplibregl-ctrl-attrib a { color: var(--lons-red) !important; }
+  @media (max-width: 600px) {
+    .map-controls { top: 12px; right: 12px; width: 208px; }
+    .bottom-controls { right: 12px; bottom: 116px; }
+  }
 
   @media (max-width: 900px) {
     aside.theme-rail { width: 68px; padding: 12px 6px; }
@@ -1173,6 +1177,7 @@ async function addCommuneBoundary() {
           layout: { "line-cap": "round", "line-join": "round" },
           paint: { "line-color": "#E30613", "line-width": 3, "line-dasharray": [3, 2] },
         });
+        keepOverlaysAboveBasemap();
       })
       .finally(() => {
         communeBoundaryPromise = null;
@@ -1210,6 +1215,34 @@ const map = new maplibregl.Map({
 window.__map = map;
 map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "bottom-right");
 map.addControl(new maplibregl.ScaleControl({ maxWidth: 120 }), "bottom-left");
+
+function keepOverlaysAboveBasemap() {
+  const overlayIds = [];
+  if (map.getLayer("3d-buildings")) overlayIds.push("3d-buildings");
+  ["commune-halo", "commune-outline"].forEach((id) => {
+    if (map.getLayer(id)) overlayIds.push(id);
+  });
+  Object.values(LAYERS).forEach((theme) => {
+    Object.entries(theme.items).forEach(([layerKey, meta]) => {
+      const sourceId = `osm-${layerKey}`;
+      const layerIds =
+        meta.geometry === "line"
+          ? [`${sourceId}-halo`, `${sourceId}-fill`]
+          : meta.geometry === "polygon"
+            ? [`${sourceId}-fill`, `${sourceId}-outline`, `${sourceId}-symbol`]
+            : [`${sourceId}-halo`, `${sourceId}-fill`, `${sourceId}-symbol`];
+      layerIds.forEach((id) => {
+        if (map.getLayer(id)) overlayIds.push(id);
+      });
+    });
+  });
+  if (!overlayIds.length) return;
+
+  const layers = map.getStyle()?.layers || [];
+  const topLayerIds = layers.slice(-overlayIds.length).map((layer) => layer.id);
+  if (overlayIds.every((id, index) => id === topLayerIds[index])) return;
+  overlayIds.forEach((id) => map.moveLayer(id));
+}
 
 function applyMapSources() {
   if (!map.isStyleLoaded()) return;
@@ -1309,18 +1342,7 @@ function applyMapSources() {
     });
   });
 
-  // Ensure ALL point symbols (icons) sit on TOP of line/surface layers
-  Object.keys(LAYERS).forEach((tk) => Object.entries(LAYERS[tk].items).forEach(([lk, meta]) => {
-    const sid = `osm-${lk}-symbol`;
-    const fid = `osm-${lk}-fill`;
-    if (meta.geometry === "point") {
-      if (map.getLayer(fid)) map.moveLayer(fid);
-      if (map.getLayer(sid)) map.moveLayer(sid);
-    } else if (meta.geometry === "polygon") {
-      // Polygon: keep fill below, outline & symbol on top
-      if (map.getLayer(`${sid}`)) map.moveLayer(sid);
-    }
-  }));
+  keepOverlaysAboveBasemap();
 }
 
 map.on("load", () => {

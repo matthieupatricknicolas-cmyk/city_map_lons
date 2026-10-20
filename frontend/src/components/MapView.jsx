@@ -42,6 +42,34 @@ function fitCommuneBounds(map, boundaryData, duration = 0) {
   return true;
 }
 
+function keepOverlaysAboveBasemap(map) {
+  const overlayIds = [];
+  if (map.getLayer("3d-buildings")) overlayIds.push("3d-buildings");
+  if (map.getLayer("commune-outline")) overlayIds.push("commune-outline");
+
+  Object.values(LAYERS).forEach((theme) => {
+    Object.entries(theme.items).forEach(([layerKey, meta]) => {
+      const sourceId = `osm-${layerKey}`;
+      const layerIds =
+        meta.geometry === "line"
+          ? [`${sourceId}-halo`, `${sourceId}-fill`]
+          : meta.geometry === "polygon"
+            ? [`${sourceId}-fill`, `${sourceId}-outline`, `${sourceId}-symbol`]
+            : [`${sourceId}-halo`, `${sourceId}-fill`, `${sourceId}-symbol`];
+      layerIds.forEach((id) => {
+        if (map.getLayer(id)) overlayIds.push(id);
+      });
+    });
+  });
+
+  const layers = map.getStyle()?.layers || [];
+  const topLayerIds = layers.slice(-overlayIds.length).map((layer) => layer.id);
+  if (overlayIds.length && overlayIds.every((id, index) => id === topLayerIds[index])) {
+    return;
+  }
+  overlayIds.forEach((id) => map.moveLayer(id));
+}
+
 function makeStyle(basemap) {
   if (basemap.type === "raster") return buildRasterStyle(basemap);
   return basemap.style;
@@ -253,6 +281,8 @@ const MapView = React.forwardRef(function MapView(
         hasFitCommune.current = fitCommuneBounds(map, boundaryData);
       }
     }
+
+    keepOverlaysAboveBasemap(map);
   }, [layerData, buildings3D, selectedId, boundaryData]);
 
   // Init map
