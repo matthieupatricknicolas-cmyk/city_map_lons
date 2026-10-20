@@ -72,6 +72,15 @@ const KEY_LABELS = {
   adresse: "Adresse",
   enseigne: "Enseigne",
   type: "Type",
+  identifier: "Identifiant DiaLog",
+  organization: "Organisme",
+  category: "Nature de l'arrêté",
+  subject: "Motif",
+  measure_type: "Restriction",
+  start_date: "Début de validité",
+  end_date: "Fin de validité",
+  source: "Source",
+  document_url: "Arrêté officiel",
 };
 
 function humanize(v) {
@@ -97,6 +106,7 @@ function DetailPanelContent({ feature, onClose }) {
   const layerMeta = themeMeta?.items?.[layerKey];
 
   const title =
+    props.title ||
     props.name ||
     props.nom ||
     props.brand ||
@@ -107,6 +117,7 @@ function DetailPanelContent({ feature, onClose }) {
     "Objet cartographique";
 
   const category =
+    props.measure_type ||
     props.categorie ||
     props.shop ||
     props.amenity ||
@@ -248,7 +259,7 @@ function DetailPanelContent({ feature, onClose }) {
         )}
         {entries.map(([k, value]) => {
           const label = KEY_LABELS[k] || k.replace(/_/g, " ");
-          if (k === "website" || k === "url" || k === "site_web") {
+          if (k === "website" || k === "url" || k === "site_web" || k === "document_url") {
             const href = /^https?:\/\//.test(value) ? value : `https://${value}`;
             return (
               <a

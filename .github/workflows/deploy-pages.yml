@@ -8,6 +8,8 @@ on:
       - ".github/workflows/deploy-pages.yml"
       - "frontend/**"
   workflow_dispatch:
+  schedule:
+    - cron: "*/15 * * * *"
 
 permissions:
   contents: read
@@ -22,6 +24,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          ref: dev1
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -34,6 +38,10 @@ jobs:
       - name: Install frontend dependencies
         working-directory: frontend
         run: yarn install --frozen-lockfile --non-interactive --ignore-scripts
+
+      - name: Refresh published DiaLog restrictions
+        working-directory: frontend
+        run: node scripts/sync-dialog-regulations.mjs
 
       - name: Build frontend for the project Pages URL
         working-directory: frontend

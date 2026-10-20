@@ -409,7 +409,7 @@ const LAYERS = {
     label: "Parking", subtitle: "Se garer",
     tabIcon: "square-parking",
     items: {
-      parking_pay:   { label: "Stationnement payant",  icon: "parking",    color: "#DC2626", geometry: "polygon", capacityLabelField: "capacity", file: "data/paid_parking.geojson" },
+      parking_pay:   { label: "Stationnement payant",  icon: "parking",    color: "#DC2626", geometry: "polygon", showIcon: false, capacityLabelField: "capacity", file: "data/paid_parking.geojson" },
       parking_free:  { label: "Stationnement gratuit", icon: "parking",    color: "#16A34A", geometry: "polygon", showIcon: false, parkingStyle: true, capacityLabelField: "capacity", file: "data/free_parking.geojson" },
       horodateur:    { label: "Horodateurs",            icon: "meter",      color: "#F59E0B", geometry: "point", file: "data/parking_meters.geojson" },
       pmr:           { label: "Places PMR",             icon: "wheelchair", color: "#2563EB", geometry: "point", file: "data/accessible_parking.geojson" },
@@ -421,8 +421,8 @@ const LAYERS = {
     label: "Travaux", subtitle: "Chantiers & perturbations",
     tabIcon: "construction",
     items: {
-      roadworks: { label: "Travaux", icon: "construction", color: "#DC2626", geometry: "polygon", file: "data/roadworks.geojson" },
-      disruptions: { label: "Perturbations temporaires", icon: "alert", color: "#F59E0B", geometry: "line", file: "data/temporary_disruptions.geojson" },
+      roadworks: { label: "Travaux", icon: "construction", color: "#DC2626", geometry: "mixed", file: "data/dialog_roadworks.geojson" },
+      disruptions: { label: "Perturbations temporaires", icon: "alert", color: "#F59E0B", geometry: "mixed", file: "data/dialog_temporary_disruptions.geojson" },
     },
   },
   securite: {
@@ -434,16 +434,7 @@ const LAYERS = {
         icon: "heart-pulse",
         color: "#DC2626",
         geometry: "point",
-        api: {
-          url: "https://tabular-api.data.gouv.fr/api/resources/edb6a9e1-2f16-4bbf-99e7-c3eb6b90794c/data/",
-          filterField: "c_com_insee",
-          filterValues: [
-            "39041", "39066", "39079", "39088", "39145", "39146", "39162", "39164",
-            "39169", "39170", "39171", "39217", "39241", "39250", "39251", "39300",
-            "39306", "39327", "39334", "39348", "39362", "39404", "39411", "39421",
-            "39445", "39458", "39480", "39537", "39550", "39552", "39558", "39567",
-          ],
-        },
+        file: "data/dae.geojson",
       },
     },
   },
@@ -474,6 +465,10 @@ const KEY_LABELS = {
   bidirect: "Bidirectionnel", categorie: "Catégorie", telephone: "Téléphone",
   site_web: "Site web", horaires: "Horaires", adresse: "Adresse",
   enseigne: "Enseigne", type: "Type", source: "Source", date_maj: "Mise à jour",
+  identifier: "Identifiant DiaLog", organization: "Organisme",
+  category: "Nature de l'arrêté", subject: "Motif", measure_type: "Restriction",
+  start_date: "Début de validité", end_date: "Fin de validité",
+  document_url: "Arrêté officiel",
   d_service: "Mise en service",
   adresse: "Adresse", code_postal: "Code postal", commune: "Commune",
   acces: "Accès", acces_libre: "Accès libre",
@@ -669,6 +664,16 @@ function humanize(v) {
   }
   if (v == null) return "—";
   return String(v);
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (character) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;",
+  })[character]);
 }
 
 function makeStyle(bm) {
@@ -872,81 +877,6 @@ async function fetchLocalGeoJSON(file) {
     return f;
   });
   return j;
-}
-
-const DAE_API_COLUMNS = [
-  "gid", "c_nom", "c_lat_coor1", "c_long_coor1", "c_adr_num", "c_adr_voie",
-  "c_com_cp", "c_com_insee", "c_com_nom", "c_acc", "c_acc_lib", "c_acc_pcsec",
-  "c_acc_acc", "c_acc_etg", "c_acc_complt", "c_dispo_horaires", "c_etat_fonct",
-  "c_etat", "c_date_instal", "c_dermnt", "c_maj_don", "c_expt_rais",
-];
-
-function daeProperties(row) {
-  const booleanLabel = (value) => value === "t" ? "Oui" : value === "f" ? "Non" : value;
-  return {
-    id: `dae-${row.gid}`,
-    nom: row.c_nom,
-    adresse: [row.c_adr_num, row.c_adr_voie].filter(Boolean).join(" "),
-    code_postal: row.c_com_cp,
-    commune: row.c_com_nom,
-    acces: row.c_acc,
-    acces_libre: booleanLabel(row.c_acc_lib),
-    acces_premiers_secours: booleanLabel(row.c_acc_pcsec),
-    acces_accessible: booleanLabel(row.c_acc_acc),
-    etage: row.c_acc_etg,
-    complement_acces: row.c_acc_complt,
-    disponibilite_horaires: row.c_dispo_horaires,
-    etat_fonctionnement: row.c_etat_fonct,
-    statut: row.c_etat,
-    date_installation: row.c_date_instal,
-    date_derniere_maintenance: row.c_dermnt,
-    date_mise_a_jour: row.c_maj_don,
-    exploitant: row.c_expt_rais,
-    source_donnees: "Géo'DAE · Atlasanté / data.gouv.fr",
-    licence: "Licence Ouverte 2.0",
-  };
-}
-
-async function fetchDaeGeoJSON(api) {
-  const features = [];
-  let page = 1;
-  let total = Infinity;
-  while (features.length < total) {
-    const url = new URL(api.url);
-    url.searchParams.set(`${api.filterField}__exact`, api.filterValue);
-    url.searchParams.set("columns", DAE_API_COLUMNS.join(","));
-    url.searchParams.set("page_size", "100");
-    url.searchParams.set("page", String(page));
-    const response = await fetch(url);
-    if (!response.ok) throw new Error(`API DAE indisponible : HTTP ${response.status}`);
-    const result = await response.json();
-    if (!Array.isArray(result.data) || !Number.isSafeInteger(result.meta?.total) || result.meta.total < 0) {
-      throw new Error("Réponse invalide de l'API nationale des DAE");
-    }
-    total = result.meta.total;
-    result.data.filter((row) => row[api.filterField] === api.filterValue).forEach((row) => {
-      const longitude = Number(row.c_long_coor1);
-      const latitude = Number(row.c_lat_coor1);
-      if (!Number.isFinite(longitude) || !Number.isFinite(latitude) || longitude < -180 || longitude > 180 || latitude < -90 || latitude > 90) {
-        throw new Error(`Coordonnées invalides pour le DAE ${row.gid}`);
-      }
-      features.push({
-        type: "Feature",
-        id: `dae-${row.gid}`,
-        geometry: { type: "Point", coordinates: [longitude, latitude] },
-        properties: daeProperties(row),
-      });
-    });
-    if (result.data.length === 0 && features.length < total) {
-      throw new Error("Réponse incomplète de l'API nationale des DAE");
-    }
-    page += 1;
-  }
-  return { type: "FeatureCollection", features };
-}
-
-async function fetchLayerData(meta) {
-  return meta.api ? fetchDaeGeoJSON(meta.api) : fetchLocalGeoJSON(meta.file);
 }
 
 /** Panoramax: find the nearest street-level picture around a POI. */
@@ -1233,8 +1163,8 @@ function renderDetail() {
   if (mapArea) mapArea.classList.add("detail-open");
   const props = f.properties || {};
   const layerMeta = LAYERS[props._theme]?.items?.[props._layer];
-  const title = props.name || props.nom || props.brand || props.enseigne || props.operator || props.ref || layerMeta?.label || "Objet";
-  const category = props.categorie || props.shop || props.amenity || props.historic || props.tourism || props.highway || props.type || layerMeta?.label || "OSM";
+  const title = props.title || props.name || props.nom || props.brand || props.enseigne || props.operator || props.ref || layerMeta?.label || "Objet";
+  const category = props.measure_type || props.categorie || props.shop || props.amenity || props.historic || props.tourism || props.highway || props.type || layerMeta?.label || "OSM";
   let lon = 0, lat = 0;
   if (f._clickCoords) [lon, lat] = f._clickCoords;
   else if (Array.isArray(props.coordonneesxy)) [lon, lat] = props.coordonneesxy;
@@ -1262,19 +1192,19 @@ function renderDetail() {
       ${osmId ? `<a class="osm-logo-link" href="https://www.openstreetmap.org/${osmType}/${osmId}" target="_blank" rel="noopener noreferrer" aria-label="Voir cet objet sur OpenStreetMap" title="OpenStreetMap">
         <img src="osm-logo.svg" alt="OpenStreetMap">
       </a>` : ""}
-      <div class="detail-badge"><span style="font-size:14px;line-height:1">${LAYER_EMOJI[props._layer] || "📍"}</span>${humanize(category)}</div>
-      <h2 class="detail-title">${humanize(title)}</h2>
+      <div class="detail-badge"><span style="font-size:14px;line-height:1">${LAYER_EMOJI[props._layer] || "📍"}</span>${escapeHtml(humanize(category))}</div>
+      <h2 class="detail-title">${escapeHtml(humanize(title))}</h2>
       <div class="detail-coords"><i data-lucide="map-pin" style="width:12px;height:12px"></i>${lat.toFixed(5)}, ${lon.toFixed(5)}</div>
     </div>
     <div class="detail-body">
       ${entries.length === 0 ? `<div class="detail-empty"><i data-lucide="info" style="width:16px;height:16px;flex-shrink:0;margin-top:2px"></i>Pas de données détaillées supplémentaires.</div>` : ""}
       ${entries.map(([k, v]) => {
         const label = KEY_LABELS[k] || k.replace(/_/g, " ");
-        if (k === "website" || k === "site_web" || k === "url") {
-          const href = /^https?:\/\//.test(v) ? v : `https://${v}`;
-          return `<a href="${href}" target="_blank" rel="noreferrer" class="detail-row" style="text-decoration:none"><span class="k">${label}</span><span class="v" style="color:var(--lons-red)">${v} ↗</span></a>`;
+        if (k === "website" || k === "site_web" || k === "url" || k === "document_url") {
+          const href = /^https?:\/\//i.test(v) ? v : (k === "document_url" ? "" : `https://${v}`);
+          if (href) return `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer" class="detail-row" style="text-decoration:none"><span class="k">${escapeHtml(label)}</span><span class="v" style="color:var(--lons-red)">${escapeHtml(v)} ↗</span></a>`;
         }
-        return `<div class="detail-row"><span class="k">${label}</span><span class="v" title="${humanize(v)}">${humanize(v)}</span></div>`;
+        return `<div class="detail-row"><span class="k">${escapeHtml(label)}</span><span class="v" title="${escapeHtml(humanize(v))}">${escapeHtml(humanize(v))}</span></div>`;
       }).join("")}
 
       <div class="panoramax-preview">
@@ -1386,7 +1316,7 @@ async function ensureLayers() {
     state.failedLayers[layerKey] = false;
     renderLayers();
     try {
-      const raw = await fetchLayerData(meta);
+      const raw = await fetchLocalGeoJSON(meta.file);
       state.layerData[layerKey] = stampFeatures(raw, themeKey, layerKey, meta);
       cacheSet(layerKey, state.layerData[layerKey]);
       if (themeKey === "commerces") await loadCommerceMarkerImages(map);
@@ -1490,7 +1420,9 @@ function keepOverlaysAboveBasemap() {
     Object.entries(theme.items).forEach(([layerKey, meta]) => {
       const sourceId = `osm-${layerKey}`;
       const layerIds =
-        meta.geometry === "line"
+        meta.geometry === "mixed"
+          ? [`${sourceId}-halo`, `${sourceId}-line`, `${sourceId}-area`, `${sourceId}-outline`, `${sourceId}-fill`, `${sourceId}-symbol`]
+          : meta.geometry === "line"
           ? [`${sourceId}-halo`, `${sourceId}-fill`]
           : meta.geometry === "polygon"
             ? [`${sourceId}-fill`, `${sourceId}-outline`, `${sourceId}-line`, `${sourceId}-symbol`, `${sourceId}-label`]
@@ -1539,7 +1471,7 @@ function applyMapSources() {
   Object.entries(LAYERS).forEach(([tk, theme]) => {
     Object.entries(theme.items).forEach(([lk, meta]) => {
       const srcId = `osm-${lk}`;
-      const ids = [`${srcId}-halo`, `${srcId}-fill`, `${srcId}-outline`, `${srcId}-line`, `${srcId}-symbol`, `${srcId}-label`];
+      const ids = [`${srcId}-halo`, `${srcId}-fill`, `${srcId}-area`, `${srcId}-outline`, `${srcId}-line`, `${srcId}-symbol`, `${srcId}-label`];
       const isActive = tk === state.activeTheme && state.visibleLayers[lk] && state.layerData[lk];
       if (!isActive) {
         ids.forEach((id) => { if (map.getLayer(id)) map.removeLayer(id); });
@@ -1550,7 +1482,32 @@ function applyMapSources() {
       if (map.getSource(srcId)) map.getSource(srcId).setData(fc);
       else map.addSource(srcId, { type: "geojson", data: fc });
 
-      if (meta.geometry === "line") {
+      if (meta.geometry === "mixed") {
+        const lineFilter = ["any", ["==", ["geometry-type"], "LineString"], ["==", ["geometry-type"], "MultiLineString"]];
+        const polygonFilter = ["any", ["==", ["geometry-type"], "Polygon"], ["==", ["geometry-type"], "MultiPolygon"]];
+        if (!map.getLayer(`${srcId}-halo`)) map.addLayer({
+          id: `${srcId}-halo`, type: "line", source: srcId, filter: lineFilter,
+          paint: { "line-color": meta.color, "line-width": 10, "line-opacity": 0.2, "line-blur": 3 },
+        });
+        if (!map.getLayer(`${srcId}-line`)) map.addLayer({
+          id: `${srcId}-line`, type: "line", source: srcId, filter: lineFilter,
+          layout: { "line-cap": "round", "line-join": "round" },
+          paint: { "line-color": meta.color, "line-width": 3.6 },
+        });
+        if (!map.getLayer(`${srcId}-area`)) map.addLayer({
+          id: `${srcId}-area`, type: "fill", source: srcId, filter: polygonFilter,
+          paint: { "fill-color": meta.color, "fill-opacity": 0.28 },
+        });
+        if (!map.getLayer(`${srcId}-outline`)) map.addLayer({
+          id: `${srcId}-outline`, type: "line", source: srcId, filter: polygonFilter,
+          paint: { "line-color": meta.color, "line-width": 2.2 },
+        });
+        if (!map.getLayer(`${srcId}-fill`)) map.addLayer({
+          id: `${srcId}-fill`, type: "circle", source: srcId,
+          filter: ["==", ["geometry-type"], "Point"],
+          paint: { "circle-radius": 8, "circle-color": meta.color, "circle-stroke-width": 2, "circle-stroke-color": "#FFFFFF" },
+        });
+      } else if (meta.geometry === "line") {
         if (!map.getLayer(`${srcId}-halo`)) map.addLayer({ id: `${srcId}-halo`, type: "line", source: srcId, paint: { "line-color": meta.color, "line-width": 10, "line-opacity": 0.2, "line-blur": 3 } });
         if (!map.getLayer(`${srcId}-fill`)) map.addLayer({ id: `${srcId}-fill`, type: "line", source: srcId, layout: { "line-cap": "round", "line-join": "round" }, paint: { "line-color": meta.color, "line-width": 3.6 } });
       } else if (meta.geometry === "polygon") {
@@ -1713,7 +1670,7 @@ map.on("styledata", () => {
 
 map.on("click", (e) => {
   const ids = [];
-  Object.keys(LAYERS).forEach((t) => Object.keys(LAYERS[t].items).forEach((k) => ids.push(`osm-${k}-fill`, `osm-${k}-line`, `osm-${k}-symbol`)));
+  Object.keys(LAYERS).forEach((t) => Object.keys(LAYERS[t].items).forEach((k) => ids.push(`osm-${k}-fill`, `osm-${k}-line`, `osm-${k}-area`, `osm-${k}-symbol`)));
   const existing = ids.filter((l) => map.getLayer(l));
   if (existing.length === 0) { state.selectedFeature = null; renderDetail(); return; }
   const bbox = [[e.point.x - 10, e.point.y - 10], [e.point.x + 10, e.point.y + 10]];

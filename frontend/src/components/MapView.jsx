@@ -317,7 +317,16 @@ function keepOverlaysAboveBasemap(map) {
     Object.entries(theme.items).forEach(([layerKey, meta]) => {
       const sourceId = `osm-${layerKey}`;
       const layerIds =
-        meta.geometry === "line"
+        meta.geometry === "mixed"
+          ? [
+              `${sourceId}-halo`,
+              `${sourceId}-line`,
+              `${sourceId}-area`,
+              `${sourceId}-outline`,
+              `${sourceId}-fill`,
+              `${sourceId}-symbol`,
+            ]
+          : meta.geometry === "line"
           ? [`${sourceId}-halo`, `${sourceId}-fill`]
           : meta.geometry === "polygon"
             ? [`${sourceId}-fill`, `${sourceId}-outline`, `${sourceId}-line`, `${sourceId}-symbol`, `${sourceId}-label`]
@@ -428,6 +437,7 @@ const MapView = React.forwardRef(function MapView(
         const layerIds = [
           `${srcId}-halo`,
           `${srcId}-fill`,
+          `${srcId}-area`,
           `${srcId}-outline`,
           `${srcId}-line`,
           `${srcId}-symbol`,
@@ -450,7 +460,74 @@ const MapView = React.forwardRef(function MapView(
           map.addSource(srcId, { type: "geojson", data: fc });
         }
 
-        if (meta.geometry === "line") {
+        if (meta.geometry === "mixed") {
+          const lineFilter = [
+            "any",
+            ["==", ["geometry-type"], "LineString"],
+            ["==", ["geometry-type"], "MultiLineString"],
+          ];
+          const polygonFilter = [
+            "any",
+            ["==", ["geometry-type"], "Polygon"],
+            ["==", ["geometry-type"], "MultiPolygon"],
+          ];
+          if (!map.getLayer(`${srcId}-halo`)) {
+            map.addLayer({
+              id: `${srcId}-halo`,
+              type: "line",
+              source: srcId,
+              filter: lineFilter,
+              paint: {
+                "line-color": meta.color,
+                "line-width": 10,
+                "line-opacity": 0.2,
+                "line-blur": 3,
+              },
+            });
+          }
+          if (!map.getLayer(`${srcId}-line`)) {
+            map.addLayer({
+              id: `${srcId}-line`,
+              type: "line",
+              source: srcId,
+              filter: lineFilter,
+              layout: { "line-cap": "round", "line-join": "round" },
+              paint: { "line-color": meta.color, "line-width": 3.6 },
+            });
+          }
+          if (!map.getLayer(`${srcId}-area`)) {
+            map.addLayer({
+              id: `${srcId}-area`,
+              type: "fill",
+              source: srcId,
+              filter: polygonFilter,
+              paint: { "fill-color": meta.color, "fill-opacity": 0.28 },
+            });
+          }
+          if (!map.getLayer(`${srcId}-outline`)) {
+            map.addLayer({
+              id: `${srcId}-outline`,
+              type: "line",
+              source: srcId,
+              filter: polygonFilter,
+              paint: { "line-color": meta.color, "line-width": 2.2 },
+            });
+          }
+          if (!map.getLayer(`${srcId}-fill`)) {
+            map.addLayer({
+              id: `${srcId}-fill`,
+              type: "circle",
+              source: srcId,
+              filter: ["==", ["geometry-type"], "Point"],
+              paint: {
+                "circle-radius": 8,
+                "circle-color": meta.color,
+                "circle-stroke-width": 2,
+                "circle-stroke-color": "#FFFFFF",
+              },
+            });
+          }
+        } else if (meta.geometry === "line") {
           if (!map.getLayer(`${srcId}-halo`)) {
             map.addLayer({
               id: `${srcId}-halo`,
@@ -678,7 +755,13 @@ const MapView = React.forwardRef(function MapView(
       const allIds = [];
       Object.keys(LAYERS).forEach((t) =>
         Object.keys(LAYERS[t].items).forEach((k) =>
-          allIds.push(`osm-${k}-fill`, `osm-${k}-line`, `osm-${k}-symbol`)
+          allIds.push(
+            `osm-${k}-fill`,
+            `osm-${k}-line`,
+            `osm-${k}-area`,
+            `osm-${k}-outline`,
+            `osm-${k}-symbol`
+          )
         )
       );
       const existing = allIds.filter((l) => map.getLayer(l));

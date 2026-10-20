@@ -5,7 +5,7 @@ import SidebarNav from "@/components/SidebarNav";
 import MapView from "@/components/MapView";
 import MapControls from "@/components/MapControls";
 import DetailPanel from "@/components/DetailPanel";
-import { fetchLayerData, fetchLayerGeoJSON, LAYERS, stampFeatures } from "@/lib/osm";
+import { fetchLayerGeoJSON, LAYERS, stampFeatures } from "@/lib/osm";
 
 const DEFAULT_VISIBLE = {
   mobility: {
@@ -73,7 +73,7 @@ export default function CartographyPage() {
       inflight.current.add(layerKey);
       setLoadingLayers((s) => ({ ...s, [layerKey]: true }));
       try {
-        const fc = await fetchLayerData(meta);
+        const fc = await fetchLayerGeoJSON(meta.file);
         const stamped = stampFeatures(fc, themeKey, layerKey, meta);
         setLayerData((s) => ({ ...s, [layerKey]: stamped }));
         toast.success(`${meta.label} · ${stamped.features.length} objets`, {

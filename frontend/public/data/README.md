@@ -1,10 +1,9 @@
 # Données des couches cartographiques
 
-La plupart des couches thématiques et la limite communale sont chargées depuis
-les fichiers GeoJSON versionnés dans le dépôt. La couche des DAE utilise l'API
-open data officielle Géo'DAE, filtrée sur les 32 communes d'ECLA, dont
-Lons-le-Saunier. Les autres fichiers sont des instantanés exportés le
-18 octobre 2026 ; ils peuvent être modifiés ou remplacés indépendamment du code.
+Les couches thématiques, y compris les DAE, et la limite communale sont chargées
+depuis les fichiers GeoJSON versionnés dans le dépôt. Les autres fichiers sont
+des instantanés exportés le 18 octobre 2026 ; ils peuvent être modifiés ou
+remplacés indépendamment du code.
 
 | Fichier | Couche | Source de l’instantané |
 | --- | --- | --- |
@@ -29,11 +28,21 @@ Lons-le-Saunier. Les autres fichiers sont des instantanés exportés le
 | `drop_off.geojson` | Arrêts minute | [Overpass API](https://overpass-api.de/) · rayon de 4 km |
 | `loading_zones.geojson` | Zones de livraison | [Overpass API](https://overpass-api.de/) · rayon de 4 km |
 | `commune_boundary.geojson` | Limite communale | [Nominatim](https://nominatim.openstreetmap.org/) · relation OSM 152508 |
-| `roadworks.geojson` | Travaux | Couche locale vide · géométries `Polygon` / `MultiPolygon` |
-| `temporary_disruptions.geojson` | Perturbations temporaires | Couche locale vide · géométries `LineString` / `MultiLineString` |
-| API Géo'DAE | Défibrillateurs automatisés externes | [API tabulaire data.gouv.fr](https://tabular-api.data.gouv.fr/api/resources/edb6a9e1-2f16-4bbf-99e7-c3eb6b90794c/data/) · filtrée sur les codes INSEE des [32 communes d'ECLA](https://geo.api.gouv.fr/epcis/200071116/communes?fields=nom%2Ccode&format=json) |
+| `roadworks.geojson` | Travaux saisis localement | Données éditables conservées lors de la synchronisation DiaLog |
+| `temporary_disruptions.geojson` | Perturbations saisies localement | Données éditables conservées lors de la synchronisation DiaLog |
+| `dialog_roadworks.geojson` | Travaux publiés dans DiaLog | Généré à chaque déploiement depuis l’[API publique DiaLog](https://dialog.beta.gouv.fr/api/doc) · arrêtés temporaires en vigueur · Lons-le-Saunier (39300) |
+| `dialog_temporary_disruptions.geojson` | Autres perturbations temporaires DiaLog | Généré à chaque déploiement depuis l’[API publique DiaLog](https://dialog.beta.gouv.fr/api/doc) · Lons-le-Saunier (39300) |
+| `dae.geojson` | Défibrillateurs automatisés externes | [Base nationale Géo'DAE](https://www.data.gouv.fr/datasets/geodae-base-nationale-des-defibrillateurs/) · DAE déclarés par la Commune de Lons-le-Saunier ou ECLA, extraits le 20 octobre 2026 |
 
 Les données Géo'DAE sont publiées par [Atlasanté](https://www.data.gouv.fr/datasets/geodae-base-nationale-des-defibrillateurs/) sous [Licence Ouverte 2.0](https://www.etalab.gouv.fr/licence-ouverte-open-licence/).
+
+Les restrictions DiaLog sont récupérées côté GitHub Actions, car l’API publique
+n’autorise pas les appels directs depuis le navigateur (CORS). Le site est
+reconstruit toutes les 15 minutes à partir des arrêtés temporaires en vigueur
+publiés pour Lons-le-Saunier. La synchronisation conserve les objets édités
+dans `roadworks.geojson` et `temporary_disruptions.geojson`. Le déclenchement
+planifié GitHub ne devient actif qu’une fois le workflow présent sur la branche
+par défaut du dépôt.
 
 Les données OpenStreetMap sont © [contributeurs OpenStreetMap](https://www.openstreetmap.org/copyright)
 et disponibles sous licence [ODbL](https://opendatacommons.org/licenses/odbl/).
@@ -50,6 +59,12 @@ sont affichées dans leur fiche ; conservez leurs identifiants OSM (`id_osm`,
 `osm_id` ou `id`) lorsqu’ils existent pour garder des identifiants stables.
 Les lignes de bus regroupent les segments d’une même relation et utilisent des
 géométries `LineString` ou `MultiLineString`.
+
+Les fichiers `dialog_roadworks.geojson` et
+`dialog_temporary_disruptions.geojson` sont générés par
+`frontend/scripts/sync-dialog-regulations.mjs` ; ne les modifiez pas à la main.
+Pour ajuster les données locales, modifiez plutôt les deux GeoJSON sources
+`roadworks.geojson` et `temporary_disruptions.geojson`.
 
 Les fonds de carte, les bâtiments 3D, la recherche d’adresses et les photos
 Panoramax utilisent toujours leurs services distants ; cette liste concerne les
